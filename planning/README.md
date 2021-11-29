@@ -7,8 +7,8 @@
 
 |Llama       |       Monday    |       Tuesday   |      Wednesday  |     Thursday    |    Friday    |
 |:---------: |   :---------:   |   :---------:   |   :---------:   |   :----------:  |  :---------: |
-|Áxil        |Afternoon-Evening|Morning-Afternoon|Afternoon-Evening|Morning-Afternoon|Morning       |
-|Firewyni    |                 |                 |                 |                 |              |
+|Áxil        |Afternoon-Evening|Morning-Afternoon|Afternoon-Evening|Morning-Afternoon|   Morning    |
+|Firewyni    |    Evening      |      Morning    |       Morning   |Morning/Afternoon|   Morning    |          
 |Hajir       |                 |                 |                 |                 |              |
 |Inggrit     |                 |                 |                 |                 |              |
 |Laura       |                 |                 |                 |                 |              |
