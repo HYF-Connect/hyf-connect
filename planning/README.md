@@ -26,7 +26,7 @@
 - Inggrit: _20h_;
 - Laura: _20h_;
 - Maria: _10h_;
-- Moamin: 20h_;
+- Moamin: _20h_;
 - Rayane: _30h_;
 - Reinaldo: _30h_;
 - Rosa: _25h_;
