@@ -1,0 +1,75 @@
+{
+  "users": [],
+  "channels": [
+    {
+      "id": "61141356d131010000000001",
+      "name": "Random"
+    },
+    {
+      "id": "611413b100a9910000000001",
+      "name": "test from here"
+    },
+    {
+      "name": "Hockey!",
+      "id": "611416fac2fc000000000001"
+    }
+  ],
+  "messages": [
+    {
+      "text": "Hi random! Yoshi here",
+      "id": "61141589ff5f210000000001",
+      "channelId": "undefined"
+    },
+    {
+      "text": "Hi random! Yoshi here #2",
+      "id": "611416066cb5380000000001",
+      "channelId": "undefined"
+    },
+    {
+      "text": "Hi random!",
+      "id": "61141655d0607e0000000001",
+      "channelId": "61141356d131010000000001"
+    },
+    {
+      "text": "Hi test from here!",
+      "id": "61141688084e140000000001",
+      "channelId": "611413b100a9910000000001",
+      "date": "2021-08-11T18:27:20.816Z"
+    },
+    {
+      "text": "Hello!",
+      "id": "611416dfbbca930000000001",
+      "user": "Yoshi",
+      "channelId": "611413b100a9910000000001",
+      "date": "2021-08-11T18:28:47.968Z"
+    },
+    {
+      "text": "Hi!",
+      "id": "61141703f257fa0000000001",
+      "user": "Steve",
+      "channelId": "611416fac2fc000000000001",
+      "date": "2021-08-11T18:29:23.168Z"
+    },
+    {
+      "text": "hiiii",
+      "id": "6114170c721c3a0000000001",
+      "user": "Yoshi",
+      "channelId": "611416fac2fc000000000001",
+      "date": "2021-08-11T18:29:32.864Z"
+    },
+    {
+      "text": "test",
+      "id": "611418d4db15580000000001",
+      "user": "Yoshi",
+      "channelId": "611416fac2fc000000000001",
+      "date": "2021-08-11T18:37:08.713Z"
+    },
+    {
+      "text": "test 2",
+      "id": "611418e2e91e1e0000000001",
+      "user": "Yoshi",
+      "channelId": "611416fac2fc000000000001",
+      "date": "2021-08-11T18:37:22.212Z"
+    }
+  ]
+}

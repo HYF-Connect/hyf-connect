@@ -1,0 +1,35 @@
+{
+  "plugins": [],
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true
+  },
+  "overrides": [
+    {
+      "files": ["**/logic/**/*.js"],
+      "env": {
+        "browser": false
+      }
+    },
+    {
+      "files": ["**/api-calls/**/*.js"],
+      "env": {
+        "browser": false
+      },
+      "globals": {
+        "fetch": true,
+        "window": true
+      }
+    }
+  ],
+  "rules": {
+    "no-console": 1,
+
+    "import/prefer-default-export": 0,
+    "import/named": 2,
+    "import/no-cycle": 0,
+    "import/extensions": [1, { "js": "always" }]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "title": "A post",
+  "description": "a user's post",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "objectID"
+    },
+    "user": {
+      "type": "objectID"
+    },
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string"
+    },
+    "image_link": {
+      "type": "string"
+    }
+  },
+  "required": ["id", "user", "title", "body"]
+}

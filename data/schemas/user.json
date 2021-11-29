@@ -1,0 +1,38 @@
+{
+  "title": "User Profile",
+  "description": "a user's profile data",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "objectID"
+    },
+    "user_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "birth": {
+      "type": "object",
+      "required": ["date", "place"],
+      "properties": {
+        "date": {
+          "type": "string"
+        },
+        "place": {
+          "type": "string"
+        }
+      }
+    },
+    "accepting_friend_requests": {
+      "type": "boolean"
+    }
+  },
+  "required": ["id", "user_name", "first_name", "email"]
+}
