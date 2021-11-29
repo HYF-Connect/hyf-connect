@@ -15,7 +15,7 @@
 |Maria       |                 |                 |                 |                 |              |
 |Moamin      |                 |                 |                 |                 |              |
 |Rayane      |                 |                 |                 |                 |              |
-|Reinaldo    |                 |                 |                 |                 |              |
+|Reinaldo    |    9-12 / 2-6   |   9-12 / 2-6    |   9-12 / 2-6    |    9-12 / 2-6   |  9-12 / 2-6  |
 |Rosa        |                 |                 |                 |                 |              |
 
 ### Hours per week:
@@ -28,5 +28,5 @@
 - Maria: _10h_;
 - Moamin: _20h_;
 - Rayane: _30h_;
-- Reinaldo: _30h_;
+- Reinaldo: _35h_;
 - Rosa: _25h_;
