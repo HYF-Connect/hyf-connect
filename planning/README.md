@@ -7,7 +7,7 @@
 [Hajir](https://github.com/Hajir-pro): Frontend and Databases.<br>
 [Inggrit](https://github.com/inggritenovaleta): Management, Design/UX-UI and Quality Assurance.<br>
 [Laura](https://github.com/lauraramirez220612): Design/UX-UI and Databases.<br>
-[Maria](https://github.com/Maria2811-code): Management, Design/UX-UI and Frontend.<br>
+[Maria](https://github.com/Maria2811-code): Management and Design/UX-UI.<br>
 [Moamin](https://github.com/Moamin-AbuEwaida): Frontend, Backend, Software Architecture and Databases.<br>
 [Rayane](https://github.com/rayanejsilva): Frontend, Backend, Software Architecture and Databases.<br>
 [Reinaldo](https://github.com/perezrei): Design/UX-UI and Frontend.<br>
