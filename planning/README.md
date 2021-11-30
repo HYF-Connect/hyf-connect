@@ -13,7 +13,7 @@
 |Inggrit     |                 |                 |                 |                 |              |
 |Laura       |                 |                 |                 |                 |              |
 |Maria       |                 |                 |                 |                 |              |
-|Moamin      |                 |                 |                 |                 |              |
+|Moamin      |3pm-7pm            |  3pm-7pm               |   3pm-7pm             |      3pm-7pm           |  3pm-7pm           |
 |Rayane      |                 |                 |                 |                 |              |
 |Reinaldo    |    9-12 / 2-6   |   9-12 / 2-6    |   9-12 / 2-6    |    9-12 / 2-6   |  9-12 / 2-6  |
 |Rosa        |                 |                 |                 |                 |              |
@@ -26,7 +26,7 @@
 - Inggrit: _20h_;
 - Laura: _20h_;
 - Maria: _10h_;
-- Moamin: _20h_;
+- Moamin: _20h_; mainly this timing I'll be giving to the project till the end but whenever I have more time I'll be adding more hours to the project
 - Rayane: _30h_;
 - Reinaldo: _35h_;
 - Rosa: _25h_;
