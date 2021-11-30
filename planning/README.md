@@ -1,5 +1,22 @@
 # Planning
 
+## Team & Roles
+
+[Áxil](https://github.com/bringmetheaxx): Management, Design/UX-UI, Backend and Quality Assurance. <br>
+[Firewyni](https://github.com/firity): Design/UX-UI, Frontend and Backend.<br>
+[Hajir](https://github.com/Hajir-pro): Frontend and Databases.<br>
+[Inggrit](https://github.com/inggritenovaleta): Management, Design/UX-UI and Quality Assurance.<br>
+[Laura](https://github.com/lauraramirez220612): Design/UX-UI and Databases.<br>
+[Maria](https://github.com/Maria2811-code): Management, Design/UX-UI and Frontend.<br>
+[Moamin](https://github.com/Moamin-AbuEwaida): Frontend, Backend, Software Architecture and Databases.<br>
+[Rayane](https://github.com/rayanejsilva): Frontend, Backend, Software Architecture and Databases.<br>
+[Reinaldo](https://github.com/perezrei): Design/UX-UI and Frontend.<br>
+[Rosa](https://github.com/RosaMoran): Frontend, Backend and Quality Assurance.<br>
+
+[Dirk](https://github.com/dirk-jacobs-supportsquare): Supervisor.<br>
+[Yoshi](https://github.com/yoshimalaise): Supervisor.<br>
+
+
 ## Communication Channels
 
 - **Slack Messaging:** 24/7
