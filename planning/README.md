@@ -13,9 +13,9 @@
 |Inggrit     |                 |                 |                 |                 |              |
 |Laura       |                 |                 |                 |                 |              |
 |Maria       |                 |                 |                 |                 |              |
-|Moamin      |                 |                 |                 |                 |              |
-|Rayane      |                 |                 |                 |                 |              |
-|Reinaldo    |                 |                 |                 |                 |              |
+|Moamin      |15:00-19:00|  15:00-19:00 | 15:00-19:00|15:00-19:00 |15:00-19:00|
+|Rayane      |  10:00-16:00               |    10:00-16:00              |    13:00-20:00              |  11:00-17:00               | 11:00-17:00              |
+|Reinaldo    |    9-12 / 2-6   |   9-12 / 2-6    |   9-12 / 2-6    |    9-12 / 2-6   |  9-12 / 2-6  |
 |Rosa        |                 |                 |                 |                 |              |
 
 ### Hours per week:
@@ -26,7 +26,7 @@
 - Inggrit: _20h_;
 - Laura: _20h_;
 - Maria: _10h_;
-- Moamin: _20h_;
+- Moamin: _20h_; mainly this timing I'll be giving to the project till the end but whenever I have more time I'll be adding more hours to the project
 - Rayane: _30h_;
-- Reinaldo: _30h_;
+- Reinaldo: _35h_;
 - Rosa: _25h_;
