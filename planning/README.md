@@ -1,8 +1,13 @@
 # Planning
 
+## Communication Channels
+
+- **Slack Messaging:** 24/7
+- **Google Meet:** 2 times a week
+- **Check In Call:** Wednesday 9PM
+- **Pull Requests:** 2 reviewers needed
 
 ## Availability
-
 ### Comfortable working at:
 
 |Llama       |       Monday    |       Tuesday   |      Wednesday  |     Thursday    |    Friday    |
