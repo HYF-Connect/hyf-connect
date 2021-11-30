@@ -7,7 +7,7 @@
 
 |Llama       |       Monday    |       Tuesday   |      Wednesday  |     Thursday    |    Friday    |
 |:---------: |   :---------:   |   :---------:   |   :---------:   |   :----------:  |  :---------: |
-|Áxil        |Afternoon-Evening|Morning-Afternoon|Afternoon-Evening|Morning-Afternoon|Morning       |
+|Áxil        | 14-18 / 19-23   |  10-13 / 14-18  |  14-18 / 19-23  |  10-13 / 14-18  |     10-13    |
 |Firewyni    |                 |                 |                 |                 |              |
 |Hajir       |                 |                 |                 |                 |              |
 |Inggrit     |                 |                 |                 |                 |              |
@@ -28,5 +28,5 @@
 - Maria: _10h_;
 - Moamin: _20h_;
 - Rayane: _30h_;
-- Reinaldo: _30h_;
+- Reinaldo: _35h_;
 - Rosa: _25h_;
