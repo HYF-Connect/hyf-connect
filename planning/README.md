@@ -15,7 +15,7 @@
 |Maria       |                 |                 |                 |                 |              |
 |Moamin      |                 |                 |                 |                 |              |
 |Rayane      |                 |                 |                 |                 |              |
-|Reinaldo    |                 |                 |                 |                 |              |
+|Reinaldo    |   9-12 / 14-18  |   9-12 / 14-18  |   9-12 / 14-18  |   9-12 / 14-18  | 9-12 / 14-18 |
 |Rosa        |                 |                 |                 |                 |              |
 
 ### Hours per week:
