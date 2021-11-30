@@ -13,7 +13,7 @@
 [Reinaldo](https://github.com/perezrei): Design/UX-UI and Frontend.<br>
 [Rosa](https://github.com/RosaMoran): Frontend, Backend and Quality Assurance.<br>
 
-[Dirk](https://github.com/dirk-jacobs-supportsquare): Supervisor.<br>
+[Dirk](https://github.com/dirk-jacobs): Supervisor.<br>
 [Yoshi](https://github.com/yoshimalaise): Supervisor.<br>
 
 
