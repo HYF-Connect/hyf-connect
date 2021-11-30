@@ -14,7 +14,7 @@
 |:---------: |   :---------:   |   :---------:   |   :---------:   |   :----------:  |  :---------: |
 |Áxil        |Afternoon-Evening|Morning-Afternoon|Afternoon-Evening|Morning-Afternoon|Morning       |
 |Firewyni    |                 |                 |                 |                 |              |
-|Hajir       |                 |                 |                 |                 |              |
+|Hajir       | 09:00-13:00     |   09:00-13:00   |    09:00-13:00  |   09:00-13:00   |  09:00-13:00 |
 |Inggrit     |                 |                 |                 |                 |              |
 |Laura       |                 |                 |                 |                 |              |
 |Maria       |                 |                 |                 |                 |              |
