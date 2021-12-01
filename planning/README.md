@@ -46,7 +46,7 @@
 - Firewyni: _20h_;
 - Hajir: _20h_;
 - Inggrit: _20h_;
-- Laura: _20h_;
+- Laura: _10h_;
 - Maria: _10h_;
 - Moamin: _20h_; mainly this timing I'll be giving to the project till the end but whenever I have more time I'll be adding more hours to the project
 - Rayane: _30h_;
