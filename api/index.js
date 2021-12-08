@@ -29,11 +29,13 @@ if (config.MODE === 'development') {
   app.use(morgan('dev'));
 }
 
+/*
 app.get('/', (req, res) => {
   res.send('API! go to `/api`');
 });
+*/
 app.use('/api', routes);
-
+app.use('/', express.static(path.join(__dirname, '../client')));
 /* eslint-disable */
 app.use((err, req, res, next) => {
   console.error(err.stack);
