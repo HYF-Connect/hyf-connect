@@ -42,12 +42,14 @@ app.use((err, req, res, next) => {
   res.status(500).end();
 });
 
-app.listen(config.PORT, err => {
+const port = process.env.PORT || 2000;
+
+app.listen(port, err => {
   if (err) {
     console.error(err);
   } else {
     console.log(
-      `listening at http://localhost:${config.PORT} (${config.MODE} mode)`
+      `listening at http://localhost:${port} (${config.MODE} mode)`
     );
   }
 });
