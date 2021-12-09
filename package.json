@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=production PORT=3000 STATIC_DIR=client DATA_DIR=data node ./api/index.js",
+    "start": "NODE_ENV=production STATIC_DIR=client DATA_DIR=data node ./api/index.js",
     "dev:api": "nodemon api/index.js",
     "dev:client": "vite ./client",
     "document:client": "node ./dev-scripts/document client",
