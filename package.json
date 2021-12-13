@@ -12,7 +12,9 @@
     "document": "node ./dev-scripts/document client api",
     "lint:js": "eslint --max-warnings=0 --ext=.js --format=codeframe --fix",
     "lint": "npm run lint:js",
-    "format": "prettier --write ./"
+    "format": "prettier --write ./",
+    "db": "node api/db/scripts/create-db.js && node api/db/scripts/sync && node api/scripts/create-user.js",
+    "cdb": "node api/db/scripts/create-db.js"
   },
   "author": "",
   "license": "ISC",
@@ -27,6 +29,7 @@
     "morgan": "^1.10.0",
     "objectid": "^3.2.1",
     "pg": "^8.7.1",
+    "pgtools": "^0.3.2",
     "sequelize": "^6.12.0-beta.3",
     "tv4": "^1.3.0",
     "vite": "^2.5.10"
