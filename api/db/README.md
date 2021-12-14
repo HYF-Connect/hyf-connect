@@ -1,1 +1,0 @@
-We used Postgres database along with sequelize to create the database tables
