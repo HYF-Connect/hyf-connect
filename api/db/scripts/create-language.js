@@ -1,7 +1,7 @@
-const language = require("./models/language");
+const Language = require("../../models/language.js");
 
 const createLanguages = async () => {
-   const languages = await language.bulkCreate([
+   const languages = await Language.bulkCreate([
       { LanguageID: 1, Language: "English" },
       { LanguageID: 2, Language: "French" },
       { LanguageID: 3, Language: "German" },

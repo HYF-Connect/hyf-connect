@@ -3,7 +3,7 @@ const sequelize = require("../db");
 //loading different models in sequelize
 
 const User = require("../../models/user");
-const language = require("../../models/language");
+const Language = require("../../models/language");
 
 // create tables
 
