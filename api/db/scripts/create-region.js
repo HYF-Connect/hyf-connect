@@ -1,7 +1,8 @@
 const Region = require('../../models/region.js');
 
 const createRegion = async ()=>{
-    return await Region.bulkCreate([
+    try {
+        return await Region.bulkCreate([
         {RegionID: 1, Name:'Brussels'},
         {RegionID: 2, Name:'Antwerp'},
         {RegionID: 3, Name:'Flemish Brabant'},
@@ -14,6 +15,9 @@ const createRegion = async ()=>{
         {RegionID: 10, Name:'Namur'},
         {RegionID: 11, Name:'Walloon Brabant'},
     ]);
+    } catch (error) {
+        console.log(error);
+    } 
 };
 
 createRegion();

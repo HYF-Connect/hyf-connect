@@ -33,6 +33,7 @@ const User = sequelize.define('user',
     Email:{
         type: Sequelize.STRING(50),
         allowNull: false,
+        unique: true,
     },
     NationalityID:{
         type: Sequelize.INTEGER,
