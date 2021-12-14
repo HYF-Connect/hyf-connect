@@ -16,7 +16,7 @@ const Region = sequelize.define('region',
     }
 },
 {
-    tableName: 'Region',
+    tableName: 'region',
     timestamps: false
 }
 );
