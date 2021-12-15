@@ -93,7 +93,7 @@ User.belongsTo(Nationality, {
 User.belongsTo(Class, {
    as: "Class",
    foreignKey: "ClassID",
-}); */
+});
 
 User.belongsTo(Region, {
    as: "Region",
@@ -130,5 +130,5 @@ User.belongsToMany(Project, {
    uniqueKey: "UserProjectID",
    foreignKey: "UserID",
    otherKey: "ProjectID",
-}) 
+});
 module.exports = User;
