@@ -1,6 +1,6 @@
 const UserSkill = require('../../models/user-skill.js');
 
-const CreateUserSkill = async () => {
+const createUserSkill = async () => {
     const userSkill = await UserSkill.bulkCreate([
         {
             UserSillID: 1,
@@ -9,14 +9,14 @@ const CreateUserSkill = async () => {
             Level: 2,
             SelectedSkill: 2
         },
-         {
+        {
             UserSillID: 2,
             UserID: 3,
             SkillID: 5,
             Level: 5,
             SelectedSkill: 1
         },
-         {
+        {
             UserSillID: 3,
             UserID: 3,
             SkillID: 5,
@@ -25,12 +25,10 @@ const CreateUserSkill = async () => {
         }
     ]);
     
-    try {
-        return userSkill;
     
-    } catch (error) {
-        console.log(error);
-    }
+    return userSkill;
+    
+    
 };
 
-CreateUserSkill();
+createUserSkill();
