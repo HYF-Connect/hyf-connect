@@ -1,14 +1,13 @@
 const { Sequelize } = require("sequelize");
 const sequelize = require("../db/db.js");
 
-//const Nationality = require ('./nationality.js');
+const Nationality = require("./nationality.js");
 const Language = require("./language.js");
-/* const Class = require('./class.js');
-const Region = require ('./region.js');
-const Type = require('./type.js');
-const Skill = require('./skill.js');
-const Project = require('./project.js');
- */
+const Class = require("./class.js");
+const Region = require("./region.js");
+const Type = require("./type.js");
+const Skill = require("./skill.js");
+const Project = require("./project.js");
 
 const User = sequelize.define(
    "user",
@@ -34,6 +33,7 @@ const User = sequelize.define(
       Email: {
          type: Sequelize.STRING(50),
          allowNull: false,
+         unique: true,
       },
       NationalityID: {
          type: Sequelize.INTEGER,
@@ -80,11 +80,11 @@ const User = sequelize.define(
 
 /**
  * Creating the connection between the user table
- * and the other tables such as nationality, langauge and project
+ * and the other tables such as nationality, language and project
  * using one to many categorise and tags
  */
 
-/* User.belongsTo(Nationality, {
+User.belongsTo(Nationality, {
    as: "Nationality",
    foreignKey: "NationalityID",
 });
@@ -97,7 +97,7 @@ User.belongsTo(Class, {
 User.belongsTo(Region, {
    as: "Region",
    foreignKey: "RegionID",
-}); */
+});
 
 User.belongsToMany(Language, {
    as: "Language",
@@ -107,7 +107,7 @@ User.belongsToMany(Language, {
    otherKey: "LanguageID",
 });
 
-/* User.belongsToMany(Type, {
+User.belongsToMany(Type, {
    as: "Type",
    through: "UserType",
    uniqueKey: "UserTypeID",
@@ -130,5 +130,4 @@ User.belongsToMany(Project, {
    foreignKey: "UserID",
    otherKey: "ProjectID",
 });
- */
 module.exports = User;
