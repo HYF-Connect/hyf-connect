@@ -3,7 +3,7 @@ const sequelize = require ('../db.js');
 //loading different models in sequelize
 
 const User = require('../../models/user.js');
-
+const Region = require('../../models/region.js')
 
 
 
