@@ -5,6 +5,7 @@ const Nationality = require("./nationality.js");
 const Language = require("./language.js");
 const Class = require("./class.js");
 const Region = require("./region.js");
+const UserLanguage = require("./user-language.js");
 const Type = require("./type.js");
 const Skill = require("./skill.js");
 const Project = require("./project.js");
@@ -100,8 +101,8 @@ User.belongsTo(Region, {
 });
 
 User.belongsToMany(Language, {
-   as: "Language",
-   through: "UserLanguage",
+   as: "Languages",
+   through: UserLanguage,
    uniqueKey: "UserLanguageID",
    foreignKey: "UserID",
    otherKey: "LanguageID",
