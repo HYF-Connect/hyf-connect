@@ -21,7 +21,7 @@ const UserSkill = sequelize.define(
             allowNull: false
         },
         Level:{
-            type: Sequelize.STRING(50),
+            type: Sequelize.INTEGER,
             allowNull: true
         },
         SelectedSkill: {

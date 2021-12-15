@@ -6,21 +6,21 @@ const CreateUserSkill = async () => {
             UserSillID: 1,
             UserID: 1,
             SkillID: 1,
-            Level: 'Junior',
+            Level: 2,
             SelectedSkill: 2
         },
          {
             UserSillID: 2,
             UserID: 3,
             SkillID: 5,
-            Level: 'Senior',
+            Level: 5,
             SelectedSkill: 1
         },
          {
             UserSillID: 3,
             UserID: 3,
             SkillID: 5,
-            Level: 'Mid',
+            Level: 3,
             SelectedSkill: 3
         }
     ]);
