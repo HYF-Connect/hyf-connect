@@ -1,13 +1,13 @@
 const {Sequelize} = require ('sequelize');
 const sequelize = require('../db/db.js');
 
-const Nationality = require ('./nationality.js');
-const Language = require ('./language.js');
-const Class = require('./class.js');
-const Region = require ('./region.js');
-const Type = require('./type.js');
+// const Nationality = require ('./nationality.js');
+// const Language = require ('./language.js');
+// const Class = require('./class.js');
+// const Region = require ('./region.js');
+// const Type = require('./type.js');
 const Skill = require('./skill.js');
-const Project = require('./project.js');
+// const Project = require('./project.js');
 
 
 const User = sequelize.define('user',
@@ -84,7 +84,7 @@ const User = sequelize.define('user',
  * using one to many categorise and tags
  */
 
-
+/*
 User.belongsTo(Nationality,{
     as:'Nationality',
     foreignKey: 'NationalityID',
@@ -117,6 +117,7 @@ User.belongsToMany(Type,{
     foreignKey: 'UserID',
     otherKey: 'TypeID'
 });
+*/
 
 User.belongsToMany(Skill,{
     as: 'Skill',
@@ -126,6 +127,7 @@ User.belongsToMany(Skill,{
     otherKey: 'SkillID'
 });
 
+/*
 User.belongsToMany(Project,{
     as:'Project',
     through: 'UserProject',
@@ -133,7 +135,7 @@ User.belongsToMany(Project,{
     foreignKey: 'UserID',
     otherKey: 'ProjectID'
 });
-
+*/
 
 
 module.exports = User;
