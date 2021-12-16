@@ -5,6 +5,7 @@ const Class = require("./class.js");
 const Skill = require("./skill.js");
 const ProjectClass = require('./project-class.js');
 
+
 const Project = sequelize.define(
     "porject",
     {
@@ -57,7 +58,6 @@ Project.belongsToMany(Class, {
     foreignKey: "ProjectID",
     otherKey: "ClassID",
 });
-
 
 
 
