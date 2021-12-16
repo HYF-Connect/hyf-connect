@@ -3,7 +3,7 @@ const sequelize = require("../db/db.js");
 
 const Nationality = require("./nationality.js");
 const Language = require("./language.js");
-//const Class = require("./class.js");
+const Class = require("./class.js");
 const Region = require("./region.js");
 const Skill = require("./skill.js");
 const UserLanguage = require("./user-language.js");
@@ -92,10 +92,10 @@ User.belongsTo(Nationality, {
    foreignKey: "NationalityID",
 });
 
-/* User.belongsTo(Class, {
+User.belongsTo(Class, {
    as: "Class",
    foreignKey: "ClassID",
-}); */
+});
 
 User.belongsTo(Region, {
    as: "Region",
