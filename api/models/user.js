@@ -1,4 +1,4 @@
-const { Sequelize } = require("sequelize");
+const { DataTypes } = require("sequelize");
 const sequelize = require("../db/db.js");
 
 const Nationality = require("./nationality.js");
@@ -14,62 +14,62 @@ const User = sequelize.define(
    "user",
    {
       UserID: {
-         type: Sequelize.INTEGER,
+         type: DataTypes.INTEGER,
          autoIncrement: true,
          allowNull: false,
          primaryKey: true,
       },
       FirstName: {
-         type: Sequelize.STRING(50),
+         type: DataTypes.STRING(50),
          allowNull: false,
       },
       LastName: {
-         type: Sequelize.STRING(50),
+         type: DataTypes.STRING(50),
          allowNull: false,
       },
       Password: {
-         type: Sequelize.STRING(256),
+         type: DataTypes.STRING(256),
          allowNull: false,
       },
       Email: {
-         type: Sequelize.STRING(50),
+         type: DataTypes.STRING(50),
          allowNull: false,
          unique: true,
       },
       NationalityID: {
-         type: Sequelize.INTEGER,
+         type: DataTypes.INTEGER,
          allowNull: true,
       },
       ProfilePicture: {
-         type: Sequelize.BLOB,
+         type: DataTypes.BLOB,
          allowNull: true,
       },
       Bio: {
-         type: Sequelize.STRING(256),
+         type: DataTypes.STRING(256),
          allowNull: true,
       },
       GithubURL: {
-         type: Sequelize.STRING(2048),
+         type: DataTypes.STRING(2048),
          allowNull: true,
       },
       LinkedinURL: {
-         type: Sequelize.STRING(2048),
+         type: DataTypes.STRING(2048),
          allowNull: true,
       },
       WebsiteURL: {
-         type: Sequelize.STRING(2048),
+         type: DataTypes.STRING(2048),
          allowNull: true,
       },
       ClassID: {
-         type: Sequelize.INTEGER,
+         type: DataTypes.INTEGER,
          allowNull: true,
       },
       JobTitle: {
-         type: Sequelize.STRING(50),
+         type: DataTypes.STRING(50),
          allowNull: true,
       },
       RegionID: {
-         type: Sequelize.INTEGER,
+         type: DataTypes.INTEGER,
          allowNull: true,
       },
    },
@@ -94,7 +94,6 @@ User.belongsTo(Class, {
    as: "Class",
    foreignKey: "ClassID",
 });
-
 
 User.belongsTo(Region, {
    as: "Region",
@@ -132,6 +131,5 @@ User.belongsToMany(Project, {
    foreignKey: "UserID",
    otherKey: "ProjectID",
 });
-
 
 module.exports = User;
