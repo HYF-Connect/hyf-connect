@@ -10,8 +10,7 @@ const UserLanguage = require("./user-language.js");
 const Type = require("./type.js");
 const Skill = require("./skill.js");
 const Project = require("./project.js");
-const UserType= require('./user-type'); // this line is added for the test
-
+const UserType = require("./user-type");
 
 const User = sequelize.define(
    "user",
@@ -121,21 +120,18 @@ User.belongsToMany(Language, {
 
 User.belongsToMany(Skill, {
    as: "Skill",
-   through: "UserSkill",
+   through: UserSkill,
    uniqueKey: "UserSkillID",
    foreignKey: "UserID",
    otherKey: "SkillID",
 });
 
-/* User.belongsToMany(Project, {
+User.belongsToMany(Project, {
    as: "Project",
    through: "UserProject",
    uniqueKey: "UserProjectID",
    foreignKey: "UserID",
    otherKey: "ProjectID",
-}); */
-
 });
-
 
 module.exports = User;
