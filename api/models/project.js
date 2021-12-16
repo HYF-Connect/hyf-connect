@@ -4,6 +4,7 @@ const sequelize = require("../db/db.js");
 const Class = require("./class.js");
 const Skill = require("./skill.js");
 const ProjectSkill = require("./project-skill");
+const ProjectClass = require("./project-class");
 
 const Project = sequelize.define(
    "project",
