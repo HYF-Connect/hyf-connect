@@ -13,7 +13,7 @@
       "lint:js": "eslint --max-warnings=0 --ext=.js --format=codeframe --fix",
       "lint": "npm run lint:js",
       "format": "prettier --write ./",
-      "db": "node api/db/scripts/create-db.js && node api/db/scripts/sync && node api/db/scripts/create-user.js && node api/db/scripts/create-language.js&& node api/db/scripts/create-region.js && node api/db/scripts/create-skill.js  && node api/db/scripts/create-class.js",
+      "db": "node api/db/scripts/create-db.js && node api/db/scripts/sync && node api/db/scripts/create-nationality.js && node api/db/scripts/create-user.js && node api/db/scripts/create-language.js && node api/db/scripts/create-region.js && node api/db/scripts/create-skill.js",
       "cdb": "node api/db/scripts/create-db.js"
    },
    "author": "",

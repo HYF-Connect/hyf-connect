@@ -3,13 +3,15 @@ const sequelize = require("../db/db.js");
 
 const Nationality = require("./nationality.js");
 const Language = require("./language.js");
-const Class = require("./class.js");
+//const Class = require("./class.js");
 const Region = require("./region.js");
+const Skill = require("./skill.js");
 const UserLanguage = require("./user-language.js");
 const Type = require("./type.js");
 const Skill = require("./skill.js");
 const Project = require("./project.js");
 const UserType= require('./user-type'); // this line is added for the test
+
 
 const User = sequelize.define(
    "user",
@@ -91,10 +93,10 @@ User.belongsTo(Nationality, {
    foreignKey: "NationalityID",
 });
 
-User.belongsTo(Class, {
+/* User.belongsTo(Class, {
    as: "Class",
    foreignKey: "ClassID",
-});
+}); */
 
 User.belongsTo(Region, {
    as: "Region",
@@ -109,13 +111,13 @@ User.belongsToMany(Language, {
    otherKey: "LanguageID",
 });
 
-User.belongsToMany(Type, {
+/* User.belongsToMany(Type, {
    as: "Type",
    through: "UserType",
    uniqueKey: "UserTypeID",
    foreignKey: "UserID",
    otherKey: "TypeID",
-});
+}); */
 
 User.belongsToMany(Skill, {
    as: "Skill",
@@ -125,12 +127,15 @@ User.belongsToMany(Skill, {
    otherKey: "SkillID",
 });
 
-User.belongsToMany(Project, {
+/* User.belongsToMany(Project, {
    as: "Project",
    through: "UserProject",
    uniqueKey: "UserProjectID",
    foreignKey: "UserID",
    otherKey: "ProjectID",
+}); */
+
 });
+
 
 module.exports = User;
