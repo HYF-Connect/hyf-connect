@@ -1,29 +1,28 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../db/db.js");
 
-const UserProject = sequelize.define(
-   "userproject",
+const projectSkill = sequelize.define(
+   "projectskill",
    {
-      UserProjectID: {
+      ProjectSkillID: {
          type: DataTypes.INTEGER,
-         unique: true,
-         autoIncrement: true,
-         allowNull: false,
          primaryKey: true,
-      },
-      UserID: {
-         type: DataTypes.INTEGER,
+         autoIncrement: true,
          allowNull: false,
       },
       ProjectID: {
          type: DataTypes.INTEGER,
-         allowNull: true,
+         allowNull: false,
+      },
+      SkillID: {
+         type: DataTypes.INTEGER,
+         allowNull: false,
       },
    },
    {
-      tableName: "userproject",
+      tableName: "projectskill",
       timestamps: false,
    }
 );
 
-module.exports = UserProject;
+module.exports = projectSkill;
