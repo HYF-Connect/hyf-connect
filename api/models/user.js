@@ -8,6 +8,7 @@ const Region = require("./region.js");
 const Type = require("./type.js");
 const Skill = require("./skill.js");
 const Project = require("./project.js");
+const UserType= require('./user-type'); // this line is added for the test
 
 const User = sequelize.define(
    "user",
