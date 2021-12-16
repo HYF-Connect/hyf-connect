@@ -130,4 +130,5 @@ User.belongsToMany(Project, {
    foreignKey: "UserID",
    otherKey: "ProjectID",
 });
+
 module.exports = User;
