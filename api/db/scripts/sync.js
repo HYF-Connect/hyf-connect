@@ -7,6 +7,8 @@ const Skill = require("../../models/skill.js");
 const Region = require("../../models/region.js");
 const Language = require("../../models/language");
 const Class = require("../../models/class");
+const Project = require("../../models/project.js");
+const Type = require("../../models/type.js");
 
 // create tables
 
