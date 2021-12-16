@@ -1,8 +1,10 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../db/db.js");
 
-//const Class = require("./class.js");
+const Class = require("./class.js");
 const Skill = require("./skill.js");
+const ProjectClass = require('./project-class.js');
+
 
 const Project = sequelize.define(
     "porject",
@@ -48,16 +50,15 @@ const Project = sequelize.define(
  */
 
 
-/*
+
 Project.belongsToMany(Class, {
     as: "Class",
-    through: "ProjectClass",
+    through: ProjectClass,
     uniqueKey: "ProjectClassID",
     foreignKey: "ProjectID",
     otherKey: "ClassID",
 });
 
-*/
 
 
 Project.belongsToMany(Skill, {
