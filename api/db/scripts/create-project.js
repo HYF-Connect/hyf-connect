@@ -20,5 +20,4 @@ const createProject = async () => {
    ]);
    return project;
 };
-
-createProject();
+module.exports = createProject;

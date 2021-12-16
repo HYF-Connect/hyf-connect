@@ -16,4 +16,4 @@ const createNationality = async () => {
    return countries;
 };
 
-createNationality();
+module.exports = createNationality;

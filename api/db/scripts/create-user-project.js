@@ -8,5 +8,4 @@ const createUserProject = async () => {
    ]);
    return userProject;
 };
-
-createUserProject();
+module.exports = createUserProject;

@@ -5,7 +5,7 @@ const Class = sequelize.define(
    "class",
    {
       ClassID: {
-         type: DataTypes.INTEGER,
+         type: DataTypes.BIGINT,
          allowNull: false,
          autoIncrement: true,
          primaryKey: true,

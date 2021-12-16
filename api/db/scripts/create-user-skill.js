@@ -27,5 +27,4 @@ const createUserSkill = async () => {
 
    return userSkill;
 };
-
-createUserSkill();
+module.exports = createUserSkill;

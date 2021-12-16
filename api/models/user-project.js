@@ -5,18 +5,18 @@ const UserProject = sequelize.define(
    "userproject",
    {
       UserProjectID: {
-         type: DataTypes.INTEGER,
+         type: DataTypes.BIGINT,
          unique: true,
          autoIncrement: true,
          allowNull: false,
          primaryKey: true,
       },
       UserID: {
-         type: DataTypes.INTEGER,
+         type: DataTypes.BIGINT,
          allowNull: false,
       },
       ProjectID: {
-         type: DataTypes.INTEGER,
+         type: DataTypes.BIGINT,
          allowNull: true,
       },
    },

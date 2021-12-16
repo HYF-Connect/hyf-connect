@@ -1,18 +1,18 @@
-const { Sequelize } = require("sequelize");
+const { DataTypes } = require("sequelize");
 const sequelize = require("../db/db.js");
 
 const Skill = sequelize.define(
    "skill",
    {
       SkillID: {
-         type: Sequelize.INTEGER,
+         type: DataTypes.BIGINT,
          autoIncrement: true,
          allowNull: false,
          primaryKey: true,
          unique: true,
       },
       Name: {
-         type: Sequelize.STRING(50),
+         type: DataTypes.STRING(50),
          allowNull: false,
       },
    },

@@ -16,4 +16,4 @@ const createRegion = async () => {
    ]);
 };
 
-createRegion();
+module.exports = createRegion;

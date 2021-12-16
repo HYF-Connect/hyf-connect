@@ -5,17 +5,17 @@ const userLanguage = sequelize.define(
    "userlanguage",
    {
       UserLanguageID: {
-         type: DataTypes.INTEGER,
+         type: DataTypes.BIGINT,
          primaryKey: true,
          autoIncrement: true,
          allowNull: false,
       },
       UserID: {
-         type: DataTypes.INTEGER,
+         type: DataTypes.BIGINT,
          allowNull: false,
       },
       LanguageID: {
-         type: DataTypes.INTEGER,
+         type: DataTypes.BIGINT,
          allowNull: false,
       },
       Level: {

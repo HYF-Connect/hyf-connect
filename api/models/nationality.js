@@ -5,7 +5,7 @@ const nationality = sequelize.define(
    "nationality",
    {
       NationalityID: {
-         type: DataTypes.INTEGER,
+         type: DataTypes.BIGINT,
          autoIncrement: true,
          allowNull: false,
          primaryKey: true,

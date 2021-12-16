@@ -8,4 +8,4 @@ const createProjectClass = async () => {
    return projectClasses;
 };
 
-createProjectClass();
+module.exports = createProjectClass;

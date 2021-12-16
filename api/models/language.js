@@ -5,7 +5,7 @@ const Language = sequelize.define(
    "language",
    {
       LanguageID: {
-         type: DataTypes.INTEGER,
+         type: DataTypes.BIGINT,
          autoIncrement: true,
          allowNull: false,
          primaryKey: true,

@@ -10,7 +10,7 @@ const Project = sequelize.define(
    "project",
    {
       ProjectID: {
-         type: DataTypes.INTEGER,
+         type: DataTypes.BIGINT,
          autoIncrement: true,
          allowNull: false,
          primaryKey: true,

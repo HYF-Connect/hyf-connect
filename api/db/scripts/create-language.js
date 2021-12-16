@@ -1,4 +1,5 @@
 const Language = require("../../models/language.js");
+const createClass = require("./create-class.js");
 
 const createLanguages = async () => {
    const languages = await Language.bulkCreate([
@@ -16,4 +17,4 @@ const createLanguages = async () => {
    return languages;
 };
 
-createLanguages();
+module.exports = createLanguages;

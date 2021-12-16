@@ -15,5 +15,4 @@ const createUserLanguages = async () => {
    ]);
    return userLang;
 };
-
-createUserLanguages();
+module.exports = createUserLanguages;

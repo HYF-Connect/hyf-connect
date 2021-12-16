@@ -5,17 +5,17 @@ const projectSkill = sequelize.define(
    "projectskill",
    {
       ProjectSkillID: {
-         type: DataTypes.INTEGER,
+         type: DataTypes.BIGINT,
          primaryKey: true,
          autoIncrement: true,
          allowNull: false,
       },
       ProjectID: {
-         type: DataTypes.INTEGER,
+         type: DataTypes.BIGINT,
          allowNull: false,
       },
       SkillID: {
-         type: DataTypes.INTEGER,
+         type: DataTypes.BIGINT,
          allowNull: false,
       },
    },

@@ -18,7 +18,7 @@ const User = sequelize.define(
    "user",
    {
       UserID: {
-         type: DataTypes.INTEGER,
+         type: DataTypes.BIGINT,
          autoIncrement: true,
          allowNull: false,
          primaryKey: true,
@@ -41,7 +41,7 @@ const User = sequelize.define(
          unique: true,
       },
       NationalityID: {
-         type: DataTypes.INTEGER,
+         type: DataTypes.BIGINT,
          allowNull: true,
       },
       ProfilePicture: {
@@ -65,7 +65,7 @@ const User = sequelize.define(
          allowNull: true,
       },
       ClassID: {
-         type: DataTypes.INTEGER,
+         type: DataTypes.BIGINT,
          allowNull: true,
       },
       JobTitle: {
@@ -73,7 +73,7 @@ const User = sequelize.define(
          allowNull: true,
       },
       RegionID: {
-         type: DataTypes.INTEGER,
+         type: DataTypes.BIGINT,
          allowNull: true,
       },
    },

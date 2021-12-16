@@ -10,4 +10,4 @@ const createClass = async () => {
    return Classes;
 };
 
-createClass();
+module.exports = createClass;

@@ -17,4 +17,4 @@ const createSkills = async () => {
    ]);
 };
 
-createSkills();
+module.exports = createSkills;

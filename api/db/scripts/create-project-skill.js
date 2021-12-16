@@ -1,4 +1,4 @@
-const ProjectSkill = require("../../models/project-class.js");
+const ProjectSkill = require("../../models/project-skill.js");
 
 const createProjectSkill = async () => {
    const skillProject = await ProjectSkill.bulkCreate([
@@ -7,4 +7,5 @@ const createProjectSkill = async () => {
    ]);
    return skillProject;
 };
-createProjectSkill();
+
+module.exports = createProjectSkill;
