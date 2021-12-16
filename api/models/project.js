@@ -3,7 +3,6 @@ const sequelize = require("../db/db.js");
 
 //const Class = require("./class.js");
 const Skill = require("./skill.js");
-const User = require("./user.js");
 
 const Project = sequelize.define(
     "porject",
@@ -67,14 +66,6 @@ Project.belongsToMany(Skill, {
     uniqueKey: "ProjectSkillID",
     foreignKey: "ProjectID",
     otherKey: "SkillID",
-});
-
-Project.belongsToMany(User, {
-    as: "User",
-    through: "UserProject",
-    uniqueKey: "UserProjectID",
-    foreignKey: "UserID",
-    otherKey: "ProjectID",
 });
 
 

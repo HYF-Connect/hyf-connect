@@ -1,7 +1,8 @@
 const Project = require ('../../models/project.js');
 
 const createProject = async () => {
-    const project = await Project.bulkCreate([
+    try {
+        const project = await Project.bulkCreate([
         {
             ProjectID:1,
             Title: 'HYF Connect',
@@ -18,6 +19,10 @@ const createProject = async () => {
             Describtion: 'class 13 members created this project',
         }
     ]);
+    return project
+    } catch (error) {
+        console.log(error);
+    }
 };
 
 
