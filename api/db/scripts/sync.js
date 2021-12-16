@@ -6,6 +6,9 @@ const User = require("../../models/user.js");
 const Skill = require("../../models/skill.js");
 const Region = require("../../models/region.js");
 const Language = require("../../models/language");
+const Type = require("../../models/type.js");
+
+
 // create tables
 
 const createTables = async () => {
