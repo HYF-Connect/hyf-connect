@@ -6,9 +6,9 @@ const Skill = require("./skill.js");
 const ProjectSkill = require("./project-skill");
 
 const Project = sequelize.define(
-   "porject",
+   "project",
    {
-      ProejctID: {
+      ProjectID: {
          type: DataTypes.INTEGER,
          autoIncrement: true,
          allowNull: false,
@@ -19,7 +19,7 @@ const Project = sequelize.define(
          type: DataTypes.STRING(50),
          allowNull: false,
       },
-      Describtion: {
+      Description: {
          type: DataTypes.STRING(265),
          allowNull: true,
       },
@@ -37,7 +37,7 @@ const Project = sequelize.define(
       },
    },
    {
-      tableName: "Project",
+      tableName: "project",
       timestamps: false,
    }
 );
