@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../db/db");
 
-const language = sequelize.define(
+const Language = sequelize.define(
    "language",
    {
       LanguageID: {
@@ -21,4 +21,4 @@ const language = sequelize.define(
    }
 );
 
-module.exports = language;
+module.exports = Language;
