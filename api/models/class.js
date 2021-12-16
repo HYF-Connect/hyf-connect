@@ -1,24 +1,24 @@
 const { DataTypes } = require("sequelize");
-const sequelize = require("../db/db");
+const sequelize = require("../db/db.js");
 
-const Language = sequelize.define(
-   "language",
+const Class = sequelize.define(
+   "class",
    {
-      LanguageID: {
+      ClassID: {
          type: DataTypes.INTEGER,
-         autoIncrement: true,
          allowNull: false,
+         autoIncrement: true,
          primaryKey: true,
       },
-      Language: {
+      Name: {
          type: DataTypes.STRING(50),
          allowNull: false,
       },
    },
    {
-      tableName: "language",
+      tableName: "class",
       timestamps: false,
    }
 );
 
-module.exports = Language;
+module.exports = Class;
