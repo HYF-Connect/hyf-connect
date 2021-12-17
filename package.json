@@ -4,7 +4,7 @@
    "description": "",
    "main": "index.js",
    "scripts": {
-      "start": "node api/db/scripts/create-db.js && node api/db/scripts/sync && node api/db/scripts/seeds.js && node api/index.js",
+      "start": "node api/index.js",
       "dev:api": "nodemon api/index.js",
       "dev:client": "vite ./client",
       "document:client": "node ./dev-scripts/document client",
