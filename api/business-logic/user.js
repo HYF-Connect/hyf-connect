@@ -4,21 +4,24 @@ const user = require("../models/user");
 const saltRounds = 13;
 
 const userManager = {
-   createUser: async (firstName, lastName, email, password) => {
-      const newUser = { firstName, lastName, email, password };
-
-      newUser.password = await bcrypt.hash(
-         newUser.password + newUser.email,
-         saltRounds
-      );
-      await user.create(newUser);
-
+   createUser: async ({ FirstName, LastName, Email, Password }) => {
+      const newUser = { FirstName, LastName, Email, Password };
+      bcrypt.hash(newUser.Password + newUser.Email, saltRounds, (err, hash) => {
+         if (err) {
+            console.log(err);
+         }
+         const hashedPassword = (newUser.Password = hash);
+         user.create({
+            FirstName: FirstName,
+            LastName: LastName,
+            Password: hashedPassword,
+            Email: Email,
+         });
+      });
       return newUser;
    },
    getAllUsers: async () => {
-      const allUsers = await user.findAll({
-         attributes: ["UserID", "FirstName", "LastName", "Password", "Email"],
-      });
+      const allUsers = await user.findAll();
       return allUsers;
    },
 };
