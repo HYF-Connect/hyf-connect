@@ -12,6 +12,10 @@ const userController = {
    post: async (req, res) => {
       try {
          const { FirstName, LastName, Email, Password } = req.body;
+         if (!(Password.length >= 6)) {
+            res.status(400).send("Password contains less than 6 characters!");
+         }
+
          const user = await userManager.createUser({
             FirstName: FirstName,
             LastName: LastName,

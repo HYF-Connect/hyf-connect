@@ -5,7 +5,7 @@ const userValidator = require("../middleware/validate-user");
 const userRoutes = express.Router();
 
 userRoutes.get("/", userController.get);
-userRoutes.post("/", userValidator);
-userRoutes.post("/", userController.post);
+userRoutes.post("/register", userValidator);
+userRoutes.post("/register", userController.post);
 
 module.exports = userRoutes;

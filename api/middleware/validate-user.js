@@ -7,9 +7,9 @@ const validateUser = async (req, res, next) => {
    try {
       const { FirstName, LastName, Email, Password } = req.body;
       if (!FirstName || !LastName || !Email || !Password) {
-         res.status(400).send(
-            "Please, enter a full name, email and password to sing-up!"
-         );
+         return res
+            .status(400)
+            .send("Please, enter a full name, email and password to sing-up!");
       }
       const userAlreadyExists = await users.findOne({ where: { Email } });
       if (userAlreadyExists) {
