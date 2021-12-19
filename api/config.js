@@ -1,6 +1,5 @@
-const dotenv = require('dotenv');
-const result = dotenv.config({silent: true});
-const {parsed : envs} = result;
+const dotenv = require("dotenv");
+const result = dotenv.config({ silent: true });
+const { parsed: envs } = result;
 
-
-module.exports = {...process.env, ...envs};
+module.exports = { ...process.env, ...envs };

@@ -14,20 +14,20 @@ const createProjectClass = require("./create-project-class");
 const createProjectSkill = require("./create-project-skill");
 
 const seeds = async () => {
-   await createNationality();
-   await createLanguages();
-   await createType();
-   await createRegion();
-   await createSkills();
-   await createClass();
-   await createUsers();
-   await createUserType();
-   await createUserLanguages();
-   await createUserSkill();
-   await createProject();
-   await createUserProject();
-   await createProjectClass();
-   await createProjectSkill();
+  await createNationality();
+  await createLanguages();
+  await createType();
+  await createRegion();
+  await createSkills();
+  await createClass();
+  await createUsers();
+  await createUserType();
+  await createUserLanguages();
+  await createUserSkill();
+  await createProject();
+  await createUserProject();
+  await createProjectClass();
+  await createProjectSkill();
 };
 
 seeds();

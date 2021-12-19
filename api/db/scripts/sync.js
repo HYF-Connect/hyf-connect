@@ -13,9 +13,9 @@ const Project = require("../../models/project.js");
 // create tables
 
 const createTables = async () => {
-   const result = await sequelize.sync({ force: true });
+  const result = await sequelize.sync({ force: true });
 };
 
 createTables().then(() => {
-   process.exit();
+  process.exit();
 });
