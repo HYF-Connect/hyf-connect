@@ -5,6 +5,7 @@
    "main": "index.js",
    "scripts": {
       "start": "node api/index.js",
+      "start:windows": "SET NODE_ENV=development & nodemon ./api/index.js",
       "dev:api": "nodemon api/index.js",
       "dev:client": "vite ./client",
       "document:client": "node ./dev-scripts/document client",

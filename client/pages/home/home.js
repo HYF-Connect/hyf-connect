@@ -9,7 +9,7 @@ const page = Vue.createApp({
     FooterComponent,
     MainSection
   },
-  data: () => ({ message: 'Members' }),
+  data: () => ({ message: 'Home' }),
   template: `
   <div class="page">
     <header-component></header-component>
@@ -17,7 +17,7 @@ const page = Vue.createApp({
     <footer-component></footer-component>
   </div>
   `
-}).mount('#members');
+}).mount('#home');
 
 
 export default page;

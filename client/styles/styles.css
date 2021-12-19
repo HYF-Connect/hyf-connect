@@ -386,3 +386,7 @@ main {
   min-height: 41px !important;
   padding: 9px 5px 9px 8px;
 }
+
+.logo {
+  max-height: 50px;
+}
