@@ -6,18 +6,11 @@ const saltRounds = 13;
 const userManager = {
    createUser: async ({ FirstName, LastName, Email, Password }) => {
       const newUser = { FirstName, LastName, Email, Password };
-      bcrypt.hash(newUser.Password + newUser.Email, saltRounds, (err, hash) => {
-         if (err) {
-            console.log(err);
-         }
-         const hashedPassword = (newUser.Password = hash);
-         user.create({
-            FirstName: FirstName,
-            LastName: LastName,
-            Password: hashedPassword,
-            Email: Email,
-         });
-      });
+      newUser.Password = await bcrypt.hash(
+         newUser.Password + newUser.Email,
+         saltRounds
+      );
+      await user.create(newUser);
       return newUser;
    },
    getAllUsers: async () => {

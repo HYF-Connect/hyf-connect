@@ -11,6 +11,14 @@ const validateUser = async (req, res, next) => {
             .status(400)
             .send("Please, enter a full name, email and password to sing-up!");
       }
+
+      if (
+         !Email.toLowerCase().match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+         )
+      ) {
+         return res.status(400).send("Please, provide a valid email address!");
+      }
       const userAlreadyExists = await users.findOne({ where: { Email } });
       if (userAlreadyExists) {
          return res
