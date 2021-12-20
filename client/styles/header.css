@@ -1,0 +1,28 @@
+
+
+.navbar-light .navbar-nav .nav-link {
+    font-size: 22px;
+    color: #1C2294;
+    }
+    .navbar-brand {
+    line-height:12px;
+    padding-top:20px;
+    padding-bottom:5px;
+    }
+    .navbar-brand small {
+    display:block;
+    font-size:15px;
+    color: #1C2294;
+    }
+    .btn {
+    background-color: #2F195F;
+    border-radius: 20%;
+    font-weight: 600;
+    outline: none;
+    text-align: center;
+    color: #fff;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: 'Montserrat Bold';
+}
