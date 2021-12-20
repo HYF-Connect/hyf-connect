@@ -29,17 +29,21 @@ if (config.MODE === "development") {
   app.use(morgan("dev"));
 }
 
-/*
-app.get('/', (req, res) => {
-  res.send('API! go to `/api`');
-});
-*/
+
 app.use("/api", routes);
 app.use("/", express.static(path.join(__dirname, "../client")));
 /* eslint-disable */
 app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).end();
+  res.status(500).send({
+    message: "Something went wrong!",
+ });
+ const errorLog = {
+    endpoint: `${req.method} ${req.path}`,
+    errorMessage: err.message,
+    stack: err.stack,
+    status: res.statusCode,
+ };
+ console.error(JSON.stringify(errorLog));
 });
 
 const port = process.env.PORT || 2000;
