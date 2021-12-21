@@ -1,5 +1,5 @@
-import HeaderComponent from "../../components/header-component.js";
-import FooterComponent from "../../components/footer-component.js";
+import HeaderComponent from "../../components/header.js";
+import FooterComponent from "../../components/footer.js";
 import MainSection from "./main-section.js";
 
 const page = Vue.createApp({
