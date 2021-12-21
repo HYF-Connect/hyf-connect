@@ -1,8 +1,7 @@
 const BannerSection = {
-  template: `
-  <section class="banner">
+  template: `<section class="banner">
     <div class= "banner__left">
-      <img src="images/banner_left_side.png" width=550px alt="banner-img">
+      <img class=banner__left--image src="public/images/banner_left_side.png" alt="banner-img">
     </div>
     <div class= "banner__right">
       <h1 class= "banner__right--title">Keep connected - keep growing</h1>
@@ -10,8 +9,7 @@ const BannerSection = {
         by joining the community</p>
         <button class=banner__join-btn>join us</button>
     </div>
-  </section>
-    `,
+  </section>`
 };
 
-export default MainSection;
+export default BannerSection;

@@ -1,14 +1,15 @@
 import HeaderComponent from "../../components/header-component.js";
-import BannerSection from "./banner-section.js";
+import BannerSection from "./banner-section";
 
-const page = Vue.createApp({
+const homepage = Vue.createApp({
   components: {
-    // HeaderComponent,
+    HeaderComponent,
     BannerSection,
   },
   template: `
-  <banner-section></banner-section>>
+  <header-component></header-component>
+  <banner-section></banner-section>
   `,
 }).mount("#homepage");
 
-export default page;
+export default homepage;
