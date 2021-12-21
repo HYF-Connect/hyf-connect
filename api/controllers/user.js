@@ -10,10 +10,13 @@ const userController = {
       }
    },
    post: async (req, res) => {
+      console.log("hello from controllers");
       try {
          const { FirstName, LastName, Email, Password } = req.body;
          if (!(Password.length >= 6)) {
-            res.status(400).send("Password contains less than 6 characters!");
+            res.status(400).json({
+               message: "Password contains less than 6 characters!",
+            });
             return;
          }
 
@@ -29,7 +32,7 @@ const userController = {
          );
       } catch (error) {
          console.log(error);
-         res.status(500).send(error.message);
+         res.status(500).json({ message: error.message });
       }
    },
 };

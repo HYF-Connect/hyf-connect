@@ -3,7 +3,7 @@
 import MainSection from "./main-section.js";
 import FormSection from "./form-section.js";
 
-const page = Vue.createApp({
+const SignUpPage = Vue.createApp({
    components: {
       // HeaderComponent,
       // FooterComponent,
@@ -19,4 +19,4 @@ const page = Vue.createApp({
       `,
 }).mount("#sign-up");
 
-export default page;
+export default SignUpPage;
