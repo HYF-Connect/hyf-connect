@@ -1,4 +1,4 @@
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 const userStore = require ('../models/user.js');
 const createToken = require('../utils/create-token.js');
 
@@ -29,14 +29,7 @@ const loginManager = {
     const token = createToken(registeredUserData);
 
     const userName = registeredUserData.FirstName;
-    /*
-    jwt.sign({ user +++ }, 'secretKey', (err, token) => {
-    res.json({
-      token,
-    });
-    
-  });
-*/
+
     return {
         token: token,
         userName, 
