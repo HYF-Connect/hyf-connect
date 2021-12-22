@@ -1,15 +1,12 @@
 const loginManager = require('../business-logic/login.js');
 
-
 const loginController = {
-post: async (req, res) => {
 
+post: async (req, res) => {
     try {
         const body = req.body
         const email = body.Email;
         const password = body.Password;
-
-        // console.log(`${password} from controller`);
 
         const result = await loginManager.comparePassword(email,password);
         if (!result) {
@@ -28,5 +25,4 @@ post: async (req, res) => {
     
 };
 
-module.exports=loginController;
-
+module.exports = loginController;

@@ -4,7 +4,7 @@ const validateLogin = async (req, res, next) => {
     try {
     const { Email, Password } = req.body;
     if (!Email || !Password) {
-        res.status(400).send('Email and password are required to login!');
+        res.status(400).send({message: 'Email and password are required to login!'});
         return;
     }
     const allUsers = await userManager.getAllUsers();

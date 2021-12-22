@@ -1,16 +1,15 @@
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const userStore = require ('../models/user.js');
 const createToken = require('../utils/create-token.js');
-
+// const autenticateLogin = require('../middleware/authenticate.js')
 
 const saltRounds = 13;
 
 const loginManager = {
 
 
-    comparePassword: async (email,password) => {
 
-
+comparePassword: async (email,password) => {
     const registeredUserData = await userStore.findOne({ where: { Email: email } });
     if (!registeredUserData){
         throw new Error ('Invalid email or password')
