@@ -1,12 +1,12 @@
-h2 {
+.form__title {
    color: #2f195f;
-   font-size: 1em;
+   font-size: 2opx;
    text-align: center;
 }
 
-.sign-up-form {
-   max-width: 500px;
-   margin: 50px auto;
+.form-container {
+   max-width: 520px;
+   margin: 60px auto;
    background: #f7f7fc;
    text-align: left;
    padding: 40px;
@@ -14,20 +14,20 @@ h2 {
    font-weight: bold;
 }
 
-.register-label {
+.form__label {
    color: #2f195f;
    display: inline-block;
-   margin: 25px 0 15px;
+   margin: 18px 0 15px;
    font-size: 0.8em;
-   text-transform: uppercase;
+   text-transform: capitalize;
    letter-spacing: 1px;
    font-weight: bold;
 }
 
-input {
+.form__input {
    display: block;
    padding: 10px 6px;
-   width: 100%;
+   width: 95%;
    box-sizing: border-box;
    border: none;
    border-radius: 20px;
@@ -46,14 +46,14 @@ input[type="checkbox"] {
    top: 2px;
 }
 
-.terms-label {
+.form__label-terms {
    display: inline-block;
    margin: 25px 0 15px;
    font-size: 0.8em;
    font-weight: 500;
 }
 
-.btn-submit {
+.form__btn-submit {
    background: #2f195f;
    align-items: center;
    width: 210px;
@@ -65,7 +65,7 @@ input[type="checkbox"] {
    font-weight: bold;
    border: 2px solid transparent;
 }
-.btn-submit:hover {
+.form__btn-submit:hover {
    background-color: #fff;
    color: #2f195f;
    border-color: #2f195f;
@@ -73,7 +73,7 @@ input[type="checkbox"] {
    -moz-transition: all 0.4s;
    transition: all 0.4s;
 }
-.warning {
+.form__input-warning {
    color: #b52055;
    margin-top: 10px;
    font-size: 0.8em;

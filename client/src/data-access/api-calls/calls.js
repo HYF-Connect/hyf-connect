@@ -15,17 +15,16 @@ export const performFetch = async (path) => {
    });
    if (!response.ok) {
       console.error(`HTTP error! status: ${response.status}\n-> ${URL}`);
+      const data = await response.json();
+      throw new Error(data.message);
    }
    const data = await response.json();
-
    return data;
 };
 
 export const performPost = async (path, body) => {
    console.log(JSON.stringify(body));
    const URL = `${window.location.origin}/api/${path}`;
-   console.log(URL);
-
    const encodedURL = encodeURI(URL);
    const response = await fetch(encodedURL, {
       method: "POST",
@@ -43,7 +42,6 @@ export const performPost = async (path, body) => {
       throw new Error(data.message);
    }
    const data = await response.json();
-
    return data;
 };
 export const registerUser = async (FirstName, LastName, Email, Password) => {
