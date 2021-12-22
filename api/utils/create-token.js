@@ -1,6 +1,9 @@
 const jwt = require('jsonwebtoken');
 
-const JWT_SECRET = require('../config/tokens');
+const enviroment = require('../config');
+
+const secretKey =  enviroment.SECRET_KEY;
+
 
 function createToken(user) {
   const payload = {
@@ -12,7 +15,8 @@ function createToken(user) {
     exp: new Date().setDate(new Date().getDate() + 1),
   };
 
-  const token = jwt.sign(payload, JWT_SECRET);
+
+  const token = jwt.sign(payload, secretKey);
 
   return token;
 }

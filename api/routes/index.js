@@ -1,8 +1,8 @@
 "use strict";
 
 const express = require("express");
-
 const router = express.Router();
+const userManager = require('../business-logic/user')
 
 // require routes files
 const userRoutes = require("./user");

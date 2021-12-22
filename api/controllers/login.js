@@ -21,7 +21,6 @@ post: async (req, res) => {
         }
         
         } catch (error) {
-            console.log('login controller break')
             res.status(500).json({ error: error.message });
         }
         

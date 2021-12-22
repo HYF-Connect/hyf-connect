@@ -10,10 +10,6 @@ const loginManager = {
 
     comparePassword: async (email,password) => {
 
-        
-            console.log('login from busines')
-            console.log(password);
-            console.log(email);
 
     const registeredUserData = await userStore.findOne({ where: { Email: email } });
     if (!registeredUserData){
