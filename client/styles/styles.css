@@ -70,21 +70,26 @@ body {
   color: #fff;
 }
 
- /* *****  benefits-section  ***** */
+ /* *****  benefits-section  *****/
 
 .benefit {
-  background-color: #008000;
+  background-color: #b9b9b9;
   height: 100px;
 }
 
 .benefit__card {
-  background-color: #ff0000;
+  background-color: #879fbe;
 }
 
 .benefit__card--avatar {
-
+  width:50px;
+  height:50px;
+  background-color: #a3d895;
 }
 
 .benefit__card--content {
+  width:100px;
+  height:150px;
+  background-color: #c770ad;
   
 }

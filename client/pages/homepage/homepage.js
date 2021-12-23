@@ -11,7 +11,7 @@ const homepage = Vue.createApp({
   template: `
   <header-component></header-component>
   <banner-section></banner-section>
-  <benefits-section></benefit-section>
+  <benefit-section></benefit-section>
   `,
 }).mount("#homepage");
 

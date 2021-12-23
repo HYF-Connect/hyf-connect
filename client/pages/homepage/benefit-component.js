@@ -1,8 +1,11 @@
 const BenefitComponent = {
   props: ['benefit'],
-  template: `<div class="benefit__card">
-      <div class="benefit__card--avatar">{{benefit.avatar}}</div>
-      <div class="benefit__card--content">{{benefit.content}}</div>
+  template: `
+  <div class="benefit">
+    <div class="benefit__card">
+        <div class="benefit__card--avatar">{{benefit.avatar}}</div>
+        <div class="benefit__card--content">{{benefit.content}}</div>
+    </div>
   </div>`
 }
 
