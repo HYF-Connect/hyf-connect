@@ -7,8 +7,9 @@ const HeaderComponent = {
   <a class="link" href="/pages/members/members.html">members</a>
   <a class="link" href="/pages/about-us/about-us.html">about us</a>
   <a class="link" href="/pages/contact-us/contact-us.html">contact us</a>
-  <button>Log In</button>
+  <button onclick="window.location.href='../../pages/login/login.html'">Log In</button>
 </div>`
 }
 
 export default HeaderComponent;
+

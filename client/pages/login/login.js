@@ -1,21 +1,22 @@
 import HeaderComponent from "../../components/header-component.js";
 import FooterComponent from "../../components/footer-component.js";
-import MainSection from "./main-section.js";
+import MainSection from './main-section.js';
+import FormSection from './form-section.js';
 
-const page = Vue.createApp({
+const loginPage = Vue.createApp({
   components: {
     HeaderComponent,
     FooterComponent,
     MainSection,
+    FormSection,
   },
   template: `
       <div class="page">
-        <header-component></header-component>
         <main-section></main-section>
-        <footer-component></footer-component>
+        <form-section></form-section>
       </div>
     
       `,
-}).mount("#sign-in");
+}).mount("#login");
 
-export default page;
+export default loginPage;

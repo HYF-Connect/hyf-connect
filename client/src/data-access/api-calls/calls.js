@@ -52,3 +52,9 @@ export const registerUser = async (FirstName, LastName, Email, Password) => {
       Password,
    });
 };
+export const loginUser = async (Email, Password) => {
+   return await performPost("users/login", {
+      Email,
+      Password,
+   });
+};
