@@ -1,7 +1,7 @@
 import { registerUser } from "../../src/data-access/api-calls/calls.js";
 export const FormSection = {
    template: `
-    <form class="form-container" @submit.prevent="handleSubmit">
+    <form class="form-registration" @submit.prevent="handleSubmit">
       <div class="alert alert-danger" role="alert" v-if="errorMessage">
        {{ errorMessage }}
       </div>
