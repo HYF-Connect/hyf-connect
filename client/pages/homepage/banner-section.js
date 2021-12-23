@@ -1,4 +1,3 @@
-<<<<<<< HEAD:client/src/pages/homepage/banner-section.js
 const BannerSection = {
   template: `<section class="banner">
     <div class= "banner__left">
@@ -8,26 +7,10 @@ const BannerSection = {
       <h1 class= "banner__right--title">Keep connected - keep growing</h1>
       <p class="banner__right--paragraph">continue your hack your future journey <br>
         by joining the community</p>
-        <button class=banner__join-btn>join us</button>
+      <a class= "banner__join-btn" class="link" href="pages/sign-up/sign-up.html">join us</a>
     </div>
   </section>`
 };
 
 export default BannerSection;
-=======
-const BannerSection = {
-  template: `<section class="banner">
-    <div class= "banner__left">
-      <img class=banner__left--image src="public/images/banner_left_side.png" alt="banner-img">
-    </div>
-    <div class= "banner__right">
-      <h1 class= "banner__right--title">Keep connected - keep growing</h1>
-      <p class="banner__right--paragraph">continue your hack your future journey <br>
-        by joining the community</p>
-        <button class=banner__join-btn>join us</button>
-    </div>
-  </section>`
-};
 
-export default BannerSection;
->>>>>>> 7ccaeaf1d58083919e0b76342e4ed1c1775d39fd:client/pages/homepage/banner-section.js
