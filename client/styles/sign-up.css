@@ -1,18 +1,34 @@
-.form__title {
-   color: #2f195f;
-   font-size: 2opx;
-   text-align: center;
+.sign-page {
+   background-color: #f7f7fc;
+   display: flex;
+   position: absolute;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   box-sizing: border-box;
+   margin: 0;
+   border: 0;
+   padding: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   min-height: 100vh;
+   z-index: -1;
 }
 
-.form-container {
+/* FORM SECTION */
+
+.form-registration {
    max-width: 520px;
+   order: 2;
    margin: 60px auto;
    font-family: "Poppins", sans-serif;
    background: #f7f7fc;
    text-align: left;
    padding: 40px;
    border-radius: 10px;
-   font-weight: bold;
+   font-weight: 500;
 }
 
 .form__label {
@@ -21,7 +37,7 @@
    margin: 18px 0 15px;
    font-size: 0.8em;
    text-transform: capitalize;
-   letter-spacing: 1px;
+   letter-spacing: 0.1em;
    font-weight: bold;
 }
 
@@ -79,4 +95,41 @@ input[type="checkbox"] {
    margin-top: 10px;
    font-size: 0.8em;
    font-weight: bold;
+}
+.form__title {
+   color: #2f195f;
+   font-size: 1.8em;
+   text-align: center;
+   font-weight: 500;
+}
+
+/* MAIN SECTION */
+
+.main__trapezoid {
+   order: 1;
+   position: relative;
+   text-align: center;
+   border-left: 48vw solid #dfd7ef;
+   border-top: 10vw solid transparent;
+   border-bottom: 10vw solid transparent;
+   width: 0;
+   height: 55vw;
+   z-index: 1;
+}
+
+.main__text-box {
+   font-family: "Poppins", sans-serif;
+   position: absolute;
+   text-align: left;
+   padding-top: 3vw;
+   left: 10vw;
+   color: #1c2294;
+   font-size: 3.7em;
+   font-weight: 600;
+   line-height: 1.3em;
+   z-index: 2;
+}
+
+.main__text-left {
+   padding-left: 3vw;
 }
