@@ -1,3 +1,5 @@
+/* ****  general css  **** */
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +10,8 @@ body {
   font-family:'Poppins', sans-serif;
   color: #2F195F;
 }
+
+/* ****  banner-section  **** */
 
 .banner {
   background-color: #DFD7EF;
@@ -39,9 +43,12 @@ body {
   color: #ffffff;
   font-size: 24px;
   margin-top: 25px;
+  margin-bottom: 100px;
 }
 
 .banner__join-btn {
+  text-decoration: none;
+  padding: 20px 50px;
   width: 120px;
   height: 50px;
   border-radius: 25px;
@@ -55,8 +62,36 @@ body {
 
 .banner__join-btn:hover {
   background-color: #3f01c4;
+  color: #fff;
 }
 
 .banner__join-btn:active {
   background-color: #2F195F;
+  color: #fff;
+}
+
+ /* *****  benefits-section  *****/
+
+.benefit {
+  display: flex;
+  padding: 50px;
+  background-color: #b9b9b9;
+  height: 500px;
+}
+
+.benefit__card {
+  background-color: #879fbe;
+}
+
+.benefit__card--avatar {
+  width:150px;
+  height:150px;
+  background-color: #a3d895;
+}
+
+.benefit__card--content {
+  width:200px;
+  height:150px;
+  background-color: #c770ad;
+  
 }
