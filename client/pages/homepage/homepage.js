@@ -1,10 +1,10 @@
 import HeaderComponent from "../../components/header-component.js";
-import BannerSection from "./banner-section";
+import BannerSection from "./banner-section.js";
 
 const homepage = Vue.createApp({
   components: {
     HeaderComponent,
-    BannerSection,
+    BannerSection
   },
   template: `
   <header-component></header-component>

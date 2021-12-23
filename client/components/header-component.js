@@ -1,7 +1,7 @@
 const HeaderComponent = {
   template: `<div class="header">
   <a class="link" href="/">
-    <img alt="HYF_connect logo" src="/assets/logo_pc_full.png" width="90"/>
+    <img alt="HYF_connect logo" src="/public/assets/logo_pc_full.png" width="90"/>
   </a>
   <a class="link" href="/pages/projects/projects.html">projects</a>
   <a class="link" href="/pages/members/members.html">members</a>
