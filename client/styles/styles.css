@@ -28,7 +28,7 @@ body {
   display: inline;
   font-family: 'Montserrat';
 }
-a {
+.nav-bar a {
   text-decoration: none;
 }
 
@@ -43,6 +43,7 @@ color: #fff;
 font-weight: 500;
 font-size: 14px;
 font-family: 'Montserrat';
+text-decoration: none;
 }  
 .sign-in-btn:hover {
 background-color: #DFD7EF;
