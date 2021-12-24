@@ -33,8 +33,10 @@ export const FormSection = {
             try {
                 const result = await loginUser(
                 this.email,
-                this.password  
+                this.password,
             );
+            //console.log(result.token);  
+            localStorage.setItem("token", result.token)          
             this.passwordError = "";
             this.success = true;
             setTimeout(() => (window.location.href = "/"), 500);
