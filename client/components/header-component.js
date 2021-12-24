@@ -12,5 +12,5 @@ const HeaderComponent = {
             </div>
             <a class="sign-in-btn" href="/pages/sign-in.html">Sign-in</a>
         </div>`
-  }
+}
 export default HeaderComponent;

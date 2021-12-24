@@ -28,6 +28,9 @@ body {
   display: inline;
   font-family: 'Montserrat';
 }
+a {
+  text-decoration: none;
+}
 
 .nav-bar a:hover {
 border-bottom: 2px #2F195F solid;
