@@ -19,6 +19,7 @@ export const performFetch = async (path) => {
       throw new Error(data.message);
    }
    const data = await response.json();
+   
    return data;
 };
 
@@ -52,9 +53,13 @@ export const registerUser = async (FirstName, LastName, Email, Password) => {
       Password,
    });
 };
+// login into the app
 export const loginUser = async (Email, Password) => {
    return await performPost("users/login", {
       Email,
       Password,
+      
    });
 };
+
+

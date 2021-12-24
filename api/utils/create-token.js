@@ -19,6 +19,6 @@ function createToken(user) {
   const token = jwt.sign(payload, secretKey);
 
   return token;
-}
+};
 
 module.exports = createToken;

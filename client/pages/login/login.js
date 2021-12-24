@@ -1,12 +1,12 @@
-import HeaderComponent from "../../components/header-component.js";
-import FooterComponent from "../../components/footer-component.js";
+// import HeaderComponent from "../../components/header-component.js";
+// import FooterComponent from "../../components/footer-component.js";
 import MainSection from './main-section.js';
 import FormSection from './form-section.js';
 
 const loginPage = Vue.createApp({
   components: {
-    HeaderComponent,
-    FooterComponent,
+  // HeaderComponent,
+  //  FooterComponent,
     MainSection,
     FormSection,
   },
