@@ -7,13 +7,19 @@ await ProjectStore.create(newProject);
 return newProject;
 },
 getProjectById: async(projectId) =>{
-const project = await ProjectStore.findByPk(projectId);
+try {
+    const project = await ProjectStore.findByPk(projectId);
 //findOne({ where: { ProjectID: projectId } });
+   
 
 if (!project) {
 throw new Error(`Could not find a project with id ${projectId}!`);
     } 
     return project;
+} catch (error) {
+ console.log(errer)
+}
+
 },
 getAllProjects: async () => {
 const allProjects = await ProjectStore.findAll();

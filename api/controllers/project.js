@@ -2,7 +2,7 @@ const projectManager = require("../business-logic/project");
 const ProjectStore = require("../models/project");
 
 const projectController = {
-get: async (req, res) => {
+    get: async (req, res) => {
     try {
         const allProjects = await projectManager.getAllProjects();
         res.send(JSON.stringify(allProjects, null, 2));
@@ -10,12 +10,11 @@ get: async (req, res) => {
     res.status(500).send(error);
     }
 },
+
 getProjectById: async (req, res) => {
     try {
         const projectId = req.params.projectId;
-
         const project = await projectManager.getProjectById(projectId);
-
         res.send(JSON.stringify(project));
     } catch (error) {
         res.status(500).send(error.message);
