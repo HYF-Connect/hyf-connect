@@ -5,8 +5,8 @@ const BenefitComponent = {
   <h2 class="benefit__title">Why Hack Your Future Connect</h2>  
   <div class="benefit__container">   
     <div class="benefit__card">
-      <div>{{benefit.avatar}}
-      <div>{{benefit.content}}      
+      <div>{{benefit.avatar}}</div>
+      <div>{{benefit.content}}</div>    
     </div>    
   </div>
 </section>`

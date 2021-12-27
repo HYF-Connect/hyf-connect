@@ -1,5 +1,5 @@
 const BannerSection = {
-   template: `<section class="banner">
+  template: `<section class="banner">
     <div class= "banner__left">
       <img class=banner__left--image src="/images/homepage/banner_left_side.png" alt="banner-img">
     </div>
