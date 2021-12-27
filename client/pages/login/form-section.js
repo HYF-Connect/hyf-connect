@@ -17,7 +17,7 @@ export const FormSection = {
         <button class= "login-form__btn-submit">Sign in</button>
         <label class="login-form__label-signup">not a memeber?</label>
         <button class= "login-form__btn-signup" onclick="window.location.href='../sign-up/sign-up.html'">Sign up</button>
-        </form> 
+        </form>     
     `,
     data() {
         return {

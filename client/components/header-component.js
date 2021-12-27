@@ -1,15 +1,16 @@
 const HeaderComponent = {
-  template: `<div class="header">
-  <a class="link" href="/">
-    <img alt="HYF_connect logo" src="/public/assets/logo_pc_full.png" width="90"/>
-  </a>
-  <a class="link" href="/pages/projects/projects.html">projects</a>
-  <a class="link" href="/pages/members/members.html">members</a>
-  <a class="link" href="/pages/about-us/about-us.html">about us</a>
-  <a class="link" href="/pages/contact-us/contact-us.html">contact us</a>
-  <button onclick="window.location.href='../../pages/login/login.html'">Log In</button>
-</div>`
-}
+    template: `<div class="header-container">
+                <div class="brand">
+                    <a href="../homepage/homepage.html" class="logo"><img src="../../public/assets/logo_pc_full.png" alt="logo" width="90" height="70"/></a>
+                </div>
+                <div class="nav-bar">
+                    <a class="nav-link" href="../projects/projects.html">projects</a>
+                    <a class="nav-link" href="../members/members.html">members</a>
+                    <a class="nav-link" href="../about-us/about-us.html">about us</a>
+                    <a class="nav-link" href="../contact-us/contact-us.html">contact us</a>
+                </div>
+                <a class="sign-in-btn" href="../login/login.html">Sign-in</a>
+                </div>`,
+};
 
 export default HeaderComponent;
-

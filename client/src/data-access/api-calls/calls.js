@@ -1,5 +1,3 @@
-import { state } from "../state/state.js";
-
 export const performFetch = async (path) => {
    const URL = `${window.location.origin}/api/${path}`;
 
@@ -7,10 +5,8 @@ export const performFetch = async (path) => {
    const response = await fetch(encodedURL, {
       method: "GET",
       headers: {
-         "Content-Type": "application/json",
-         Authorization:
-            state.token === undefined ? "" : `Bearer ${state.token}`,
-         Email: state.email === undefined ? "" : state.email,
+         'Content-Type': 'application/json',
+         Authorization: localStorage.getItem("token") === undefined ? "" : `Bearer ${localStorage.getItem("token")}`
       },
    });
    if (!response.ok) {
@@ -30,10 +26,9 @@ export const performPost = async (path, body) => {
    const response = await fetch(encodedURL, {
       method: "POST",
       headers: {
-         "Content-Type": "application/json",
+         'Content-Type': 'application/json',
          Authorization:
-            state.token === undefined ? "" : `Bearer ${state.token}`,
-         Username: state.username === undefined ? "" : state.username,
+         localStorage.getItem("token") === undefined ? "" : `Bearer ${localStorage.getItem("token")}`
       },
       body: JSON.stringify(body),
    });
