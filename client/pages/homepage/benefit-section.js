@@ -14,9 +14,9 @@ const BenefitSection = {
   data() {
     return {
       benefits: [
-        { avatar: "client/public/images/key_benefit_first.png", content: "sharing knowledge & opportunities" },
-        { avatar: "client/public/images/key_benefit_second.png", content: "build & showcase your portfolio" },
-        { avatar: "client/public/images/key_benefit_third.png", content: "grow together & help each other" },
+        { avatar: "/public/images/key_benefit_first.png", content: "sharing knowledge & opportunities" },
+        { avatar: "/public/images/key_benefit_second.png", content: "build & showcase your portfolio" },
+        { avatar: "/public/images/key_benefit_third.png", content: "grow together & help each other" },
       ],
     };
   },
