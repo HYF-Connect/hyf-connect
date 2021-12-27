@@ -1,15 +1,10 @@
 const BenefitComponent = {
   props: ['benefit'],
-  template: `
-  <section class="benefit-section">  
-  <h2 class="benefit__title">Why Hack Your Future Connect</h2>  
-  <div class="benefit__container">   
+  template: `  
     <div class="benefit__card">
-      <div>{{benefit.avatar}}</div>
+      <div><img v-bind:src="benefit.avatar"></div>
       <div>{{benefit.content}}</div>    
-    </div>    
-  </div>
-</section>`
+    </div>`
 }
 
-export default BenefitComponent; 
+export default BenefitComponent;
