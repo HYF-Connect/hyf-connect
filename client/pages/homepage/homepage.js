@@ -1,5 +1,5 @@
 import HeaderComponent from "../../components/header-component.js";
-import BannerSection from "./banner-section";
+import BannerSection from "./banner-section.js";
 import BenefitSection from "./benefit-section.js";
 
 const homepage = Vue.createApp({
