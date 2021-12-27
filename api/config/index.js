@@ -8,7 +8,7 @@ const configEnv = process.env.NODE_ENV || "development";
 // construct the path to the config module
 // can you guess what could wrong here?
 // could anything go wrong here?
-const configPath = `./${configEnv}.js`;
+const configPath = `./${configEnv.trim()}.js`;
 
 // import a config module based on the constructed path
 /* eslint-disable */

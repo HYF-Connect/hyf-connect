@@ -10,6 +10,106 @@ body {
   font-family: "Poppins", sans-serif;
   color: #2f195f;
 }
+  
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  height: 70px;
+ 
+}
+.nav-bar a  {
+  color:#1C2294;
+  padding: 12px;
+  font-size: 24px;
+  display: inline;
+  font-family: 'Montserrat';
+}
+
+.nav-bar a:hover {
+border-bottom: 2px #2F195F solid;
+}
+.sign-in-btn{
+padding: 12px 24px;
+background-color: #2F195F;
+border-radius: 20px;
+color: #fff;
+font-weight: 500;
+font-size: 14px;
+font-family: 'Montserrat';
+}  
+.sign-in-btn:hover {
+background-color: #DFD7EF;
+}
+.sign-in-btn:hover:active{
+background-color: #fff;
+border: #2F195F;
+}
+@media screen and (max-width: 500px) {
+  .nav-bar a {
+  float: none;
+  display: block;
+  text-align: left;
+  }
+  .sign-in-btn{
+  float: none;
+  }
+  }
+
+
+/* header section */
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  height: 70px;
+ 
+}
+.nav-bar a  {
+  color:#1C2294;
+  padding: 12px;
+  font-size: 24px;
+  display: inline;
+  font-family: 'Montserrat';
+}
+.nav-bar a {
+  text-decoration: none;
+}
+
+.nav-bar a:hover {
+border-bottom: 2px #2F195F solid;
+}
+.sign-in-btn{
+padding: 12px 24px;
+background-color: #2F195F;
+border-radius: 20px;
+color: #fff;
+font-weight: 500;
+font-size: 14px;
+font-family: 'Montserrat';
+text-decoration: none;
+}  
+.sign-in-btn:hover {
+background-color: #DFD7EF;
+}
+.sign-in-btn:hover:active{
+background-color: #fff;
+border: #2F195F;
+}
+@media screen and (max-width: 500px) {
+  .nav-bar a {
+  float: none;
+  display: block;
+  text-align: left;
+  }
+  .sign-in-btn{
+  float: none;
+  }
+  }
+ 
 
 /* ****  banner-section  **** */
 
