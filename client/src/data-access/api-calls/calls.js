@@ -10,7 +10,7 @@ export const performFetch = async (path) => {
          "Content-Type": "application/json",
          Authorization:
             state.token === undefined ? "" : `Bearer ${state.token}`,
-         Username: state.username === undefined ? "" : state.username,
+         Email: state.email === undefined ? "" : state.email,
       },
    });
    if (!response.ok) {

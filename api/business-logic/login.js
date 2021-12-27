@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const userStore = require ('../models/user.js');
 const createToken = require('../utils/create-token.js');
 // const autenticateLogin = require('../middleware/authenticate.js')

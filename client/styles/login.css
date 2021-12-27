@@ -12,13 +12,13 @@
 
 
 
-.form__title {
+.login-form__title {
    color: #2f195f;
    font-size: 2opx;
    text-align: center;
 }
 
-.form-container {
+.login-form-container {
    max-width: 520px;
    margin: 60px auto;
    font-family: "Poppins", sans-serif;
@@ -30,7 +30,7 @@
    position: relative;
 }
 
-.form__label {
+.login-form__label {
    color: rgba(131, 131, 131, 1);
    display: block;
    margin: 18px 0 15px;
@@ -40,7 +40,7 @@
    font-weight: bold;
    
 }
-.form__label-signup{
+.login-form__label-signup{
    color: rgba(131, 131, 131, 1);
    display: block;
    margin: 18px 0 auto;
@@ -51,7 +51,7 @@
    text-align: center;
 }
 
-.form__input {
+.login-form__input {
    display: block;
    padding: 10px 6px;
    width: 95%;
@@ -65,7 +65,7 @@
 
 
 
-.form__label-terms {
+.login-form__label-terms {
    display: inline-block;
    padding: 10px 6px;
    margin: 25px 0 15px;
@@ -74,7 +74,7 @@
 }
 
 
-.form__btn-submit {
+.login-form__btn-submit {
    background: #2f195f;
    align-items: center;
    width: 80%;
@@ -86,10 +86,10 @@
    font-weight: bold;
    border: 2px solid transparent;
    display: flex;
-    justify-content: center;
+   justify-content: center;
 
 }
-.form__btn-submit:hover {
+.login-form__btn-submit:hover {
    background-color: #fff;
    color: #2f195f;
    border-color: #2f195f;
@@ -97,13 +97,13 @@
    -moz-transition: all 0.4s;
    transition: all 0.4s;
 }
-.form__input-warning {
+.login-form__input-warning {
    color: #b52055;
    margin-top: 10px;
    font-size: 0.8em;
    font-weight: bold;
 }
-.form__btn-signup {
+.login-form__btn-signup {
    background: #B52055;
    align-items: center;
    width: 80%;
@@ -115,10 +115,10 @@
    font-weight: bold;
    border: 2px solid transparent;
    display: flex;
-    justify-content: center;
+   justify-content: center;
 
 }
-.form__btn-signup:hover {
+.login-form__btn-signup:hover {
    background-color: #fff;
    color: #2f195f;
    border-color: #2f195f;
