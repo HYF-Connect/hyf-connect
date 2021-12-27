@@ -1,7 +1,7 @@
 const BannerSection = {
    template: `<section class="banner">
     <div class= "banner__left">
-      <img class=banner__left--image src="/public/images/banner_left_side.png" alt="banner-img">
+      <img class=banner__left--image src="/images/homepage/banner_left_side.png" alt="banner-img">
     </div>
     <div class= "banner__right">
       <h1 class= "banner__right--title">Keep connected - keep growing</h1>
