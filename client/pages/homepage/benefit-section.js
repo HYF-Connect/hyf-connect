@@ -8,7 +8,7 @@ const BenefitSection = {
   <h2 class="benefit__title">Why Hack Your Future Connect</h2>  
   <div class="benefit__container">
     <template v-for="benefit in benefits">
-      <benefit-component :benefit="benefit" />
+      <benefit-component :benefit="benefit"/>
     </template>
   </div>
   `,
