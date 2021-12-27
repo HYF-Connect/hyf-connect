@@ -7,21 +7,20 @@
 }
 
 body {
-  font-family:'Poppins', sans-serif;
-  color: #2F195F;
+  font-family: "Poppins", sans-serif;
+  color: #2f195f;
 }
 
 /* ****  banner-section  **** */
 
 .banner {
-  background-color: #DFD7EF;
+  background-color: #dfd7ef;
   height: 500px;
   display: flex;
 }
 
 .banner__left {
   margin-left: 20px;
-
 }
 
 .banner__left--image {
@@ -36,7 +35,7 @@ body {
 .banner__right--title {
   font-size: 48px;
   margin-top: 100px;
-  color: #2F195F;
+  color: #2f195f;
 }
 
 .banner__right--paragraph {
@@ -52,9 +51,9 @@ body {
   width: 120px;
   height: 50px;
   border-radius: 25px;
-  background-color: #2F195F;
+  background-color: #2f195f;
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 12px;
   margin-top: 100px;
@@ -66,32 +65,48 @@ body {
 }
 
 .banner__join-btn:active {
-  background-color: #2F195F;
+  background-color: #2f195f;
   color: #fff;
 }
 
- /* *****  benefits-section  *****/
+/* *****  benefits-section  *****/
 
-.benefit {
-  display: flex;
-  padding: 50px;
-  background-color: #b9b9b9;
-  height: 500px;
+.benefit-section {
+  background-color: #ffffff;
+}
+
+.benefit__title {
+  text-align: center;
+  color: #2f195f;
+  padding-top: 1rem;
+  font-family: Poppins;
+  font-weight: bolder;
+  font-size: 48px;
+}
+
+.benefit__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 350px);
+  justify-content: center;
+  padding-bottom: 2rem;
+  background-color: #ffffff;
 }
 
 .benefit__card {
-  background-color: #879fbe;
+  justify-content: center;
+  background-color: #ffffff;
+  text-align: center;
+  position: relative;
 }
 
 .benefit__card--avatar {
-  width:150px;
-  height:150px;
-  background-color: #a3d895;
+  height: 280px;
 }
 
 .benefit__card--content {
-  width:200px;
-  height:150px;
-  background-color: #c770ad;
-  
+  color: #2f195f;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: bolder;
+  font-size: 18px;
 }
