@@ -1,8 +1,8 @@
 const ProjectStore = require("../models/project");
 
 const projectManager = {
-createProject: async ({ Title, Description,GithubURL,WebsiteURL,Thumbnail}) => {
-const newProject = { Title, Description,GithubURL,WebsiteURL,Thumbnail };
+createProject: async ({ Title, Description, GithubURL, WebsiteURL, Thumbnail }) => {
+const newProject = { Title, Description, GithubURL, WebsiteURL, Thumbnail };
 await ProjectStore.create(newProject);
 return newProject;
 },
