@@ -4,8 +4,8 @@ const projectController = require("../controllers/project");
 const projectRoutes = express.Router();
 
 projectRoutes.get("/", projectController.get);
-projectRoutes.get("/:projectId", projectController.getProjectById)
-projectRoutes.post("/addProject", projectController.post);
+projectRoutes.post("/", projectController.post);
+projectRoutes.get("/projects:projectId", projectController.getProjectById)
 
 projectRoutes.use("/projects:projectId", async (req, res, next) => {
 try {

@@ -1,5 +1,5 @@
 const projectManager = require("../business-logic/project");
-const projects = require("../models/project");
+const ProjectStore = require("../models/project");
 
 const projectController = {
 get: async (req, res) => {
@@ -14,7 +14,7 @@ getProjectById: async (req, res) => {
 try {
 const projectId = req.params.projectId;
 
-const project = await projectManager.getProject(projectId);
+const project = await projectManager.getProjectById(projectId);
 
 res.send(JSON.stringify(project));
 } catch (error) {
@@ -32,7 +32,8 @@ message:
 });
 }
 
-const projectAlreadyExists = await projects.findOne({ where: { Title } });
+
+const projectAlreadyExists = await ProjectStore.findOne ({ where: { ProjectID }});
 if (projectAlreadyExists) {
 return res
 .status(409)
@@ -43,7 +44,7 @@ const project = await projectManager.createProject({
 Title,
 Description,
 });
-console.log(project);
+// console.log(project);
 res.status(200).json(
 `Congratulation ${project.Title}, is created!`
 );
