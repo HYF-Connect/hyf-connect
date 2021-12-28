@@ -6,7 +6,7 @@ const userRoutes = express.Router();
 userRoutes.get("/", userController.get);
 userRoutes.post("/register", userController.post);
 
-userRoutes.use("/:userId", async (req, res, next) => {
+userRoutes.use("/users:userId", async (req, res, next) => {
    try {
       const user = await userManager.getAllUsers(req.params.userId);
       req.user = user;
