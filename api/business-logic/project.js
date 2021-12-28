@@ -15,10 +15,6 @@ const projectManager = {
   getProjectById: async (projectId) => {
     try {
       const project = await ProjectStore.findByPk(projectId);
-
-      if (!project) {
-        throw new Error(`Could not find a project with id ${projectId}!`);
-      }
       return project;
     } catch (error) {
       console.log(errer);

@@ -23,3 +23,5 @@
 ::1 - - [28/Dec/2021:19:48:01 +0000] "POST /api/projects HTTP/1.1" 200 48 "-" "PostmanRuntime/7.28.4"
 ::1 - - [28/Dec/2021:19:53:51 +0000] "POST /api/projects HTTP/1.1" 200 48 "-" "PostmanRuntime/7.28.4"
 ::1 - - [28/Dec/2021:19:55:15 +0000] "POST /api/projects HTTP/1.1" 200 48 "-" "PostmanRuntime/7.28.4"
+::1 - - [28/Dec/2021:20:05:53 +0000] "POST /api/projects HTTP/1.1" 200 48 "-" "PostmanRuntime/7.28.4"
+::1 - - [28/Dec/2021:20:06:01 +0000] "GET /api/projects/ HTTP/1.1" 200 3208 "-" "PostmanRuntime/7.28.4"
