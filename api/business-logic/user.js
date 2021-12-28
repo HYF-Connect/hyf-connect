@@ -13,8 +13,31 @@ const userManager = {
       await user.create(newUser);
       return newUser;
    },
-   createUserProfile: async () => {
-      const newUserProfile = await user.create(newUserProfile);
+   createUserProfile: async ({
+      Nationality,
+      ProfilePicture,
+      Bio,
+      GithubURL,
+      LinkedinURL,
+      WebsiteURL,
+      Class,
+      JobTitle,
+      Region,
+   }) => {
+      const newUserProfile = {
+         Nationality,
+         ProfilePicture,
+         Bio,
+         GithubURL,
+         LinkedinURL,
+         WebsiteURL,
+         Class,
+         JobTitle,
+         Region,
+      };
+      await user.create(newUserProfile);
+      console.log("business-logic", newUserProfile);
+      return newUserProfile;
    },
    getAllUsers: async () => {
       const allUsers = await user.findAll();
@@ -22,9 +45,7 @@ const userManager = {
    },
    getUserById: async (userId) => {
       const userById = await user.findOne({ where: { UserID: userId } });
-      console.log("business-logic", userById);
       return userById;
    },
 };
-
 module.exports = userManager;
