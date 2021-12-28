@@ -195,3 +195,69 @@ border: #2F195F;
   background-color: #c770ad;
   
 }
+
+/* footer section */
+
+#footer{
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;;
+  padding: 20px;
+  width: auto;
+  height: auto;
+  background: #2F195F;
+}
+
+
+.footer_pp{
+  color:#ffffff;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600px;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: center;
+  top: auto;
+
+}
+
+.hyf_ico{
+  margin-left: 4em;
+  margin-bottom: 0em;
+  margin-top: -7em;
+}
+.footer_connect{
+  color:#ffffff;
+  font-family: 'Montserrat';
+  font-size: 13px;
+  font-weight: 200;
+  margin-top: 2em;
+  margin-right: 0em;
+  margin-left: 1em;
+  margin-bottom: 0em;
+  display: flex;
+}
+
+
+.link_ico{
+  display: inline-block;
+  display: inline;
+  margin-left: 1.1em;
+  margin-right: 0em;
+  margin-bottom: 0em;
+  margin-top: 0em;
+}
+
+.footer_code{
+  color:#ffffff;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 0em;
+  margin-right: 2em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  display: flex;
+}
