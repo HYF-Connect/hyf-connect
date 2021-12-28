@@ -2,13 +2,12 @@ export const performFetch = async (path) => {
    const URL = `${window.location.origin}/api/${path}`;
 
    const encodedURL = encodeURI(URL);
-   const response = await fetch((encodedURL), {
+   const response = await fetch(encodedURL, {
       method: "GET",
       headers: {
          "Content-Type": "application/json",
          Authorization:
          localStorage.getItem("token") === undefined ? "" : `Bearer ${localStorage.getItem("token")}`,
-         Email:localStorage.getItem("email") === undefined ? "" : localStorage.getItem('email'),
 
       },
    });
@@ -21,14 +20,12 @@ export const performFetch = async (path) => {
 export const performPost = async (path, body) => {
    const URL = `${window.location.origin}/api/${path}`;
    const encodedURL = encodeURI(URL);
-   const response = await fetch((encodedURL), {
+   const response = await fetch(encodedURL, {
       method: "POST",
       headers: {
          "Content-Type": "application/json",
          Authorization:
          localStorage.getItem("token") === undefined ? "" : `Bearer ${localStorage.getItem("token")}`,
-         Email:localStorage.getItem("email") === undefined ? "" : localStorage.getItem('email'),
-
       },
       body: JSON.stringify(body),
    });
