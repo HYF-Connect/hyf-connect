@@ -1,5 +1,9 @@
 const express = require("express");
 const router = express.Router();
+<<<<<<< HEAD
+=======
+// const userManager = require("../business-logic/user");
+>>>>>>> 07382f19270eb6947ba59a566030e5af614aea9a
 
 // require routes files
 const userRoutes = require("./user");

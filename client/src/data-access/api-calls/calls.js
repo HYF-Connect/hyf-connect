@@ -1,5 +1,3 @@
-import { state } from "../state/state.js";
-
 export const performFetch = async (path) => {
    const URL = `${window.location.origin}/api/${path}`;
 
@@ -7,10 +5,8 @@ export const performFetch = async (path) => {
    const response = await fetch(encodedURL, {
       method: "GET",
       headers: {
-         "Content-Type": "application/json",
-         Authorization:
-            state.token === undefined ? "" : `Bearer ${state.token}`,
-         Username: state.username === undefined ? "" : state.username,
+         'Content-Type': 'application/json',
+         Authorization: localStorage.getItem("token") === undefined ? "" : `Bearer ${localStorage.getItem("token")}`
       },
    });
    if (!response.ok) {
@@ -19,6 +15,7 @@ export const performFetch = async (path) => {
       throw new Error(data.message);
    }
    const data = await response.json();
+   
    return data;
 };
 
@@ -29,10 +26,9 @@ export const performPost = async (path, body) => {
    const response = await fetch(encodedURL, {
       method: "POST",
       headers: {
-         "Content-Type": "application/json",
+         'Content-Type': 'application/json',
          Authorization:
-            state.token === undefined ? "" : `Bearer ${state.token}`,
-         Username: state.username === undefined ? "" : state.username,
+         localStorage.getItem("token") === undefined ? "" : `Bearer ${localStorage.getItem("token")}`
       },
       body: JSON.stringify(body),
    });
@@ -52,3 +48,13 @@ export const registerUser = async (FirstName, LastName, Email, Password) => {
       Password,
    });
 };
+// login into the app
+export const loginUser = async (Email, Password) => {
+   return await performPost("users/login", {
+      Email,
+      Password,
+   });
+   
+};
+
+
