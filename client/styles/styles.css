@@ -59,21 +59,6 @@ body {
 /* header section */
 
 .header-container {
-<<<<<<< HEAD
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  height: 70px;
-
-}
-.nav-bar a  {
-  color:#1C2294;
-  padding: 12px;
-  font-size: 24px;
-  display: inline;
-  font-family: 'Montserrat';
-=======
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -86,10 +71,15 @@ body {
    font-size: 24px;
    display: inline;
    font-family: "Montserrat";
->>>>>>> ac881f24e175d0e85212641e03e377fa5c2c410c
-}
-.nav-bar a {
    text-decoration: none;
+}
+.username {
+   color: #1c2294;
+   padding: 12px;
+   font-size: 18px;
+   display: inline;
+   font-family: "Montserrat";
+   text-decoration: none
 }
 
 .nav-bar a:hover {
@@ -112,6 +102,25 @@ body {
    background-color: #fff;
    border: #2f195f;
 }
+.sign-out-btn {
+   padding: 12px 24px;
+   background-color: rgba(181, 32, 85, 1);
+   border-radius: 20px;
+   color: #fff;
+   font-weight: 500;
+   font-size: 14px;
+   font-family: "Montserrat";
+   text-decoration: none;
+}
+
+.sign-out-btn:hover {
+   background-color: #dfd7ef;
+}
+.sign-out-btn:hover:active {
+   background-color: #fff;
+   border: #2f195f;
+}
+
 @media screen and (max-width: 500px) {
    .nav-bar a {
       float: none;

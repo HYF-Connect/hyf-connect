@@ -36,6 +36,7 @@ export const FormSection = {
                 this.password,
             );
             localStorage.setItem("token", result.token) ;
+            localStorage.setItem('username', result.userName);
             this.passwordError = "";
             this.password = "";
             this.success = true;
