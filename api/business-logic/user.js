@@ -13,9 +13,17 @@ const userManager = {
       await user.create(newUser);
       return newUser;
    },
+   createUserProfile: async () => {
+      const newUserProfile = await user.create(newUserProfile);
+   },
    getAllUsers: async () => {
       const allUsers = await user.findAll();
       return allUsers;
+   },
+   getUserById: async (userId) => {
+      const userById = await user.findOne({ where: { UserID: userId } });
+      console.log("business-logic", userById);
+      return userById;
    },
 };
 

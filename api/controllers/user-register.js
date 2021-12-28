@@ -58,6 +58,19 @@ const userController = {
          res.status(500).json({ message: error.message });
       }
    },
+   getUserById: async (req, res) => {
+      try {
+         const userId = req.params.userId;
+         console.log(userId);
+         const result = await userManager.getUserById(userId);
+         console.log("result", result);
+         return result;
+      } catch (error) {
+         res.status(400).json({
+            message: ` provided could not be found`,
+         });
+      }
+   },
 };
 
 module.exports = userController;
