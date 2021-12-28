@@ -15,7 +15,7 @@ export const FormSection = {
         <label class="login-form__label">Password (6 or more characters)</label>
         <input class="login-form__input" type="password" required v-model="password">
         <button class= "login-form__btn-submit">Sign in</button>
-        <label class="login-form__label-signup">not a memeber?</label>
+        <label class="login-form__label-signup">not a member?</label>
         <button class= "login-form__btn-signup" onclick="window.location.href='../sign-up/sign-up.html'">Sign up</button>
         </form>     
     `,

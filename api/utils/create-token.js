@@ -1,8 +1,8 @@
 const jwt = require('jsonwebtoken');
 
-const enviroment = require('../config');
+const environment = require('../config');
 
-const secretKey =  enviroment.SECRET_KEY;
+const secretKey =  environment.SECRET_KEY;
 
 
 function createToken(user) {
@@ -15,7 +15,10 @@ function createToken(user) {
     exp: new Date().setDate(new Date().getDate() + 1),
   };
 
-
+if (secretKey=== undefined){
+  console.log("no SECRET_KEY found in environment, please add it into your .env file");
+  throw new Error ('No SECRET_KEY found in environment, please add it into your .env file'); 
+}
   const token = jwt.sign(payload, secretKey);
 
   return token;
