@@ -35,11 +35,12 @@ export const FormSection = {
                 this.email,
                 this.password,
             );
-            // console.log(result.token);  
-            localStorage.setItem("token", result.token)          
+            localStorage.setItem("token", result.token) ;
+            this.email= localStorage.setItem("email", result.email);  
+            this.password = localStorage.setItem('password', result.password);       
             this.passwordError = "";
             this.success = true;
-            setTimeout(() => (window.location.href = "/"), 500);
+            setTimeout(() => (window.location.href = "/pages/homepage/homepage.html"), 500);
             } catch (error) {
             this.passwordError = "Invalid email or password";
             this.success = false;
