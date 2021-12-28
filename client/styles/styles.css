@@ -11,7 +11,7 @@ body {
   color: #2f195f;
 }
 
-.header-container {
+/* .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -54,7 +54,7 @@ body {
   .sign-in-btn {
     float: none;
   }
-}
+} */
 
 /* header section */
 
@@ -150,7 +150,7 @@ body {
   height: 50px;
   border-radius: 25px;
   background-color: #2f195f;
-  color: #fff;
+  color: #ffffff;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 12px;
@@ -197,11 +197,54 @@ body {
   position: relative;
 }
 
-.benefit__card--avatar {
+.benefit__card--avatar > img {
   height: 250px;
+  object-fit: contain;
 }
 
 .benefit__card--content {
+  color: #2f195f;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+/* *****  testimonial-section  *****/
+
+.testimonial-section {
+  background-color: #ffffff;
+}
+
+.testimonial__title {
+  text-align: center;
+  color: #2f195f;
+  padding-top: 2rem;
+  font-family: Poppins;
+  font-weight: bolder;
+  font-size: 38px;
+}
+
+.testimonial__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 350px);
+  justify-content: center;
+  padding-bottom: 2rem;
+  background-color: #ffffff;
+}
+
+.testimonial__card {
+  justify-content: center;
+  background-color: #ffffff;
+  text-align: center;
+  position: relative;
+}
+
+.testimonial__card--avatar {
+  height: 250px;
+}
+
+.testimonial__card--content {
   color: #2f195f;
   text-align: center;
   font-family: Poppins;
@@ -225,6 +268,7 @@ body {
   width: auto;
   z-index: 1;
 }
+
 /* SIGN-UP FORM SECTION */
 
 .sign-up-form {
