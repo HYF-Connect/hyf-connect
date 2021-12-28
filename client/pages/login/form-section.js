@@ -36,9 +36,8 @@ export const FormSection = {
                 this.password,
             );
             localStorage.setItem("token", result.token) ;
-            this.email= localStorage.setItem("email", result.email);  
-            this.password = localStorage.setItem('password', result.password);       
             this.passwordError = "";
+            this.password = "";
             this.success = true;
             setTimeout(() => (window.location.href = "/pages/homepage/homepage.html"), 500);
             } catch (error) {
