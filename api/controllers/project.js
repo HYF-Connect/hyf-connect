@@ -23,24 +23,19 @@ const projectController = {
 
   post: async (req, res) => {
     try {
-      const { Title, Description } = req.body;
+      const { Title, Description, GithubURL, WebsiteURL, Thumbnail } = req.body;
       if (!Title || !Description) {
         return res.status(400).json({
           message: "Please, enter the project's title and description",
         });
       }
-      const projectAlreadyExists = await ProjectStore.findOne({
-        where: { Title },
-      });
-      if (projectAlreadyExists) {
-        return res
-          .status(409)
-          .json({ message: "This project title is already being used" });
-      }
 
       const project = await projectManager.createProject({
         Title,
         Description,
+        GithubURL,
+        WebsiteURL,
+        Thumbnail,
       });
       res
         .status(200)
