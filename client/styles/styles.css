@@ -59,6 +59,21 @@ body {
 /* header section */
 
 .header-container {
+<<<<<<< HEAD
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  height: 70px;
+
+}
+.nav-bar a  {
+  color:#1C2294;
+  padding: 12px;
+  font-size: 24px;
+  display: inline;
+  font-family: 'Montserrat';
+=======
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -71,6 +86,7 @@ body {
    font-size: 24px;
    display: inline;
    font-family: "Montserrat";
+>>>>>>> ac881f24e175d0e85212641e03e377fa5c2c410c
 }
 .nav-bar a {
    text-decoration: none;

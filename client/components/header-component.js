@@ -9,7 +9,7 @@ const HeaderComponent = {
               <a class="nav-link" href="/pages/about-us/about-us.html">about us</a>
               <a class="nav-link" href="/pages/contact-us/contact-us.html">contact us</a>
           </div>
-          <a class="sign-in-btn" href="/pages/sign-in/sign-in.html">Sign-in</a>
+          <a class="sign-in-btn" href="/pages/login/login.html">Sign-in</a>
       </div>`,
 };
 
