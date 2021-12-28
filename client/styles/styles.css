@@ -195,3 +195,53 @@ border: #2F195F;
   background-color: #c770ad;
   
 }
+
+
+/*members page*/
+.members-ticket {
+  width: 952px;
+  height: 140px;
+  margin: 60px auto;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  padding: 40px;
+  border-radius: 10px;
+  font-weight: bold;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: flex;
+  flex-direction:row;  
+}
+.members-ticket__cards{
+  width: 90%;
+  display: flex;
+
+}
+.members-ticket__card-img{
+  float: left;
+  width: 15%;
+  
+}
+.members-ticket__card-content{
+  width: 60%;
+}
+
+.members-ticket__card-icons{
+  float: right;
+  width: 25%;
+}
+.members-ticket__card-img-top{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.members-ticket__card-icon{
+  width: 40px;
+  height: 50px;
+  margin: 5px;
+}
+.members-ticket__card-title{
+  color: rgba(28, 34, 148, 1);
+}
