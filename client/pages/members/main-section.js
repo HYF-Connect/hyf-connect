@@ -1,5 +1,5 @@
 const MainSection = {
-  data: () => ({ message: "Members" }),
+  data: () => ({ message: "Members page" }),
   template: `
     <div class="main">
       <h1>{{message}}</h1>

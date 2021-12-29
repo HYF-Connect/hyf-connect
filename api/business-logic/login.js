@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const userStore = require ('../models/user.js');
 const createToken = require('../utils/create-token.js');
 // const autenticateLogin = require('../middleware/authenticate.js')
@@ -22,13 +22,13 @@ comparePassword: async (email,password) => {
     
 
     const token = createToken(registeredUserData);
-
-    const userName = registeredUserData.FirstName;
+ 
+    const userName = `${registeredUserData.FirstName} ${registeredUserData.LastName}`;
 
     return {
         token: token,
         userName, 
-        message: `Session created for ${userName}` 
+        message: `Session created for ${userName}`,
     }
     
         
