@@ -353,11 +353,13 @@ input[type="password"] {
    padding-left: 3vw;
 }
 /* Members page*/
+
 .members-ticket{
    background-color: #f7f7fc;
    display: flex;
    align-items: center;
    justify-content: center;
+   padding-top: 15px;
 }
 .members-ticket__cards{
    display: flex;
@@ -398,9 +400,9 @@ input[type="password"] {
    height: 60px;
    margin-left: 5px;
 }
-.member-banner{
-   background-color: #1c2294;
-   height: 500px;
-   display: flex;
-   
+.members-banner__text{
+   color: white;
+   margin-left: 700px;
+   margin-top: -200px;
 }
+
