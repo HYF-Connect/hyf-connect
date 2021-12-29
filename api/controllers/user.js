@@ -66,7 +66,7 @@ const userController = {
       }
    },
 
-   postUserProfile: async (req, res) => {
+   putUserProfile: async (req, res) => {
       try {
          const {
             Nationality,
@@ -79,19 +79,19 @@ const userController = {
             JobTitle,
             Region,
          } = req.body;
-
-         const userProfile = await userManager.createUserProfile({
-            NationalityID: Nationality,
+         const userId = req.params.userId;
+         const userProfile = await userManager.updateUserProfile({
+            UserID: userId,
+            Nationality: Nationality,
             ProfilePicture: ProfilePicture,
             Bio: Bio,
             GithubURL: GithubURL,
             LinkedinURL: LinkedinURL,
             WebsiteURL: WebsiteURL,
-            ClassID: Class,
+            Class: Class,
             JobTitle: JobTitle,
-            RegionID: Region,
+            Region: Region,
          });
-         console.log("controllers", userProfile);
          res.status(200).json(
             `Congratulation ${userProfile.FirstName}, your profile has been successfully created!`
          );

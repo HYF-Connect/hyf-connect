@@ -1,5 +1,5 @@
 const bcrypt = require("bcryptjs");
-const user = require("../models/user");
+const userStore = require("../models/user");
 
 const saltRounds = 13;
 
@@ -10,10 +10,11 @@ const userManager = {
          newUser.Password + newUser.Email,
          saltRounds
       );
-      await user.create(newUser);
+      await userStore.create(newUser);
       return newUser;
    },
-   createUserProfile: async ({
+   updateUserProfile: async ({
+      UserID,
       Nationality,
       ProfilePicture,
       Bio,
@@ -24,20 +25,19 @@ const userManager = {
       JobTitle,
       Region,
    }) => {
-      const newUserProfile = {
-         Nationality,
+      const userById = await userStore.findOne({ where: { UserID: UserID } });
+      const updatedProfile = await userById.update({
+         NationalityID: Nationality,
          ProfilePicture,
          Bio,
          GithubURL,
          LinkedinURL,
          WebsiteURL,
-         Class,
+         ClassID: Class,
          JobTitle,
-         Region,
-      };
-      await user.create(newUserProfile);
-      console.log("business-logic", newUserProfile);
-      return newUserProfile;
+         RegionID: Region,
+      });
+      return updatedProfile;
    },
    getAllUsers: async () => {
       const allUsers = await user.findAll();
