@@ -8,7 +8,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  color: #2f195f;
+  color: #1C2294;
 }
 
 /* header section */
@@ -59,7 +59,7 @@ body {
 }
 .sign-out-btn {
   padding: 12px 24px;
-  background-color: rgba(181, 32, 85, 1);
+  background-color: #b52055;
   border-radius: 20px;
   color: #fff;
   font-weight: 500;
@@ -109,12 +109,15 @@ body {
 }
 
 .banner__right--title {
-  font-size: 48px;
+  font-family: Poppins;
+  font-weight: bolder;
+  font-size: 42px;
   margin-top: 100px;
-  color: #2f195f;
+  color: #1C2294;
 }
 
 .banner__right--paragraph {
+  font-family: Poppins;
   color: #ffffff;
   font-size: 24px;
   margin-top: 25px;
@@ -130,8 +133,7 @@ body {
   background-color: #2f195f;
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 100px;
 }
 
@@ -153,7 +155,7 @@ body {
 
 .benefit__title {
   text-align: center;
-  color: #2f195f;
+  color: #1C2294;
   padding-top: 2rem;
   font-family: Poppins;
   font-weight: bolder;
@@ -184,8 +186,7 @@ body {
   color: #2f195f;
   text-align: center;
   font-family: Poppins;
-  font-weight: bolder;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 /* *****  testimonial-section  *****/
@@ -197,11 +198,11 @@ body {
 
 .testimonial__title {
   text-align:center;
-  color:#2F195F;
+  color:#1C2294;
   padding: 2rem;
   font-family: Poppins;
   font-weight:bolder;
-  font-size: 36px;
+  font-size: 38px;
   margin:30px 0;
 }
 
@@ -252,13 +253,20 @@ body {
 }
 
 .members__link-btn {
-  background-color: #2F195F;
-  font-family: Poppins;
-  font-size:20px;
-  color: #ffffff;
-  padding: 20px 25px;
-  border-radius:30px;
   text-decoration: none;
+  padding: 20px 30px;
+  width: 120px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #2f195f;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.members__link-btn:hover {
+  background-color: #1C2294;
+  color: #ffffff;
 }
 
 /* SIGN-UP PAGE */
