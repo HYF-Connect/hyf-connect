@@ -514,7 +514,8 @@ background-color: #2F195F;
 border-radius: 20px;
 color: #fff;
 font-weight: 600;
-font-size: 14px;      
+font-size: 14px;     
+text-decoration: none; 
 }
 
 .About-hyf-connect {
@@ -536,6 +537,7 @@ font-weight: 600;
 font-size: 14px;
 float: right; 
 margin-top: -1em;
+text-decoration: none;
 }
 
 .About-hyf-connect2 {

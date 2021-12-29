@@ -1,9 +1,8 @@
 const MainSection = {
-  data: () => ({ message: "About Us" }),
-  template: `
-  <div class="about-us-container">
-  <h1>About us</h1>
+template: `
 
+<div class="about-us-container">
+<h1>About us</h1>
 </div>
 <div class="about-us">
     <div class = "About-hyf"> 
