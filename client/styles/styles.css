@@ -183,10 +183,11 @@ body {
 }
 
 .benefit__card--content {
-  color: #2f195f;
+  color: #1C2294;
   text-align: center;
   font-family: Poppins;
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 /* *****  testimonial-section  *****/
