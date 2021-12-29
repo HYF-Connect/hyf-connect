@@ -12,7 +12,7 @@ const TestimonialSection = {
         <testimonial-component :testimonial="testimonial"/>
       </template>
     </div>
-    <a class="members__link-btn" href="../members/members.html">see all members</a>
+    <a class="members__link-btn" href="/pages/members/members.html">see all members</a>
     <div class="testimonial__background"></div>
   </div>
   `,
