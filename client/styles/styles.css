@@ -8,7 +8,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  color: #1C2294;
+  color: #1c2294;
 }
 
 /* header section */
@@ -113,7 +113,7 @@ body {
   font-weight: bolder;
   font-size: 42px;
   margin-top: 100px;
-  color: #1C2294;
+  color: #1c2294;
 }
 
 .banner__right--paragraph {
@@ -155,7 +155,7 @@ body {
 
 .benefit__title {
   text-align: center;
-  color: #1C2294;
+  color: #1c2294;
   padding-top: 2rem;
   font-family: Poppins;
   font-weight: bolder;
@@ -183,7 +183,7 @@ body {
 }
 
 .benefit__card--content {
-  color: #1C2294;
+  color: #1c2294;
   text-align: center;
   font-family: Poppins;
   font-weight: bold;
@@ -193,46 +193,46 @@ body {
 /* *****  testimonial-section  *****/
 
 .testimonial__section {
-  background-color:#ffffff;
+  background-color: #ffffff;
   text-align: center;
 }
 
 .testimonial__title {
-  text-align:center;
-  color:#1C2294;
+  text-align: center;
+  color: #1c2294;
   padding: 2rem;
   font-family: Poppins;
-  font-weight:bolder;
+  font-weight: bolder;
   font-size: 38px;
-  margin:30px 0;
+  margin: 30px 0;
 }
 
 .testimonial__container {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, 350px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 350px);
   justify-content: center;
-  background-color:transparent;
+  background-color: transparent;
   gap: 40px;
 }
 
 .testimonial__card {
-  justify-content:center;
-  background-color:#ffffff;
-  border: 1px solid #2F195F;
-  text-align:center;
-  border-radius:20px;
-  margin-bottom:100px;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid #2f195f;
+  text-align: center;
+  border-radius: 20px;
+  margin-bottom: 100px;
 }
 
 .testimonial__quotes > img {
   width: 80px;
-  margin-top:20px;
+  margin-top: 20px;
   margin-right: 240px;
   object-fit: contain;
 }
 
 .testimonial__card--content {
-  margin-top:20px;
+  margin-top: 20px;
   color: #000000;
   text-align: justify;
   font-family: Poppins;
@@ -241,16 +241,16 @@ body {
 }
 
 .testimonial__avatar > img {
-  width:150px;
+  width: 150px;
   border-radius: 100px;
   margin-bottom: 20px;
   object-fit: contain;
 }
 
 .testimonial__background {
-  background-color: #DFD7EF;
+  background-color: #dfd7ef;
   height: 600px;
-  margin-top:-450px;
+  margin-top: -450px;
 }
 
 .members__link-btn {
@@ -266,7 +266,7 @@ body {
 }
 
 .members__link-btn:hover {
-  background-color: #1C2294;
+  background-color: #1c2294;
   color: #ffffff;
 }
 
