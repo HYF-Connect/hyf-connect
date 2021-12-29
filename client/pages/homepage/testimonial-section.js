@@ -5,7 +5,7 @@ const TestimonialSection = {
     TestimonialComponent,
   },
   template: `
-  <div class="testimonial__section";>  
+  <div class="testimonial__section">  
     <h2 class="testimonial__title">listen to their stories about the community</h2>
     <div class="testimonial__container">
       <template v-for="testimonial in testimonials">

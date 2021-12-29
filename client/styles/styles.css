@@ -222,10 +222,11 @@ body {
   margin-bottom:100px;
 }
 
-.testimonial__quotes {
+.testimonial__quotes > img {
   width: 80px;
   margin-top:20px;
-  margin-right: 240px;;
+  margin-right: 240px;
+  object-fit: contain;
 }
 
 .testimonial__card--content {
@@ -237,10 +238,11 @@ body {
   padding: 30px;
 }
 
-.testimonial__avatar {
+.testimonial__avatar > img {
   width:150px;
   border-radius: 100px;
   margin-bottom: 20px;
+  object-fit: contain;
 }
 
 .testimonial__background {
