@@ -65,7 +65,51 @@ const userController = {
          res.status(500).json({ message: error.message });
       }
    },
-
+   postSkill: async (req, res) => {
+      try {
+         const { Skill, Level, SelectedSkill } = req.body;
+         const userId = req.params.userId;
+         const userSkill = await userManager.createUserSkill({
+            UserID: userId,
+            SkillID: Skill,
+            Level: Level,
+            SelectedSkill: SelectedSkill,
+         });
+         res.status(200).json(userSkill);
+      } catch (error) {
+         console.log(error);
+         res.status(500).json({ message: error.message });
+      }
+   },
+   postLanguage: async (req, res) => {
+      try {
+         const { Language, Level } = req.body;
+         const userId = req.params.userId;
+         const userLanguage = await userManager.createUserLanguage({
+            UserID: userId,
+            LanguageID: Language,
+            Level: Level,
+         });
+         res.status(200).json(userLanguage);
+      } catch (error) {
+         console.log(error);
+         res.status(500).json({ message: error.message });
+      }
+   },
+   postType: async (req, res) => {
+      try {
+         const { Type } = req.body;
+         const userId = req.params.userId;
+         const userType = await userManager.createUserType({
+            UserID: userId,
+            TypeID: Type,
+         });
+         res.status(200).json(userType);
+      } catch (error) {
+         console.log(error);
+         res.status(500).json({ message: error.message });
+      }
+   },
    putUserProfile: async (req, res) => {
       try {
          const {
@@ -99,6 +143,51 @@ const userController = {
          res.status(400).json({
             message: error.message,
          });
+      }
+   },
+   deleteSkill: async (req, res) => {
+      try {
+         const { skillId, userId } = req.params;
+         await userManager.deleteUserLanguage({
+            UserID: userId,
+            SkillID: skillId,
+         });
+         res.status(200).json({
+            message: `Skill with id ${skillId} was successfully deleted!`,
+         });
+      } catch (error) {
+         console.log(error);
+         res.status(500).json({ message: error.message });
+      }
+   },
+   deleteLanguage: async (req, res) => {
+      try {
+         const { languageId, userId } = req.params;
+         await userManager.deleteUserLanguage({
+            UserID: userId,
+            LanguageID: languageId,
+         });
+         res.status(200).json({
+            message: `Language with id ${languageId} was successfully deleted!`,
+         });
+      } catch (error) {
+         console.log(error);
+         res.status(500).json({ message: error.message });
+      }
+   },
+   deleteType: async (req, res) => {
+      try {
+         const { typeId, userId } = req.params;
+         await userManager.deleteUserType({
+            UserID: userId,
+            TypeID: typeId,
+         });
+         res.status(200).json({
+            message: `Type with id ${typeId} was successfully deleted!`,
+         });
+      } catch (error) {
+         console.log(error);
+         res.status(500).json({ message: error.message });
       }
    },
 };
