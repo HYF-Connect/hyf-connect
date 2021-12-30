@@ -3,7 +3,6 @@ import FooterComponent from "../../components/footer-component.js";
 import BannerSection from "./banner-section.js";
 import BenefitSection from "./benefit-section.js";
 import TestimonialSection from "./testimonial-section.js";
-import FooterComponent from "/components/footer-component.js";
 import CarouselComponent from "./carousel-component.js";
 
 const homepage = Vue.createApp({
@@ -11,8 +10,8 @@ const homepage = Vue.createApp({
     HeaderComponent,
     BannerSection,
     BenefitSection,
-    TestimonialSection,
     CarouselComponent,
+    TestimonialSection,
     FooterComponent
   },
   template: `
