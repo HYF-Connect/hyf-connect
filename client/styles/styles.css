@@ -272,7 +272,7 @@ body {
 
 /* CAROUSEL-COMPONENT */
 
-.carousel {
+.homepage__carousel {
   background-color: #ffffff;
   text-align: center;
 }
@@ -305,7 +305,7 @@ body {
   padding: 25px;
   text-align: center;
   margin-bottom:80px;
-  background-color: #ffffff
+  background-color: #ffffff;
 }
 
 .slide__tittle {
@@ -340,6 +340,15 @@ body {
 .carousel__projects--btn:hover {
   background-color: #1c2294;
   color: #ffffff;
+}
+
+.carousel-control-prev-icon {
+  background-color: #c2c2c2;
+  border-radius: 10px;
+}
+.carousel-control-next-icon {
+  background-color: #c2c2c2;
+  border-radius: 10px;
 }
 
 
