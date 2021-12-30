@@ -1,4 +1,5 @@
 import HeaderComponent from "../../components/header-component.js";
+import FooterComponent from "../../components/footer-component.js";
 import BannerSection from "./banner-section.js";
 import BenefitSection from "./benefit-section.js";
 import TestimonialSection from "./testimonial-section.js";
