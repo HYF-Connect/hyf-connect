@@ -67,11 +67,11 @@ const userController = {
    },
    postSkill: async (req, res) => {
       try {
-         const { Skill, Level, SelectedSkill } = req.body;
-         const userId = req.params.userId;
+         const { SkillID, Level, SelectedSkill } = req.body;
+         const UserID = req.params.userId;
          const userSkill = await userManager.createUserSkill({
-            UserID: userId,
-            SkillID: Skill,
+            UserID: UserID,
+            SkillID: SkillID,
             Level: Level,
             SelectedSkill: SelectedSkill,
          });
@@ -83,11 +83,11 @@ const userController = {
    },
    postLanguage: async (req, res) => {
       try {
-         const { Language, Level } = req.body;
-         const userId = req.params.userId;
+         const { LanguageID, Level } = req.body;
+         const UserID = req.params.userId;
          const userLanguage = await userManager.createUserLanguage({
-            UserID: userId,
-            LanguageID: Language,
+            UserID: UserID,
+            LanguageID: LanguageID,
             Level: Level,
          });
          res.status(200).json(userLanguage);
@@ -98,11 +98,11 @@ const userController = {
    },
    postType: async (req, res) => {
       try {
-         const { Type } = req.body;
-         const userId = req.params.userId;
+         const { TypeID } = req.body;
+         const UserID = req.params.userId;
          const userType = await userManager.createUserType({
-            UserID: userId,
-            TypeID: Type,
+            UserID: UserID,
+            TypeID: TypeID,
          });
          res.status(200).json(userType);
       } catch (error) {
@@ -148,7 +148,7 @@ const userController = {
    deleteSkill: async (req, res) => {
       try {
          const { skillId, userId } = req.params;
-         await userManager.deleteUserLanguage({
+         await userManager.deleteUserSkill({
             UserID: userId,
             SkillID: skillId,
          });

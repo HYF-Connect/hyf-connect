@@ -18,22 +18,22 @@ const userManager = {
    },
    createUserSkill: async ({
       UserID,
-      Skill,
+      SkillID,
       Level,
       SelectedSkill: SelectedSkill,
    }) => {
       const createdUserSkill = await userSkillStore.create({
          UserID: UserID,
-         SkillID: Skill,
+         SkillID: SkillID,
          Level: Level,
          SelectedSkill: SelectedSkill,
       });
       return createdUserSkill;
    },
-   createUserLanguage: async ({ UserID, Language, Level }) => {
+   createUserLanguage: async ({ UserID, LanguageID, Level }) => {
       const createdUserLanguage = await userLanguageStore.create({
          UserID: UserID,
-         LanguageID: Language,
+         LanguageID: LanguageID,
          Level: Level,
       });
       return createdUserLanguage;
@@ -79,21 +79,21 @@ const userManager = {
       const userById = await user.findOne({ where: { UserID: userId } });
       return userById;
    },
-   deleteUserSkill: async ({ userId, skillId }) => {
+   deleteUserSkill: async ({ UserID, SkillID }) => {
       await userSkillStore.destroy({
-         where: { UserID: userId, SkillID: skillId },
+         where: { UserID: UserID, SkillID: SkillID },
       });
       return true;
    },
-   deleteUserLanguage: async ({ userId, languageId }) => {
+   deleteUserLanguage: async ({ UserID, LanguageID }) => {
       await userLanguageStore.destroy({
-         where: { UserID: userId, LanguageID: languageId },
+         where: { UserID: UserID, LanguageID: LanguageID },
       });
       return true;
    },
-   deleteUserType: async ({ userId, typeId }) => {
+   deleteUserType: async ({ UserID, TypeID }) => {
       await userTypeStore.destroy({
-         where: { UserID: userId, TypeID: typeId },
+         where: { UserID: UserID, TypeID: TypeID },
       });
       return true;
    },
