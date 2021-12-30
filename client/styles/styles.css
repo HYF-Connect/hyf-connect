@@ -216,7 +216,9 @@ body {
   
 }
 
-/* footer section */
+
+/* *****  footer section  *****/
+
 
 #footer{
   
@@ -281,3 +283,5 @@ body {
   margin-bottom: 1em;
   display: flex;
 }
+
+/* *****  contact us  *****/
