@@ -277,9 +277,13 @@ body {
   text-align: center;
 }
 
+.carousel-inner {
+  border-radius: 20px 20px 0 0;
+}
+
 .carousel__title {
-  text-align: center;
   font-family: Poppins;
+  text-align: center;
   font-size: 36px;
   font-weight: bolder;
   color: #1C2294;
@@ -305,7 +309,7 @@ body {
   padding: 25px;
   text-align: center;
   margin-bottom:80px;
-  background-color: #ffffff;
+  background-color: #ffffff
 }
 
 .slide__tittle {
@@ -343,14 +347,14 @@ body {
 }
 
 .carousel-control-prev-icon {
-  background-color: #c2c2c2;
-  border-radius: 10px;
-}
-.carousel-control-next-icon {
-  background-color: #c2c2c2;
-  border-radius: 10px;
+  background-color: #9c9c9c8f;
+  border-radius: 9px;
 }
 
+.carousel-control-next-icon {
+  background-color: #9c9c9c8f;
+  border-radius: 9px;
+}
 
 /* SIGN-UP PAGE */
 
