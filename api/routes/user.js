@@ -9,6 +9,7 @@ userRoutes.put("/:userId/profile", userController.putUserProfile);
 userRoutes.post("/:userId/skill", userController.postSkill);
 userRoutes.post("/:userId/language", userController.postLanguage);
 userRoutes.post("/:userId/type", userController.postType);
+userRoutes.delete("/:userId/profile", userController.deleteUserProfile);
 userRoutes.delete("/:userId/skill/:skillId", userController.deleteSkill);
 userRoutes.delete(
    "/:userId/language/:languageId",

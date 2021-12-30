@@ -79,6 +79,12 @@ const userManager = {
       const userById = await user.findOne({ where: { UserID: userId } });
       return userById;
    },
+   deleteUserProfile: async ({ UserID }) => {
+      await userStore.destroy({
+         where: { UserID: UserID },
+      });
+      return true;
+   },
    deleteUserSkill: async ({ UserID, SkillID }) => {
       await userSkillStore.destroy({
          where: { UserID: UserID, SkillID: SkillID },

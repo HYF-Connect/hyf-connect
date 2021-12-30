@@ -145,6 +145,20 @@ const userController = {
          });
       }
    },
+   deleteUserProfile: async (req, res) => {
+      try {
+         const { userId } = req.params;
+         await userManager.deleteUserProfile({
+            UserID: userId,
+         });
+         res.status(200).json({
+            message: `User with id ${userId} was successfully deleted!`,
+         });
+      } catch (error) {
+         console.log(error);
+         res.status(500).json({ message: error.message });
+      }
+   },
    deleteSkill: async (req, res) => {
       try {
          const { skillId, userId } = req.params;
