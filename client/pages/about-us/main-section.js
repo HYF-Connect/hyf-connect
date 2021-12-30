@@ -13,7 +13,7 @@ template: `
     refugees and disadvantaged people to build digital skills for a career in web development, 
     facilitate the integration of newcomers, and address the shortage of qualified workforce in the IT sector.</p>
     <br>
-    <a class="About-visit-website" href="">visit website</a>
+    <a class="About-visit-website" href="https://hackyourfuture.be/">visit website</a>
 </div>
 <div class="About-hyf-team">
 <img src="/images/homepage/hyf-team.jpeg"  alt="pic" width="650" height="400"></a>
@@ -28,7 +28,7 @@ continuing the HYF journey. In this platform, everyone can share their knowledge
 share their profile for new opportunities to grow. 
 Our mission is to connect, to share, and to grow together as one big HackYourFuture Community</p>
 
-<a class="About-visit-project" href="">See project</a>
+<a class="About-visit-project" href="https://github.com/HYF-Connect">See project</a>
 </div> 
 <div class="About-hyf-connect2">
 <img src="/assets/logo_pc_full.png"  alt="logo" width="700" height="650">
@@ -119,7 +119,7 @@ Our mission is to connect, to share, and to grow together as one big HackYourFut
 </div>
 <div class="profile-card">
 <div class="img">
-<img src="/images/members/MariaP.jpeg">
+<img src="/images/members/MariaP.jpg">
 </div>
 <div class="caption">
 <h3>MariaP</h3>
