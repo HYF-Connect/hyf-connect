@@ -40,6 +40,7 @@ Our mission is to connect, to share, and to grow together as one big HackYourFut
 </div>
 <div class="About-main">
 <div class="profile-card">
+
 <div class="img">
 <img src="/images/members/MoaminA.png">
 </div>
