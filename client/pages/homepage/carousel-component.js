@@ -2,8 +2,10 @@ const CarouselComponent = {
   template: `
   <div class="homepage__carousel">
       <h2 class="carousel__title">see what we have achieved as HYF community!</h2>
+      <!-- CHANGES
       <h3 class="carousel__subtittle">and many more projects to build...</h3>
-      <div class="container">
+      -->
+      <div class="homepage-carousel-container">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
