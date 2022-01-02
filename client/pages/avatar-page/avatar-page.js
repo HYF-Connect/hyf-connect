@@ -1,15 +1,18 @@
-export const AvatarDropdown = {
-    template: `
-    <div class="dropdown">
-   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-     Dropdown button
-   </button>
-   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-     <li><a class="dropdown-item" href="#">Action</a></li>
-     <li><a class="dropdown-item" href="#">Another action</a></li>
-     <li><a class="dropdown-item" href="#">Something else here</a></li>
-   </ul>
- </div>
-     `
- };
- export default AvatarDropdown;
+import HeaderComponent from "../../components/header-component.js";
+import FooterComponent from "../../components/footer-component.js";
+import AvatarDropdown from "../../components/avatar-dropdown-component.js";
+
+const avatarpage = Vue.createApp({
+  components: {
+    HeaderComponent,
+    AvatarDropdown,
+    FooterComponent
+  },
+  template: `
+  <header-component></header-component>
+  <avatar-dropdown></avatar-dropdown>
+  <footer-component></footer-component>
+  `,
+}).mount("#avatar-page");
+
+export default avatarpage;
