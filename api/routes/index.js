@@ -1,8 +1,6 @@
 const express = require("express");
 const router = express.Router();
 
-// const userManager = require("../business-logic/user");
-
 // require routes files
 const userRoutes = require("./user");
 const loginRoutes = require("./login.js");
@@ -16,8 +14,8 @@ router.use("/users", loginRoutes);
 router.use("/projects", projectRoutes);
 // this route was added for testing the middleware
 router.get("/auth", (req, res) => {
-  console.log(req.loggedInUser);
-  res.json({ mes: "ok" });
+   console.log(req.loggedInUser);
+   res.json({ mes: "ok" });
 });
 // export the routes
 module.exports = router;

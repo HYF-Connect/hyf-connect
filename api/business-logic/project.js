@@ -1,29 +1,31 @@
 const ProjectStore = require("../models/project");
 
 const projectManager = {
-  createProject: async ({
-    Title,
-    Description,
-    GithubURL,
-    WebsiteURL,
-    Thumbnail,
-  }) => {
-    const newProject = { Title, Description, GithubURL, WebsiteURL, Thumbnail };
-    await ProjectStore.create(newProject);
-    return newProject;
-  },
-  getProjectById: async (projectId) => {
-    try {
+   createProject: async ({
+      Title,
+      Description,
+      GithubURL,
+      WebsiteURL,
+      Thumbnail,
+   }) => {
+      const newProject = {
+         Title,
+         Description,
+         GithubURL,
+         WebsiteURL,
+         Thumbnail,
+      };
+      await ProjectStore.create(newProject);
+      return newProject;
+   },
+   getProjectById: async (projectId) => {
       const project = await ProjectStore.findByPk(projectId);
       return project;
-    } catch (error) {
-      console.log(errer);
-    }
-  },
-  getAllProjects: async () => {
-    const allProjects = await ProjectStore.findAll();
-    return allProjects;
-  },
+   },
+   getAllProjects: async () => {
+      const allProjects = await ProjectStore.findAll();
+      return allProjects;
+   },
 };
 
 module.exports = projectManager;
