@@ -477,6 +477,9 @@ input[type="password"] {
 
 /* *****  contact us  *****/
 
+.main__contact{
+  color: #ffffff;
+}
 .contact__text{
   font-family: 'Montserrat';
   font-size: 30px;
@@ -511,9 +514,18 @@ input[type="password"] {
 }
 
 .image1{
-  position: absolute;
-width: 1442.5px;
+position: absolute;
+width: 542.5px;
 height: 276.5px;
 left: -2px;
 top: 86px;
+
+}
+.image2{
+  margin-left: 76px;
+  margin-top: 359px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px #FFFFFF40;
+
+
 }

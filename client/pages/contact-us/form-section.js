@@ -1,6 +1,22 @@
 // import { registerUser } from "../../src/data-access/api-calls/calls.js";
 export const FormSection = {
    template: `
+   <form class="main__contact">
+    <div class="image1">
+      <img class="rectangle" alt="rectangle" src="/images/contact-us/Rectangle 740.png"/>
+    </div>
+    <div class="image2">
+      <img alt="screenshot-img" src="/images/contact-us/Screenshot_2021-12-08.png" width="78px" height="78px"/>
+    </div>  
+      <div class="contact__text">
+          <p class="contacts__text1">you have </p>
+          <p class="contacts__text2">question</p>
+          <p class="contacts__text3">or</p>
+          <p class="contacts__text4">suggestion?</p>
+          <p class="contacts__text5">contact us!</p>
+      </div>
+      
+    </form>
     <form class="contact-us-form" @submit.prevent="handleSubmit">
       <div class="alert alert-danger" role="alert" v-if="errorMessage">
        {{ errorMessage }}
