@@ -5,15 +5,16 @@ import MainSection from "./main-section.js";
 const page = Vue.createApp({
   components: {
     HeaderComponent,
-    FooterComponent,
     MainSection,
+    FooterComponent,
+    
   },
   template: `
-      <div class="page">
-        <header-component></header-component>
-        <main-section></main-section>
-        <footer-component></footer-component>
-      </div>
+  <div class="page">
+  <header-component></header-component>
+  <main-section></main-section>
+  <footer-component></footer-component>
+</div>
     
       `,
 }).mount("#contact-us");

@@ -9,13 +9,15 @@ const homepage = Vue.createApp({
     HeaderComponent,
     BannerSection,
     BenefitSection,
-    TestimonialSection
+    TestimonialSection,
+    FooterComponent
   },
   template: `
   <header-component></header-component>
   <banner-section></banner-section>
   <benefit-section></benefit-section>
   <testimonial-section></testimonial-section>
+  <footer-component></footer-component>
   `,
 }).mount("#homepage");
 
