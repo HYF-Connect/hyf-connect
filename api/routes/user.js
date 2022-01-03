@@ -3,19 +3,19 @@ const userController = require("../controllers/user");
 
 const userRoutes = express.Router();
 
-userRoutes.get("/", userController.get);
-userRoutes.post("/register", userController.post);
-
-userRoutes.use("/users:userId", async (req, res, next) => {
-   try {
-      const user = await userManager.getAllUsers(req.params.userId);
-      req.user = user;
-      next();
-   } catch (error) {
-      res.status(400).send({
-         message: `${user} provided could not be found`,
-      });
-   }
-});
+userRoutes.get("/", userController.getAll);
+userRoutes.post("/register", userController.postRegister);
+userRoutes.put("/:userId/profile", userController.putUserProfile);
+userRoutes.post("/:userId/skill", userController.postSkill);
+userRoutes.post("/:userId/language", userController.postLanguage);
+userRoutes.post("/:userId/type", userController.postType);
+userRoutes.delete("/:userId/profile", userController.deleteUserProfile);
+userRoutes.delete("/:userId/skill/:skillId", userController.deleteSkill);
+userRoutes.delete(
+   "/:userId/language/:languageId",
+   userController.deleteLanguage
+);
+userRoutes.delete("/:userId/type/:typeId", userController.deleteType);
+userRoutes.get("/:userId", userController.getById);
 
 module.exports = userRoutes;
