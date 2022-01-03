@@ -1,4 +1,4 @@
-export const membersTicketSection = {
+export const membersTicketComponent = {
   template: `
 <div class="members-ticket">
     <div class="members-ticket__cards">
@@ -20,4 +20,4 @@ export const membersTicketSection = {
 `,
 };
 
-export default membersTicketSection;
+export default membersTicketComponent;
