@@ -417,7 +417,7 @@ input[type="password"] {
   
   display: flex;
   align-items: center;
-  justify-content: space-between;;
+  justify-content: space-between;
   padding: 20px;
   width: auto;
   height: auto;
@@ -476,3 +476,44 @@ input[type="password"] {
 }
 
 /* *****  contact us  *****/
+
+.contact__text{
+  font-family: 'Montserrat';
+  font-size: 30px;
+  font-weight: 500;
+  
+  position: absolute;
+  left: 127px;
+  top: 187.19px;
+  display: flex;
+  align-items: center;
+  
+  transform: matrix(1, 0, 0, 1, 0, 0);
+
+}
+.contacts__text1, .contacts__text3{
+  color: #1C2294;
+}
+
+.contacts__text2, .contacts__text4{
+  color: #ffffff;
+}
+
+.contacts__text5{
+  color: #1c2294;
+  font-size: 50px;
+
+  position: absolute;
+  left: 187px;
+  top: 39.19px;
+  display: flex;
+  align-items: center;
+}
+
+.image1{
+  position: absolute;
+width: 1442.5px;
+height: 276.5px;
+left: -2px;
+top: 86px;
+}
