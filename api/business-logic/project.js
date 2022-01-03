@@ -81,7 +81,7 @@ const projectManager = {
     return true;
   },
   deleteProjectClass: async ({ ProjectID, ClassID }) => {
-    await ProjectSkillStore.destroy({
+    await ProjectClassStore.destroy({
       where: { ProjectID: ProjectID, ClassID: ClassID },
     });
     return true;
