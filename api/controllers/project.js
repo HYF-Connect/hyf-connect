@@ -153,7 +153,7 @@ const projectController = {
   deleteClass: async (req, res) => {
     try {
       const { classId, projectId } = req.params;
-      await userManager.deleteProjectClass({
+      await projectManager.deleteProjectClass({
         ProjectID: projectId,
         ClassID: classId,
       });
@@ -165,25 +165,11 @@ const projectController = {
       res.status(500).json({ message: error.message });
     }
   },
-  deleteClass: async (req, res) => {
-    try {
-      const { classId, projectId } = req.params;
-      await userManager.deleteProjectClass({
-        ProjectID: projectId,
-        ClassID: classId,
-      });
-      res.status(200).json({
-        message: `Class with id ${classId} was successfully deleted!`,
-      });
-    } catch (error) {
-      console.log(error);
-      res.status(500).json({ message: error.message });
-    }
-  },
+
   deleteUser: async (req, res) => {
     try {
       const { userId, projectId } = req.params;
-      await userManager.deleteUserProject({
+      await projectManager.deleteUserProject({
         ProjectID: projectId,
         UserID: userId,
       });

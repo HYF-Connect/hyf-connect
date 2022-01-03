@@ -7,11 +7,11 @@ const projectRoutes = express.Router();
 projectRoutes.get("/", projectController.get);
 projectRoutes.post("/", projectController.post);
 projectRoutes.get("/:projectId", projectController.getProjectById);
-projectRoutes.put("/:projectId/project", projectController.putProject);
+projectRoutes.put("/:projectId", projectController.putProject);
 projectRoutes.post("/:projectId/skill", projectController.postSkill);
 projectRoutes.post("/:projectId/class", projectController.postClass);
 projectRoutes.post("/:projectId/user", projectController.postUser);
-projectRoutes.delete("/:projectId/project", projectController.deleteProject);
+projectRoutes.delete("/:projectId", projectController.deleteProject);
 projectRoutes.delete(
   "/:projectId/skill/:skillId",
   projectController.deleteSkill
