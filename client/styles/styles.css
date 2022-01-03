@@ -275,10 +275,8 @@ body {
 .homepage__carousel {
   background-color: #ffffff;
   text-align: center;
-  /* CHANGES */
   padding-left: 80px;
   padding-right: 80px;
-  /* END CHANGES */
 }
 
 .carousel-inner {
@@ -291,10 +289,8 @@ body {
   font-size: 36px;
   font-weight: bolder;
   color: #1C2294;
-  /* CHANGES */
   margin-top:48px;
   margin-bottom:32px;
-  /* END CHANGES */
 }
 .carousel__subtittle {
   text-align: center;
@@ -309,12 +305,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* CHANGES */
   width: 100%;
   max-width: 1024px;
   margin-left:auto;
   margin-right: auto;
-  /* END CHANGES */
   border: 1px solid #1C2294;
   border-radius: 25px;
   padding: 25px;
@@ -326,19 +320,15 @@ body {
 .slide__tittle {
   font-family: Poppins;
   font-weight: bold;
-  /* CHANGES */
   font-size: 24px;
-  text-decoration: none;
-  /* END CHANGES */
+  text-decoration: none;/
   color: #1C2294;
   margin: 20px;
 }
 
 .slide__description {
   font-family: Montserrat;
-  /* CHANGES */
   font-size: 18px;
-  /* END CHANGES */
   margin-top: 10px;
 }
 
