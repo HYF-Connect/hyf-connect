@@ -1,11 +1,10 @@
 const MainSection = {
-  data: () => ({ message: "Add new project" }),
   template: `
   <div class="addnewproject__banner">
   <h1>Add your new project here!</h1>
 </div>
 <div class="addnewproject__container">
-  <form class="addnewproject__form">
+  <form class="addnewproject__form" @submit.prevent="handleSubmit">
     <label class="addnewproject__form--label">Project Title</label>
       <input class="addnewproject__form--input" type="text" placeholder="Your project's title" required v-model="projectTitle" style="width: 400px">
     <label class="addnewproject__form--label">Project URL</label>
@@ -82,26 +81,10 @@ const MainSection = {
     },
 methods: {
   async handleSubmit() {
-
-      try {
-          const result = await loginUser(
-          this.email,
-          this.password,
-      );
-      localStorage.setItem("token", result.token) ;
-      localStorage.setItem('username', result.userName);
-      this.passwordError = "";
-      this.password = "";
-      this.success = true;
-      setTimeout(() => (window.location.href = "/pages/homepage/homepage.html"), 500);
-      } catch (error) {
-      this.passwordError = "Invalid email or password";
-      this.success = false;
-      console.log("error from login", error);
-      }
-  },  
-
-},
-};
-
+    let newProject = {
+      "projectTitle":this.projectTitle,
+...
+    }
+    console.log("newProject",newProject)
+  }
 export default MainSection;
