@@ -275,6 +275,10 @@ body {
 .homepage__carousel {
   background-color: #ffffff;
   text-align: center;
+  /* CHANGES */
+  padding-left: 80px;
+  padding-right: 80px;
+  /* END CHANGES */
 }
 
 .carousel-inner {
@@ -287,9 +291,11 @@ body {
   font-size: 36px;
   font-weight: bolder;
   color: #1C2294;
-  margin-top:20px;
+  /* CHANGES */
+  margin-top:48px;
+  margin-bottom:32px;
+  /* END CHANGES */
 }
-
 .carousel__subtittle {
   text-align: center;
   font-family: Poppins;
@@ -299,11 +305,16 @@ body {
   margin-bottom: 30px;;
 }
 
-.container {
+.homepage-carousel-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100rem;
+  /* CHANGES */
+  width: 100%;
+  max-width: 1024px;
+  margin-left:auto;
+  margin-right: auto;
+  /* END CHANGES */
   border: 1px solid #1C2294;
   border-radius: 25px;
   padding: 25px;
@@ -315,15 +326,19 @@ body {
 .slide__tittle {
   font-family: Poppins;
   font-weight: bold;
-  font-size: 30px;
+  /* CHANGES */
+  font-size: 24px;
+  text-decoration: none;
+  /* END CHANGES */
   color: #1C2294;
   margin: 20px;
-  text-decoration: underline;
 }
 
 .slide__description {
   font-family: Montserrat;
-  font-size: 26px;
+  /* CHANGES */
+  font-size: 18px;
+  /* END CHANGES */
   margin-top: 10px;
 }
 
