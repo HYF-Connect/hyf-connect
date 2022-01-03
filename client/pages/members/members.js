@@ -1,7 +1,7 @@
 import HeaderComponent from "../../components/header-component.js";
 import FooterComponent from "../../components/footer-component.js";
 import MainSection from "./main-section.js";
-import membersTicketComponent from "./memebers-ticket-component.js";
+import membersTicketSection from "./memebers-ticket-Section.js";
 import bannerSection from "./banner-section.js";
 
 const page = Vue.createApp({
@@ -9,7 +9,7 @@ const page = Vue.createApp({
     HeaderComponent,
     FooterComponent,
     MainSection,
-    membersTicketComponent,
+    membersTicketSection,
     bannerSection,
   },
   template: `
@@ -17,7 +17,7 @@ const page = Vue.createApp({
 <header-component></header-component>
 <main-section></main-section>
 <banner-section></banner-section>
-<members-ticket-component></members-ticket-component>
+<members-ticket-section></members-ticket-section>
 <footer-component></footer-component>
 </div>
 `,

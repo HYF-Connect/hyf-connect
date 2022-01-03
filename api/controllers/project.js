@@ -16,11 +16,6 @@ const projectController = {
       const projectId = req.params.projectId;
       const project = await projectManager.getProjectById(projectId);
       res.send(JSON.stringify(project));
-
-      if (!project) {
-        throw new Error(`Could not find a project with id ${projectId}!`);
-      }
-      return project;
     } catch (error) {
       res.status(500).send({ message: error.message });
     }
