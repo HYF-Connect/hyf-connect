@@ -270,6 +270,97 @@ body {
    color: #ffffff;
 }
 
+/* CAROUSEL-COMPONENT */
+
+.homepage__carousel {
+  background-color: #ffffff;
+  text-align: center;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.carousel-inner {
+  border-radius: 20px 20px 0 0;
+}
+
+.carousel__title {
+  font-family: Poppins;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bolder;
+  color: #1C2294;
+  margin-top:48px;
+  margin-bottom:32px;
+}
+.carousel__subtittle {
+  text-align: center;
+  font-family: Poppins;
+  font-size: 48px;
+  font-weight: bolder;
+  color: #1C2294;
+  margin-bottom: 30px;;
+}
+
+.homepage-carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1024px;
+  margin-left:auto;
+  margin-right: auto;
+  border: 1px solid #1C2294;
+  border-radius: 25px;
+  padding: 25px;
+  text-align: center;
+  margin-bottom:80px;
+  background-color: #ffffff
+}
+
+.slide__tittle {
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 24px;
+  text-decoration: none;
+  color: #1C2294;
+  margin: 20px;
+}
+
+.slide__description {
+  font-family: Montserrat;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.carousel__projects--btn {
+  text-align: center;
+  text-decoration: none;
+  padding: 20px 30px;
+  width: 120px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #2f195f;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  margin-bottom:100px;
+}
+
+.carousel__projects--btn:hover {
+  background-color: #1c2294;
+  color: #ffffff;
+}
+
+.carousel-control-prev-icon {
+  background-color: #9c9c9c8f;
+  border-radius: 9px;
+}
+
+.carousel-control-next-icon {
+  background-color: #9c9c9c8f;
+  border-radius: 9px;
+}
+
 /* SIGN-UP PAGE */
 
 .sign-up-page {
