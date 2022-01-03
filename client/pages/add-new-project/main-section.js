@@ -15,35 +15,71 @@ const MainSection = {
     <label class="addnewproject__form--label">Description</label>
       <textarea class="addnewproject__form--textarea" placeholder="Describe your project" required v-model="projectDescription" style="width: 400px; height:50px"></textarea>
     <label class="addnewproject__form--label">Team Members</label>
-      <!-- <input class="addnewproject__form--input" type="text" placeholder="Tag your team member of this project starting with '@' " style="width: 400px"> -->
-      <select class="select" multiple data-mdb-filter="true">
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-        <option value="4">Four</option>
-        <option value="5">Five</option>
-        <option value="6">Six</option>
-        <option value="7">Seven</option>
-        <option value="8">Eight</option>
-        <option value="9">Nine</option>
-        <option value="10">Ten</option>
-      </select>
+      <multiselect
+      v-model="value"
+      placeholder="city name?"
+      label="city" track-by="city_ascii"
+      :options="options"
+      :multiple="true"
+      :taggable="true"
+    ></multiselect>
     <label class="addnewproject__form--label">Add Thumbnail</label>
-      <input class="addnewproject__form--input type="file" accept="Image/*" style="width: 400px;">
+      <input class="addnewproject__form--input" type="file" accept="Image/*" style="width: 400px;">
     <button class= "addnewproject__form--btn" v-on:click="handleSubmit">save project</button>
-    </div>
   </form>
 </div>
     `,
+
+    components: { Multiselect: window.VueMultiselect.default },
     data() {
       return {
           projectTitle: "",
           websiteUrl: "",
           githubRepo: "",
           projectDescription:"",
-      };
-},
-
+          teamMembers:[],
+          students:["Yoshi", "Moamin", "Rayane"],
+          value: [],
+          options: [
+                  {
+                    "city": "San Martin",
+                    "city_ascii": "San Martin",
+                    "lat": -33.06998533,
+                    "lng": -68.49001612,
+                    "pop": 99974,
+                    "country": "Argentina",
+                    "iso2": "AR",
+                    "iso3": "ARG",
+                    "province": "Mendoza",
+                    "timezone": "America/Argentina/Mendoza"
+                  },
+                  {
+                    "city": "San Nicolas",
+                    "city_ascii": "San Nicolas",
+                    "lat": -33.33002114,
+                    "lng": -60.24000289,
+                    "pop": 117123.5,
+                    "country": "Argentina",
+                    "iso2": "AR",
+                    "iso3": "ARG",
+                    "province": "Ciudad de Buenos Aires",
+                    "timezone": "America/Argentina/Buenos_Aires"
+                  },
+                  {
+                    "city": "San Francisco",
+                    "city_ascii": "San Francisco",
+                    "lat": -31.43003375,
+                    "lng": -62.08996749,
+                    "pop": 43231,
+                    "country": "Argentina",
+                    "iso2": "AR",
+                    "iso3": "ARG",
+                    "province": "Córdoba",
+                    "timezone": "America/Argentina/Cordoba"
+                  }
+                ],
+      }
+    },
 methods: {
   async handleSubmit() {
 
