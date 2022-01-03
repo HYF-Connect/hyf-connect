@@ -489,13 +489,13 @@ input[type="password"] {
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
-.About-hyf-team {
+
+.about-hyf-team {
 margin-left: 47.5%;
 margin-top: -15em;
 }
 
-
-.About-hyf {
+.about-hyf {
   background-color: #fff;
   border: 2px solid  #1C2294;
   padding: 50px;
@@ -508,7 +508,7 @@ margin-top: -15em;
   width: min(600px,70%);
 }
 
-.About-visit-website{
+.about-visit-website{
 padding: 14px 26px;
 background-color: #2F195F;
 border-radius: 20px;
@@ -518,7 +518,7 @@ font-size: 14px;
 text-decoration: none; 
 }
 
-.About-hyf-connect {
+.about-hyf-connect {
 background-color: #fff;
 border: 2px solid #1C2294;
 margin-top: 2em;
@@ -528,7 +528,7 @@ padding: 50px;
 margin-left:35em;
 
 }
-.About-visit-project{
+.about-visit-project{
 padding: 14px 26px;
 background-color: #2F195F;
 border-radius: 20px;
@@ -540,7 +540,7 @@ margin-top: -1em;
 text-decoration: none;
 }
 
-.About-hyf-connect2 {
+.about-hyf-connect2 {
   margin-top: -35em;
 }
 .team-container{
@@ -548,7 +548,7 @@ text-decoration: none;
   color: #1C2294;
   text-align: center;
 }
-.About-title-1 {
+.about-title-1 {
   color: #1C2294;
   text-align: right;
   text-shadow: #2F195F;
@@ -558,7 +558,7 @@ text-decoration: none;
   margin-right: 5em;
 
 }
-.About-title {
+.about-title {
   color: #1C2294;
   text-shadow: #2F195F;
   font-size: 30px;
@@ -570,8 +570,6 @@ text-decoration: none;
   height: 70px;
   margin: 0 auto;
   margin-top: 1em;
-
-
 }
 
 .caption h3{
@@ -583,7 +581,7 @@ text-decoration: none;
   font-weight: 600;
 }
 
-.About-main{
+.about-main{
   width: 100%;
   height: 100vh;
   display: flex;
@@ -619,7 +617,7 @@ text-decoration: none;
   height: 260px;
 }
 
-.profile-card .img{
+.profile-card .about-img{
   position: relative;
   width: 100%;
   height: 100%;
@@ -628,7 +626,7 @@ text-decoration: none;
 
 }
 
-.img img{
+.about-img img{
   width: 100%;
   min-width: 20%;
   border-radius: 50%;
@@ -636,12 +634,12 @@ text-decoration: none;
   transition: .6s;
   
 }
-
-.profile-card:hover .img{
+  
+.profile-card:hover .about-img{
   transform: translateY(-60px);
 }
 
-.profile-card:hover img{
+.profile-card:hover .about-img{
   border-radius: 10px;
 }
 .caption{
@@ -664,7 +662,7 @@ text-decoration: none;
   margin: 2px 0 9px 0;
 }
 
-.About-last-container {
+.about-last-container {
   background-color: #DFD7EF;
   height: 240px;
   margin-top:-22%;
