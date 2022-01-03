@@ -5,9 +5,11 @@ export const AvatarDropdown = {
    Dropdown button
  </button>
  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-   <li><a class="dropdown-item" href="#">Action</a></li>
-   <li><a class="dropdown-item" href="#">Another action</a></li>
-   <li><a class="dropdown-item" href="#">Something else here</a></li>
+   <li><a class="dropdown-item" href="#">My profile</a></li>
+   <li><a class="dropdown-item" href="#">My projects</a></li>
+   <li><a class="dropdown-item" href="#">Account setting</a></li>
+   <li><a class="dropdown-item" href="#">Get help</a></li>
+   <li><a class="dropdown-item" href="#">Invite another HYF</a></li>
  </ul>
 </div>
    `
