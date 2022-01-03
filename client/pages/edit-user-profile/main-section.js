@@ -1,8 +1,7 @@
 const MainSection = {
-  data: () => ({ message: "Edit user profile" }),
-  template: `
-    <div class="main">
-      <h1>{{message}}</h1>
+   template: `
+    <div class="edit-user__main">
+      <h1 class= "edit-user__main-title"> Hello <span class= "edit-user__span">there<span>!</h1>
     </div>
     `,
 };
