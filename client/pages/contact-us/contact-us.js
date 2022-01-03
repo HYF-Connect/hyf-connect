@@ -1,20 +1,20 @@
 import HeaderComponent from "../../components/header-component.js";
 import FooterComponent from "../../components/footer-component.js";
-import ContactUsSection from "./contact-us-section";
+import MainSection from "./main-section.js";
 
 const page = Vue.createApp({
   components: {
     HeaderComponent,
-    ContactUsSection,
+    MainSection,
     FooterComponent,
     
   },
   template: `
-  <div class="page">
-  <header-component></header-component>
-  <contact-us-section></contact-us-section>
-  <footer-component></footer-component>
-</div>
+      <div class="page">
+        <header-component></header-component>
+        <main-section></main-section>
+        <footer-component></footer-component>
+      </div>
     
       `,
 }).mount("#contact-us");
