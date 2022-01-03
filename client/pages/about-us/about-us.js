@@ -9,13 +9,13 @@ const page = Vue.createApp({
     MainSection,
   },
   template: `
-  <div class="page">
-    <header-component></header-component>
-    <main-section></main-section>
-    <footer-component></footer-component>
-  </div>
-
-  `,
+      <div class="page">
+        <header-component></header-component>
+        <main-section></main-section>
+        <footer-component></footer-component>
+      </div>
+    
+      `,
 }).mount("#about-us");
 
 export default page;
