@@ -18,7 +18,7 @@ const EditProfilePage = Vue.createApp({
          <edit-form-section></edit-form-section>
       </div>
    </div>
-    <footer-component></footer-component>
+   <footer-component></footer-component>
     
       `,
 }).mount("#edit-user-profile");
