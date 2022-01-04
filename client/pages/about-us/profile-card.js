@@ -13,7 +13,7 @@ const ProfileCard = {
   `,
   data() {
     return {
-      Profiles: [
+      profiles: [
         { img: "/images/members/MoaminA.png", title: "Moamin", subtitle:"Full stack developer"},
         { img: "/images/members/InggritEN.jpeg",title: "Inggrit",subtitle:"Full stack developer"},
         { img: "/images/members/LauraR.jpg", title: "Laura",subtitle:"Full stack developer"},
