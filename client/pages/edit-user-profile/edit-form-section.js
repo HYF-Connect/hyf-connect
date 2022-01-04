@@ -8,32 +8,61 @@ export const FormSection = {
       <div class="alert alert-success" role="alert" v-if="success">
         Your account has been successfully created!
       </div>
+      <div class="profile-form-group"> 
       <label class="profile-form__label">First Name</label>
       <input class="profile-form__input" type="text" required v-model="firstName">
+      </div>
+      <div class="profile-form-group"> 
       <label class="profile-form__label">Last Name</label>
       <input class="profile-form__input" type="text" required v-model="lastName">
+      </div>
+       <div class="profile-form-group"> 
       <label class="profile-form__label">Email</label>
       <input class="profile-form__input" type="email" required v-model="email">
+          </div>
+       <div class="profile-form-group"> 
       <label class="profile-form__label">Job Title</label>
+      <input class="profile-form__input" type="text" v-model="jobTitle">
+          </div>
+       <div class="profile-form-group"> 
+      <label class="profile-form__label">Nationality</label>
       <input class="profile-form__input" type="text" v-model="nationality">
-            <label class="profile-form__label">Nationality</label>
+          </div>
+       <div class="profile-form-group"> 
+      <label class="profile-form__label">Language</label>
       <input class="profile-form__input" type="text" v-model="language">
-            <label class="profile-form__label">Language</label>
+          </div>
+       <div class="profile-form-group"> 
+      <label class="profile-form__label">Region</label>
       <input class="profile-form__input" type="text" v-model="region">
-            <label class="profile-form__label">Region</label>
+          </div>
+       <div class="profile-form-group"> 
+      <label class="profile-form__label">HYF Class</label>
       <input class="profile-form__input" type="text" v-model="hyfClass">
-            <label class="profile-form__label">HYF Class</label>
+          </div>
+       <div class="profile-form-group"> 
+      <label class="profile-form__label">GitHub</label>
       <input class="profile-form__input" type="text" v-model="gitHub">
-            <label class="profile-form__label">GitHub</label>
+          </div>
+       <div class="profile-form-group"> 
+      <label class="profile-form__label">Website</label>
       <input class="profile-form__input" type="text" v-model="website">
-            <label class="profile-form__label">Website</label>
+          </div>
+       <div class="profile-form-group"> 
+      <label class="profile-form__label">LinkedIn</label>
       <input class="profile-form__input" type="text" v-model="linkedIn">
-            <label class="profile-form__label">LinkedIn</label>
+          </div>
+       <div class="profile-form-group"> 
+      <label class="profile-form__label">My Skills</label>
       <input class="profile-form__input" type="text" v-model="skills">
-            <label class="profile-form__label">My Skills</label>
-      <input class="profile-form__input" type="text" v-model="bio">
-            <label class="profile-form__label">About me</label>
-      <button class= "form__btn-submit"> save </button>
+      </div>
+       <div class="profile-form-group"> 
+      <label class="profile-form__label">About me</label> 
+      <input class="profile-form__input-bio" type="text" v-model="bio">
+      </div>
+      <div class = "profile-form_btn-right">
+      <button class = "profile-form__btn-submit"> save </button>
+      </div>
   </form>
     `,
    data() {
