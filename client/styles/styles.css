@@ -627,8 +627,9 @@ text-decoration: none;
 }
 
 .about-img img{
-  width: 100%;
-  min-width: 20%;
+  width: 160%;
+  height: 160%;
+  object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 0 22px #3336;
   transition: .6s;

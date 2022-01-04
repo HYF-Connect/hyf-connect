@@ -16,7 +16,7 @@ template: `
     <a class="about-visit-website" href="https://hackyourfuture.be/" target="_blank">visit website</a>
 </div>
 <div class="about-hyf-team">
-<img src="/images/homepage/hyf-team.jpeg"  alt="pic" width="650" height="400"></a>
+<img src="/images/homepage/hyf-team.jpeg"  alt="pic" width="650" height="400">
 </div>
 <div class="about-title-1">
 <h2> what is hyf-connect?</h2>

@@ -6,11 +6,9 @@ const ProfileCard = {
   },
   template: `
   <div class="about-main">
-  <div class="profile-card">
     <template v-for="profile in profiles">
       <profile-component :profile="profile"/>
     </template>
-  </div>
   </div>
   `,
   data() {
