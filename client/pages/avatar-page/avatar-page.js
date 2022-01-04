@@ -10,9 +10,18 @@ const avatarpage = Vue.createApp({
   },
   template: `
   <header-component></header-component>
-  <avatar-dropdown></avatar-dropdown>
+  <avatar-dropdown :avatar="avatar"></avatar-dropdown>
   <footer-component></footer-component>
   `,
+  data() {
+    return {
+      avatar: 
+        {  
+          "name":"Firewyni",
+          "url":"/images/members/firewyni.jpg"
+        }
+    };
+  },
 }).mount("#avatar-page");
 
 export default avatarpage;
