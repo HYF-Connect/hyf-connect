@@ -1,13 +1,10 @@
-import { registerUser } from "../../src/data-access/api-calls/calls.js";
+import { updateUserProfile } from "../../src/data-access/api-calls/calls.js";
+import { userLanguage } from "../../src/data-access/api-calls/calls.js";
+import { userSkill } from "../../src/data-access/api-calls/calls.js";
+import { userType } from "../../src/data-access/api-calls/calls.js";
 export const FormSection = {
    template: `
     <form class="user-profile-form" @submit.prevent="handleSubmit">
-      <div class="alert alert-danger" role="alert" v-if="errorMessage">
-       {{ errorMessage }}
-      </div>
-      <div class="alert alert-success" role="alert" v-if="success">
-        Your account has been successfully created!
-      </div>
       <div class="profile-form-group"> 
       <label class="profile-form__label">First Name</label>
       <input class="profile-form__input" type="text" required v-model="firstName">
@@ -19,6 +16,10 @@ export const FormSection = {
        <div class="profile-form-group"> 
       <label class="profile-form__label">Email</label>
       <input class="profile-form__input" type="email" required v-model="email">
+          </div>
+      <div class="profile-form-group"> 
+      <label class="profile-form__label">User Type</label>
+      <input class="profile-form__input" type="text" v-model="userType">
           </div>
        <div class="profile-form-group"> 
       <label class="profile-form__label">Job Title</label>
@@ -74,40 +75,37 @@ export const FormSection = {
          language: "",
          region: "",
          hyfClass: "",
+         jobTitle: "",
+         userType: "",
          gitHub: "",
          website: "",
          linkedIn: "",
          skills: "",
          bio: "",
-         errorMessage: "",
-         success: false,
       };
    },
    methods: {
-      /*   async handleSubmit() {
-         this.passwordError =
-            this.password.length >= 6
-               ? ""
-               : "Password contains less than 6 characters!";
-         this.passwordCheck =
-            this.password === this.confirmPassword
-               ? ""
-               : "Passwords do not match. Try again!";
+      async handleSubmit() {
          try {
-            const result = await registerUser(
+            const result = await updateUserProfile(
                this.firstName,
                this.lastName,
                this.email,
-               this.password
+               this.nationality,
+               this.region,
+               this.jobTitle,
+               this.hyfClass,
+               this.gitHub,
+               this.website,
+               this.linkedIn,
+               this.bio
             );
-            this.errorMessage = "";
-            this.success = true;
             setTimeout(() => (window.location.href = "/"), 4000);
          } catch (error) {
             this.errorMessage = error;
-            console.log("error from registration", error);
+            console.log("error from user profile form", error);
          }
-      }, */
+      },
    },
 };
 
