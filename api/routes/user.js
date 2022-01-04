@@ -12,10 +12,11 @@ userRoutes.post("/:userId/type", userController.postType);
 userRoutes.delete("/:userId/profile", userController.deleteUserProfile);
 userRoutes.delete("/:userId/skill/:skillId", userController.deleteSkill);
 userRoutes.delete(
-   "/:userId/language/:languageId",
-   userController.deleteLanguage
+  "/:userId/language/:languageId",
+  userController.deleteLanguage
 );
 userRoutes.delete("/:userId/type/:typeId", userController.deleteType);
 userRoutes.get("/:userId", userController.getById);
+userRoutes.get("/:userId/skill", userController.getAllSkill); // added this to call all users skills
 
 module.exports = userRoutes;

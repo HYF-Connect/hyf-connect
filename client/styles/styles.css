@@ -477,6 +477,7 @@ input[type="password"] {
 .members-ticket{
    background-color: #f7f7fc;
    display: flex;
+   flex-direction: column;
    align-items: center;
    justify-content: center;
    padding-top: 15px;
@@ -492,9 +493,10 @@ input[type="password"] {
    margin: 10px;
 }
 .members-ticket__card-content{
+  width:750px;
    padding-left: 20px;
    margin: 15px 20px;
-   padding-right:420px;
+   padding-right:100px;
    font-family: "Poppins", sans-serif;
 }
 
@@ -506,6 +508,7 @@ input[type="password"] {
    padding-left: 20px;
    margin: 15px 20px;
    float:right;
+   width: 300px
    
 }
 .members-ticket__card-content--name{

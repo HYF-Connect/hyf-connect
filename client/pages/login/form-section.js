@@ -1,7 +1,7 @@
 import { loginUser } from "../../src/data-access/api-calls/calls.js";
 
 export const FormSection = {
-   template: `
+  template: `
     <form class="login-form-container" @submit.prevent="handleSubmit">
         <div class="alert alert-danger" role="alert" v-if="passwordError">
         {{ passwordError }}
@@ -19,35 +19,35 @@ export const FormSection = {
         <button class= "login-form__btn-signup" onclick="window.location.href='../sign-up/sign-up.html'">Sign up</button>
         </form>     
     `,
-   data() {
-      return {
-         email: "",
-         password: "",
-         passwordError: "",
-         success: false,
-      };
-   },
-   methods: {
-      async handleSubmit() {
-         try {
-            const result = await loginUser(this.email, this.password);
-            localStorage.setItem("token", result.token);
-            localStorage.setItem("username", result.userName);
-            localStorage.setItem("userId", result.userId);
-            this.passwordError = "";
-            this.password = "";
-            this.success = true;
-            setTimeout(
-               () => (window.location.href = "/pages/homepage/homepage.html"),
-               500
-            );
-         } catch (error) {
-            this.passwordError = "Invalid email or password";
-            this.success = false;
-            console.log("error from login", error);
-         }
-      },
-   },
+  data() {
+    return {
+      email: "",
+      password: "",
+      passwordError: "",
+      success: false,
+    };
+  },
+  methods: {
+    async handleSubmit() {
+      try {
+        const result = await loginUser(this.email, this.password);
+        localStorage.setItem("token", result.token);
+        localStorage.setItem("username", result.userName);
+        localStorage.setItem("userId", result.userId);
+        this.passwordError = "";
+        this.password = "";
+        this.success = true;
+        setTimeout(
+          () => (window.location.href = "/pages/homepage/homepage.html"),
+          500
+        );
+      } catch (error) {
+        this.passwordError = "Invalid email or password";
+        this.success = false;
+        console.log("error from login", error);
+      }
+    },
+  },
 };
 
 export default FormSection;

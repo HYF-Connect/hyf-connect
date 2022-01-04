@@ -2,7 +2,9 @@ const memberComponent = {
   props: ["member"],
   template: `  
     <div class="members-ticket__card">
-        <div class="members-ticket__card-img"><img class="members-ticket__card-img--member"v-bind:src="member.avatar"></div>
+        <div class="members-ticket__card-img">
+            <img class="members-ticket__card-img--member"v-bind:src="member.avatar">
+        </div>
         <div class="members-ticket__card-content">
             <p class="members-ticket__card-content--name">{{member.username}}</p>
             <p class="members-ticket__card-content--title">{{member.title}}</p>
