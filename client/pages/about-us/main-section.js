@@ -13,7 +13,7 @@ template: `
     refugees and disadvantaged people to build digital skills for a career in web development, 
     facilitate the integration of newcomers, and address the shortage of qualified workforce in the IT sector.</p>
     <br>
-    <a class="about-visit-website" href="https://hackyourfuture.be/">visit website</a>
+    <a class="about-visit-website" href="https://hackyourfuture.be/" target="_blank">visit website</a>
 </div>
 <div class="about-hyf-team">
 <img src="/images/homepage/hyf-team.jpeg"  alt="pic" width="650" height="400"></a>
@@ -23,7 +23,7 @@ template: `
 </div>
 <div class="about-hyf-connect">
 <p><strong>HackYourFuture Connect</strong> is the final project developed by students from #class15.<br> <br>
-<strong>HYC Connect</strong> is a platform where all students, alumni, and coaches can gather together, 
+<strong>HYF Connect</strong> is a platform where all students, alumni, and coaches can gather together, 
 continuing the HYF journey. In this platform, everyone can share their knowledge about coding world, 
 share their profile for new opportunities to grow. 
 Our mission is to connect, to share, and to grow together as one big HackYourFuture Community</p>
@@ -45,7 +45,7 @@ Our mission is to connect, to share, and to grow together as one big HackYourFut
 <img src="/images/members/MoaminA.png">
 </div>
 <div class="caption">
-<h3>Moamine</h3>
+<h3>Moamin</h3>
 <p>Full Stack Developer</p>
 </div>
 </div>
