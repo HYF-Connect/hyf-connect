@@ -11,7 +11,7 @@ export const filterSection = {
     aria-haspopup="true"
     aria-expanded="false"
     style = "background-color:rgba(223, 215, 239, 1); color: black;"
-  >select filter
+    >select filter
   </a>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <a class="dropdown-item" style = "color:black;" href="#">class15</a>
@@ -20,7 +20,6 @@ export const filterSection = {
     <a class="dropdown-item" style = "color:black;" href="#">privouse classes</a>
   </div>
 </div>
-
     `,
 };
 

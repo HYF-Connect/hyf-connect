@@ -52,8 +52,9 @@ export const membersTicketSection = {
     async onload() {
       try {
         const result = await fetchUsers();
+        //console.log(result);
         const skillsResult = await fetchSkills();
-        console.log(skillsResult[1].SelectedSkill);
+        //console.log(skillsResult);
         for (let i = 0; i < result.length; i++) {
           this.members[i].username =
             result[i].FirstName + " " + result[i].LastName;
