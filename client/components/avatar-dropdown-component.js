@@ -16,7 +16,7 @@ export const AvatarDropdown = {
     </ul>
   </div>
     `
-    methods: {
+    ,methods: {
       logOut() {
         localStorage.removeItem("token");
         localStorage.removeItem("username");
