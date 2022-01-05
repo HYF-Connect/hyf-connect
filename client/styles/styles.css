@@ -477,55 +477,102 @@ input[type="password"] {
 
 /* *****  contact us  *****/
 
-.main__contact{
-  color: #ffffff;
+div.container-contact-us-page{
+  margin: auto;
+}
+
+.container-contact-us-page{
+  position: relative;
+  width: 1200px;
+  padding: 0;
+  border: 0;
+}
+
+.section{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  display: block;
+}
+
+.contact-form{
+  margin-bottom: 0;
+}
+
+form{
+  margin-bottom: 20px;
+}
+
+button, input, select, textarea, label{
+  touch-action: manipulation;
+}
+
+div.section{
+  margin: 10px;
+}
+
+.contact__text, .row{
+  zoom: 1;
 }
 .contact__text{
   font-family: 'Montserrat';
   font-size: 30px;
-  font-weight: 500;
-  
+  font-weight: 600;
+  font-style: normal;
+  line-height: 39.9px;
+
   position: absolute;
-  left: 127px;
-  top: 187.19px;
+  top: 5%;
+  left: 28%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
-  
-  transform: matrix(1, 0, 0, 1, 0, 0);
+  text-align: center;
+  white-space: pre;
 
+  transform: matrix(1, 0, 0, 1, 0, 0);
 }
-.contacts__text1, .contacts__text3{
+
+.contact__text1, .contact__text3{
   color: #1C2294;
 }
 
-.contacts__text2, .contacts__text4{
+.contact__text2, .contact__text4{
   color: #ffffff;
 }
 
-.contacts__text5{
+.contact__text5{
   color: #1c2294;
   font-size: 50px;
-
   position: absolute;
-  left: 187px;
-  top: 39.19px;
+  left: 147px;
+  top: 59.19px;
   display: flex;
   align-items: center;
 }
 
-.image1{
-position: absolute;
-width: 542.5px;
-height: 276.5px;
-left: -2px;
-top: 86px;
-
+.rectangle{
+  position: absolute;
+  width: 1279px;
+  left: -40px;
+  top: 0;
 }
-.image2{
-  margin-left: 76px;
-  margin-top: 359px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 2px 2px #FFFFFF40;
 
+.container-contact-us-page.image2{
+  width: 730px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;  
+}
+
+.img{
+  position: relative;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
 
 }

@@ -14,7 +14,7 @@ const ContactUsPage = Vue.createApp({
   template: `
       <div class="page">
         <header-component></header-component>
-        <div class="contact-us-page">
+        <div class="container-contact-us-page">
           <main-section></main-section>
           <form-section></form-section>
         </div>
