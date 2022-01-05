@@ -52,7 +52,7 @@ export const FormSection = {
    // methods: {
    //    async handleSubmit() {
    //       this.messageError =
-   //          this.message.length >= 500
+   //          this.message.length <= 500
    //             ? ""
    //             : "Message contains more than 500 characters!";
    //       this.messageCheck =
@@ -70,7 +70,7 @@ export const FormSection = {
    //          setTimeout(() => (window.location.href = "/"), 4000);
    //       } catch (error) {
    //          this.errorMessage = error;
-   //          console.log("error from message", error);
+   //          console.log(`The result: Name: ${this.name}, eMail: ${this.email}, Message: ${this.message}`);
    //       }
    //    },
    // },
