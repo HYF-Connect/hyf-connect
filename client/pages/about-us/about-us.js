@@ -15,7 +15,9 @@ const page = Vue.createApp({
       <div class="page">
         <header-component></header-component>
         <main-section></main-section>
+        <div class="about-main">
         <profile-card></profile-card>
+        </div>
         <footer-component></footer-component>
       </div>
     
