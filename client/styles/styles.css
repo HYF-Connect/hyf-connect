@@ -545,4 +545,7 @@ input[type="password"] {
    margin-left: 700px;
    margin-top: -200px;
 }
+.members__dropdown {
+  margin: 10% 2% 10% 80%
+}
 
