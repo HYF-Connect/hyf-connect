@@ -441,10 +441,21 @@ body {
   font-size: 1vw;
   color: white;
   text-decoration: none;
-  background-color: #1c2294;
+  background-color: #2F195F;
   border-radius: 25px;
   padding: 1.2vw 2.5vw;
+  cursor: pointer;
 }
+
+.project__github--btn:hover, .project__website--btn:hover {
+  background-color: #1c2294;
+  color: white;
+}  
+
+.project__github--btn:active, .project__website--btn:active {
+  background-color: #3d47ff;
+  color: white;
+}  
 
 .project__card--right-container {
   background-color: #e6e6e6;
