@@ -1,3 +1,4 @@
+@import url("avatar.css");
 .avatar-container{
     padding: 16px;
 /*     box-shadow: 4px 4px 4px rgba(28, 34, 148, 0.25);
@@ -5,6 +6,8 @@
  */}
 
 .avatar-image{
+    position:relative;
+    top: 8px;
     border-radius: 50%;
     width: 80px;
     height: 80px;

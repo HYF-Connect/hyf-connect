@@ -16,5 +16,11 @@ export const AvatarDropdown = {
     </ul>
   </div>
     `
+    methods: {
+      logOut() {
+        localStorage.removeItem("token");
+        localStorage.removeItem("username");
+      },
+    },
 };
 export default AvatarDropdown;
