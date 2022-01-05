@@ -11,9 +11,11 @@ const userController = {
       }
    },
    getById: async (req, res) => {
+      const userId = req.params.userId;
+      console.log("controllers", userId);
       try {
-         const userId = req.params.userId;
          const result = await userManager.getUserById(userId);
+
          res.status(200).json(result);
       } catch (error) {
          res.status(400).json({

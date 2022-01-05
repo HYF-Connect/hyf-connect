@@ -86,43 +86,46 @@ export const loginUser = async (Email, Password) => {
    });
 };
 export const updateUserProfile = async (
-   Nationality,
-   ProfilePicture,
-   Bio,
-   GithubURL,
-   LinkedinURL,
-   WebsiteURL,
-   Class,
+   FirstName,
+   LastName,
+   Email,
+   NationalityID,
+   Region,
    JobTitle,
-   Region
+   Class,
+   GithubURL,
+   WebsiteURL,
+   LinkedinURL,
+   Bio
 ) => {
-   return await performUpdate("users/:userId/profile", {
-      Nationality,
-      ProfilePicture,
-      Bio,
-      GithubURL,
-      LinkedinURL,
-      WebsiteURL,
-      Class,
-      JobTitle,
+   const id = localStorage.getItem("userId");
+   return await performUpdate(`users/${id}/profile`, {
+      FirstName,
+      LastName,
+      Email,
+      NationalityID,
       Region,
+      JobTitle,
+      Class,
+      GithubURL,
+      WebsiteURL,
+      LinkedinURL,
+      Bio,
    });
 };
-export const userLanguage = async (LanguageID, Level) => {
-   return await performPost("users/:userId/skill", {
-      LanguageID,
-      Level,
-   });
+
+export const fetchAllUsers = async () => {
+   return await performFetch("users");
 };
-export const userSkill = async (SkillID, Level, SelectedSkill) => {
-   return await performPost("users/:userId/language", {
-      SkillID,
-      Level,
-      SelectedSkill,
-   });
+
+export const fetchUserById = async (userId) => {
+   return await performFetch(`users/${userId}`);
 };
-export const userType = async (TypeID) => {
-   return await performPost("users/:userId/type", {
-      TypeID,
-   });
+
+export const fetchAllLanguages = async () => {
+   return await performFetch("languages");
+};
+
+export const fetchAllClasses = async () => {
+   return await performFetch("classes");
 };

@@ -72,11 +72,11 @@ const userManager = {
       return updatedProfile;
    },
    getAllUsers: async () => {
-      const allUsers = await user.findAll();
+      const allUsers = await userStore.findAll();
       return allUsers;
    },
    getUserById: async (userId) => {
-      const userById = await user.findOne({ where: { UserID: userId } });
+      const userById = await userStore.findOne({ where: { UserID: userId } });
       return userById;
    },
    deleteUserProfile: async ({ UserID }) => {
