@@ -57,4 +57,19 @@ export const loginUser = async (Email, Password) => {
    
 };
 
+// fetching all users
+export const fetchUsers = async () => {
+   return await performFetch("users/");
+};
 
+
+// create project
+export const createProject = async (Title,Description,GithubURL,WebsiteURL,Thumbnail) => {
+   return await performPost("project", {
+      Title,
+      Description,
+      GithubURL,
+      WebsiteURL,
+      Thumbnail,
+   });
+}
