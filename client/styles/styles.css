@@ -532,6 +532,14 @@ input[type="password"] {
    height: 60px;
    margin-left: 5px;
 }
+.members-ticket nav {
+  margin: 20px auto;
+  
+}
+.members-ticket a {
+  margin: auto 10px;
+  color: rgba(28, 34, 148, 1);
+}
 .members-banner__text{
    color: white;
    margin-left: 700px;
