@@ -15,7 +15,6 @@ const userController = {
       console.log("controllers", userId);
       try {
          const result = await userManager.getUserById(userId);
-
          res.status(200).json(result);
       } catch (error) {
          res.status(400).json({

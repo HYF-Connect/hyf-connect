@@ -2,79 +2,95 @@ import { updateUserProfile } from "../../src/data-access/api-calls/calls.js";
 import { fetchUserById } from "../../src/data-access/api-calls/calls.js";
 import { fetchAllLanguages } from "../../src/data-access/api-calls/calls.js";
 import { fetchAllClasses } from "../../src/data-access/api-calls/calls.js";
+import { fetchAllNationalities } from "../../src/data-access/api-calls/calls.js";
+import { fetchAllRegions } from "../../src/data-access/api-calls/calls.js";
 
 export const FormSection = {
    template: `
-    <form class="user-profile-form" @submit.prevent="handleSubmit">
+   <form class="user-profile-form" @submit.prevent="handleSubmit">
       <div class="profile-form-group"> 
-      <label class="profile-form__label">First Name</label>
-      <input class="profile-form__input" type="text" required readonly v-model="firstName">
+         <label class="profile-form__label">First Name</label>
+         <input class="profile-form__input" type="text" required readonly v-model="firstName">
       </div>
       <div class="profile-form-group"> 
-      <label class="profile-form__label">Last Name</label>
-      <input class="profile-form__input" type="text" required readonly v-model="lastName">
+         <label class="profile-form__label">Last Name</label>
+         <input class="profile-form__input" type="text" required readonly v-model="lastName">
       </div>
-       <div class="profile-form-group"> 
-      <label class="profile-form__label">Email</label>
-      <input class="profile-form__input" type="email" required readonly v-model="email">
-          </div>
       <div class="profile-form-group"> 
-      <label class="profile-form__label">User Type</label>
-      <input class="profile-form__input" type="text" v-model="userType">
-          </div>
-       <div class="profile-form-group"> 
-      <label class="profile-form__label">Job Title</label>
-      <input class="profile-form__input" type="text" v-model="jobTitle">
-          </div>
-       <div class="profile-form-group"> 
-      <label class="profile-form__label">Nationality</label>
-      <input class="profile-form__input" type="text" v-model="nationality">
-          </div>
-       <div class="profile-form-group"> 
-      <label class="profile-form__label">Language</label>
-      <select class="profile-form__input" v-model="language">
-         <option v-for="language in languages" v-bind:value="language.LanguageID">
-            {{ language.Language }}
-         </option>
-      </select>
-          </div>
-       <div class="profile-form-group"> 
-      <label class="profile-form__label">Region</label>
-      <input class="profile-form__input" type="text" v-model="region">
-          </div>
-       <div class="profile-form-group"> 
+         <label class="profile-form__label">Email</label>
+         <input class="profile-form__input" type="email" required readonly v-model="email">
+      </div>
+      <div class="profile-form-group"> 
+         <label class="profile-form__label">User Type</label>
+         <input class="profile-form__input" type="text" v-model="userType">
+      </div>
+      <div class="profile-form-group"> 
+         <label class="profile-form__label">Job Title</label>
+         <input class="profile-form__input" type="text" v-model="jobTitle">
+      </div>
+      <div class="profile-form-group"> 
+       <div class="profile-form-list"> 
+            <label class="profile-form__label">Nationality</label>
+            <select class="profile-form__select" v-model="nationality">
+               <option v-for="nationality in nationalities" v-bind:value="nationality.NationalityID">
+                  {{ nationality.Country }}
+               </option>
+            </select>
+         </div>
+      </div>
+      <div class="profile-form-group"> 
+         <label class="profile-form__label">Language</label>
+         <select class="profile-form__input" v-model="language">
+            <option v-for="language in languages" v-bind:value="language.LanguageID">
+               {{ language.Language }}
+            </option>
+         </select>
+      </div>
+      <div class="profile-form-group"> 
+         <div class="profile-form-list"> 
+         <label class="profile-form__label">Region</label>
+         <select class="profile-form__select" v-model="region">
+            <option v-for="region in regions" v-bind:value="region.RegionID">
+                  {{ region.Name }}
+            </option>
+         </select>
+         </div>
+      </div>
+      <div class="profile-form-group"> 
+         <div class="profile-form-list">   
          <label class="profile-form__label">HYF Class</label>
-         <select class="profile-form__input" v-model="hyfClass">
+         <select class="profile-form__select" v-model="hyfClass">
             <option v-for="hyfClass in classes" v-bind:value="hyfClass.ClassID">
                {{ hyfClass.Name }}
             </option>
          </select>
-       </div>
-       <div class="profile-form-group"> 
-      <label class="profile-form__label">GitHub</label>
-      <input class="profile-form__input" type="text" v-model="gitHub">
-          </div>
-       <div class="profile-form-group"> 
-      <label class="profile-form__label">Website</label>
-      <input class="profile-form__input" type="text" v-model="website">
-          </div>
-       <div class="profile-form-group"> 
-      <label class="profile-form__label">LinkedIn</label>
-      <input class="profile-form__input" type="text" v-model="linkedIn">
-          </div>
-       <div class="profile-form-group"> 
-      <label class="profile-form__label">My Skills</label>
-      <input class="profile-form__input" type="text" v-model="skills">
+         </div>
       </div>
-       <div class="profile-form-group"> 
-      <label class="profile-form__label">About me</label> 
-      <input class="profile-form__input-bio" type="text" v-model="bio">
+      <div class="profile-form-group"> 
+         <label class="profile-form__label">GitHub</label>
+         <input class="profile-form__input" type="text" v-model="gitHub">
+      </div>
+      <div class="profile-form-group"> 
+         <label class="profile-form__label">Website</label>
+         <input class="profile-form__input" type="text" v-model="website">
+      </div>
+      <div class="profile-form-group"> 
+         <label class="profile-form__label">LinkedIn</label>
+         <input class="profile-form__input" type="text" v-model="linkedIn">
+      </div>
+      <div class="profile-form-group"> 
+         <label class="profile-form__label">My Skills</label>
+         <input class="profile-form__input" type="text" v-model="skills">
+      </div>
+      <div class="profile-form-group"> 
+         <label class="profile-form__label">About me</label> 
+         <input class="profile-form__input-bio" type="text" v-model="bio">
       </div>
       <div class = "profile-form_btn-right">
-      <button class = "profile-form__btn-submit"> save </button>
+         <button class = "profile-form__btn-submit"> save </button>
       </div>
-  </form>
-    `,
+   </form>
+   `,
    data() {
       return {
          firstName: "",
@@ -83,6 +99,8 @@ export const FormSection = {
          nationality: "",
          languages: [],
          classes: [],
+         nationalities: [],
+         regions: [],
          language: "",
          region: "",
          hyfClass: "",
@@ -100,6 +118,8 @@ export const FormSection = {
          try {
             this.languages = await fetchAllLanguages();
             this.classes = await fetchAllClasses();
+            this.nationalities = await fetchAllNationalities();
+            this.regions = await fetchAllRegions();
             const id = localStorage.getItem("userId");
             const user = await fetchUserById(id);
             this.firstName = user.FirstName;

@@ -589,8 +589,15 @@ input[type="password"] {
    letter-spacing: 0.1em;
 }
 
+.profile-form-list {
+   width: 65%;
+   display: inline-flex;
+   justify-content: space-evenly;
+   margin-right: 36%;
+}
 .profile-form__input,
-.profile-form__input-bio {
+.profile-form__input-bio,
+.profile-form__select {
    display: inline-flex;
    background-color: #ebebeb;
    padding: 10px 3px;
@@ -605,9 +612,21 @@ input[type="password"] {
    word-wrap: break-word;
 }
 
+.profile-form__select {
+   padding: 0 15px;
+   width: 45%;
+   height: 46px;
+}
+.profile-form__select option {
+   padding-left: 5%;
+}
 .profile-form__input-bio {
    padding: 0;
    height: 170px;
+}
+input,
+select:focus {
+   outline: none;
 }
 .profile-form_btn-right {
    display: flex;

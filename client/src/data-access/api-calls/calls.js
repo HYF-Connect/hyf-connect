@@ -89,7 +89,7 @@ export const updateUserProfile = async (
    FirstName,
    LastName,
    Email,
-   NationalityID,
+   Nationality,
    Region,
    JobTitle,
    Class,
@@ -103,7 +103,7 @@ export const updateUserProfile = async (
       FirstName,
       LastName,
       Email,
-      NationalityID,
+      Nationality,
       Region,
       JobTitle,
       Class,
@@ -128,4 +128,11 @@ export const fetchAllLanguages = async () => {
 
 export const fetchAllClasses = async () => {
    return await performFetch("classes");
+};
+
+export const fetchAllRegions = async () => {
+   return await performFetch("regions");
+};
+export const fetchAllNationalities = async () => {
+   return await performFetch("nationalities");
 };
