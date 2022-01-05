@@ -19,6 +19,7 @@ body {
   justify-content: space-between;
   padding: 20px;
   height: 70px;
+  
 }
 .nav-bar a {
   color: #1c2294;
@@ -568,15 +569,16 @@ input[type="password"] {
 
 /* *****  contact us  *****/
 
+
 div.container-contact-us-page{
   margin: auto;
 }
 
 .container-contact-us-page{
   position: relative;
-  width: 1200px;
-  padding: 0;
-  border: 0;
+  padding: 20px;
+  background: #f7f7fc;
+
 }
 
 .section{
@@ -646,7 +648,7 @@ div.section{
 
 .rectangle{
   position: absolute;
-  width: 1279px;
+  width: 1318.5px;
   left: -40px;
   top: 0;
 }
@@ -660,10 +662,30 @@ div.section{
   font: inherit;  
 }
 
-.img{
+.image2{
+  margin-left: 10px;
   position: relative;
-  overflow: hidden;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  padding: 10px;
+  width: 655px;
+  height: 536px;
+  left: 76px;
+  top: -45px
 
+}
+
+/* FORM SECTION */
+
+.contact__columns{
+  margin-left: 70vmax;
+  top: 30vmax;
+  padding: 8px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.three{
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  padding-bottom: 30px;
 }
