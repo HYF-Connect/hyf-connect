@@ -11,10 +11,9 @@ const page = Vue.createApp({
   template: `
       <div class="page">
         <header-component></header-component>
+        <project-component></project-component>
         <main-section></main-section>
-        <footer-component></footer-component>
-      </div>
-    
+      </div>    
       `,
 }).mount("#projects");
 
