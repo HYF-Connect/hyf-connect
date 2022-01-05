@@ -1,4 +1,4 @@
-import ProjectComponent from "./project-component.js";
+import ProjectComponent from "/components/project-component.js";
 
 const MainSection = {
   components: {
