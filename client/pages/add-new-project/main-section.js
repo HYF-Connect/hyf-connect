@@ -1,35 +1,39 @@
-const MainSection = {
+import MultiSelect from "../../components/multiselect-component.js";
+import { fetchUsers } from "../../src/data-access/api-calls/calls.js";
+import { createProject } from "../../src/data-access/api-calls/calls.js";
+
+
+export const MainSection = {
+  components: {
+    MultiSelect
+  },
+
   template: `
   <div class="addnewproject__banner">
   <h1>Add your new project here!</h1>
-</div>
-<div class="addnewproject__container">
+  </div>
+  <div class="addnewproject__container" v-on:load="onload()">
   <form class="addnewproject__form" @submit.prevent="handleSubmit">
+    <div class="alert alert-success" role="alert" v-if="success">
+        Your new project is successfully saved! 
+    </div>
     <label class="addnewproject__form--label">Project Title</label>
-      <input class="addnewproject__form--input" type="text" placeholder="Your project's title" required v-model="projectTitle" style="width: 400px">
+      <input class="addnewproject__form--input" type="text" placeholder="Your project's title" required v-model="projectTitle">
     <label class="addnewproject__form--label">Project URL</label>
-      <input class="addnewproject__form--input" type="url" placeholder="example@example.com" required v-model="websiteUrl" style="width: 400px">
+      <input class="addnewproject__form--input" type="url" placeholder="example@example.com" required v-model="websiteUrl">
     <label class="addnewproject__form--label">Github Repo</label>
-      <input class="addnewproject__form--input" type="url" placeholder="example@github.com" required v-model="githubRepo" style="width: 400px">
+      <input class="addnewproject__form--input" type="url" placeholder="example@github.com" required v-model="githubRepo">
     <label class="addnewproject__form--label">Description</label>
-      <textarea class="addnewproject__form--textarea" placeholder="Describe your project" required v-model="projectDescription" style="width: 400px; height:50px"></textarea>
+      <textarea class="addnewproject__form--textarea" placeholder="Describe your project" required v-model="projectDescription" style="height:50px"></textarea><br>
     <label class="addnewproject__form--label">Team Members</label>
-      <multiselect
-      v-model="value"
-      placeholder="city name?"
-      label="city" track-by="city_ascii"
-      :options="options"
-      :multiple="true"
-      :taggable="true"
-    ></multiselect>
+    <multi-select v-bind:options="students" v-bind:selection="teamMembers" v-on:new-selection="updateTeammates"></multi-select>
     <label class="addnewproject__form--label">Add Thumbnail</label>
-      <input class="addnewproject__form--input" type="file" accept="Image/*" style="width: 400px;">
+      <input class="addnewproject__form--input" type="file" accept="Image/*">
     <button class= "addnewproject__form--btn" v-on:click="handleSubmit">save project</button>
   </form>
 </div>
     `,
 
-    components: { Multiselect: window.VueMultiselect.default },
     data() {
       return {
           projectTitle: "",
@@ -37,54 +41,51 @@ const MainSection = {
           githubRepo: "",
           projectDescription:"",
           teamMembers:[],
-          students:["Yoshi", "Moamin", "Rayane"],
-          value: [],
-          options: [
-                  {
-                    "city": "San Martin",
-                    "city_ascii": "San Martin",
-                    "lat": -33.06998533,
-                    "lng": -68.49001612,
-                    "pop": 99974,
-                    "country": "Argentina",
-                    "iso2": "AR",
-                    "iso3": "ARG",
-                    "province": "Mendoza",
-                    "timezone": "America/Argentina/Mendoza"
-                  },
-                  {
-                    "city": "San Nicolas",
-                    "city_ascii": "San Nicolas",
-                    "lat": -33.33002114,
-                    "lng": -60.24000289,
-                    "pop": 117123.5,
-                    "country": "Argentina",
-                    "iso2": "AR",
-                    "iso3": "ARG",
-                    "province": "Ciudad de Buenos Aires",
-                    "timezone": "America/Argentina/Buenos_Aires"
-                  },
-                  {
-                    "city": "San Francisco",
-                    "city_ascii": "San Francisco",
-                    "lat": -31.43003375,
-                    "lng": -62.08996749,
-                    "pop": 43231,
-                    "country": "Argentina",
-                    "iso2": "AR",
-                    "iso3": "ARG",
-                    "province": "Córdoba",
-                    "timezone": "America/Argentina/Cordoba"
-                  }
-                ],
+          students:[],
+          projectThumbnail: "",
+          success: false,
       }
     },
-methods: {
-  async handleSubmit() {
-    let newProject = {
-      "projectTitle":this.projectTitle,
-...
-    }
-    console.log("newProject",newProject)
-  }
-export default MainSection;
+
+    mounted: function () {
+      this.onload();
+    },
+
+    methods: {
+    async onload() {
+      try {
+        const users = await fetchUsers();
+        this.students = users.map(u => ({label: u.FirstName + " " + u.LastName, value: u.UserID}))
+        console.log(users);
+        } catch (error) {
+        console.log("error from members", error);
+      }
+    },
+
+    async updateTeammates(teammates) {
+      console.log("teammates", teammates);
+    },
+
+    async handleSubmit() {
+      try {
+        const result = await createProject(this.projectTitle,this.projectDescription,this.githubUrl,this.websiteUrl,this.projectThumbnail);
+        this.projectTitle = result.Title;
+        this.projectDescription = result.Description;
+        this.githubUrl = result.GithubURL;
+        this.websiteUrl = result.WebsiteURL;
+        this.projectThumbnail = result.Thumbnail;
+        this.success = true;
+            setTimeout(
+              () => (window.location.href = "/pages/user-project/user-project.html"),
+              500
+            );
+        //console.log(`the selected values:`, this.teamMembers);
+        return;
+      } catch (error) {
+        console.log("error  from project", error);
+      }
+      },
+    },
+  };
+
+    export default MainSection;
