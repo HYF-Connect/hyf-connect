@@ -1,4 +1,6 @@
+import AvatarDropdown from "./avatar-dropdown-component.js";
 const HeaderComponent = {
+  components: {    AvatarDropdown,  },
   template: `<div class="header-container">
     <div class="brand">
         <a href="/pages/homepage/homepage.html" class="logo"><img src="/assets/logo_pc_full.png" alt="logo" width="90" height="70"/></a>
@@ -9,9 +11,7 @@ const HeaderComponent = {
             <a class="nav-link" href="/pages/about-us/about-us.html">about us</a>
             <a class="nav-link" href="/pages/contact-us/contact-us.html">contact us</a>
         </div>
-        <div class="username" v-if="isLoggedIn">{{ username }} 
-        <a class="sign-out-btn" href="" v-on:click="logOut">sign out</a>
-        </div>
+        <avatar-dropdown :avatar="avatar" v-if="isLoggedIn"></avatar-dropdown>
         <a class="sign-in-btn" href="/pages/login/login.html" v-else>sign in</a>
         </div>`,
   data() {
@@ -23,6 +23,11 @@ const HeaderComponent = {
     return {
       isLoggedIn,
       username: localStorage.getItem("username"),
+      avatar: 
+      {  
+        "name":localStorage.getItem("username"),
+        "url":"/images/members/firewyni.jpg"
+      }
     };
   },
   methods: {
