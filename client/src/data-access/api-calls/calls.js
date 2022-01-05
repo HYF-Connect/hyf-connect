@@ -64,7 +64,7 @@ export const fetchUsers = async () => {
 
 
 // create project
-export const createProject = async (Title,Description,GithubURL,WebsiteURL,Thumbnail) => {
+export const createProject = async (Title, Description, GithubURL, WebsiteURL, Thumbnail) => {
    return await performPost("project", {
       Title,
       Description,
