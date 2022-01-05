@@ -669,7 +669,7 @@ div.section{
   width: 655px;
   height: 536px;
   left: 76px;
-  top: -45px
+  top: -109px
 
 }
 
@@ -688,4 +688,37 @@ div.section{
   font-weight: 700;
   font-size: 16px;
   padding-bottom: 30px;
+}
+
+#contactFormName, #contactFormEmail, .message{
+  padding: 10px 6px;
+  padding-bottom: 4px;
+  padding-left: 20px;
+  touch-action: manipulation;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  border: 1px solid rgb(255, 255, 255)
+}
+
+#action_button{
+  width: 130px;
+  padding: 12px 24px;
+  background-color: #2f195f;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  font-family: "Montserrat";
+  text-decoration: none;
+  padding-top: 10px;
+  margin-left: 10px;
+  position: relative;
+  padding: 10px;
+  left: 156px;
+  top: 180px
+}
+
+#action_button:hover{
+  background: #dfd7ef;;
 }

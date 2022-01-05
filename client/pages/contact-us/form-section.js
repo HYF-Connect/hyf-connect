@@ -27,8 +27,8 @@ export const FormSection = {
             <div class="three columns omega">
             <input type="email" id="contactFormEmail" name="contact[email]" placeholder="Email" autocorrect="off" autocapitalize="off" value required="required">         </input>
             </div>
-            <textarea  class="message" rows="5" cols="25.5"  placeholder="Message" required="required"></textarea>
-            <button type="submit" class="submit action_button" value="submit">submit</button>
+            <textarea  class="message" rows="10" cols="25.5"  placeholder="Message" required="required"></textarea>
+            <button type="submit" id="action_button" value="submit">submit</button>
           </div>
         <br class="clear">
         <br class="clear">
