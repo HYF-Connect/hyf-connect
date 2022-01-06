@@ -136,3 +136,19 @@ export const fetchAllRegions = async () => {
 export const fetchAllNationalities = async () => {
    return await performFetch("nationalities");
 };
+// create project
+export const createProject = async (
+   Title,
+   Description,
+   GithubURL,
+   WebsiteURL,
+   Thumbnail
+) => {
+   return await performPost("project", {
+      Title,
+      Description,
+      GithubURL,
+      WebsiteURL,
+      Thumbnail,
+   });
+};
