@@ -29,7 +29,7 @@ export const FormSection = {
          <input class="profile-form__input" type="text" v-model="jobTitle">
       </div>
       <div class="profile-form-group"> 
-       <div class="profile-form-list"> 
+      <div class="profile-form-list"> 
             <label class="profile-form__label">Nationality</label>
             <select class="profile-form__select" v-model="nationality">
                <option v-for="nationality in nationalities" v-bind:value="nationality.NationalityID">

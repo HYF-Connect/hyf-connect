@@ -71,6 +71,38 @@ const userManager = {
       });
       return updatedProfile;
    },
+   updateUserSkill: async ({
+      UserID,
+      SkillID,
+      Level,
+      SelectedSkill: SelectedSkill,
+   }) => {
+      const userSkillById = await userSkillStore.findOne({
+         where: { UserID: UserID },
+      });
+      const updatedUserSkill = await userSkillById.update({
+         UserID: UserID,
+         SkillID: SkillID,
+         Level: Level,
+         SelectedSkill: SelectedSkill,
+      });
+      return updatedUserSkill;
+   },
+   updateUserLanguage: async ({ UserID, LanguageID, Level }) => {
+      const updatedUserLanguage = await userLanguageStore.update({
+         UserID: UserID,
+         LanguageID: LanguageID,
+         Level: Level,
+      });
+      return updatedUserLanguage;
+   },
+   updateUserType: async ({ UserID, TypeID }) => {
+      const updatedNewUserType = await userTypeStore.update({
+         UserID: UserID,
+         TypeID: TypeID,
+      });
+      return updatedNewUserType;
+   },
    getAllUsers: async () => {
       const allUsers = await userStore.findAll();
       return allUsers;

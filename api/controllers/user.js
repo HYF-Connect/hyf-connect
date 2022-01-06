@@ -68,11 +68,11 @@ const userController = {
    },
    postSkill: async (req, res) => {
       try {
-         const { SkillID, Level, SelectedSkill } = req.body;
+         const { Skill, Level, SelectedSkill } = req.body;
          const UserID = req.params.userId;
          const userSkill = await userManager.createUserSkill({
             UserID: UserID,
-            SkillID: SkillID,
+            SkillID: Skill,
             Level: Level,
             SelectedSkill: SelectedSkill,
          });
@@ -84,11 +84,11 @@ const userController = {
    },
    postLanguage: async (req, res) => {
       try {
-         const { LanguageID, Level } = req.body;
+         const { Language, Level } = req.body;
          const UserID = req.params.userId;
          const userLanguage = await userManager.createUserLanguage({
             UserID: UserID,
-            LanguageID: LanguageID,
+            LanguageID: Language,
             Level: Level,
          });
          res.status(200).json(userLanguage);
@@ -99,11 +99,11 @@ const userController = {
    },
    postType: async (req, res) => {
       try {
-         const { TypeID } = req.body;
+         const { Type } = req.body;
          const UserID = req.params.userId;
          const userType = await userManager.createUserType({
             UserID: UserID,
-            TypeID: TypeID,
+            TypeID: Type,
          });
          res.status(200).json(userType);
       } catch (error) {
@@ -138,12 +138,63 @@ const userController = {
             Region: Region,
          });
          res.status(200).json(
-            `Congratulation ${userProfile.FirstName}, your profile has been successfully created!`
+            `Congratulation ${userProfile.FirstName}, your profile has been successfully updated!`
          );
       } catch (error) {
          res.status(400).json({
             message: error.message,
          });
+      }
+   },
+   putSkill: async (req, res) => {
+      try {
+         const { Skill, Level, SelectedSkill } = req.body;
+         const UserID = req.params.userId;
+         const userSkill = await userManager.updateUserSkill({
+            UserID: UserID,
+            SkillID: Skill,
+            Level: Level,
+            SelectedSkill: SelectedSkill,
+         });
+         res.status(200).json(
+            `Skill ${userSkill.SkillID} has been successfully updated!`
+         );
+      } catch (error) {
+         console.log(error);
+         res.status(500).json({ message: error.message });
+      }
+   },
+   putLanguage: async (req, res) => {
+      try {
+         const { Language, Level } = req.body;
+         const UserID = req.params.userId;
+         const userLanguage = await userManager.updateUserLanguage({
+            UserID: UserID,
+            LanguageID: Language,
+            Level: Level,
+         });
+         res.status(200).json(
+            `Language ${userLanguage.LanguageID} has been successfully updated!`
+         );
+      } catch (error) {
+         console.log(error);
+         res.status(500).json({ message: error.message });
+      }
+   },
+   putType: async (req, res) => {
+      try {
+         const { Type } = req.body;
+         const UserID = req.params.userId;
+         const userType = await userManager.updateUserType({
+            UserID: UserID,
+            TypeID: Type,
+         });
+         res.status(200).json(
+            `Type ${userType.TypeID} has been successfully updated!`
+         );
+      } catch (error) {
+         console.log(error);
+         res.status(500).json({ message: error.message });
       }
    },
    deleteUserProfile: async (req, res) => {
