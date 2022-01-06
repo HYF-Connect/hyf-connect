@@ -7,12 +7,15 @@ export const membersTicketSection = {
     memberComponent,
   },
   template: `
-        <select class="form-select" v-model="hyfClass">
-            <option v-for="hyfClass in classes" v-bind:value="hyfClass.ClassID">
-              {{ hyfClass.Name }}
-            </option>
-        </select>
+     <div class= "members-form__select"> 
+      <label class="members-form__select--label">filter by</label>
+      <select class="members-form__select--options" v-model="hyfClass">
+      <option v-for="hyfClass in classes" v-bind:value="hyfClass.ClassID">{{ hyfClass.Name }}
+          </option>
+      </select>
+     </div>   
     <div class="members-ticket" v-on:load="onload()">
+      
         <template v-for="member in showingMembers" >
             <member-component :member="member" />
         </template>
@@ -23,7 +26,7 @@ export const membersTicketSection = {
           </li>
           {{pageCount}}
           <li class="page-item">
-            <button class="page-link" v-on:click="nextPage"v-bind:disabled="disableNext">Next</button>
+            <button class="page-link" v-on:click="nextPage" v-bind:disabled="disableNext">Next</button>
           </li>
         </ul>
       </nav>
@@ -68,25 +71,37 @@ export const membersTicketSection = {
       try {
         //this.classes = await fetchClasses();
         //this.classes = [{ Name: "select all", ClassID: -1 }, ...(await fetchClasses())];
-        //const imageMap= {"1": "/assets/JS-Logo.png"}
+
+        const imageMap = [
+          { 1: "/assets/css-logo.png" },
+          { 2: "/assets/html-logo.png" },
+          { 3: "/assets/JS-logo.png" },
+          { 4: "/assets/logo-facebook.svg" },
+          { 5: "/assets/logo-github.svg" },
+          { 6: "/assets/logo-instagram.svg" },
+          { 7: "/assets/quote_icon.png" },
+          { 8: "/assets/logo_pc_full.png" },
+          { 9: "/assets/JS-logo.png" },
+          { 10: "/assets/JS-logo.png" },
+        ];
+
+        console.log(imageMap[2]);
+
         const result = await fetchUsers();
-        console.log(result);
+        //console.log(result);
+        console.log(result[2]);
+
         const skillsResult = await fetchSkills();
-        //console.log(skillsResult);
+        console.log(skillsResult);
         for (let i = 0; i < result.length; i++) {
+          //console.log(skillsResult[i].SkillID);
           this.members.push({
             username: result[i].FirstName + " " + result[i].LastName,
             avatar: result[i].ProfilePicture,
             title: result[i].JobTitle,
             ClassID: result[i].ClassID,
+            //icon1: imageMap[skillsResult[1].SkillID],
           });
-
-          //this.members[i].icon1 = skillsResult[i].SelectedSkill;
-          //this.members[i].icon1 = skillsResult[i].SkillID;
-          //this.members[i].icon2 = skillsResult[i].SelectedSkill;
-          //this.members[i].icon2 = skillsResult[i].SkillID;
-          //this.members[i].icon3 = skillsResult[i].SelectedSkill;
-          //this.members[i].icon3 = skillsResult[i].SkillID;
         }
       } catch (error) {
         console.log("error from members", error);
