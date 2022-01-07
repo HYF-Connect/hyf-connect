@@ -22,6 +22,33 @@ const userController = {
          });
       }
    },
+   getSkills: async (req, res) => {
+      const userId = req.params.userId;
+      try {
+         const allUserSkills = await userManager.getAllUserSkills(userId);
+         res.send(JSON.stringify(allUserSkills, null, 2));
+      } catch (error) {
+         res.status(500).send(error);
+      }
+   },
+   getLanguages: async (req, res) => {
+      const userId = req.params.userId;
+      try {
+         const allUserLanguages = await userManager.getAllUserLanguages(userId);
+         res.send(JSON.stringify(allUserLanguages, null, 2));
+      } catch (error) {
+         res.status(500).send(error);
+      }
+   },
+   getTypes: async (req, res) => {
+      const userId = req.params.userId;
+      try {
+         const allUserTypes = await userManager.getAllUserTypes(userId);
+         res.send(JSON.stringify(allUserTypes, null, 2));
+      } catch (error) {
+         res.status(500).send(error);
+      }
+   },
    postRegister: async (req, res) => {
       try {
          const { FirstName, LastName, Email, Password } = req.body;

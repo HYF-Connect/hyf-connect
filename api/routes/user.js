@@ -4,6 +4,9 @@ const userController = require("../controllers/user");
 const userRoutes = express.Router();
 
 userRoutes.get("/", userController.getAll);
+userRoutes.get("/:userId/skill", userController.getSkills);
+userRoutes.get("/:userId/language", userController.getLanguages);
+userRoutes.get("/:userId/type", userController.getTypes);
 userRoutes.post("/register", userController.postRegister);
 userRoutes.put("/:userId/profile", userController.putUserProfile);
 userRoutes.put("/:userId/skill", userController.putSkill);

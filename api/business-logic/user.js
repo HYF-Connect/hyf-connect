@@ -71,20 +71,15 @@ const userManager = {
       });
       return updatedProfile;
    },
-   updateUserSkill: async ({
-      UserID,
-      SkillID,
-      Level,
-      SelectedSkill: SelectedSkill,
-   }) => {
-      const userSkillById = await userSkillStore.findOne({
+   updateUserSkills: async (UserID, skills) => {
+      // get all user skills
+      // remove all user skills
+      // loop skills parameters
+      const userSkillById = await userSkillStore.findAll({
          where: { UserID: UserID },
       });
       const updatedUserSkill = await userSkillById.update({
          UserID: UserID,
-         SkillID: SkillID,
-         Level: Level,
-         SelectedSkill: SelectedSkill,
       });
       return updatedUserSkill;
    },
@@ -106,6 +101,24 @@ const userManager = {
    getAllUsers: async () => {
       const allUsers = await userStore.findAll();
       return allUsers;
+   },
+   getAllUserSkills: async (userId) => {
+      const allUserSkills = await userSkillStore.findAll({
+         where: { UserID: userId },
+      });
+      return allUserSkills;
+   },
+   getAllUserLanguages: async (userId) => {
+      const allUserLanguages = await userLanguageStore.findAll({
+         where: { UserID: userId },
+      });
+      return allUserLanguages;
+   },
+   getAllUserTypes: async (userId) => {
+      const allUserTypes = await userTypeStore.findAll({
+         where: { UserID: userId },
+      });
+      return allUserTypes;
    },
    getUserById: async (userId) => {
       const userById = await userStore.findOne({ where: { UserID: userId } });

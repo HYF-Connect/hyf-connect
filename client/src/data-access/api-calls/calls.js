@@ -113,8 +113,14 @@ export const updateUserProfile = async (
       Bio,
    });
 };
-
-export const fetchAllUsers = async () => {
+export const updateLanguage = async (Language, Level) => {
+   const id = localStorage.getItem("userId");
+   return await performUpdate(`users/${id}/language`, {
+      Language,
+      Level,
+   });
+};
+export const fetchUsers = async () => {
    return await performFetch("users");
 };
 
@@ -135,6 +141,22 @@ export const fetchAllRegions = async () => {
 };
 export const fetchAllNationalities = async () => {
    return await performFetch("nationalities");
+};
+
+export const fetchAllTypes = async () => {
+   return await performFetch("types");
+};
+export const fetchAllSkills = async () => {
+   return await performFetch("skills");
+};
+export const fetchUserTypes = async (userId) => {
+   return await performFetch(`users/${userId}/type`);
+};
+export const fetchUserSkills = async (userId) => {
+   return await performFetch(`users/${userId}/skill`);
+};
+export const fetchUserLanguages = async (userId) => {
+   return await performFetch(`users/${userId}/language`);
 };
 // create project
 export const createProject = async (
