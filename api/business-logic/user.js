@@ -83,11 +83,16 @@ const userManager = {
       });
       return updatedUserSkill;
    },
-   updateUserLanguage: async ({ UserID, LanguageID, Level }) => {
-      const updatedUserLanguage = await userLanguageStore.update({
+   updateUserLanguage: async (UserID, Languages) => {
+      const getUserLanguages = await userLanguageStore.findAll({
+         where: { UserID: UserID },
+      });
+      await getUserLanguages.destroy({
+         where: { UserID: UserID },
+      });
+
+      const updatedUserLanguage = await selectedLanguages.update({
          UserID: UserID,
-         LanguageID: LanguageID,
-         Level: Level,
       });
       return updatedUserLanguage;
    },

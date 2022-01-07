@@ -193,16 +193,16 @@ const userController = {
    },
    putLanguage: async (req, res) => {
       try {
-         const { Language, Level } = req.body;
+         console.log("body", req.body);
+         console.log("userId", req.params.userId);
+         /*          const { Language, Level } = req.body;
          const UserID = req.params.userId;
          const userLanguage = await userManager.updateUserLanguage({
             UserID: UserID,
             LanguageID: Language,
-            Level: Level,
-         });
-         res.status(200).json(
-            `Language ${userLanguage.LanguageID} has been successfully updated!`
-         );
+        /*     Level: Level,
+         }); */
+         res.status(200).json(`Language has been successfully updated!`);
       } catch (error) {
          console.log(error);
          res.status(500).json({ message: error.message });

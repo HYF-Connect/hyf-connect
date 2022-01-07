@@ -190,8 +190,9 @@ export const FormSection = {
       },
       async updateUserLanguages() {
          try {
-            const result = await updateLanguage(this.selectedLanguages);
-            console.log(result);
+            console.log(this.selectedLanguages);
+            //const result = await updateLanguage(this.selectedLanguages);
+            // console.log(result);
          } catch (error) {
             console.log("error from user language", error);
          }
@@ -218,12 +219,12 @@ export const FormSection = {
                this.bio
             );
             this.success = true;
-            setTimeout(
+            /*             setTimeout(
                () =>
                   (window.location.href =
                      "/pages/user-profile/user-profile.html"),
                4000
-            );
+            ); */
          } catch (error) {
             console.log("error from user profile form", error);
          }
