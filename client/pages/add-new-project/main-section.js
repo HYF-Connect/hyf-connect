@@ -21,8 +21,8 @@ export const MainSection = {
       <input class="addnewproject__form--input" type="text" placeholder="Your project's title" required v-model="projectTitle">
     <label class="addnewproject__form--label">Project URL</label>
       <input class="addnewproject__form--input" type="url" placeholder="example@example.com" required v-model="websiteUrl">
-    <label class="addnewproject__form--label">Github Repo</label>
-      <input class="addnewproject__form--input" type="url" placeholder="example@github.com" required v-model="githubRepo">
+    <label class="addnewproject__form--label">Github URL</label>
+      <input class="addnewproject__form--input" type="url" placeholder="example@github.com" required v-model="githubUrl">
     <label class="addnewproject__form--label">Description</label>
       <textarea class="addnewproject__form--textarea" placeholder="Describe your project" required v-model="projectDescription" style="height:50px"></textarea><br>
     <label class="addnewproject__form--label">Team Members</label>
@@ -38,7 +38,7 @@ export const MainSection = {
       return {
           projectTitle: "",
           websiteUrl: "",
-          githubRepo: "",
+          githubUrl: "",
           projectDescription:"",
           teamMembers:[],
           students:[],
@@ -69,18 +69,11 @@ export const MainSection = {
     async handleSubmit() {
       try {
         const result = await createProject(this.projectTitle,this.projectDescription,this.githubUrl,this.websiteUrl,this.projectThumbnail);
-        this.projectTitle = result.Title;
-        this.projectDescription = result.Description;
-        this.githubUrl = result.GithubURL;
-        this.websiteUrl = result.WebsiteURL;
-        this.projectThumbnail = result.Thumbnail;
         this.success = true;
             setTimeout(
-              () => (window.location.href = "/pages/user-project/user-project.html"),
+              () => (window.location.href = "/"),
               500
             );
-        //console.log(`the selected values:`, this.teamMembers);
-        return;
       } catch (error) {
         console.log("error  from project", error);
       }
