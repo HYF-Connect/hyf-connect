@@ -113,11 +113,29 @@ export const updateUserProfile = async (
       Bio,
    });
 };
-export const updateLanguage = async (Language, Level) => {
+export const updateUserLanguages = async (languages) => {
    const id = localStorage.getItem("userId");
    return await performUpdate(`users/${id}/language`, {
-      Language,
-      Level,
+      languages,
+   });
+};
+export const updateUserSkills = async (skills) => {
+   const id = localStorage.getItem("userId");
+   return await performUpdate(`users/${id}/skill`, {
+      skills,
+   });
+};
+export const updateUserTypes = async (types) => {
+   const id = localStorage.getItem("userId");
+   return await performUpdate(`users/${id}/type`, {
+      types,
+   });
+};
+
+export const updatePicture = async (ProfilePicture) => {
+   const id = localStorage.getItem("userId");
+   return await performUpdate(`users/${id}/picture`, {
+      ProfilePicture,
    });
 };
 export const fetchUsers = async () => {

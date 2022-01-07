@@ -142,7 +142,6 @@ const userController = {
       try {
          const {
             Nationality,
-            ProfilePicture,
             Bio,
             GithubURL,
             LinkedinURL,
@@ -155,7 +154,6 @@ const userController = {
          const userProfile = await userManager.updateUserProfile({
             UserID: userId,
             Nationality: Nationality,
-            ProfilePicture: ProfilePicture,
             Bio: Bio,
             GithubURL: GithubURL,
             LinkedinURL: LinkedinURL,
@@ -173,52 +171,54 @@ const userController = {
          });
       }
    },
-   putSkill: async (req, res) => {
+   putUserPicture: async (req, res) => {
       try {
-         const { Skill, Level, SelectedSkill } = req.body;
-         const UserID = req.params.userId;
-         const userSkill = await userManager.updateUserSkill({
-            UserID: UserID,
-            SkillID: Skill,
-            Level: Level,
-            SelectedSkill: SelectedSkill,
-         });
-         res.status(200).json(
-            `Skill ${userSkill.SkillID} has been successfully updated!`
-         );
+         const { ProfilePicture } = req.body;
+         const userId = req.params.userId;
+         await userManager.updateUserPicture(userId, ProfilePicture);
+         res.status(200).json(`Picture has been successfully updated!`);
       } catch (error) {
          console.log(error);
          res.status(500).json({ message: error.message });
       }
    },
-   putLanguage: async (req, res) => {
+   putSkills: async (req, res) => {
       try {
-         console.log("body", req.body);
-         console.log("userId", req.params.userId);
-         /*          const { Language, Level } = req.body;
+         const { skills } = req.body;
          const UserID = req.params.userId;
-         const userLanguage = await userManager.updateUserLanguage({
-            UserID: UserID,
-            LanguageID: Language,
-        /*     Level: Level,
-         }); */
-         res.status(200).json(`Language has been successfully updated!`);
+         const result = await userManager.updateUserSkills(UserID, skills);
+         res.status(200).json({
+            message: `Skill has been successfully updated!`,
+         });
       } catch (error) {
          console.log(error);
          res.status(500).json({ message: error.message });
       }
    },
-   putType: async (req, res) => {
+   putLanguages: async (req, res) => {
       try {
-         const { Type } = req.body;
+         const { languages } = req.body;
          const UserID = req.params.userId;
-         const userType = await userManager.updateUserType({
-            UserID: UserID,
-            TypeID: Type,
-         });
-         res.status(200).json(
-            `Type ${userType.TypeID} has been successfully updated!`
+         const result = await userManager.updateUserLanguages(
+            UserID,
+            languages
          );
+         res.status(200).json({
+            message: `Language has been successfully updated!`,
+         });
+      } catch (error) {
+         console.log(error);
+         res.status(500).json({ message: error.message });
+      }
+   },
+   putTypes: async (req, res) => {
+      try {
+         const { types } = req.body;
+         const UserID = req.params.userId;
+         const result = await userManager.updateUserTypes(UserID, skills);
+         res.status(200).json({
+            message: `Type has been successfully updated!`,
+         });
       } catch (error) {
          console.log(error);
          res.status(500).json({ message: error.message });

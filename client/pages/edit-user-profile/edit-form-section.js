@@ -1,16 +1,19 @@
-import { updateUserProfile } from "../../src/data-access/api-calls/calls.js";
-import { updateLanguage } from "../../src/data-access/api-calls/calls.js";
-import { fetchUserById } from "../../src/data-access/api-calls/calls.js";
-import { fetchAllLanguages } from "../../src/data-access/api-calls/calls.js";
-import { fetchAllClasses } from "../../src/data-access/api-calls/calls.js";
-import { fetchAllNationalities } from "../../src/data-access/api-calls/calls.js";
-import { fetchAllRegions } from "../../src/data-access/api-calls/calls.js";
-import { fetchAllTypes } from "../../src/data-access/api-calls/calls.js";
-import { fetchAllSkills } from "../../src/data-access/api-calls/calls.js";
-import { fetchUserSkills } from "../../src/data-access/api-calls/calls.js";
-import { fetchUserTypes } from "../../src/data-access/api-calls/calls.js";
-import { fetchUserLanguages } from "../../src/data-access/api-calls/calls.js";
-
+import {
+   updateUserProfile,
+   updateUserLanguages,
+   updateUserSkills,
+   updateUserTypes,
+   fetchUserById,
+   fetchAllLanguages,
+   fetchAllClasses,
+   fetchAllNationalities,
+   fetchAllRegions,
+   fetchAllTypes,
+   fetchAllSkills,
+   fetchUserSkills,
+   fetchUserTypes,
+   fetchUserLanguages,
+} from "../../src/data-access/api-calls/calls.js";
 import MultiSelect from "../../components/multiselect-component.js";
 
 export const FormSection = {
@@ -19,9 +22,9 @@ export const FormSection = {
    },
    template: `
    <form class="user-profile-form" @submit.prevent="handleSubmit">
-       <div class="alert alert-success" role="alert" v-if="success">
-        Your profile is successfully saved! 
-    </div>
+      <div class="alert alert-success" role="alert" v-if="success">
+         Your profile is successfully saved! 
+      </div>
       <div class="profile-form-group"> 
          <label class="profile-form__label">First Name</label>
          <input class="profile-form__input" type="text" required readonly v-model="firstName">
@@ -37,7 +40,7 @@ export const FormSection = {
       <div class="profile-form-group">
          <div class="profile-form-list"> 
             <label class="profile-form__label">User Type</label>
-           <multi-select v-bind:dropdownid="'typesDropDown'" v-bind:options="types" v-bind:selection="selectedTypes" v-on:new-selection="updateUserType"></multi-select>
+            <multi-select v-bind:dropdownid="'typesDropDown'" v-bind:options="types" v-bind:selection="selectedTypes" v-on:new-selection="updateUserType"></multi-select>
          </div>
       </div>
       <div class="profile-form-group"> 
@@ -92,7 +95,7 @@ export const FormSection = {
          <label class="profile-form__label">LinkedIn</label>
          <input class="profile-form__input" type="text" v-model="linkedIn">
       </div>
-        <div class="profile-form-group"> 
+      <div class="profile-form-group"> 
          <div class="profile-form-list"> 
             <label class="profile-form__label">My Skills</label>
             <multi-select  v-bind:dropdownid="'skillsDropDown'" v-bind:options="skills" v-bind:selection="selectedSkills" v-on:new-selection="updateUserSkill"></multi-select>
@@ -150,9 +153,9 @@ export const FormSection = {
             this.region = user.RegionID;
             this.jobTitle = user.JobTitle;
             this.hyfClass = user.ClassID;
-            this.gitHub = user.GitHubURL;
+            this.gitHub = user.GithubURL;
             this.website = user.WebsiteURL;
-            this.linkedIn = user.LinkedInURL;
+            this.linkedIn = user.LinkedinURL;
             this.bio = user.Bio;
             const getAllLanguages = await fetchAllLanguages();
             this.languages = getAllLanguages.map((l) => ({
@@ -170,9 +173,9 @@ export const FormSection = {
                value: t.TypeID,
             }));
             const getUserTypes = await fetchUserTypes(id);
-            this.selectedType = getUserTypes.map((l) => ({
-               label: l.Language,
-               value: l.LanguageID,
+            this.selectedType = getUserTypes.map((t) => ({
+               label: t.Title,
+               value: t.TypeID,
             }));
             const getAllSkills = await fetchAllSkills();
             this.skills = getAllSkills.map((s) => ({
@@ -188,20 +191,14 @@ export const FormSection = {
             console.log("error from user profile form", error);
          }
       },
-      async updateUserLanguages() {
-         try {
-            console.log(this.selectedLanguages);
-            //const result = await updateLanguage(this.selectedLanguages);
-            // console.log(result);
-         } catch (error) {
-            console.log("error from user language", error);
-         }
+      async updateUserLanguages(newLangs) {
+         this.selectedLanguages = newLangs;
       },
-      async updateUserSkills(b) {
-         console.log("userSkills", b);
+      async updateUserSkills(newSkills) {
+         this.selectedSkills = newSkills;
       },
-      async updateUserTypes(c) {
-         console.log("userTypes", c);
+      async updateUserTypes(newTypes) {
+         this.selectedTypes = newTypes;
       },
       async handleSubmit() {
          try {
@@ -218,13 +215,10 @@ export const FormSection = {
                this.linkedIn,
                this.bio
             );
+            const language = await updateUserLanguages(this.selectedLanguages);
+            const skill = await updateUserTypes(this.selectedTypes);
+            const type = await updateUserSkills(this.selectedSkills);
             this.success = true;
-            /*             setTimeout(
-               () =>
-                  (window.location.href =
-                     "/pages/user-profile/user-profile.html"),
-               4000
-            ); */
          } catch (error) {
             console.log("error from user profile form", error);
          }

@@ -48,7 +48,6 @@ const userManager = {
    updateUserProfile: async ({
       UserID,
       Nationality,
-      ProfilePicture,
       Bio,
       GithubURL,
       LinkedinURL,
@@ -60,7 +59,6 @@ const userManager = {
       const userById = await userStore.findOne({ where: { UserID: UserID } });
       const updatedProfile = await userById.update({
          NationalityID: Nationality,
-         ProfilePicture,
          Bio,
          GithubURL,
          LinkedinURL,
@@ -71,37 +69,48 @@ const userManager = {
       });
       return updatedProfile;
    },
+   updateUserPicture: async (userId, ProfilePicture) => {
+      const userById = await userStore.findOne({ where: { UserID: userId } });
+      const updatedUser = await userById.update({
+         ProfilePicture,
+      });
+      return updatedUser;
+   },
    updateUserSkills: async (UserID, skills) => {
-      // get all user skills
-      // remove all user skills
-      // loop skills parameters
-      const userSkillById = await userSkillStore.findAll({
+      await userSkillStore.destroy({
          where: { UserID: UserID },
       });
-      const updatedUserSkill = await userSkillById.update({
-         UserID: UserID,
-      });
-      return updatedUserSkill;
+      for (let skill in skills) {
+         await userSkillStore.create({
+            UserID: UserID,
+            SkillID: skill.value,
+         });
+      }
+      return true;
    },
-   updateUserLanguage: async (UserID, Languages) => {
-      const getUserLanguages = await userLanguageStore.findAll({
+   updateUserLanguages: async (UserID, languages) => {
+      await userLanguageStore.destroy({
          where: { UserID: UserID },
       });
-      await getUserLanguages.destroy({
-         where: { UserID: UserID },
-      });
-
-      const updatedUserLanguage = await selectedLanguages.update({
-         UserID: UserID,
-      });
-      return updatedUserLanguage;
+      for (let lang in languages) {
+         await userLanguageStore.create({
+            UserID: UserID,
+            LanguageID: lang.value,
+         });
+      }
+      return true;
    },
-   updateUserType: async ({ UserID, TypeID }) => {
-      const updatedNewUserType = await userTypeStore.update({
-         UserID: UserID,
-         TypeID: TypeID,
+   updateUserTypes: async ({ UserID, types }) => {
+      await userTypeStore.destroy({
+         where: { UserID: UserID },
       });
-      return updatedNewUserType;
+      for (let type in types) {
+         await userTypeStore.create({
+            UserID: UserID,
+            TypeID: type.value,
+         });
+      }
+      return true;
    },
    getAllUsers: async () => {
       const allUsers = await userStore.findAll();
