@@ -17,16 +17,16 @@ export const membersTicketSection = {
     <div class="members-ticket" v-on:load="onload()">
       
         <template v-for="member in showingMembers" >
-            <member-component :member="member" />
+            <member-component :member="member"  />
         </template>
         <nav aria-label="Page navigation example">
-        <ul class="pagination">
-          <li class="page-item">
-            <button class="page-link" v-on:click="previousPage" v-bind:disabled="disablePrevious">Previous</button>
+        <ul class="members-pagination">
+          <li class="memers-pagination--item">
+            <button class="memers-pagination--item__btn" v-on:click="previousPage" v-bind:disabled="disablePrevious">Previous</button>
           </li>
           {{pageCount}}
-          <li class="page-item">
-            <button class="page-link" v-on:click="nextPage" v-bind:disabled="disableNext">Next</button>
+          <li class="memers-pagination--item">
+            <button class="memers-pagination--item__btn" v-on:click="nextPage" v-bind:disabled="disableNext">Next</button>
           </li>
         </ul>
       </nav>
@@ -72,35 +72,32 @@ export const membersTicketSection = {
         //this.classes = await fetchClasses();
         //this.classes = [{ Name: "select all", ClassID: -1 }, ...(await fetchClasses())];
 
-        const imageMap = [
-          { 1: "/assets/css-logo.png" },
-          { 2: "/assets/html-logo.png" },
-          { 3: "/assets/JS-logo.png" },
-          { 4: "/assets/logo-facebook.svg" },
-          { 5: "/assets/logo-github.svg" },
-          { 6: "/assets/logo-instagram.svg" },
-          { 7: "/assets/quote_icon.png" },
-          { 8: "/assets/logo_pc_full.png" },
-          { 9: "/assets/JS-logo.png" },
-          { 10: "/assets/JS-logo.png" },
-        ];
-
-        console.log(imageMap[2]);
-
+        const imageMap = {
+          1: "/assets/css-logo.png",
+          2: "/assets/html-logo.png",
+          3: "/assets/JS-logo.png",
+          4: "/assets/logo-facebook.svg",
+          5: "/assets/logo-github.svg",
+          6: "/assets/logo-instagram.svg",
+          7: "/assets/quote_icon.png",
+          8: "/assets/logo_pc_full.png",
+          9: "/assets/JS-logo.png",
+          10: "/assets/JS-logo.png",
+        };
         const result = await fetchUsers();
-        //console.log(result);
-        console.log(result[2]);
 
         const skillsResult = await fetchSkills();
-        console.log(skillsResult);
+
+        //console.log(skillsResult[x].SkillID);
         for (let i = 0; i < result.length; i++) {
-          //console.log(skillsResult[i].SkillID);
           this.members.push({
             username: result[i].FirstName + " " + result[i].LastName,
             avatar: result[i].ProfilePicture,
             title: result[i].JobTitle,
             ClassID: result[i].ClassID,
-            //icon1: imageMap[skillsResult[1].SkillID],
+            icon1: imageMap[skillsResult[i].SkillID],
+            icon2: imageMap[skillsResult[i].UserID],
+            icon3: imageMap[skillsResult[i].SelectedSkill],
           });
         }
       } catch (error) {
