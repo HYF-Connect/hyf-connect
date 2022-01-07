@@ -364,137 +364,108 @@ body {
 
 /* PROJECTS-PAGE */
 
-.projects__banner--container {
+.project__banner--container {
   background-color: #dfd7ef;
-  height: fit-content;
   width: 100%;
-  margin-bottom: 30px;
-  /* clip-path: polygon(0 0, 100% 0, 100% 44%, 0 86%); */
+  margin-bottom: 3vh;
+    /* clip-path: polygon(0 0, 100% 0, 100% 44%, 0 86%); */
 }
 
-.projects__banner--title--container {
-  display: flex;
-  justify-content: flex-start;
-  width: 80%;
-  margin-left: 80px;
-}
-
-.projects__banner--title {
-  font-family: Montserrat;
-  font-weight: bolder;
-  font-size: 3.5vw;
-  width: 900px;
-  color: #1c2294;
-  padding: 30px 80px 0 0;
-}
-
-.projects__banner--image--container {
-  display: flex;
-  justify-content: flex-end;
-  margin-left: auto;
-  width: 80%;
-}
-
-.projects__banner--image {
-  padding-right: 50px;
-  width: 100%;
-  height: auto;
-}
-
-.projects__card--component {
-  display: flex;
-  align-self: center;
-  width: 85%;
-  height: auto;
-  background-color: #ffffff;
-  border: 2px solid #cccccc;
-  box-shadow: 7px 7px 5px #3f3f3f59;
-  margin: 0 auto 30px auto;
-}
-
-.project__card--left-container {
-  background-color: #e6e6e6;
-  width: 35%;
-  height: auto;
-  margin: 30px 15px 30px 30px;
-  box-shadow: 7px 7px 5px #3f3f3f59;
-}
-
-.project__card--left-image-container > img {
-  object-fit: contain;
-  max-height: 300px;
-  height: auto;
-  width: 100%;
-  padding: 10px;
-}
-
-.project__card--left-buttons {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  height: 77px;
-}
-
-.project__github--btn, .project__website--btn {
-  font-family: Montserrat;
-  font-weight: bolder;
-  font-size: 1vw;
-  color: white;
-  text-decoration: none;
-  background-color: #2F195F;
-  border-radius: 25px;
-  padding: 1.2vw 2.5vw;
-  cursor: pointer;
-}
-
-.project__github--btn:hover, .project__website--btn:hover {
-  background-color: #1c2294;
-  color: white;
-}  
-
-.project__github--btn:active, .project__website--btn:active {
-  background-color: #3d47ff;
-  color: white;
-}  
-
-.project__card--right-container {
-  background-color: #e6e6e6;
-  width: 65%;
-  height: auto;
-  margin: 30px 30px 30px 15px;
-  padding: 25px 25px 0 25px;
-  box-shadow: 7px 7px 5px #3f3f3f59;
-}
-
-.project__card--right-title {
-  font-family: Poppins;
-  font-weight: bolder;
+.project__banner--title {
+  font-family: Montserrat, sans serif;
   font-size: 3vw;
-  color: #1c2294;
+  color: #04198b;
+  padding-left: 6vw;
+  padding-right: 25vw;
+  padding-top: 2vh;
+  padding-bottom:1vh;
 }
 
-.project__card--right-description {
-  font-family: Poppins;
-  font-size: 1.4vw;
-  line-height: 1.4;
-  color: #000000;
+.project__banner--image {
+  width: 100%;
+  height: auto;
+  padding-right: 5vw;
+  padding-left: 25vw;
+}
+
+.project__component--container {
+  display: flex;
+  background-color:white;
+  border:1px solid rgb(196, 196, 196);
+  width:80vw;
+  margin: auto;
+  margin-bottom:3vh;
+  gap: 15px;
+  padding:15px;
+  box-shadow: 7px 7px 5px #3f3f3f59;
+}
+
+.project__component--left {
+  display:flex;
+  flex-direction: column;
+  background-color: #f5f3f3;
+  width: 25vw;
+  height:auto;
+  padding:1vw;
+}
+
+.project__thumbnail {
+  width: 20vw;
+  height: 70%;
+}
+
+.project__buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color:transparent;
+  height:30%;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+.project__github--url, .project__website--url {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #04198b;
+  border-radius: 10px;
+  padding: .5em 1em;
+  font-family: Montserrat, sans-serif;
+  font-size: 1vw;
+}
+
+.project__github--url:hover, .project__website--url:hover {
+  background-color: #1922d1;
+}
+
+.project__github--url:active, .project__website--url:active {
+  background-color: #595fe0;
+}
+
+
+
+.project__component--right {
+  background-color: #f5f3f3;
+  width:75vw;
+  padding:10px;
+  font-family: Poppins, sans-serif;
+  font-size: 1vw;
+}
+
+.project__title {
+  font-size: 2em;
+  color: #1C2294;
+}
+
+.project__description {
   text-align: justify;
+  padding-bottom: 2vh;
 }
 
-.project__card--right-subtitle {
-  font-family: Poppins;
-  font-size: 2vw;
-  font-weight: bolder;
-  color: #1c2294;
-}
-
-.project__team--members {
-  font-family: Poppins;
-  font-size: 1.4vw;
-  line-height: 1.4;
-  color: #000000;
-  text-align: justify;
+.project__subtitle {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #1C2294;
 }
 
 /* SIGN-UP PAGE */
