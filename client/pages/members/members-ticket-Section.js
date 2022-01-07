@@ -116,15 +116,15 @@ export const membersTicketSection = {
         return this.members;
       }
       for (let member of this.members) {
-        console.log(
-          `memberId ${member.ClassID} - filtering on: ${this.hyfClass}`
-        );
+        //console.log(
+        //  `memberId ${member.ClassID} - filtering on: ${this.hyfClass}`
+        //);
         if (member.ClassID == this.hyfClass) {
-          console.log("They are equal!");
+          // console.log("They are equal!");
           resultList.push(member);
         }
       }
-      console.log(resultList);
+      //console.log(resultList);
       return resultList;
     },
   },
