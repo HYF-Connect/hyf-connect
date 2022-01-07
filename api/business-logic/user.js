@@ -17,12 +17,12 @@ const userManager = {
       saltRounds
     );
     await userStore.create(newUser);
-    //const link = `${Protocol}://${HOST_NAME}/signin`;
+    const link = `${Protocol}://${HOST_NAME}/signin`;
     await sendEmail(
       Email,
       "HYFConnect@gmail.com",
       "Welcome to HYF community",
-      sayToUser.welcome(FirstName)
+      sayToUser.welcome(FirstName, link)
     );
 
     return newUser;

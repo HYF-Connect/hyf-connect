@@ -1,7 +1,7 @@
 const { SENDMAIL_API_KEY } = require("../config.js");
 const sgMail = require("@sendgrid/mail");
 
-sgMail.setApiKey(process.env.SENDMAIL_API_KEY);
+sgMail.setApiKey(SENDMAIL_API_KEY);
 
 const sendEmail = (to, from, subject, content) => {
   try {
@@ -12,8 +12,8 @@ const sendEmail = (to, from, subject, content) => {
       html: content,
     };
     return sgMail.send(data);
-  } catch (e) {
-    return new Error(e);
+  } catch (error) {
+    throw new Error("error from the email sender", error);
   }
 };
 

@@ -1,4 +1,4 @@
-const welcome = (FirstName) => {
+const welcome = (FirstName, link) => {
   return `
     <!doctype html>
 <html lang="en-US">
@@ -54,7 +54,7 @@ const welcome = (FirstName) => {
                                                     <p style="text-align: center;word-wrap: break-word;">As a volunteer-based, charitable non-profit organization,
                                                         we gratefully accept volunteers from all backgrounds!</p>
                                             </p>
-                                            <a href=#link
+                                            <a href=${link}
                                                 style="background:#20e277;text-decoration:none !important; font-weight:500; margin-top:35px; color:#fff;text-transform:uppercase; font-size:14px;padding:10px 24px;display:inline-block;border-radius:50px;">Visit VoxBox</a>
                                     </td>
                                 </tr>
