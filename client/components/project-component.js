@@ -1,27 +1,25 @@
 const ProjectComponent = {
   props: ['project'],
   template: `  
-    <div class="projects__card--component">
-      <div class="project__card--left-container">
-        <div class="project__card--left-image-container">
-          <div class="project__card--left-image"><img v-bind:src="project.thumbnail" alt="project thumbnail"></div>
+  <div class="project__component--container">
+    <div class="project__component--left">
+      <div class="project__thumbnail"><img v-bind:src="project.thumbnail" alt="project thumbnail"></div>
+      <div class="project__buttons">
+        <div class="project__github--url">
+          <a v-bind:href="project.github">see project</a>
         </div>
-        <div class="project__card--left-buttons">
-          <div class="project__github--btn">
-            <a v-bind:href="project.github">see project</a>
-          </div>
-          <div class="project__website--btn">
-            <a v-bind:href="project.website">visit website</a>
-          </div>
+        <div class="project__website--url">
+          <a v-bind:href="project.website">visit website</a>
         </div>
       </div>
-      <div class="project__card--right-container">
-        <h2 class="project__card--right-title" >{{project.title}}</h2>
-        <p class="project__card--right-description">{{project.description}}</p>
-        <h4 class="project__card--right-subtitle">team members:</h4>
-        <p class="project__team--members">{{project.members}}</p>
-      </div>
-    </div>`
+    </div>
+    <div class="project__component--right">
+      <h4 class="project__title" >{{project.title}}</h4>
+      <p class="project__description">{{project.description}}</p>
+      <span class="project__subtitle">team members:</span>
+      <p class="project__members">{{project.members}}</p>
+    </div>
+  </div>`
 }
 
 export default ProjectComponent;

@@ -12,7 +12,7 @@ body {
   color: #1c2294;
 }
 
-/* header section */
+/* HEADER-COMPONENT */
 
 .header-container {
   display: flex;
@@ -88,7 +88,7 @@ body {
   }
 }
 
-/* ****  banner-section  **** */
+/* HOMEPAGE-BANNER SECTION */
 
 .banner {
   background-color: #dfd7ef;
@@ -148,7 +148,7 @@ body {
   color: #fff;
 }
 
-/* *****  benefits-section  *****/
+/* HOMEPAGE-BENEFITS-SECTION */
 
 .benefit-section {
   background-color: #ffffff;
@@ -191,7 +191,7 @@ body {
   font-size: 18px;
 }
 
-/* *****  testimonial-section  *****/
+/* HOMEPAGE-TESTIMONIAL-SECTION */
 
 .testimonial__section {
   background-color: #ffffff;
@@ -271,7 +271,7 @@ body {
   color: #ffffff;
 }
 
-/* CAROUSEL-COMPONENT */
+/* HOMEPAGE-CAROUSEL-COMPONENT */
 
 .homepage__carousel {
   background-color: #ffffff;
@@ -367,17 +367,19 @@ body {
 .project__banner--container {
   background-color: #dfd7ef;
   width: 100%;
+  padding-top: 4vh;
   margin-bottom: 3vh;
     /* clip-path: polygon(0 0, 100% 0, 100% 44%, 0 86%); */
 }
 
 .project__banner--title {
   font-family: Montserrat, sans serif;
+  font-weight: 500;
   font-size: 3vw;
   color: #04198b;
   padding-left: 6vw;
   padding-right: 25vw;
-  padding-top: 2vh;
+  padding-top: 3vh;
   padding-bottom:1vh;
 }
 
@@ -409,9 +411,11 @@ body {
   padding:1vw;
 }
 
-.project__thumbnail {
-  width: 20vw;
-  height: 70%;
+.project__thumbnail > img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  background-color:red;
 }
 
 .project__buttons {
@@ -427,43 +431,44 @@ body {
 .project__github--url, .project__website--url {
   color: #ffffff;
   text-decoration: none;
-  background-color: #04198b;
-  border-radius: 10px;
+  background-color: #2F195F;
+  border-radius: 18px;
   padding: .5em 1em;
   font-family: Montserrat, sans-serif;
   font-size: 1vw;
+  cursor: pointer;
 }
 
 .project__github--url:hover, .project__website--url:hover {
-  background-color: #1922d1;
+  background-color: #1C2294;
 }
 
 .project__github--url:active, .project__website--url:active {
-  background-color: #595fe0;
+  background-color: #42365c;
 }
-
-
 
 .project__component--right {
   background-color: #f5f3f3;
   width:75vw;
-  padding:10px;
+  padding: 10px 20px 0 20px;
   font-family: Poppins, sans-serif;
   font-size: 1vw;
 }
 
 .project__title {
-  font-size: 2em;
+  font-size: 3em;
+  font-weight: bold;
   color: #1C2294;
 }
 
-.project__description {
+.project__description, .project__members {
   text-align: justify;
-  padding-bottom: 2vh;
+  font-size: 1.4em;
+  color: #000000;
 }
 
 .project__subtitle {
-  font-size: 1.3em;
+  font-size: 1.5em;
   font-weight: bold;
   color: #1C2294;
 }
