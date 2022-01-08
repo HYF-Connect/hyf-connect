@@ -76,41 +76,46 @@ const userManager = {
       });
       return updatedUser;
    },
-   updateUserSkills: async (UserID, skills) => {
+   updateUserSkills: async (userId, skills) => {
       await userSkillStore.destroy({
-         where: { UserID: UserID },
+         where: { UserID: userId },
       });
-      for (let skill in skills) {
+      skills.forEach(async (skill) => {
+         console.log("Business-Logic - Writing Skill:", skill);
          await userSkillStore.create({
-            UserID: UserID,
+            UserID: userId,
             SkillID: skill.value,
          });
-      }
+      });
       return true;
    },
-   updateUserLanguages: async (UserID, languages) => {
+   updateUserLanguages: async (userId, languages) => {
+      console.log("Business-Logic - User ID", userId);
+      console.log("Business-Logic - Languages", languages);
       await userLanguageStore.destroy({
-         where: { UserID: UserID },
+         where: { UserID: userId },
       });
-      for (let lang in languages) {
+
+      languages.forEach(async (language) => {
+         console.log("Business-Logic - Writing Language:", language);
          await userLanguageStore.create({
-            UserID: UserID,
-            LanguageID: lang.value,
+            UserID: userId,
+            LanguageID: language.value,
          });
-      }
+      });
       return true;
    },
-   updateUserTypes: async ({ UserID, types }) => {
+   updateUserTypes: async (userId, types) => {
       await userTypeStore.destroy({
-         where: { UserID: UserID },
+         where: { UserID: userId },
       });
-      for (let type in types) {
+      types.forEach(async (type) => {
+         console.log("Business-Logic - Writing Type:", type);
          await userTypeStore.create({
-            UserID: UserID,
+            UserID: userId,
             TypeID: type.value,
          });
-      }
-      return true;
+      });
    },
    getAllUsers: async () => {
       const allUsers = await userStore.findAll();

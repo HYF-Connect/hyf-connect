@@ -185,8 +185,8 @@ const userController = {
    putSkills: async (req, res) => {
       try {
          const { skills } = req.body;
-         const UserID = req.params.userId;
-         const result = await userManager.updateUserSkills(UserID, skills);
+         const userId = req.params.userId;
+         const result = await userManager.updateUserSkills(userId, skills);
          res.status(200).json({
             message: `Skill has been successfully updated!`,
          });
@@ -198,9 +198,10 @@ const userController = {
    putLanguages: async (req, res) => {
       try {
          const { languages } = req.body;
-         const UserID = req.params.userId;
+         console.log("Controller - Received Languages", languages);
+         const userId = req.params.userId;
          const result = await userManager.updateUserLanguages(
-            UserID,
+            userId,
             languages
          );
          res.status(200).json({
@@ -214,8 +215,8 @@ const userController = {
    putTypes: async (req, res) => {
       try {
          const { types } = req.body;
-         const UserID = req.params.userId;
-         const result = await userManager.updateUserTypes(UserID, skills);
+         const userId = req.params.userId;
+         const result = await userManager.updateUserTypes(userId, types);
          res.status(200).json({
             message: `Type has been successfully updated!`,
          });

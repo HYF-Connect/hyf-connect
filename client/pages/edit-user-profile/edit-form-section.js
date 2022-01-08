@@ -1,3 +1,4 @@
+import MultiSelect from "../../components/multiselect-component.js";
 import {
    updateUserProfile,
    updateUserLanguages,
@@ -14,7 +15,6 @@ import {
    fetchUserTypes,
    fetchUserLanguages,
 } from "../../src/data-access/api-calls/calls.js";
-import MultiSelect from "../../components/multiselect-component.js";
 
 export const FormSection = {
    components: {
@@ -40,7 +40,7 @@ export const FormSection = {
       <div class="profile-form-group">
          <div class="profile-form-list"> 
             <label class="profile-form__label">User Type</label>
-            <multi-select v-bind:dropdownid="'typesDropDown'" v-bind:options="types" v-bind:selection="selectedTypes" v-on:new-selection="updateUserType"></multi-select>
+            <multi-select v-bind:dropdownid="'typesDropDown'" v-bind:options="types" v-bind:selection="selectedTypes" v-on:new-selection="updateUserTypes"></multi-select>
          </div>
       </div>
       <div class="profile-form-group"> 
@@ -60,7 +60,7 @@ export const FormSection = {
       <div class="profile-form-group"> 
       <div class="profile-form-list"> 
          <label class="profile-form__label">Language</label>
-         <multi-select v-bind:dropdownid="'languagesDropDown'" v-bind:options="languages" v-bind:selection="selectedLanguages" v-on:new-selection="updateUserLanguage"></multi-select>
+         <multi-select v-bind:dropdownid="'languagesDropDown'" v-bind:options="languages" v-bind:selection="selectedLanguages" v-on:new-selection="updateUserLanguages"></multi-select>
       </div>
       </div>
       <div class="profile-form-group"> 
@@ -98,7 +98,7 @@ export const FormSection = {
       <div class="profile-form-group"> 
          <div class="profile-form-list"> 
             <label class="profile-form__label">My Skills</label>
-            <multi-select  v-bind:dropdownid="'skillsDropDown'" v-bind:options="skills" v-bind:selection="selectedSkills" v-on:new-selection="updateUserSkill"></multi-select>
+            <multi-select  v-bind:dropdownid="'skillsDropDown'" v-bind:options="skills" v-bind:selection="selectedSkills" v-on:new-selection="updateUserSkills"></multi-select>
          </div>
       </div>
       <div class="profile-form-group"> 
@@ -164,7 +164,8 @@ export const FormSection = {
             }));
             const getUserLanguages = await fetchUserLanguages(id);
             this.selectedLanguages = getUserLanguages.map((l) => ({
-               label: l.Language,
+               label: this.languages.find((all) => all.value === l.LanguageID)
+                  .label,
                value: l.LanguageID,
             }));
             const getAllTypes = await fetchAllTypes();
@@ -173,8 +174,8 @@ export const FormSection = {
                value: t.TypeID,
             }));
             const getUserTypes = await fetchUserTypes(id);
-            this.selectedType = getUserTypes.map((t) => ({
-               label: t.Title,
+            this.selectedTypes = getUserTypes.map((t) => ({
+               label: this.types.find((all) => all.value === t.TypeID).label,
                value: t.TypeID,
             }));
             const getAllSkills = await fetchAllSkills();
@@ -183,8 +184,8 @@ export const FormSection = {
                value: s.SkillID,
             }));
             const getUserSkills = await fetchUserSkills(id);
-            this.selectedSkill = getUserSkills.map((s) => ({
-               label: s.Name,
+            this.selectedSkills = getUserSkills.map((s) => ({
+               label: this.skills.find((all) => all.value === s.SkillID).label,
                value: s.SkillID,
             }));
          } catch (error) {

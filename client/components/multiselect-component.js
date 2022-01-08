@@ -3,11 +3,12 @@ const multiSelect = {
    data() {
       return { selectedValues: this.selection };
    },
-   template: `<div>
-                <input v-bind:id="dropdownid" v-once class="form-control addnewproject__form--input" type="text">
-                <span class="badge rounded-pill bg-primary" v-on:click="removeSelected(s)" v-for="s in selectedValues">{{ s.label }} <i class="fas fa-times"></i></span>
-              </div>
-    `,
+   template: ` <div>
+                  <input v-bind:id="dropdownid" v-once class="form-control addnewproject__form--input" type="text">
+                  <div class="pills">
+                     <span class="badge rounded-pill bg-pill-hyf" v-on:click="removeSelected(s)" v-for="s in selectedValues">{{ s.label }} <i class="fas fa-times"></i></span>
+                  </div>
+               </div> `,
    mounted: function () {
       function bootstrapComponent() {
          console.log("we are inside the bootstrap component");
@@ -35,6 +36,10 @@ const multiSelect = {
          } else {
             setTimeout(bootstrapComponent.bind(this), 1000);
          }
+         if (this.selection.length != 0) {
+            this.selectedValues = this.selection;
+            this.$emit("new-selection", this.selectedValues);
+         }
       }
       setTimeout(bootstrapComponent.bind(this), 1000);
    },
@@ -48,5 +53,4 @@ const multiSelect = {
       },
    },
 };
-
 export default multiSelect;
