@@ -1,3 +1,4 @@
+/*
 const { SENDMAIL_API_KEY } = require("../config.js");
 const sgMail = require("@sendgrid/mail");
 
@@ -17,4 +18,16 @@ const sendEmail = (to, from, subject, content) => {
   }
 };
 
+module.exports = sendEmail;
+*/
+const nodemailer = require("nodemailer");
+
+// Not the movie transporter!
+const sendEmail = nodemailer.createTransport({
+  service: "Gmail",
+  auth: {
+    user: "hyfconnect@gmail.com", // Your email id
+    pass: "HappyLlamas15", // Your password
+  },
+});
 module.exports = sendEmail;

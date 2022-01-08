@@ -17,13 +17,20 @@ const userManager = {
       saltRounds
     );
     await userStore.create(newUser);
-    const link = `${Protocol}://${HOST_NAME}/signin`;
-    await sendEmail(
-      Email,
-      "HYFConnect@gmail.com",
-      "Welcome to HYF community",
-      sayToUser.welcome(FirstName, link)
-    );
+    const mailOptions = {
+      from: "hyfconnect@gmail.com>", // sender address
+      to: Email, // list of receivers
+      subject: "Email Example", // Subject line
+      //text: text, //, // plaintext body
+      html: "<b>Hello world ✔</b>", // You can choose to send an HTML body instead
+    };
+    sendEmail.sendMail(mailOptions, function (error, info) {
+      if (error) {
+        console.log("error" + error);
+      } else {
+        console.log("Message sent: " + info.response);
+      }
+    });
 
     return newUser;
   },
