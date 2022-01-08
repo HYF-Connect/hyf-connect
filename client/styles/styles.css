@@ -568,6 +568,7 @@ input[type="password"] {
   display: flex;
 }
 
+
 /* *****  contact us  *****/
 
 
@@ -576,71 +577,10 @@ input[type="password"] {
 
 }
 
-.section{
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  display: flex;
-}
-
-.contact-form{
-  margin-bottom: 0;
-  
-}
-
-form{
-  margin-bottom: 20px;
-}
-
-button, input, select, textarea, label{
-  touch-action: manipulation;
-}
-
-.contact__text, .row{
-  zoom: 1;
-}
-.contact__text{
-  font-family: 'Montserrat';
-  font-size: 30px;
-  font-weight: 600;
-  font-style: normal;
-  line-height: 39.9px;
-
-  position: absolute;
-  top: 5%;
-  left: 28%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  text-align: center;
-  white-space: pre;
-
-  transform: matrix(1, 0, 0, 1, 0, 0);
-}
-
-.contact__text1, .contact__text3{
-  color: #1C2294;
-}
-
-.contact__text2, .contact__text4{
-  color: #ffffff;
-}
-
-.contact__text5{
-  color: #1c2294;
-  font-size: 50px;
-  position: absolute;
-  left: 147px;
-  top: 59.19px;
-  display: flex;
-  align-items: center;
-}
 
 .rectangle{
   position: absolute;
-  width: 1200px;
+  width: 1278px;
 }
 
 .container-contact-us-page.image2{
@@ -651,7 +591,6 @@ button, input, select, textarea, label{
 }
 
 .image2{
-  padding: 10px;
   display: flex;
 }
 
@@ -659,40 +598,37 @@ button, input, select, textarea, label{
 .contact__rectangle{
   width: 100%;
 }
-.contact__text{
+
+.contact__text_color{
   font-family: 'Montserrat';
   font-size: 30px;
   font-weight: 600;
-  font-style: normal;
-  line-height: 39.9px;
-  display: flex;
-  align-items: center;
+  display: block;
   text-align: center;
   white-space: pre;
   position: relative;
   height:300px;
-}
-.contact__text1, .contact__text3{
   color: #1C2294;
-  position: absolute;
-  left: 147px;
-  top: 59.19px;
+  margin-bottom: -20px;
+
 }
-.contact__text2, .contact__text4{
+
+.contact__text_white{
   color: #ffffff;
-  position: absolute;
-  left: 147px;
-  top: 59.19px;
 }
+
+.contact__text_purple{
+  color: #1c2294;
+  top: 109.19px;
+}
+
 .contact__text5{
   color: #1c2294;
   font-size: 50px;
-  position: absolute;
-  left: 147px;
-  top: 59.19px;
-  display: flex;
-  align-items: center;
+  margin-top: 30%;
+  left: 18%;
 }
+
 .contact__form {
   display: flex;
   flex-wrap: wrap;
@@ -710,10 +646,28 @@ button, input, select, textarea, label{
   gap:1em;
   border-radius: 10px;
   width: 360px;
+  
 }
 .contact__input {
   display: block;
   font-weight: 700;
   font-size: 16px;
   width:100%;
+  border: none;
+  border: 1px solid rgb(255, 255, 255)
 }
+
+#action_button{
+  background-color: #2f195f;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  font-family: "Montserrat";
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  width: 130px;
+  margin-left: 225px;
+  
+}
+

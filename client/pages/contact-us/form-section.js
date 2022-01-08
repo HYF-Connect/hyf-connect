@@ -9,13 +9,18 @@ export const FormSection = {
         <div class="image1">
           <img class="rectangle" alt="rectangle" src="/images/contact-us/Rectangle 740.png"/>
         </div> 
-        <div class="section contact__text">
-          <p class="contact__text1">you have </p>
-          <p class="contact__text2"> question </p>
-          <p class="contact__text3"> or </p>
-          <p class="contact__text4"> suggestion ? </p>
-          <p class="contact__text5">contact us!</p>
-      </div>
+        <div class="contact__text_div">
+        <span class="contact__text">
+          <span class="contact__text_color">you have
+          <span class="contact__text_white"> question </span>
+          <span class="contact__text_purple"> or </span>
+          <span class="contact__text_white"> suggestion</span>
+          <span class="contact__text_purple"> ? </span>
+          <br>
+          <span class="contact__tex5">contact us! </span>
+          </span>
+          </span>
+        </div>
         <div class="contact__form">
           <div class="img__left">
             <img class="contact__input_image"  src="/images/contact-us/Screenshot_2021-12-08.png"/>
