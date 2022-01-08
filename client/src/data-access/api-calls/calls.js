@@ -53,8 +53,10 @@ export const loginUser = async (Email, Password) => {
    return await performPost("users/login", {
       Email,
       Password,
-   });
-   
+   }); 
 };
-
+// fetching all projects
+export const fetchProjects = async () => {
+   return await performFetch("projects/");
+};
 
