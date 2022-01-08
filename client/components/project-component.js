@@ -6,10 +6,10 @@ const ProjectComponent = {
       <div class="project__thumbnail"><img v-bind:src="project.thumbnail" alt="project thumbnail"></div>
       <div class="project__buttons">
         <div class="project__github--url">
-          <a v-bind:href="project.github">see project</a>
+          <a v-bind:href="project.github_url">see project</a>
         </div>
         <div class="project__website--url">
-          <a v-bind:href="project.website">visit website</a>
+          <a v-bind:href="project.website_url">visit website</a>
         </div>
       </div>
     </div>
