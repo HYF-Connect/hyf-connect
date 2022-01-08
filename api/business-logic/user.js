@@ -4,7 +4,7 @@ const userSkillStore = require("../models/user-skill");
 const userLanguageStore = require("../models/user-language");
 const userTypeStore = require("../models/user-type");
 const sendEmail = require("../utils/send-email");
-
+const welcomeEmail = require("../utils/welcome-email");
 const saltRounds = 13;
 
 const userManager = {
@@ -18,9 +18,9 @@ const userManager = {
     const mailOptions = {
       from: "hyfconnect@gmail.com>", // sender address
       to: Email, // list of receivers
-      subject: "Email Example", // Subject line
+      subject: `Welcome ${FirstName} to HYFConnect`, // Subject line
       //text: text, //, // plaintext body
-      html: "<b>Hello world ✔</b>", // You can choose to send an HTML body instead
+      html: welcomeEmail.welcome(FirstName), // You can choose to send an HTML body instead "<b>Hello world ✔</b>";
     };
     sendEmail.sendMail(mailOptions, function (error, info) {
       if (error) {
