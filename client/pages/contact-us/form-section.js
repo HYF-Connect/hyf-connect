@@ -16,19 +16,17 @@ export const FormSection = {
           <p class="contact__text4"> suggestion ? </p>
           <p class="contact__text5">contact us!</p>
       </div>
+        <div class="contact__form">
+          <div class="img__left">
+            <img class="contact__input_image"  src="/images/contact-us/Screenshot_2021-12-08.png"/>
+          </div>
           <div class="contact__columns">
-            <label class="three columns alpha">
-              <input type="text" id="contactFormName" name="contact" placeholder="Name" autocapitalize="words" value required="required"></input>
-            </label>
-            <label class="three columns omega">
-            <input type="email" id="contactFormEmail" name="contact[email]" placeholder="Email" autocorrect="off" autocapitalize="off" value required="required"></input>
-            </label>
-            <textarea  class="message" rows="10" cols="25.5"  placeholder="Message" required="required"></textarea>
+          <input type="text" class="contact__input" id="contactFormName" name="contact" placeholder="Name" autocapitalize="words" value required="required" />
+          <input type="email" class="contact__input" id="contactFormEmail" name="contact[email]" placeholder="Email" autocorrect="off" autocapitalize="off" value required="required" />
+            <textarea  class="contact__input message" rows="10" cols="25.5"  placeholder="Message" required="required"></textarea>
             <button type="submit" id="action_button" value="submit">submit</button>
           </div>
-        <div class="img__left">
-        <img class="image2"  src="/images/contact-us/Screenshot_2021-12-08.png"/>
-      </div>
+        </div>
       </form>
   </div>
     `,
