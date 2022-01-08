@@ -20,13 +20,13 @@ export const FormSection = {
       </div>
           <div class="contact__columns">
             <br class="clear">
-            <div class="three columns alpha">
+            <label class="three columns alpha">
               <input type="text" id="contactFormName" name="contact" placeholder="Name" autocapitalize="words" value required="required">
               </input>
-            </div>
-            <div class="three columns omega">
+            </label>
+            <label class="three columns omega">
             <input type="email" id="contactFormEmail" name="contact[email]" placeholder="Email" autocorrect="off" autocapitalize="off" value required="required">         </input>
-            </div>
+            </label>
             <textarea  class="message" rows="10" cols="25.5"  placeholder="Message" required="required"></textarea>
             <button type="submit" id="action_button" value="submit">submit</button>
           </div>

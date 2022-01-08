@@ -688,13 +688,14 @@ div.section{
   display: block;
   font-weight: 700;
   font-size: 16px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+  float: left;
 }
 
 #contactFormName, #contactFormEmail, .message{
   padding: 10px 6px;
   padding-bottom: 4px;
-  padding-left: 20px;
+  padding-left: 10px;
   touch-action: manipulation;
   display: block;
   -webkit-font-smoothing: antialiased;
