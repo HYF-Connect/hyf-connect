@@ -38,42 +38,42 @@ export const FormSection = {
       </form>
   <div >
     `,
-   // data() {
-   //    return {
-   //       name: "",
-   //       email: "",
-   //       message: "",
-   //       messageError: "",
-   //       messageCheck: "",
-   //       messageConfirm:"",
-   //       success: false,
-   //    };
-   // },
-   // methods: {
-   //    async handleSubmit() {
-   //       this.messageError =
-   //          this.message.length <= 500
-   //             ? ""
-   //             : "Message contains more than 500 characters!";
-   //       this.messageCheck =
-   //          this.message === this.messageConfirm
-   //             ? ""
-   //             : "Message do not match, more than 500 characters. Try again!";
-   //       try {
-   //          const result = await contactUs(
-   //             this.name,
-   //             this.email,
-   //             this.message
-   //          );
-   //          this.errorMessage = "";
-   //          this.success = true;
-   //          setTimeout(() => (window.location.href = "/"), 4000);
-   //       } catch (error) {
-   //          this.errorMessage = error;
-   //          console.log(`The result: Name: ${this.name}, eMail: ${this.email}, Message: ${this.message}`);
-   //       }
-   //    },
-   // },
+  data() {
+      return {
+        name: "",
+        email: "",
+        message: "",
+        messageError: "",
+        messageCheck: "",
+        messageConfirm:"",
+        success: false,
+      };
+  },
+  methods: {
+      async handleSubmit() {
+        this.messageError =
+            this.message.length <= 500
+              ? ""
+              : "Message contains more than 500 characters!";
+        this.messageCheck =
+            this.message === this.messageConfirm
+              ? ""
+              : "Message do not match, more than 500 characters. Try again!";
+        try {
+            const result = await contactUs(
+              this.name,
+              this.email,
+              this.message
+            );
+            this.errorMessage = "";
+            this.success = true;
+            setTimeout(() => (window.location.href = "/"), 4000);
+        } catch (error) {
+            this.errorMessage = error;
+            console.log(`The result: Name: ${this.name}, eMail: ${this.email}, Message: ${this.message}`);
+        }
+      },
+  },
 };
 
 export default FormSection;
