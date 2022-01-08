@@ -4,8 +4,6 @@ const userSkillStore = require("../models/user-skill");
 const userLanguageStore = require("../models/user-language");
 const userTypeStore = require("../models/user-type");
 const sendEmail = require("../utils/send-email");
-const sayToUser = require("../utils/welcome-email.js");
-const { HOST_NAME, Protocol } = require("../config.js");
 
 const saltRounds = 13;
 
