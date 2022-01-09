@@ -1,0 +1,77 @@
+body  {
+    background-color: #f7f7fc;
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    color: #1c2294;
+    font-weight: 500;
+    font-size: 36px;
+    text-align: center;
+    justify-content: center;
+}
+
+.addnewproject__banner {
+    display: flex;
+    top: 100px;
+    height: 100px;
+    flex-direction: column;
+    background: #DFD7EF;
+  }
+  
+  .addnewproject__container{
+    max-width: 500px;
+    width: 100%;
+    background: #fff;
+    margin: 20px auto;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.175);
+    padding: 30px;
+    border-radius: 10px;
+  }
+  
+  .addnewproject__form {
+  width: 100%;
+  }
+  
+  .addnewproject__form--input {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .addnewproject__form--label {
+    width: 200px;
+    color: #757575;
+    margin-right: 10px;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    color: #1c2294;
+  }
+  
+  .addnewproject__form--input,
+  .addnewproject__form--textarea {
+    width: 100%;
+    outline: none;
+    border: 1px solid #eef0ef;
+    font-size: 10px;
+    font-family: "Poppins", sans-serif;
+    padding: 8px 10px;
+    border-radius: 25px;
+  }
+  
+  
+  .addnewproject__form--btn {
+    padding: 8px 10px;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    border: 0px;
+    background:  #2f195f;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 25px;
+    outline: none;
+  }
+  
+  .addnewproject__form--btn:hover{
+    background: #1c2294;
+  }
