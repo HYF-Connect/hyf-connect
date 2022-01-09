@@ -48,8 +48,8 @@ export const performPost = async (path, body) => {
   return data;
 };
 
-// Use "PUT" method to put a path
-const performPut = async (path, body) => {
+export const performUpdate = async (path, body) => {
+  console.log(JSON.stringify(body));
   const URL = `${window.location.origin}/api/${path}`;
   const encodedURL = encodeURI(URL);
   const response = await fetch(encodedURL, {
@@ -64,39 +64,13 @@ const performPut = async (path, body) => {
     body: JSON.stringify(body),
   });
   if (!response.ok) {
-    console.error(response);
-    throw new Error(`HTTP error! status: ${response.status}\n-->${URL}`);
+    console.error(`HTTP error! status: ${response.status}\n-> ${URL}`);
+    const data = await response.json();
+    throw new Error(data.message);
   }
   const data = await response.json();
-
   return data;
 };
-// Use "DELETE" method to delete a path
-const performDelete = async (path) => {
-  const URL = `${window.location.origin}/api/${path}`;
-  const encodedURL = encodeURI(URL);
-
-  const response = await fetch(encodedURL, {
-    method: "DELETE",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization:
-        localStorage.getItem("token") === undefined
-          ? ""
-          : `Bearer ${localStorage.getItem("token")}`,
-    },
-  });
-
-  if (!response.ok) {
-    console.error(response);
-    throw new Error(`HTTP error! status: ${response.status}\n-->${URL}`);
-  }
-  const data = await response.json();
-
-  return data;
-};
-
-// registering a user
 
 export const registerUser = async (FirstName, LastName, Email, Password) => {
   return await performPost("users/register", {
@@ -114,11 +88,110 @@ export const loginUser = async (Email, Password) => {
     Password,
   });
 };
-// fetching all users
-export const fetchUsers = async () => {
-  return await performFetch("users/");
+export const updateUserProfile = async (
+  FirstName,
+  LastName,
+  Email,
+  Nationality,
+  Region,
+  JobTitle,
+  Class,
+  GithubURL,
+  WebsiteURL,
+  LinkedinURL,
+  Bio
+) => {
+  const id = localStorage.getItem("userId");
+  return await performUpdate(`users/${id}/profile`, {
+    FirstName,
+    LastName,
+    Email,
+    Nationality,
+    Region,
+    JobTitle,
+    Class,
+    GithubURL,
+    WebsiteURL,
+    LinkedinURL,
+    Bio,
+  });
 };
-// fetching all users skills
-export const fetchSkills = async () => {
-  return await performFetch("users/:userID/skill");
+export const updateUserLanguages = async (languages) => {
+  const id = localStorage.getItem("userId");
+  return await performUpdate(`users/${id}/language`, {
+    languages,
+  });
+};
+export const updateUserSkills = async (skills) => {
+  const id = localStorage.getItem("userId");
+  return await performUpdate(`users/${id}/skill`, {
+    skills,
+  });
+};
+export const updateUserTypes = async (types) => {
+  const id = localStorage.getItem("userId");
+  return await performUpdate(`users/${id}/type`, {
+    types,
+  });
+};
+
+export const updatePicture = async (ProfilePicture) => {
+  const id = localStorage.getItem("userId");
+  return await performUpdate(`users/${id}/picture`, {
+    ProfilePicture,
+  });
+};
+export const fetchUsers = async () => {
+  return await performFetch("users");
+};
+
+export const fetchUserById = async (userId) => {
+  return await performFetch(`users/${userId}`);
+};
+
+export const fetchAllLanguages = async () => {
+  return await performFetch("languages");
+};
+
+export const fetchAllClasses = async () => {
+  return await performFetch("classes");
+};
+
+export const fetchAllRegions = async () => {
+  return await performFetch("regions");
+};
+export const fetchAllNationalities = async () => {
+  return await performFetch("nationalities");
+};
+
+export const fetchAllTypes = async () => {
+  return await performFetch("types");
+};
+export const fetchAllSkills = async () => {
+  return await performFetch("skills");
+};
+export const fetchUserTypes = async (userId) => {
+  return await performFetch(`users/${userId}/type`);
+};
+export const fetchUserSkills = async (userId) => {
+  return await performFetch(`users/${userId}/skill`);
+};
+export const fetchUserLanguages = async (userId) => {
+  return await performFetch(`users/${userId}/language`);
+};
+// create project
+export const createProject = async (
+  Title,
+  Description,
+  GithubURL,
+  WebsiteURL,
+  Thumbnail
+) => {
+  return await performPost("project", {
+    Title,
+    Description,
+    GithubURL,
+    WebsiteURL,
+    Thumbnail,
+  });
 };

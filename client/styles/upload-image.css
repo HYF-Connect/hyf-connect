@@ -1,0 +1,36 @@
+.rounded-area__img {
+   border: none;
+   background-color: #fff;
+   height: 180px;
+   width: 180px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.user-profile-picture {
+   height: 180px;
+   width: 180px;
+   border-radius: 50%;
+}
+.default-profile-picture {
+   font-size: 200px;
+   color: #dfd7ef;
+}
+
+.outer-area__img {
+   border: none;
+   height: 220px;
+   width: 220px;
+   border-radius: 5px;
+   margin-left: 22%;
+   margin-top: 2.5%;
+   display: flex;
+   position: absolute;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   z-index: 100;
+}

@@ -1,6 +1,9 @@
 import memberComponent from "./member-Component.js";
-import { fetchUsers } from "../../src/data-access/api-calls/calls.js";
-import { fetchSkills } from "../../src/data-access/api-calls/calls.js";
+import {
+  fetchUsers,
+  fetchUserSkills,
+  fetchAllClasses,
+} from "../../src/data-access/api-calls/calls.js";
 
 export const membersTicketSection = {
   components: {
@@ -84,20 +87,27 @@ export const membersTicketSection = {
           9: "/assets/JS-logo.png",
           10: "/assets/JS-logo.png",
         };
+        //console.log(imageMap[1]);
         const result = await fetchUsers();
+        //console.log(result);
 
-        const skillsResult = await fetchSkills();
+        //const skillsResult = await fetchUserSkills();
+        //console.log(skillsResult);
 
-        //console.log(skillsResult[x].SkillID);
+        const classResult = await fetchAllClasses();
+        //console.log(classResult);
         for (let i = 0; i < result.length; i++) {
+          const skillsResult = await fetchUserSkills(result[i].UserID);
+          //console.log(skillsResult);
           this.members.push({
             username: result[i].FirstName + " " + result[i].LastName,
             avatar: result[i].ProfilePicture,
             title: result[i].JobTitle,
-            ClassID: result[i].ClassID,
-            icon1: imageMap[skillsResult[i].SkillID],
-            icon2: imageMap[skillsResult[i].UserID],
-            icon3: imageMap[skillsResult[i].SelectedSkill],
+            ClassID: classResult[i].ClassID,
+            //skills: await fetchUserSkills(result[i].UserID),
+            // icon1: imageMap[skillsResult.SkillID],
+            // icon2: imageMap[skillsResult.SkillID],
+            // icon3: imageMap[skillsResult.SkillID],
           });
         }
       } catch (error) {
