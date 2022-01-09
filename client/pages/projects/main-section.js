@@ -1,4 +1,5 @@
 import ProjectComponent from "/components/project-component.js";
+import {fetchProjects} from "../../src/data-access/api-calls/calls.js";
 
 const MainSection = {
   components: {
@@ -17,6 +18,9 @@ const MainSection = {
     return {
       projects: [],
     };
+  },
+  mounted() {
+    this.onload();
   },
   methods: {
     async onload() {
