@@ -767,33 +767,43 @@ text-decoration: none;
 /* *****  contact us  *****/
 
 
-.container-contact-us-page{
-  background: #f7f7fc;
-
+.container-contact-us-page.image2{
+  width: 730px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;  
 }
-
+.image2{
+  margin-left: 10px;
+  position: relative;
+  padding: 10px;
+  width: 655px;
+  height: 536px;
+  left: 76px;
+  top: -109px
+}
+/* FORM SECTION */
 
 .rectangle{
   position: absolute;
   width: 1278px;
 }
 
-.container-contact-us-page.image2{
-  width: 730px;
-  font-size: 100%;
-  font: inherit;  
+.contact__text{
+  font-family: 'Montserrat';
+  font-size: 30px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 39.9px;
   display: flex;
+  align-items: center;
+  text-align: center;
+  white-space: pre;
+  position: relative;
+  height:300px;
 }
-
-.image2{
-  display: flex;
-}
-
-/* FORM SECTION */
-.contact__rectangle{
-  width: 100%;
-}
-
 .contact__text_color{
   font-family: 'Montserrat';
   font-size: 30px;
@@ -826,15 +836,16 @@ text-decoration: none;
 
 .contact__form {
   display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
   padding-left: 20px;
   margin-bottom: 20px;
 }
-
-
-.img__left{
+.contact__input_image{
   position: relative;
   width: 100%;
-  padding-left: 20px;
+  max-width: 640px;
+  object-fit: contain;
 }
 .contact__columns{
   display: flex;
@@ -842,25 +853,17 @@ text-decoration: none;
   gap:1em;
   border-radius: 10px;
   width: 360px;
-  
 }
-
-#action_button{
-  background-color: #2f195f;
-  color: #fff;
-  font-weight: 500;
-  font-size: 14px;
-  font-family: "Montserrat";
-  text-decoration: none;
-  border-radius: 10px;
-  padding: 12px 20px;
-  width: 130px;
-  margin-left: 225px;
-  
+.contact__input {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  width:100%;
 }
 
 input[type="text"],
 input[type="email"],
+input[type="password"],
 textarea {
   padding-left: 20px;
 }
