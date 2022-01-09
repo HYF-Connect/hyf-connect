@@ -92,8 +92,9 @@ body {
 
 .banner {
    background-color: #dfd7ef;
-   height: 500px;
    display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
 }
 
 .banner__left {
@@ -101,12 +102,16 @@ body {
 }
 
 .banner__left--image {
-   width: 550px;
+   max-width: 550px;
+   width: 100%;
 }
 
 .banner__right {
    margin-right: 36px;
    text-align: center;
+   max-width: 550px;
+   padding-left: 1em;
+   padding-right: 1em;
 }
 
 .banner__right--title {
