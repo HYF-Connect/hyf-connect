@@ -1,15 +1,4 @@
-body  {
-    background-color: #f7f7fc;
-}
 
-h1 {
-    font-family: "Poppins", sans-serif;
-    color: #1c2294;
-    font-weight: 500;
-    font-size: 36px;
-    text-align: center;
-    justify-content: center;
-}
 
 .addnewproject__banner {
     display: flex;
