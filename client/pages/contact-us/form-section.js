@@ -28,8 +28,12 @@ export const FormSection = {
           <div class="contact__columns">
           <input type="text" class="contact__input" id="contactFormName" name="contact" placeholder="Name" autocapitalize="words" value required="required" />
           <input type="email" class="contact__input" id="contactFormEmail" name="contact[email]" placeholder="Email" autocorrect="off" autocapitalize="off" value required="required" />
+            <div class="container__textarea">
             <textarea  class="contact__input message" rows="10" cols="25.5"  placeholder="Message" required="required"></textarea>
+            </div>
+            <div class="container__submit">
             <button type="submit" id="action_button" value="submit">submit</button>
+            </div>
           </div>
         </div>
       </form>
