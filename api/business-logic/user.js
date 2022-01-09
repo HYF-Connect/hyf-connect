@@ -80,13 +80,15 @@ const userManager = {
       await userSkillStore.destroy({
          where: { UserID: userId },
       });
-      skills.forEach(async (skill) => {
+      console.log("The nice iterable list of skills: ", skills);
+      for (let skill of skills) {
+         console.log(skill);
          console.log("Business-Logic - Writing Skill:", skill);
          await userSkillStore.create({
             UserID: userId,
             SkillID: skill.value,
          });
-      });
+      }
       return true;
    },
    updateUserLanguages: async (userId, languages) => {
@@ -95,27 +97,26 @@ const userManager = {
       await userLanguageStore.destroy({
          where: { UserID: userId },
       });
-
-      languages.forEach(async (language) => {
-         console.log("Business-Logic - Writing Language:", language);
+      for (let language of languages) {
          await userLanguageStore.create({
             UserID: userId,
             LanguageID: language.value,
          });
-      });
+      }
       return true;
    },
    updateUserTypes: async (userId, types) => {
       await userTypeStore.destroy({
          where: { UserID: userId },
       });
-      types.forEach(async (type) => {
+      for (let type of types) {
          console.log("Business-Logic - Writing Type:", type);
          await userTypeStore.create({
             UserID: userId,
             TypeID: type.value,
          });
-      });
+      }
+      return true;
    },
    getAllUsers: async () => {
       const allUsers = await userStore.findAll();

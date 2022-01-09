@@ -174,6 +174,10 @@ const userController = {
    putUserPicture: async (req, res) => {
       try {
          const { ProfilePicture } = req.body;
+         console.log(
+            "\n\n\nControllers\n\n\nGorgeous Rayane says: ",
+            ProfilePicture
+         );
          const userId = req.params.userId;
          await userManager.updateUserPicture(userId, ProfilePicture);
          res.status(200).json(`Picture has been successfully updated!`);
