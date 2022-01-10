@@ -18,6 +18,8 @@ const page = Vue.createApp({
         <div class="about-main">
         <profile-card></profile-card>
         </div>
+        <<div class="about-last-container">
+        </div>
         <footer-component></footer-component>
       </div>
     
