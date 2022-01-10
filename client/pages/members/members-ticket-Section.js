@@ -58,7 +58,6 @@ export const membersTicketSection = {
       pageCount: 1,
       hyfClass: 0,
       classes: [],
-      skills: [],
     };
   },
   mounted: function () {
@@ -73,38 +72,35 @@ export const membersTicketSection = {
         ];
         console.log(this.members);
         const imageMap = {
-          1: "/assets/css-logo.png",
-          2: "/assets/html-logo.png",
-          3: "/assets/JS-logo.png",
-          4: "/assets/logo-facebook.svg",
-          5: "/assets/logo-github.svg",
-          6: "/assets/logo-instagram.svg",
-          7: "/assets/quote_icon.png",
-          8: "/assets/logo_pc_full.png",
-          9: "/assets/JS-logo.png",
-          10: "/assets/JS-logo.png",
+          1: "/assets/html-logo.png",
+          2: "/assets/css-logo.png",
+          3: "/assets/figma-logo.png",
+          4: "/assets/JS-logo.png",
+          5: "/assets/nodejs-logo.png",
+          6: "/assets/react-logo.png",
+          7: "/assets/python-logo.png",
+          8: "/assets/mongodb-logo.png",
+          9: "/assets/MySQL-logo.png",
+          10: "/assets/php-logo.png",
+          11: "/assets/java-logo.png",
+          12: "/assets/github-logo.png",
         };
         //console.log(imageMap[1]);
         const result = await fetchUsers();
 
         for (let i = 0; i < result.length; i++) {
-          const skillsResult = await fetchUserSkills(result[i].UserID);
-          //console.log(skillsResult);
-          for (let x = 0; x < skillsResult.length; x++) {
-            //console.log(skillsResult[x].SkillID);
-            this.skills.push(skillsResult[x].SkillID);
-            //console.log(this.skills);
-            console.log(imageMap[this.skills[x]]);
-          }
+          let skills = await fetchUserSkills(result[i].UserID);
+          skills = skills.slice(0, 3);
+
           this.members.push({
             username: result[i].FirstName + " " + result[i].LastName,
             avatar: result[i].ProfilePicture,
             title: result[i].JobTitle,
             ClassID: result[i].ClassID,
-            skills: await fetchUserSkills(result[i].UserID),
-            //icon1, //imageMap[this.skills[x]],
-            //icon2, //imageMap[this.skills[x]],
-            //icon3, //imageMap[this.skills[x]],
+            UserID: result[i].UserID,
+            icon1: imageMap[skills[0]?.SkillID],
+            icon2: imageMap[skills[1]?.SkillID],
+            icon3: imageMap[skills[2]?.SkillID],
           });
         }
       } catch (error) {

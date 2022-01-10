@@ -247,6 +247,12 @@ body {
    margin-bottom: 20px;
    object-fit: contain;
 }
+.default-profile-picture{
+   font-size:75px ;
+   border-radius: 100px;
+   margin-bottom: 20px;
+   object-fit: contain;
+}
 
 .testimonial__background {
    background-color: #dfd7ef;
