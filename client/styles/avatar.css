@@ -12,11 +12,11 @@
    height: 60px;
    z-index: 1000;
 }
-.default-avatar-profile-picture{
+.default-avatar-profile-picture {
    position: relative;
+   color: #2f195f;
    font-size: 60px;
    z-index: 1000;
-
 }
 
 .avatar-name {

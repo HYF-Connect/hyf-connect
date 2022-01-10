@@ -19,9 +19,18 @@ const ProjectComponent = {
       <h4 class="project__title" >{{project.title}}</h4>
       <p class="project__description">{{project.description}}</p>
       <span class="project__subtitle">team members:</span>
-      <p class="project__members">{{project.members}}</p>
+        <div class="project__members">
+          <template v-for="member in project.members">
+              <img v-bind:title="member.FirstName + ' ' + member.LastName" class="project__members__avatar" v-bind:src="member.ProfilePicture" v-if="member.ProfilePicture" v-on:click="navigate(member.UserID)"/>
+              <i v-bind:title="member.FirstName + ' ' + member.LastName" class="fas fa-user-circle default-profile-picture" v-on:click="navigate(member.UserID)" v-else></i>
+          </template>
+        </div>
     </div>
   </div>`,
+   methods: {
+      async navigate(memberId) {
+         window.location.href = `../user-profile/user-profile.html?memberId=${memberId}`;
+      },
+   },
 };
-
 export default ProjectComponent;

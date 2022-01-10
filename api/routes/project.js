@@ -6,6 +6,7 @@ const projectRoutes = express.Router();
 
 projectRoutes.get("/", projectController.get);
 projectRoutes.post("/", projectController.post);
+projectRoutes.get("/:projectId/users", projectController.getAllProjectUsers);
 projectRoutes.get("/:projectId", projectController.getProjectById);
 projectRoutes.put("/:projectId", projectController.putProject);
 projectRoutes.post("/:projectId/skill", projectController.postSkill);

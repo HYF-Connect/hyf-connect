@@ -303,29 +303,38 @@ body {
 /* PROJECTS-PAGE */
 
 .project__banner--container {
-   background-color: #dfd7ef;
+   background-color: #ffff;
    width: 100%;
-   padding-top: 4vh;
    margin-bottom: 3vh;
-   /* clip-path: polygon(0 0, 100% 0, 100% 44%, 0 86%); */
+}
+.project-trapezoid {
+   position: absolute;
+   width: 0;
+   height: 0;
+   left: 0;
+   margin-right: auto;
+   border-top: 30vw solid #dfd7ef;
+   border-right: 200vw solid transparent;
+   z-index: 2;
 }
 
 .project__banner--title {
+   position: relative;
    font-family: Montserrat, sans serif;
    font-weight: 500;
    font-size: 3vw;
-   color: #04198b;
-   padding-left: 6vw;
-   padding-right: 25vw;
-   padding-top: 3vh;
-   padding-bottom: 1vh;
+   color: #1c2294;
+   padding: 1.8em 3em 1em 3em;
+   z-index: 100;
 }
 
 .project__banner--image {
+   position: relative;
    width: 100%;
    height: auto;
    padding-right: 5vw;
    padding-left: 25vw;
+   z-index: 100;
 }
 
 /* SIGN-UP PAGE */
@@ -524,7 +533,6 @@ input[type="password"] {
    display: flex;
    position: relative;
    flex-flow: row wrap;
-   justify-content: space-evenly;
    align-items: center;
    font-family: "Poppins", sans-serif;
    background: #fff;
@@ -537,65 +545,46 @@ input[type="password"] {
    box-shadow: 0px 20px 10px -15px rgb(180, 174, 174);
    z-index: 100;
 }
+.profile-form-group {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   width: 85%;
+   padding: 10px 0;
+   margin-left: 4.5em;
+}
+.profile-form-list {
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   margin-right: 7em;
+   margin-left: 5em;
+}
 #languagesDropDown,
 #typesDropDown,
 #skillsDropDown {
-   display: flex;
+   justify-content: space-start;
    background-color: #ebebeb;
    padding: 0.5em 1.2em;
-   width: 100%;
+   margin-left: 5em;
+   width: 16em;
    height: 3em;
-   margin-right: 62px;
+   box-sizing: border-box;
+   border: none;
    border-radius: 20px;
    border-bottom: 1px solid #ddd;
    color: rgb(39, 39, 39);
    outline: none;
 }
-.pills {
-   padding-left: 15px;
-}
-.bg-pill-hyf {
-   background-color: #2f195f;
-   margin: 5px 3px 0 0;
-}
-
-.dropdown-menu {
-   width: 100%;
-   outline: none;
-}
-.profile-form-group {
-   display: flex;
-   flex-flow: row wrap;
-   justify-content: space-evenly;
-   align-items: center;
-   width: 85%;
-   padding: 10px 0;
-}
-.profile-form__label {
-   color: #000000;
-   display: inline-flex;
-   justify-items: flex-start;
-   width: 110px;
-   margin: 7px 0;
-   padding: 8px 0 8px 0;
-   font-size: 0.9em;
-   text-transform: capitalize;
-   letter-spacing: 0.1em;
-}
-
-.profile-form-list {
-   width: 65%;
-   display: inline-flex;
-   justify-content: space-evenly;
-   margin-right: 35%;
-}
 .profile-form__input,
 .profile-form__input-bio,
 .profile-form__select {
-   display: inline-flex;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
    background-color: #ebebeb;
    padding: 0.5em 1.2em;
-   width: 65%;
+   width: 30em;
    height: 3em;
    box-sizing: border-box;
    border: none;
@@ -608,8 +597,33 @@ input[type="password"] {
 }
 
 .profile-form__select {
-   width: 45%;
-   position: relative;
+   width: 16em;
+   margin-left: 5em;
+}
+.pills {
+   padding-left: 15px;
+   margin-left: 5em;
+}
+.bg-pill-hyf {
+   background-color: #2f195f;
+   margin: 5px 3px 0 0;
+}
+
+.dropdown-menu {
+   width: 100%;
+   outline: none;
+}
+
+.profile-form__label {
+   color: #000000;
+   display: inline-flex;
+   justify-items: flex-start;
+   width: 110px;
+   margin: 7px 0;
+   padding: 8px 0 8px 0;
+   font-size: 0.9em;
+   text-transform: capitalize;
+   letter-spacing: 0.1em;
 }
 
 .profile-form__select option {
@@ -628,7 +642,7 @@ select:focus {
    flex-direction: row;
    align-content: flex-end;
    width: 150px;
-   margin-left: 58%;
+   margin-left: 68.5%;
 }
 .profile-form__btn-submit {
    display: inline-flex;
