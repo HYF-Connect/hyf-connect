@@ -1,21 +1,24 @@
 import HeaderComponent from "../../components/header-component.js";
 import FooterComponent from "../../components/footer-component.js";
 import MainSection from "./main-section.js";
+import PersonalDetailsSection from "./personal-details-section.js";
 
-const page = Vue.createApp({
+const UserProfilePage = Vue.createApp({
   components: {
     HeaderComponent,
     FooterComponent,
     MainSection,
+    PersonalDetailsSection,
   },
   template: `
-      <div class="page">
-        <header-component></header-component>
-        <main-section></main-section>
-        <footer-component></footer-component>
-      </div>
+   <header-component></header-component>
+   <div class="profile-page">
+      <main-section></main-section>
+      <personal-details-section></personal-details-section>
+   </div>
+   <footer-component></footer-component>
     
       `,
 }).mount("#user-profile");
 
-export default page;
+export default UserProfilePage;
