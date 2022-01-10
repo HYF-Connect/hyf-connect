@@ -9,11 +9,11 @@ const page = Vue.createApp({
       MainSection,
    },
    template: `
-      <div class="page">
-        <header-component></header-component>
+      <header-component></header-component>
+      <div class="project-page">
         <main-section></main-section>
-        <footer-component></footer-component>
       </div>    
+      <footer-component></footer-component>
       `,
 }).mount("#projects");
 

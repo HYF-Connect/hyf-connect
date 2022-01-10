@@ -1,0 +1,111 @@
+.project__component--container {
+   display: flex;
+   background-color: white;
+   width: 80vw;
+   margin: auto;
+   margin-bottom: 3vh;
+   gap: 15px;
+   padding: 15px;
+   box-shadow: 7px 7px 5px rgb(185, 183, 183);
+   border: 2px solid #fafafa;
+}
+
+.project__component--left {
+   display: flex;
+   flex-direction: column;
+   background-color: #f5f3f3;
+   width: 25vw;
+   height: auto;
+   padding: 1vw;
+}
+
+.project__thumbnail > img {
+   object-fit: contain;
+   width: 100%;
+   height: auto;
+   padding: 0.3em 0.3em 1em 0.3em;
+}
+
+.project__buttons {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   background-color: transparent;
+   height: 25%;
+   margin-bottom: auto;
+   margin-top: auto;
+   margin-left: 0.3em;
+}
+.project__buttons a {
+   text-decoration: none;
+}
+
+.project__github--url,
+.project__website--url {
+   display: block;
+   color: #ffffff;
+   text-decoration: none;
+   background-color: #2f195f;
+   border-radius: 18px;
+   padding: 0.5em 0.8em;
+   margin-right: 0.5em;
+   font-family: Montserrat, sans-serif;
+   font-size: 0.9em;
+   cursor: pointer;
+   border: 2px solid transparent;
+   font-weight: 500;
+}
+
+.project__github--url:hover,
+.project__website--url:hover {
+   background-color: #fff;
+   color: #2f195f;
+   border-color: #2f195f;
+   -webkit-transition: all 0.4s;
+   -moz-transition: all 0.4s;
+   transition: all 0.4s;
+}
+
+.project__github--url a:visited,
+.project__github--url a:active {
+   text-decoration: none;
+   color: inherit;
+}
+
+.project__component--right {
+   background-color: #f5f3f3;
+   width: 75vw;
+   padding: 10px 20px 0 20px;
+   font-family: Poppins, sans-serif;
+   font-size: 1vw;
+}
+
+.project__title {
+   font-size: 3em;
+   font-weight: bold;
+   color: #1c2294;
+}
+
+.project__description,
+.project__members {
+   text-align: justify;
+   font-size: 1.5em;
+   color: #000000;
+}
+.project__description {
+   font-size: 1.2em;
+   font-weight: 300;
+   text-transform: ;
+}
+
+.project__subtitle {
+   font-size: 1.5em;
+   font-weight: bold;
+   color: #1c2294;
+}
+.avatar {
+   vertical-align: middle;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+}

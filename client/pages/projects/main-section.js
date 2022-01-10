@@ -5,13 +5,13 @@ const MainSection = {
       ProjectComponent,
    },
    template: `
-  <div class="project__banner--container">
-    <h2 class="project__banner--title">Discover all the <span style="color:white">projects</span> built by HYF students</h2>
-    <img src="../../images/projects/project-page-banner.png" alt="project image" class="project__banner--image">
-  </div>
-    <template v-for="project in projects">
-      <project-component :project="project"/>
-    </template>
+      <div class="project__banner--container">
+         <h2 class="project__banner--title">Discover all the <span style="color:white">projects</span> built by HYF students</h2>
+         <img src="../../images/projects/project-page-banner.png" alt="project image" class="project__banner--image">
+      </div>
+      <template v-for="project in projects">
+         <project-component :project="project"/>
+      </template>
   `,
    data() {
       return {
