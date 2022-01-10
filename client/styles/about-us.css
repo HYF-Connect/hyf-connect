@@ -1,3 +1,4 @@
+
 /*About-us Section*/
 
 .about-us-container {
@@ -115,8 +116,9 @@
     font-size: 2vw;
 }
 .about-title h4 {
-    font-size: 2.5vw;
+    font-size: 2vw;
     font-weight: 600;
+    font-family: "Poppins", sans-serif;
     text-shadow: #2F195F;
     padding: 12px 16px;
     text-align: center;

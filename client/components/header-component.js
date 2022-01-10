@@ -1,7 +1,13 @@
+import AvatarDropdown from "./avatar-dropdown-component.js";
+import { fetchUserById } from "../src/data-access/api-calls/calls.js";
+
 const HeaderComponent = {
+  components: { AvatarDropdown },
   template: `<div class="header-container">
     <div class="brand">
-        <a href="/pages/homepage/homepage.html" class="logo"><img src="/assets/logo_pc_full.png" alt="logo" width="90" height="70"/></a>
+        <a href="/pages/homepage/homepage.html" class="logo">
+        <img src="/assets/logo_pc_full.png" alt="logo" width="90" height="70"/>
+        </a>
         </div>
         <div class="nav-bar">
             <a class="nav-link" href="/pages/projects/projects.html">projects</a>
@@ -9,9 +15,7 @@ const HeaderComponent = {
             <a class="nav-link" href="/pages/about-us/about-us.html">about us</a>
             <a class="nav-link" href="/pages/contact-us/contact-us.html">contact us</a>
         </div>
-        <div class="username" v-if="isLoggedIn">{{ username }} 
-        <a class="sign-out-btn" href="" v-on:click="logOut">sign out</a>
-        </div>
+        <avatar-dropdown :avatar="avatar" v-if="isLoggedIn"></avatar-dropdown>
         <a class="sign-in-btn" href="/pages/login/login.html" v-else>sign in</a>
         </div>`,
   data() {
@@ -23,14 +27,26 @@ const HeaderComponent = {
     return {
       isLoggedIn,
       username: localStorage.getItem("username"),
+      avatar: {
+        name: localStorage.getItem("username"),
+        url: undefined,
+      },
     };
   },
   methods: {
+    async getDataOnLoad() {
+      const id = localStorage.getItem("userId");
+      const user = await fetchUserById(id);
+      this.avatar.url = user.ProfilePicture;
+    },
     logOut() {
       localStorage.removeItem("token");
       localStorage.removeItem("username");
       this.isLoggedIn = false;
     },
+  },
+  mounted: function () {
+    this.getDataOnLoad();
   },
 };
 
