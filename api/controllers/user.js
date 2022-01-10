@@ -11,14 +11,42 @@ const userController = {
       }
    },
    getById: async (req, res) => {
+      const userId = req.params.userId;
+      console.log("controllers", userId);
       try {
-         const userId = req.params.userId;
          const result = await userManager.getUserById(userId);
          res.status(200).json(result);
       } catch (error) {
          res.status(400).json({
             message: `${userId} provided could not be found`,
          });
+      }
+   },
+   getSkills: async (req, res) => {
+      const userId = req.params.userId;
+      try {
+         const allUserSkills = await userManager.getAllUserSkills(userId);
+         res.send(JSON.stringify(allUserSkills, null, 2));
+      } catch (error) {
+         res.status(500).send(error);
+      }
+   },
+   getLanguages: async (req, res) => {
+      const userId = req.params.userId;
+      try {
+         const allUserLanguages = await userManager.getAllUserLanguages(userId);
+         res.send(JSON.stringify(allUserLanguages, null, 2));
+      } catch (error) {
+         res.status(500).send(error);
+      }
+   },
+   getTypes: async (req, res) => {
+      const userId = req.params.userId;
+      try {
+         const allUserTypes = await userManager.getAllUserTypes(userId);
+         res.send(JSON.stringify(allUserTypes, null, 2));
+      } catch (error) {
+         res.status(500).send(error);
       }
    },
    postRegister: async (req, res) => {
@@ -67,11 +95,11 @@ const userController = {
    },
    postSkill: async (req, res) => {
       try {
-         const { SkillID, Level, SelectedSkill } = req.body;
+         const { Skill, Level, SelectedSkill } = req.body;
          const UserID = req.params.userId;
          const userSkill = await userManager.createUserSkill({
             UserID: UserID,
-            SkillID: SkillID,
+            SkillID: Skill,
             Level: Level,
             SelectedSkill: SelectedSkill,
          });
@@ -83,11 +111,11 @@ const userController = {
    },
    postLanguage: async (req, res) => {
       try {
-         const { LanguageID, Level } = req.body;
+         const { Language, Level } = req.body;
          const UserID = req.params.userId;
          const userLanguage = await userManager.createUserLanguage({
             UserID: UserID,
-            LanguageID: LanguageID,
+            LanguageID: Language,
             Level: Level,
          });
          res.status(200).json(userLanguage);
@@ -98,11 +126,11 @@ const userController = {
    },
    postType: async (req, res) => {
       try {
-         const { TypeID } = req.body;
+         const { Type } = req.body;
          const UserID = req.params.userId;
          const userType = await userManager.createUserType({
             UserID: UserID,
-            TypeID: TypeID,
+            TypeID: Type,
          });
          res.status(200).json(userType);
       } catch (error) {
@@ -114,7 +142,6 @@ const userController = {
       try {
          const {
             Nationality,
-            ProfilePicture,
             Bio,
             GithubURL,
             LinkedinURL,
@@ -127,7 +154,6 @@ const userController = {
          const userProfile = await userManager.updateUserProfile({
             UserID: userId,
             Nationality: Nationality,
-            ProfilePicture: ProfilePicture,
             Bio: Bio,
             GithubURL: GithubURL,
             LinkedinURL: LinkedinURL,
@@ -137,12 +163,70 @@ const userController = {
             Region: Region,
          });
          res.status(200).json(
-            `Congratulation ${userProfile.FirstName}, your profile has been successfully created!`
+            `Congratulation ${userProfile.FirstName}, your profile has been successfully updated!`
          );
       } catch (error) {
          res.status(400).json({
             message: error.message,
          });
+      }
+   },
+   putUserPicture: async (req, res) => {
+      try {
+         const { ProfilePicture } = req.body;
+         console.log(
+            "\n\n\nControllers\n\n\nGorgeous Rayane says: ",
+            ProfilePicture
+         );
+         const userId = req.params.userId;
+         await userManager.updateUserPicture(userId, ProfilePicture);
+         res.status(200).json(`Picture has been successfully updated!`);
+      } catch (error) {
+         console.log(error);
+         res.status(500).json({ message: error.message });
+      }
+   },
+   putSkills: async (req, res) => {
+      try {
+         const { skills } = req.body;
+         const userId = req.params.userId;
+         const result = await userManager.updateUserSkills(userId, skills);
+         res.status(200).json({
+            message: `Skill has been successfully updated!`,
+         });
+      } catch (error) {
+         console.log(error);
+         res.status(500).json({ message: error.message });
+      }
+   },
+   putLanguages: async (req, res) => {
+      try {
+         const { languages } = req.body;
+         console.log("Controller - Received Languages", languages);
+         const userId = req.params.userId;
+         const result = await userManager.updateUserLanguages(
+            userId,
+            languages
+         );
+         res.status(200).json({
+            message: `Language has been successfully updated!`,
+         });
+      } catch (error) {
+         console.log(error);
+         res.status(500).json({ message: error.message });
+      }
+   },
+   putTypes: async (req, res) => {
+      try {
+         const { types } = req.body;
+         const userId = req.params.userId;
+         const result = await userManager.updateUserTypes(userId, types);
+         res.status(200).json({
+            message: `Type has been successfully updated!`,
+         });
+      } catch (error) {
+         console.log(error);
+         res.status(500).json({ message: error.message });
       }
    },
    deleteUserProfile: async (req, res) => {
