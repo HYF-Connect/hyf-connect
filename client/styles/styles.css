@@ -2,7 +2,6 @@
 @import url("header.css");
 @import url("footer.css");
 
-
 /* ****  general css  **** */
 
 * {
@@ -15,7 +14,6 @@ body {
    font-family: "Poppins", sans-serif;
    color: #1c2294;
 }
-
 
 /* ****  banner-section  **** */
 
@@ -625,7 +623,6 @@ select:focus {
    font-weight: bold;
 }
 
-
 /*About-us Section*/
 
 .about-us-container {
@@ -813,4 +810,115 @@ select:focus {
    height: 240px;
    margin-top: -22%;
    clip-path: polygon(84% 84%, 100% 50%, 100% 100%, 0 99%, 0 12%);
+}
+
+/* *****  contact us  *****/
+
+.container-contact-us-page {
+   background-color: #f7f7fc;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.container-contact-us-page.image2 {
+   width: 730px;
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+}
+.image2 {
+   margin-left: 10px;
+   position: relative;
+   padding: 10px;
+   width: 655px;
+   height: 536px;
+   left: 76px;
+   top: -109px;
+}
+/* FORM SECTION */
+
+.rectangle {
+   position: absolute;
+   width: 100%;
+   right: 0;
+}
+
+.contact__text {
+   font-family: "Montserrat";
+   font-size: 30px;
+   font-weight: 600;
+   white-space: pre;
+   display: flex;
+}
+.contact__text_color {
+   text-align: center;
+   white-space: pre;
+   position: relative;
+   height: 300px;
+   color: #1c2294;
+   width: 98.8vw;
+   padding-top: 40px;
+}
+
+.contact__text_white {
+   color: #ffffff;
+}
+
+.contact__text_purple {
+   color: #1c2294;
+   top: 109.19px;
+}
+
+.contact__text5 {
+   color: #1c2294;
+   font-size: 50px;
+}
+
+.contact__form {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   gap: 2em;
+   padding-left: 20px;
+}
+.contact__input_image {
+   position: relative;
+   width: 100%;
+   max-width: 640px;
+   object-fit: contain;
+}
+.contact__columns {
+   display: flex;
+   flex-direction: column;
+   gap: 1em;
+   border-radius: 10px;
+   width: 360px;
+}
+.contact__input {
+   display: block;
+   font-size: 16px;
+   width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+   padding-left: 20px;
+}
+
+#action_button {
+   background-color: #2f195f;
+   color: #fff;
+   font-weight: 500;
+   font-size: 14px;
+   font-family: "Montserrat";
+   text-decoration: none;
+   border-radius: 10px;
+   padding: 12px 20px;
+   width: 130px;
+   margin-left: 225px;
 }
