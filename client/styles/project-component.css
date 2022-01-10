@@ -72,6 +72,12 @@
    color: inherit;
 }
 
+.project__website--url a:visited,
+.project__website--url a:active {
+   text-decoration: none;
+   color: inherit;
+}
+
 .project__component--right {
    background-color: #f5f3f3;
    width: 75vw;
@@ -116,11 +122,13 @@
    height: 2.6em;
    border-radius: 50%;
    margin-bottom: 0.8em;
+   cursor: pointer;
 }
 
 .default-profile-picture {
    font-size: 2.6em;
    color: #2f195f;
+   cursor: pointer;
 }
 .fa-user-circle {
    margin-right: 0.1em;
