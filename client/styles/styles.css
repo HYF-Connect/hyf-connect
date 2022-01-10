@@ -2,7 +2,6 @@
 @import url("header.css");
 @import url("footer.css");
 
-
 /* ****  general css  **** */
 
 * {
@@ -15,7 +14,6 @@ body {
    font-family: "Poppins", sans-serif;
    color: #1c2294;
 }
-
 
 /* ****  banner-section  **** */
 
@@ -181,8 +179,8 @@ body {
    margin-bottom: 20px;
    object-fit: contain;
 }
-.default-profile-picture{
-   font-size:75px ;
+.default-profile-picture {
+   font-size: 75px;
    border-radius: 100px;
    margin-bottom: 20px;
    object-fit: contain;
@@ -631,71 +629,9 @@ select:focus {
    font-weight: bold;
 }
 
-/* footer section */
-
-#footer {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   padding: 20px;
-   width: auto;
-   height: auto;
-   background: #2f195f;
-}
-
-.footer_pp {
-   color: #ffffff;
-   font-family: Montserrat;
-   font-size: 13px;
-   font-style: normal;
-   font-weight: 600px;
-   line-height: 14px;
-   letter-spacing: 0em;
-   text-align: center;
-   top: auto;
-}
-
-.hyf_ico {
-   margin-left: 2.5em;
-   margin-bottom: 0em;
-   margin-top: -9em;
-}
-
-.footer_connect {
-   color: #ffffff;
-   font-family: "Montserrat";
-   font-size: 13px;
-   font-weight: 200;
-   margin-top: 5em;
-   margin-right: 0em;
-   margin-left: 1em;
-   margin-bottom: 0em;
-   display: flex;
-}
-
-.link_ico {
-   display: inline-block;
-   display: inline;
-   margin-left: 1.1em;
-   margin-right: 0em;
-   margin-bottom: 0em;
-   margin-top: 0em;
-}
-
-.footer_code {
-   color: #ffffff;
-   font-family: "Montserrat";
-   font-size: 16px;
-   font-weight: 500;
-   margin-top: 0em;
-   margin-right: 2em;
-   margin-left: 1em;
-   margin-bottom: 1em;
-   display: flex;
-}
 /* Members page*/
 
-.members-ticket{
+.members-ticket {
    background-color: #f7f7fc;
    display: flex;
    flex-direction: column;
@@ -703,97 +639,97 @@ select:focus {
    justify-content: center;
    padding-top: 15px;
 }
-.members-ticket__card{
+.members-ticket__card {
    display: flex;
    width: 952px;
    height: 100px;
    left: 245px;
-   background: #FFFFFF;
+   background: #ffffff;
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
    border-radius: 10px;
    margin: 10px;
 }
-.members-ticket__card-content{
-  width:750px;
+.members-ticket__card-content {
+   width: 750px;
    padding-left: 20px;
    margin: 15px 20px;
-   padding-right:100px;
+   padding-right: 100px;
    font-family: "Poppins", sans-serif;
 }
 
-.members-ticket__card-img{
+.members-ticket__card-img {
    margin: 15px 20px;
 }
 
-.members-ticket__card-icons{
+.members-ticket__card-icons {
    padding-left: 20px;
    margin: 15px 20px;
-   float:right;
-   width: 300px
-   
+   float: right;
+   width: 300px;
 }
-.members-ticket__card-content--name{
-   color:#1c2294;
+.members-ticket__card-content--name {
+   color: #1c2294;
    font-weight: 600;
    font-size: 14px;
 }
-.members-ticket__card-content--title{
+.members-ticket__card-content--title {
    color: black;
    font-weight: 600;
    font-size: 14px;
 }
-.members-ticket__card-img--member{
+.members-ticket__card-img--member {
    width: 70px;
    height: 70px;
    border-radius: 50%;
 }
 
-.members-ticket__card-icon{
+.members-ticket__card-icon {
    width: 40px;
    height: 60px;
    margin-left: 5px;
 }
 .members-ticket nav {
-  margin: 20px auto;
-  
+   margin: 20px auto;
 }
 .members-ticket a {
-  margin: auto 10px;
-  color: rgba(28, 34, 148, 1);
+   margin: auto 10px;
+   color: rgba(28, 34, 148, 1);
 }
-.members-banner__text{
+.members-banner__text {
    color: white;
    margin-left: 700px;
    margin-top: -200px;
 }
-.members-form__select{
-  position: relative;
-  left:70%;
-  margin-top: 10px
+.members-form__select {
+   position: relative;
+   left: 70%;
+   margin-top: 10px;
 }
 
-.members-form__select--options{
-  width: 120px;
-  margin-left: 10px;
-  background: rgba(223, 215, 239, 1);
+.members-form__select--options {
+   width: 120px;
+   margin-left: 10px;
+   background: rgba(223, 215, 239, 1);
 }
-.members-pagination{
-  list-style-type: none;
-  color:rgba(28, 34, 148, 1);
-  justify-self: center;
+.members-pagination {
+   list-style-type: none;
+   color: rgba(28, 34, 148, 1);
+   justify-self: center;
 }
-.memers-pagination--item{
-  display: inline-block;
-  margin: 10px;
+.members-pagination--item {
+   display: inline-block;
+   margin: 10px;
 }
-.memers-pagination--item__btn{
-  color:rgba(28, 34, 148, 1);
-  border:none;
+.members-pagination--item__btn {
+   color: rgba(28, 34, 148, 1);
+   border: none;
 }
-.memers-pagination--item :hover {
-  border-bottom: solid 1px rgba(28, 34, 148, 1);
+.members-pagination--item :hover {
+   border-bottom: solid 1px rgba(28, 34, 148, 1);
 }
-
+.members-banner__header {
+   font-size: 50px;
+}
 
 /*About-us Section*/
 
@@ -978,9 +914,119 @@ select:focus {
 }
 
 .about-last-container {
-
    background-color: #dfd7ef;
    height: 240px;
    margin-top: -22%;
    clip-path: polygon(84% 84%, 100% 50%, 100% 100%, 0 99%, 0 12%);
+}
+
+/* *****  contact us  *****/
+
+.container-contact-us-page {
+   background-color: #f7f7fc;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.container-contact-us-page.image2 {
+   width: 730px;
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+}
+.image2 {
+   margin-left: 10px;
+   position: relative;
+   padding: 10px;
+   width: 655px;
+   height: 536px;
+   left: 76px;
+   top: -109px;
+}
+/* FORM SECTION */
+
+.rectangle {
+   position: absolute;
+   width: 100%;
+   right: 0;
+}
+
+.contact__text {
+   font-family: "Montserrat";
+   font-size: 30px;
+   font-weight: 600;
+   white-space: pre;
+   display: flex;
+}
+.contact__text_color {
+   text-align: center;
+   white-space: pre;
+   position: relative;
+   height: 300px;
+   color: #1c2294;
+   width: 98.8vw;
+   padding-top: 40px;
+}
+
+.contact__text_white {
+   color: #ffffff;
+}
+
+.contact__text_purple {
+   color: #1c2294;
+   top: 109.19px;
+}
+
+.contact__text5 {
+   color: #1c2294;
+   font-size: 50px;
+}
+
+.contact__form {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   gap: 2em;
+   padding-left: 20px;
+}
+.contact__input_image {
+   position: relative;
+   width: 100%;
+   max-width: 640px;
+   object-fit: contain;
+}
+.contact__columns {
+   display: flex;
+   flex-direction: column;
+   gap: 1em;
+   border-radius: 10px;
+   width: 360px;
+}
+.contact__input {
+   display: block;
+   font-size: 16px;
+   width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+   padding-left: 20px;
+}
+
+#action_button {
+   background-color: #2f195f;
+   color: #fff;
+   font-weight: 500;
+   font-size: 14px;
+   font-family: "Montserrat";
+   text-decoration: none;
+   border-radius: 10px;
+   padding: 12px 20px;
+   width: 130px;
+   margin-left: 225px;
 }
