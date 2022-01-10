@@ -788,33 +788,31 @@ text-decoration: none;
 
 .rectangle{
   position: absolute;
-  width: 1278px;
+  width: 1420px;
+
 }
 
 .contact__text{
   font-family: 'Montserrat';
   font-size: 30px;
   font-weight: 600;
-  font-style: normal;
+  /* font-style: normal;
   line-height: 39.9px;
-  display: flex;
   align-items: center;
-  text-align: center;
+  text-align: center; */
   white-space: pre;
-  position: relative;
-  height:300px;
+  /* padding-left: 120px;
+  margin-top: 40px; */
+  display: flex;
 }
 .contact__text_color{
-  font-family: 'Montserrat';
-  font-size: 30px;
-  font-weight: 600;
-  display: block;
   text-align: center;
   white-space: pre;
   position: relative;
   height:300px;
   color: #1C2294;
-  margin-bottom: -20px;
+  width: 98.8vw;
+  padding-top: 40px;
 
 }
 
@@ -830,8 +828,6 @@ text-decoration: none;
 .contact__text5{
   color: #1c2294;
   font-size: 50px;
-  margin-top: 30%;
-  left: 18%;
 }
 
 .contact__form {

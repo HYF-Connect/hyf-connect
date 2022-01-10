@@ -9,7 +9,7 @@ export const FormSection = {
         <div class="image1">
           <img class="rectangle" alt="rectangle" src="/images/contact-us/Rectangle 740.png"/>
         </div> 
-        <div class="contact__text_div">
+        <div class="contact__text">
         <span class="contact__text">
           <span class="contact__text_color">you have
           <span class="contact__text_white"> question </span>
