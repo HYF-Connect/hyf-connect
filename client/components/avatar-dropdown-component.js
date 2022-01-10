@@ -1,9 +1,10 @@
 export const AvatarDropdown = {
-   props: ["avatar"],
-   template: `
+  props: ["avatar"],
+  template: `
   <div class="dropdown avatar-container">
     <a class="" href="#" role="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
-        <img class="avatar-image" v-bind:src="avatar.url" />
+        <img class="avatar-image" v-bind:src="avatar.url" v-if="avatar.url"/>
+        <i class="fas fa-user-circle default-avatar-profile-picture" v-else></i>
         <div class="avatar-name">{{avatar.name}}</div>
     </a>
     <ul class="dropdown-menu avatar-dropdown" aria-labelledby="dropdownMenuButton1">
@@ -16,11 +17,11 @@ export const AvatarDropdown = {
     </ul>
   </div>
     `,
-   methods: {
-      logOut() {
-         localStorage.removeItem("token");
-         localStorage.removeItem("username");
-      },
-   },
+  methods: {
+    logOut() {
+      localStorage.removeItem("token");
+      localStorage.removeItem("username");
+    },
+  },
 };
 export default AvatarDropdown;
