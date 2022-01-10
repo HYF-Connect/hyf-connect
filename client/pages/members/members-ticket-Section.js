@@ -56,14 +56,9 @@ export const membersTicketSection = {
     return {
       members: [],
       pageCount: 1,
-      hyfClass: -1,
-      classes: [
-        { ClassID: -1, Name: "Show all" },
-        { ClassID: 1, Name: "Class 11-12" },
-        { ClassID: 2, Name: "Class 13-14" },
-        { ClassID: 3, Name: "Class 15" },
-        { ClassID: 4, Name: "Lab Antwerp 1" },
-      ],
+      hyfClass: 0,
+      classes: [],
+      skills: [],
     };
   },
   mounted: function () {
@@ -72,9 +67,11 @@ export const membersTicketSection = {
   methods: {
     async onload() {
       try {
-        //this.classes = await fetchClasses();
-        //this.classes = [{ Name: "select all", ClassID: -1 }, ...(await fetchClasses())];
-
+        this.classes = [
+          { Name: "select all", ClassID: 0 },
+          ...(await fetchAllClasses()),
+        ];
+        console.log(this.members);
         const imageMap = {
           1: "/assets/css-logo.png",
           2: "/assets/html-logo.png",
@@ -89,25 +86,25 @@ export const membersTicketSection = {
         };
         //console.log(imageMap[1]);
         const result = await fetchUsers();
-        //console.log(result);
 
-        //const skillsResult = await fetchUserSkills();
-        //console.log(skillsResult);
-
-        const classResult = await fetchAllClasses();
-        //console.log(classResult);
         for (let i = 0; i < result.length; i++) {
           const skillsResult = await fetchUserSkills(result[i].UserID);
           //console.log(skillsResult);
+          for (let x = 0; x < skillsResult.length; x++) {
+            //console.log(skillsResult[x].SkillID);
+            this.skills.push(skillsResult[x].SkillID);
+            //console.log(this.skills);
+            console.log(imageMap[this.skills[x]]);
+          }
           this.members.push({
             username: result[i].FirstName + " " + result[i].LastName,
             avatar: result[i].ProfilePicture,
             title: result[i].JobTitle,
-            ClassID: classResult[i].ClassID,
-            //skills: await fetchUserSkills(result[i].UserID),
-            // icon1: imageMap[skillsResult.SkillID],
-            // icon2: imageMap[skillsResult.SkillID],
-            // icon3: imageMap[skillsResult.SkillID],
+            ClassID: result[i].ClassID,
+            skills: await fetchUserSkills(result[i].UserID),
+            //icon1, //imageMap[this.skills[x]],
+            //icon2, //imageMap[this.skills[x]],
+            //icon3, //imageMap[this.skills[x]],
           });
         }
       } catch (error) {
@@ -122,7 +119,7 @@ export const membersTicketSection = {
     },
     filterItems() {
       const resultList = [];
-      if (this.hyfClass === -1) {
+      if (this.hyfClass === 0) {
         return this.members;
       }
       for (let member of this.members) {
