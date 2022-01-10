@@ -26,8 +26,8 @@ router.use("/types", typeRoutes);
 router.use("/skills", skillRoutes);
 // this route was added for testing the middleware
 router.get("/auth", (req, res) => {
-   console.log(req.loggedInUser);
-   res.json({ mes: "ok" });
+  console.log(req.loggedInUser);
+  res.json({ mes: "ok" });
 });
 // export the routes
 module.exports = router;

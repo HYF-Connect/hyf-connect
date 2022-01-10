@@ -7,11 +7,16 @@
 
 .avatar-image {
    position: relative;
-   top: 8px;
    border-radius: 50%;
-   width: 80px;
-   height: 80px;
+   width: 60px;
+   height: 60px;
    z-index: 1000;
+}
+.default-avatar-profile-picture{
+   position: relative;
+   font-size: 60px;
+   z-index: 1000;
+
 }
 
 .avatar-name {

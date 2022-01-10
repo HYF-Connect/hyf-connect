@@ -1,4 +1,6 @@
 import AvatarDropdown from "./avatar-dropdown-component.js";
+import { fetchUserById } from "../src/data-access/api-calls/calls.js";
+
 const HeaderComponent = {
   components: {    AvatarDropdown,  },
   template: `
@@ -29,19 +31,26 @@ const HeaderComponent = {
     return {
       isLoggedIn,
       username: localStorage.getItem("username"),
-      avatar: 
-      {  
-        "name":localStorage.getItem("username"),
-        "url":"/images/members/firewyni.jpg"
-      }
+      avatar: {
+        name: localStorage.getItem("username"),
+        url: undefined,
+      },
     };
   },
   methods: {
+    async getDataOnLoad() {
+      const id = localStorage.getItem("userId");
+      const user = await fetchUserById(id);
+      this.avatar.url = user.ProfilePicture;
+    },
     logOut() {
       localStorage.removeItem("token");
       localStorage.removeItem("username");
       this.isLoggedIn = false;
     },
+  },
+  mounted: function () {
+    this.getDataOnLoad();
   },
 };
 
