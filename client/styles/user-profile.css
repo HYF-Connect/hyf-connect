@@ -3,6 +3,7 @@
    display: flex;
    flex-direction: column;
    z-index: 8;
+   margin-bottom: 20px;
 }
 
 /* EDIT USER PROFILE MAIN SECTION */
@@ -36,7 +37,7 @@
    position: absolute;
    top: 0;
    color: #f7f7fc;
-   width: 25%;
+   width: 35%;
    margin-left: 60%;
    margin-top: 7%;
    font-size: 3.8em;
@@ -50,7 +51,7 @@
 
 /* EDIT USER PROFILE FORM SECTION */
 .user-profile-form {
-   display: flex;
+   display: block;
    position: relative;
    flex-flow: row wrap;
    justify-content: space-evenly;
@@ -195,4 +196,82 @@ select:focus {
    margin-top: 10px;
    font-size: 0.8em;
    font-weight: bold;
+}
+.profile-image-jobTitle {
+   color:#2f195f; 
+   font-size: 1.1rem;
+   margin-top: 10px;
+}
+.user-profile-row { 
+  display: flex; 
+  padding-top: 170px;
+} 
+
+.column-details { 
+  flex: 50%; 
+}
+.column-about{
+   flex:50% ;
+}
+.user-about-me-box {
+   z-index: 5;
+   margin-top: 168px;
+   margin-right: 20px;
+   padding: 20px;
+   position: relative;
+   background-color: rgba(47, 25, 95, 1);
+   color: white;
+   min-height: 300px;
+   border-radius: 10px;
+}
+.profile-detail-line{
+   padding-left: 30px;
+   padding-bottom: 20px;
+}
+.profile-detail-line >i{
+   padding-right: 30px;
+   font-size: 1.2rem;
+}
+.profile-form-icons{
+   width: 100%;
+   justify-content: space-evenly;
+   display: flex;
+}
+.user-profile-projects{
+   padding-top: 20px;
+   margin: 30px;
+}
+.user-profile-projects-title{
+   color:rgba(47, 25, 95, 1);
+}
+.user-profile-skills-title{
+   color:rgba(47, 25, 95, 1);
+
+}
+.user-profile-projects-cards{
+   box-shadow: 7px 7px 5px rgb(185, 183, 183);
+   width: 100%;
+   display: block;
+   min-height: 100px;
+   border-radius: 1rem;
+   background: white;
+   padding: 20px;
+}
+.user-profile-skills{
+   box-shadow: 7px 7px 5px rgb(185, 183, 183);
+   width: 100%;
+   min-height: 100px;
+   border-radius: 1rem;
+   background: white;
+   padding: 20px;
+   display: flex;
+   justify-content: space-evenly;
+
+}
+.user-profile-skill{
+   height:80px;
+}
+.profile-details-separator{
+   margin-right: 20px;
+   margin-left: 20px;
 }

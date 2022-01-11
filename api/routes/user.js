@@ -7,6 +7,7 @@ userRoutes.get("/", userController.getAll);
 userRoutes.get("/:userId/skill", userController.getSkills);
 userRoutes.get("/:userId/language", userController.getLanguages);
 userRoutes.get("/:userId/type", userController.getTypes);
+userRoutes.get("/:userId/projects", userController.getProjects);
 userRoutes.post("/register", userController.postRegister);
 userRoutes.put("/:userId/profile", userController.putUserProfile);
 userRoutes.put("/:userId/picture", userController.putUserPicture);
