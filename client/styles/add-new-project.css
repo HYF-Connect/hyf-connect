@@ -1,66 +1,165 @@
+.add-new-project-page {
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+   box-sizing: border-box;
+   background: #f7f7fc;
+   margin: 0;
+   height: 100vh;
+   width: auto;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+}
 
+.addNewProject__banner {
+   display: flex;
+   width: 100%;
+   height: 13rem;
+   justify-content: center;
+   align-items: center;
+   background: #dfd7ef;
+}
 
-.addnewproject__banner {
-    display: flex;
-    top: 100px;
-    height: 100px;
-    flex-direction: column;
-    background: #DFD7EF;
-  }
-  
-  .addnewproject__container{
-    max-width: 500px;
-    width: 100%;
-    background: #fff;
-    margin: 20px auto;
-    box-shadow: 1px 1px 2px rgba(0,0,0,0.175);
-    padding: 30px;
-    border-radius: 10px;
-  }
-  
-  .addnewproject__form {
-  width: 100%;
-  }
-  
-  .addnewproject__form--input {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .addnewproject__form--label {
-    width: 200px;
-    color: #757575;
-    margin-right: 10px;
-    font-size: 14px;
-    font-family: "Poppins", sans-serif;
-    color: #1c2294;
-  }
-  
-  .addnewproject__form--input,
-  .addnewproject__form--textarea {
-    width: 100%;
-    outline: none;
-    border: 1px solid #eef0ef;
-    font-size: 10px;
-    font-family: "Poppins", sans-serif;
-    padding: 8px 10px;
-    border-radius: 25px;
-  }
-  
-  
-  .addnewproject__form--btn {
-    padding: 8px 10px;
-    font-size: 12px;
-    font-family: 'Montserrat', sans-serif;
-    border: 0px;
-    background:  #2f195f;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 25px;
-    outline: none;
-  }
-  
-  .addnewproject__form--btn:hover{
-    background: #1c2294;
-  }
+.addNewProject__title {
+   color: #1c2294;
+   font-size: 3em;
+   font-family: "Poppins", sans-serif;
+   font-weight: 500;
+}
+.addNewProject__container {
+   display: flex;
+   flex-direction: column;
+   max-width: auto;
+   width: 65%;
+   background: #f7f7fc;
+   margin: 20px auto;
+   height: 100%;
+   padding: 30px;
+   border-radius: 10px;
+}
+
+.addNewProject__form {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   width: 100%;
+   align-items: center;
+   height: 100%;
+}
+.addNewProject__form-group {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   font-family: "Poppins", sans-serif;
+   width: 40em;
+   padding: 0.8em;
+   height: 5em;
+}
+.multi-select {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
+   background: #f7f7fc;
+   font-family: "Poppins", sans-serif;
+   width: 100%;
+   width: 40em;
+   height: 3em;
+   padding: 2em 0;
+}
+
+.addNewProject__form--input,
+.addNewProject__form--input-description {
+   display: flex;
+   flex-direction: row;
+   background-color: #fff;
+   padding: 0.5em 1.2em;
+   width: 30em;
+   height: 3em;
+   margin: 2em 0 2em 4.3em;
+   box-sizing: border-box;
+   border: none;
+   border-radius: 20px;
+   color: rgb(39, 39, 39);
+   outline: none;
+   overflow-wrap: break-word;
+   word-wrap: break-word;
+}
+.addNewProject__form--input-description {
+   justify-items: flex-start;
+   height: 3em;
+}
+#membersDropDown {
+   justify-content: space-start;
+   background-color: #fff;
+   padding: 0.5em 1.2em;
+   margin-left: 4.3em;
+   width: 16em;
+   height: 3em;
+   box-sizing: border-box;
+   border: none;
+   border-radius: 20px;
+   color: rgb(39, 39, 39);
+   outline: none;
+}
+.dropdown-menu {
+   width: 16em;
+   outline: none;
+   border: none;
+}
+.addNewProject__form--label {
+   color: #000000;
+   display: inline-flex;
+   justify-items: flex-start;
+   width: 12em;
+   margin: 7px 0;
+   padding: 8px 0 8px 0;
+   font-size: 0.9em;
+   text-transform: capitalize;
+   letter-spacing: 0.1em;
+}
+
+.label-select {
+   color: #000000;
+   display: inline-flex;
+   justify-items: flex-start;
+   width: 10em;
+   font-size: 0.9em;
+   text-transform: capitalize;
+   letter-spacing: 0.1em;
+}
+.addNewProject__button {
+   display: flex;
+   flex-direction: row;
+   align-content: flex-end;
+   font-family: "Montserrat", sans-serif;
+   cursor: pointer;
+   outline: none;
+   margin-left: 33em;
+}
+.pills {
+   padding-left: 15px;
+   margin-left: 4.6em;
+}
+.submit-btn {
+   background: #2f195f;
+   justify-content: center;
+   width: 9.5em;
+   color: #fff;
+   padding: 0.6em;
+   margin: 12px 0 0 0;
+   border-radius: 20px;
+   font-weight: 500;
+   border: 2px solid transparent;
+}
+.submit-btn:hover {
+   background-color: #fff;
+   color: #2f195f;
+   border-color: #2f195f;
+   -webkit-transition: all 0.4s;
+   -moz-transition: all 0.4s;
+   transition: all 0.4s;
+}

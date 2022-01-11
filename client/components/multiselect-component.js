@@ -4,7 +4,7 @@ const multiSelect = {
       return { selectedValues: this.selection };
    },
    template: ` <div>
-                  <input v-bind:id="dropdownid" v-once class="form-control addnewproject__form--input" type="text">
+                  <input v-bind:id="dropdownid" v-once class="form-control-ms addnewproject__form--input" type="text">
                   <div class="pills">
                      <span class="badge rounded-pill bg-pill-hyf" v-on:click="removeSelected(s)" v-for="s in selectedValues">{{ s.label }} <i class="fas fa-times"></i></span>
                   </div>

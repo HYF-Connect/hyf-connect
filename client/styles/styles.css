@@ -40,7 +40,6 @@ body {
    padding-left: 1em;
    padding-right: 1em;
 }
-
 .banner__right--title {
    font-family: Poppins;
    font-weight: bolder;
@@ -540,7 +539,7 @@ input[type="password"] {
    padding: 40px 0 40px 0;
    margin: 20% 0 6% 18%;
    border-radius: 1rem;
-   font-weight: 600;
+   font-family: "Poppins", sans-serif;
    border: 2px solid transparent;
    box-shadow: 0px 20px 10px -15px rgb(180, 174, 174);
    z-index: 100;
@@ -572,7 +571,6 @@ input[type="password"] {
    box-sizing: border-box;
    border: none;
    border-radius: 20px;
-   border-bottom: 1px solid #ddd;
    color: rgb(39, 39, 39);
    outline: none;
 }
@@ -589,11 +587,14 @@ input[type="password"] {
    box-sizing: border-box;
    border: none;
    border-radius: 20px;
-   border-bottom: 1px solid #ddd;
    color: rgb(39, 39, 39);
    outline: none;
    overflow-wrap: break-word;
    word-wrap: break-word;
+}
+
+.form-control-ms:focus {
+   border: 1px solid transparent;
 }
 
 .profile-form__select {
@@ -648,12 +649,14 @@ select:focus {
    display: inline-flex;
    background: #2f195f;
    justify-content: center;
-   width: 180px;
+   font-family: "Montserrat", sans-serif;
+   cursor: pointer;
+   width: 9em;
    color: #fff;
-   padding: 10px 20px;
+   padding: 0.6em;
    margin: 12px 0 0 0;
    border-radius: 20px;
-   font-weight: bold;
+   font-weight: 500;
    border: 2px solid transparent;
 }
 .profile-form__btn-submit:hover {
