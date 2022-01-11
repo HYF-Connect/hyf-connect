@@ -1,10 +1,11 @@
 const ProjectComponent = {
-   props: ["project"],
-   template: `  
+  props: ["project"],
+  template: `  
   <div class="project__component--container">
     <div class="project__component--left">
       <div class="project__thumbnail">
-      <img v-bind:src="project.thumbnail" alt="project thumbnail">
+      <img v-bind:src="project.thumbnail" v-if="project.avatar" alt="project thumbnail">
+      <i class="far fa-file-code project-photo" style="color: #2f195f; font-size:75px; margin-left: 100px;" v-else></i>
       </div>
       <div class="project__buttons">
         <div class="project__github--url">
@@ -27,10 +28,10 @@ const ProjectComponent = {
         </div>
     </div>
   </div>`,
-   methods: {
-      async navigate(memberId) {
-         window.location.href = `../user-profile/user-profile.html?memberId=${memberId}`;
-      },
-   },
+  methods: {
+    async navigate() {
+      window.location.href = `../user-project/user-project.html?projectId=${projectId}`;
+    },
+  },
 };
 export default ProjectComponent;

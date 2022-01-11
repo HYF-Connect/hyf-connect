@@ -133,3 +133,22 @@
 .fa-user-circle {
    margin-right: 0.1em;
 }
+.projects-pagination {
+   list-style-type: none;
+   color: rgba(28, 34, 148, 1);
+   justify-self: center;
+}
+.projects-pagination--item {
+   display: inline-block;
+   margin: 10px;
+}
+.projects-pagination--item__btn {
+   color: rgba(28, 34, 148, 1);
+   border: none;
+}
+.projects-pagination--item :hover {
+   border-bottom: solid 1px rgba(28, 34, 148, 1);
+}
+.projects-nav {
+   margin: 20px 40%;
+}
