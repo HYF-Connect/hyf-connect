@@ -201,12 +201,25 @@ export const fetchProjects = async () => {
    return await performFetch("projects/");
 };
 
+// fetching projects by Id
+export const fetchProjectById = async (projectId) => {
+   return await performFetch(`projects/${projectId}`);
+};
+
 // fetching all members from project
 export const fetchAllProjectUsers = async (projectId) => {
    return await performFetch(`projects/${projectId}/users`);
 };
 
-// fetcing all projects of a member
+// fetching all projects of a member
 export const fetchUserProjects = async (userId) => {
    return await performFetch(`users/${userId}/projects`);
+};
+
+// update project users
+export const updateProjectUsers = async (users) => {
+   // const id = localStorage.getItem("projectId");
+   return await performUpdate(`projects/${id}/users`, {
+      users,
+   });
 };

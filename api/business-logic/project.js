@@ -69,6 +69,28 @@ const projectManager = {
       });
       return updatedProfile;
    },
+   updateProjectThumbnail: async (projectId, profilePicture) => {
+      const projectById = await ProjectStore.findOne({
+         where: { ProjectID: projectId },
+      });
+      const updatedThumbnail = await projectById.update({
+         ProfilePicture: profilePicture,
+      });
+      return updatedThumbnail;
+   },
+   updateProjectUsers: async (projectId, users) => {
+      if (users.length !== 0) {
+         await UserProjectStore.destroy({
+            where: { ProjectID: projectId },
+         });
+      }
+      for (let user of users) {
+         await UserProjectStore.create({
+            projectID: projectId,
+            userID: user.value,
+         });
+      }
+   },
    deleteProject: async ({ ProjectID }) => {
       await ProjectStore.destroy({
          where: { ProjectID: ProjectID },

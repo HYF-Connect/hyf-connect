@@ -1,6 +1,9 @@
 import MultiSelect from "../../components/multiselect-component.js";
-import { fetchUsers } from "../../src/data-access/api-calls/calls.js";
-import { createProject } from "../../src/data-access/api-calls/calls.js";
+import {
+   fetchUsers,
+   fetchUserProjects,
+   createProject,
+} from "../../src/data-access/api-calls/calls.js";
 
 export const MainSection = {
    components: {
@@ -74,7 +77,11 @@ export const MainSection = {
                label: u.FirstName + " " + u.LastName,
                value: u.UserID,
             }));
-            console.log(users);
+            const usersProject = await fetchUserProjects();
+            this.teamMembers = users.Project.map((user) => ({
+               label: user.FirstName + " " + user.LastName,
+               value: user.UserID,
+            }));
          } catch (error) {
             console.log("error from members", error);
          }

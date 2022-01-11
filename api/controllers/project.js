@@ -130,6 +130,36 @@ const projectController = {
          });
       }
    },
+   putProjectThumbnail: async (req, res) => {
+      try {
+         const { projectThumbnail } = req.body;
+         const projectId = req.params.userId;
+         await projectManager.updateProjectThumbnail(
+            projectId,
+            projectThumbnail
+         );
+         res.status(200).json(`Thumbnail has been successfully updated!`);
+      } catch (error) {
+         console.log(error);
+         res.status(500).json({ message: error.message });
+      }
+   },
+   putProjectUsers: async (req, res) => {
+      try {
+         const { users } = req.body;
+         const projectId = req.params.projectId;
+         const result = await projectManager.updateProjectUsers(
+            projectId,
+            users
+         );
+         res.status(200).json({
+            message: `Project has been successfully updated!`,
+         });
+      } catch (error) {
+         console.log(error);
+         res.status(500).json({ message: error.message });
+      }
+   },
    deleteProject: async (req, res) => {
       try {
          const { projectId } = req.params;
