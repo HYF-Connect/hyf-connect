@@ -1,0 +1,76 @@
+/* header section */
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    height: 70px;
+ }
+ .nav-bar a {
+    color: #1c2294;
+    padding: 12px;
+    font-size: 24px;
+    display: inline;
+    font-family: "Montserrat";
+    text-decoration: none;
+ }
+ .username {
+    color: #1c2294;
+    padding: 12px;
+    font-size: 18px;
+    display: inline;
+    font-family: "Montserrat";
+    text-decoration: none;
+ }
+ 
+ .nav-bar a:hover {
+    border-bottom: 2px #2f195f solid;
+ }
+ .sign-in-btn {
+    padding: 12px 24px;
+    background-color: #2f195f;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: "Montserrat";
+    text-decoration: none;
+ }
+ .sign-in-btn:hover {
+    background-color: #dfd7ef;
+ }
+ .sign-in-btn:hover:active {
+    background-color: #fff;
+    border: #2f195f;
+ }
+ .sign-out-btn {
+    padding: 12px 24px;
+    background-color: #b52055;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: "Montserrat";
+    text-decoration: none;
+ }
+ 
+ .sign-out-btn:hover {
+    background-color: #dfd7ef;
+ }
+ .sign-out-btn:hover:active {
+    background-color: #fff;
+    border: #2f195f;
+ }
+ 
+ @media screen and (max-width: 500px) {
+    .nav-bar a {
+       float: none;
+       display: block;
+       text-align: left;
+    }
+    .sign-in-btn {
+       float: none;
+    }
+ }
+ 

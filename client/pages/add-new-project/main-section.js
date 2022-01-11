@@ -2,13 +2,12 @@ import MultiSelect from "../../components/multiselect-component.js";
 import { fetchUsers } from "../../src/data-access/api-calls/calls.js";
 import { createProject } from "../../src/data-access/api-calls/calls.js";
 
-
 export const MainSection = {
-  components: {
-    MultiSelect
-  },
+   components: {
+      MultiSelect,
+   },
 
-  template: `
+   template: `
   <div class="addnewproject__banner">
   <h1>Add your new project here!</h1>
   </div>
@@ -26,7 +25,7 @@ export const MainSection = {
     <label class="addnewproject__form--label">Description</label>
       <textarea class="addnewproject__form--textarea" placeholder="Describe your project" required v-model="projectDescription" style="height:50px"></textarea><br>
     <label class="addnewproject__form--label">Team Members</label>
-    <multi-select v-bind:options="students" v-bind:selection="teamMembers" v-on:new-selection="updateTeammates"></multi-select>
+    <multi-select v-bind:dropdownid="'membersDropDown'" v-bind:options="students" v-bind:selection="teamMembers" v-on:new-selection="updateTeammates"></multi-select>
     <label class="addnewproject__form--label">Add Thumbnail</label>
       <input class="addnewproject__form--input" type="file" accept="Image/*">
     <button class= "addnewproject__form--btn" v-on:click="handleSubmit">save project</button>
@@ -34,38 +33,42 @@ export const MainSection = {
 </div>
     `,
 
-    data() {
+   data() {
       return {
-          projectTitle: "",
-          websiteUrl: "",
-          githubUrl: "",
-          projectDescription:"",
-          teamMembers:[],
-          students:[],
-          projectThumbnail: "",
-          success: false,
-      }
-    },
+         projectTitle: "",
+         websiteUrl: "",
+         githubRepo: "",
+         projectDescription: "",
+         teamMembers: [],
+         students: [],
+         projectThumbnail: "",
+         success: false,
+      };
+   },
 
-    mounted: function () {
+   mounted: function () {
       this.onload();
-    },
+   },
 
-    methods: {
-    async onload() {
-      try {
-        const users = await fetchUsers();
-        this.students = users.map(u => ({label: u.FirstName + " " + u.LastName, value: u.UserID}))
-        console.log(users);
-        } catch (error) {
-        console.log("error from members", error);
-      }
-    },
+   methods: {
+      async onload() {
+         try {
+            const users = await fetchUsers();
+            this.students = users.map((u) => ({
+               label: u.FirstName + " " + u.LastName,
+               value: u.UserID,
+            }));
+            console.log(users);
+         } catch (error) {
+            console.log("error from members", error);
+         }
+      },
 
-    async updateTeammates(teammates) {
-      console.log("teammates", teammates);
-    },
+      async updateTeammates(teammates) {
+         console.log("teammates", teammates);
+      },
 
+<<<<<<< HEAD
     async handleSubmit() {
       try {
         const result = await createProject(this.projectTitle,this.projectDescription,this.githubUrl,this.websiteUrl,this.projectThumbnail);
@@ -77,8 +80,36 @@ export const MainSection = {
       } catch (error) {
         console.log("error  from project", error);
       }
+=======
+      async handleSubmit() {
+         try {
+            const result = await createProject(
+               this.projectTitle,
+               this.projectDescription,
+               this.githubUrl,
+               this.websiteUrl,
+               this.projectThumbnail
+            );
+            this.projectTitle = result.Title;
+            this.projectDescription = result.Description;
+            this.githubUrl = result.GithubURL;
+            this.websiteUrl = result.WebsiteURL;
+            this.projectThumbnail = result.Thumbnail;
+            this.success = true;
+            setTimeout(
+               () =>
+                  (window.location.href =
+                     "/pages/user-project/user-project.html"),
+               500
+            );
+            //console.log(`the selected values:`, this.teamMembers);
+            return;
+         } catch (error) {
+            console.log("error  from project", error);
+         }
+>>>>>>> be63f82b21deb5e2d1707a141f3c2a5cded9e1f3
       },
-    },
-  };
+   },
+};
 
-    export default MainSection;
+export default MainSection;

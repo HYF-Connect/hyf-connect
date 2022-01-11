@@ -48,7 +48,6 @@ const userManager = {
   updateUserProfile: async ({
     UserID,
     Nationality,
-    ProfilePicture,
     Bio,
     GithubURL,
     LinkedinURL,
@@ -60,7 +59,6 @@ const userManager = {
     const userById = await userStore.findOne({ where: { UserID: UserID } });
     const updatedProfile = await userById.update({
       NationalityID: Nationality,
-      ProfilePicture,
       Bio,
       GithubURL,
       LinkedinURL,
@@ -71,9 +69,76 @@ const userManager = {
     });
     return updatedProfile;
   },
+  updateUserPicture: async (userId, ProfilePicture) => {
+    const userById = await userStore.findOne({ where: { UserID: userId } });
+    const updatedUser = await userById.update({
+      ProfilePicture,
+    });
+    return updatedUser;
+  },
+  updateUserSkills: async (userId, skills) => {
+    await userSkillStore.destroy({
+      where: { UserID: userId },
+    });
+    console.log("The nice iterable list of skills: ", skills);
+    for (let skill of skills) {
+      console.log(skill);
+      console.log("Business-Logic - Writing Skill:", skill);
+      await userSkillStore.create({
+        UserID: userId,
+        SkillID: skill.value,
+      });
+    }
+    return true;
+  },
+  updateUserLanguages: async (userId, languages) => {
+    console.log("Business-Logic - User ID", userId);
+    console.log("Business-Logic - Languages", languages);
+    await userLanguageStore.destroy({
+      where: { UserID: userId },
+    });
+    for (let language of languages) {
+      await userLanguageStore.create({
+        UserID: userId,
+        LanguageID: language.value,
+      });
+    }
+    return true;
+  },
+  updateUserTypes: async (userId, types) => {
+    await userTypeStore.destroy({
+      where: { UserID: userId },
+    });
+    for (let type of types) {
+      console.log("Business-Logic - Writing Type:", type);
+      await userTypeStore.create({
+        UserID: userId,
+        TypeID: type.value,
+      });
+    }
+    return true;
+  },
   getAllUsers: async () => {
     const allUsers = await userStore.findAll();
     return allUsers;
+  },
+  getAllUserSkills: async (userId) => {
+    const allUserSkills = await userSkillStore.findAll({
+      where: { UserID: userId },
+    });
+    return allUserSkills;
+  },
+  getAllUserLanguages: async (userId) => {
+    const allUserLanguages = await userLanguageStore.findAll({
+      where: { UserID: userId },
+    });
+    return allUserLanguages;
+  },
+  getAllUserTypes: async (userId) => {
+    const allUserTypes = await userTypeStore.findAll({
+      where: { UserID: userId },
+    });
+    return allUserTypes;
   },
   getUserById: async (userId) => {
     const userById = await userStore.findOne({ where: { UserID: userId } });

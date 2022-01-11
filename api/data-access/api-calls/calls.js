@@ -7,8 +7,9 @@ export const performFetch = async (path) => {
       headers: {
          "Content-Type": "application/json",
          Authorization:
-         localStorage.getItem("token") === undefined ? "" : `Bearer ${localStorage.getItem("token")}`,
-
+            localStorage.getItem("token") === undefined
+               ? ""
+               : `Bearer ${localStorage.getItem("token")}`,
       },
    });
    if (!response.ok) {
@@ -25,7 +26,9 @@ export const performPost = async (path, body) => {
       headers: {
          "Content-Type": "application/json",
          Authorization:
-         localStorage.getItem("token") === undefined ? "" : `Bearer ${localStorage.getItem("token")}`,
+            localStorage.getItem("token") === undefined
+               ? ""
+               : `Bearer ${localStorage.getItem("token")}`,
       },
       body: JSON.stringify(body),
    });
@@ -44,9 +47,10 @@ export const registerUser = async (firstName, lastName, email, password) => {
       password,
    });
 };
-export const loginUser = async (Email, Password) =>{
-   return await performPost("login",{
+// login into the app
+export const loginUser = async (Email, Password) => {
+   return await performPost("users/login", {
       Email,
-      Password
-   })
+      Password,
+   });
 };
