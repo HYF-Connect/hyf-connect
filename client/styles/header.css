@@ -6,11 +6,13 @@
   justify-content: space-between;
   padding: 20px;
   height: 70px;
+  background-color: #ffffff;
 }
 .nav-bar a {
   color: #1c2294;
   padding: 12px;
-  font-size: 22px;
+  font-size: 18px;
+  font-weight: 500;
   display: inline;
   font-family: "Montserrat";
   text-decoration: none;
@@ -23,13 +25,13 @@
   font-family: "Montserrat";
   text-decoration: none;
 }
-
 .nav-bar a:hover {
   border-bottom: 2px #2f195f solid;
 }
 .sign-in-btn {
   padding: 12px 24px;
   background-color: #2f195f;
+  border: 2px solid #2f195f;
   border-radius: 20px;
   color: #fff;
   font-weight: 500;
@@ -38,7 +40,9 @@
   text-decoration: none;
 }
 .sign-in-btn:hover {
-  background-color: #dfd7ef;
+  background-color: #ffffff;
+  color: #2f195f;
+
 }
 .sign-in-btn:hover:active {
   background-color: #fff;
@@ -110,9 +114,10 @@ button.navbar-toggler {
   display: block;
   width: 80%;
   height: 4px;
-  background-color: #ffffff;
+  background-color: #2f195f;
   position: absolute;
   top: 50%;
+  margin-top:3vh;
 }
 
 .header-menu-close-line:first-child {
@@ -127,20 +132,20 @@ button.navbar-toggler {
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 72px;
+  top: 0;
   left: 0;
   width: 100vw;
-  height: 360px;
+  height: 430px;
   background-color: #ffffff;
   z-index: 1000;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 750px) {
   .header-menu-burger {
-   display: block;
-   position: relative;
-   height: 30px;
-   width: 36px;
+  display: block;
+  position: relative;
+  height: 30px;
+  width: 36px;
   }
 
   .header-menu-horizontal,
@@ -150,10 +155,10 @@ button.navbar-toggler {
 }
 
 .burger-link {
-   font-size: 20px;
-   color: #1c2294;
-   font-weight: 400;
-   margin: 25px auto 0 40px;
-   font-family: "Montserrat";
-   text-decoration: none;
+  font-size: 28px;
+  color: #1c2294;
+  font-weight: 400;
+  margin: 25px auto 0 40px;
+  font-family: "Montserrat";
+  text-decoration: none;
 }

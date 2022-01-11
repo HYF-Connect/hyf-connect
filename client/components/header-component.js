@@ -36,7 +36,7 @@ const HeaderComponent = {
           <a class="burger-link" href="/pages/about-us/about-us.html">about us</a>
           <a class="burger-link" href="/pages/contact-us/contact-us.html">contact us</a>
           <a class="burger-link" href="/pages/login/login.html">sign in</a>
-          <a class="burger-link" href="/pages/login/login.html">sign out</a>
+          <a class="burger-link" href="/pages/user-profile/user-profile.html">sign out</a>
         </div >
       </div>
     </div>`,
