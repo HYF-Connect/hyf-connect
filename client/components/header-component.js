@@ -6,7 +6,7 @@ const HeaderComponent = {
   template: `
     <div class="header-container">
       <div class="brand">
-        <a href="/pages/homepage/homepage.html" class="logo"><img src="/assets/logo_pc_full.png" alt="logo" width="90" height="70"/></a>
+        <a href="/pages/homepage/homepage.html" class="logo"><img src="/assets/hyh-connect-logo-header.png" alt="logo" height="80"/></a>
       </div>
       <div class="nav-bar header-menu-horizontal">
           <a class="nav-link" href="/pages/projects/projects.html">projects</a>
@@ -31,11 +31,11 @@ const HeaderComponent = {
             <span class="header-menu-close-line"></span>
             <span class="header-menu-close-line"></span>
           </button>
-          <div class="">projects</div>
-          <div class="">members</div>
-          <div class="">about us</div>
-          <div class="">contact us</div>
-          <div class="">sign in</div>
+          <a class="burger-link" href="/pages/projects/projects.html">projects</a>
+          <a class="burger-link" href="/pages/members/members.html">members</a>
+          <a class="burger-link" href="/pages/about-us/about-us.html">about us</a>
+          <a class="burger-link" href="/pages/contact-us/contact-us.html">contact us</a>
+          <a class="burger-link" href="/pages/login/login.html">sign in</a>
         </div >
       </div>
     </div>`,

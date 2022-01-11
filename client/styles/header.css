@@ -10,7 +10,7 @@
 .nav-bar a {
   color: #1c2294;
   padding: 12px;
-  font-size: 24px;
+  font-size: 22px;
   display: inline;
   font-family: "Montserrat";
   text-decoration: none;
@@ -130,8 +130,8 @@ button.navbar-toggler {
   top: 0px;
   left: 0;
   width: 100vw;
-  height: 800px;
-  background-color: white;
+  height: 250px;
+  background-color: #f1f1f1;
   z-index: 1000;
 }
 
@@ -147,4 +147,14 @@ button.navbar-toggler {
   .header-menu-avatar {
     display: none;
   }
+}
+
+.burger-link {
+   font-size: 20px;
+   color: #1c2294;
+   font-weight: bold;
+   padding: 3px;
+   margin-top:10px;
+   font-family: "Montserrat";
+   text-decoration: none;
 }
