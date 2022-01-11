@@ -708,6 +708,8 @@ select:focus {
    margin: 15px 20px;
    float: right;
    width: 300px;
+   display: flex;
+   justify-content: space-evenly;
 }
 .members-ticket__card-content--name {
    color: #1c2294;
@@ -726,9 +728,7 @@ select:focus {
 }
 
 .members-ticket__card-icon {
-   width: 40px;
-   height: 60px;
-   margin-left: 5px;
+   height: 50px;
 }
 .members-ticket nav {
    margin: 20px auto;
