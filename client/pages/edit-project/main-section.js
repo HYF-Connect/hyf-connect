@@ -2,9 +2,10 @@ import MultiSelect from "../../components/multiselect-component.js";
 import {
    fetchAllProjectUsers,
    createProject,
+   updateProjectUsers,
+   fetchProjectById,
    fetchUsers,
    updateProject,
-   updateProjectThumbnail,
 } from "../../src/data-access/api-calls/calls.js";
 
 export const MainSection = {
@@ -43,17 +44,16 @@ export const MainSection = {
                <multi-select v-bind:dropdownid="'membersDropDown'" v-bind:options="students" v-bind:selection="teamMembers" v-on:new-selection="updateTeammates"></multi-select>
             </div>
          </div>
-         <div class="addNewProject__form-thumbnail">
-            <label class="addNewProject__form--label">Add Thumbnail</label> 
-            <div class="thumbnail-outer-area">
-               <div class="thumbnail-area__img" >
-                  <img class="addNewProject__thumbnail" v-if="file" v-bind:src="file" alt="project thumbnail"/>
-                  <i class="fas fa-image icon-thumbnail" v-else></i>
-                   </div>
+         <div class="addNewProject__form-group">
+            <label class="addNewProject__form--label">Add Thumbnail</label>
+            <div class="outer-area__img">
+               <div class="rounded-area__img" >
+                  <img class="user-profile-picture" v-if="file" v-bind:src="file"/>
+                  <i class="fas fa-user-circle default-profile-picture" v-else ></i>
                </div>
                <input v-on:change="handleImageUpload" id="inputFileToLoad" type="file">
-            </div>
-         </div>
+             </div>
+          </div>
          <div class="addNewProject__button">
             <button class="submit-btn" v-on:click="handleSubmit">save project</button>
          </div>
@@ -64,9 +64,9 @@ export const MainSection = {
    data() {
       return {
          projectTitle: "",
+         id: "",
          websiteUrl: "",
          githubRepo: "",
-         id: "",
          projectDescription: "",
          teamMembers: [],
          students: [],
@@ -79,15 +79,15 @@ export const MainSection = {
    mounted: function () {
       this.onload();
    },
+
    methods: {
       async onload() {
          try {
-            /*            const id = this.getProjectId();
-            console.log(id);
+            const id = this.getProjectId();
             if (id === undefined) {
                return;
             }
-            this.id = id; */
+            this.id = id;
             this.students = await fetchUsers();
             const allUsers = await fetchUsers();
             this.students = allUsers.map((u) => ({
@@ -100,6 +100,13 @@ export const MainSection = {
                label: u.FirstName + " " + u.LastName,
                value: u.userID,
             }));
+            const project = await fetchProjectById(this.id);
+            this.file = project.Thumbnail;
+            this.projectTitle = project.Title;
+            this.projectDescription = project.Description;
+            this.githubRepo = project.GithubURL;
+            this.websiteUrl = project.WebsiteURL;
+            this.projectThumbnail = project.Thumbnail;
          } catch (error) {
             console.log("error from members", error);
          }
@@ -112,9 +119,18 @@ export const MainSection = {
             fileReader.onload = function (fileLoadedEvent) {
                const srcData = fileLoadedEvent.target.result;
                this.file = srcData;
-               updateProjectThumbnail(srcData);
+               updatePicture(srcData);
             }.bind(this);
             fileReader.readAsDataURL(fileToLoad);
+         }
+      },
+      getProjectId() {
+         const queryPart = window.location.search;
+         const parts = queryPart.replace("?", "").split("&");
+         for (let part of parts) {
+            if (part.split("=")[0] === "projectId") {
+               return part.split("=")[1];
+            }
          }
       },
       async updateTeammates(members) {
@@ -131,31 +147,26 @@ export const MainSection = {
                   this.websiteUrl
                );
                this.id = result.ProjectID;
-            } else {
-               result = await updateProject(
-                  this.projectTitle,
-                  this.projectDescription,
-                  this.githubRepo,
-                  this.websiteUrl
-               );
             }
-            await updateProjectUsers(this.teamMembers);
+            /* } else {
+               result = await updateProject(
+                  (this.projectTitle = result.Title),
+                  (this.projectDescription = result.Description),
+                  (this.githubRepo = result.GithubURL),
+                  (this.websiteUrl = result.WebsiteURL),
+                  (this.projectThumbnail = result.Thumbnail)
+               );
+            } */
+
+            const users = await updateProjectUsers(this.teamMembers);
             this.success = true;
             setTimeout(
                () => (window.location.href = "/pages/projects/projects.html"),
                500
             );
+            return;
          } catch (error) {
             console.log("error from project", error);
-         }
-      },
-      getProjectId() {
-         const queryPart = window.location.search;
-         const parts = queryPart.replace("?", "").split("&");
-         for (let part of parts) {
-            if (part.split("=")[0] === "projectId") {
-               return part.split("=")[1];
-            }
          }
       },
    },

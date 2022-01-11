@@ -6,7 +6,6 @@
    background: #f7f7fc;
    margin: 0;
    height: 100vh;
-   width: auto;
    top: 0;
    bottom: 0;
    left: 0;
@@ -162,4 +161,37 @@
    -webkit-transition: all 0.4s;
    -moz-transition: all 0.4s;
    transition: all 0.4s;
+}
+.thumbnail-area__img {
+   width: 28em;
+   height: 15em;
+   border-radius: 15px;
+   background-color: white;
+   margin-bottom: 0.5em;
+}
+.addNewProject__form-thumbnail {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   width: 45em;
+   padding: 0.8em;
+   height: 15em;
+   margin-left: 1em;
+}
+.addNewProject__thumbnail {
+   object-fit: contain;
+   width: 25em;
+   height: 15em;
+   border-radius: 15px;
+   background-color: white;
+}
+.thumbnail-outer-area {
+   width: 26em;
+   height: 17em;
+   background-color: yellowgreen;
+}
+
+#inputFileToLoad {
+   width: 17em;
+   height: 7em;
 }

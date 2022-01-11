@@ -184,15 +184,13 @@ export const createProject = async (
    Title,
    Description,
    GithubURL,
-   WebsiteURL,
-   Thumbnail
+   WebsiteURL
 ) => {
    return await performPost("projects/", {
       Title,
       Description,
       GithubURL,
       WebsiteURL,
-      Thumbnail,
    });
 };
 
@@ -217,9 +215,30 @@ export const fetchUserProjects = async (userId) => {
 };
 
 // update project users
-export const updateProjectUsers = async (users) => {
-   // const id = localStorage.getItem("projectId");
-   return await performUpdate(`projects/${id}/users`, {
+export const updateProjectUsers = async (projectId, users) => {
+   return await performUpdate(`projects/${projectId}/users`, {
       users,
+   });
+};
+
+// update project
+export const updateProject = async (
+   projectId,
+   Title,
+   Description,
+   GithubURL,
+   WebsiteURL
+) => {
+   return await performPost(`projects/${projectId}`, {
+      Title,
+      Description,
+      GithubURL,
+      WebsiteURL,
+   });
+};
+
+export const updateProjectThumbnail = async (projectId, projectThumbnail) => {
+   return await performUpdate(`projects/${projectId}/thumbnail`, {
+      projectThumbnail,
    });
 };

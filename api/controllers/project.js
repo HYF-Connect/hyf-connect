@@ -23,7 +23,6 @@ const projectController = {
    getAllProjectUsers: async (req, res) => {
       try {
          const projectId = req.params.projectId;
-         console.log("Controllers - projectId:", projectId);
          const usersProject = await projectManager.getAllUsers(projectId);
          res.send(JSON.stringify(usersProject));
       } catch (error) {
@@ -147,6 +146,7 @@ const projectController = {
    putProjectUsers: async (req, res) => {
       try {
          const { users } = req.body;
+         console.log("Controller - users:", users);
          const projectId = req.params.projectId;
          const result = await projectManager.updateProjectUsers(
             projectId,
