@@ -1,7 +1,7 @@
 .main {
    position: absolute;
-   width: 0;
-   height: 0;
+   width:0px;
+   height:0px;
    border-top: 600px solid rgba(223, 215, 239, 1);
    border-right: 1300px solid transparent;
 }
@@ -16,6 +16,7 @@
 .login-form-container {
    max-width: 520px;
    margin: 60px auto;
+   margin-bottom: 15%;
    font-family: "Poppins", sans-serif;
    background: #f7f7fc;
    text-align: left;
@@ -28,7 +29,7 @@
 .login-form__label {
    color: rgba(131, 131, 131, 1);
    display: block;
-   margin: 18px 0 15px;
+   margin: 18px 50px 15px;
    font-size: 0.6em;
    text-transform: capitalize;
    letter-spacing: 1px;
@@ -49,7 +50,8 @@
 .login-form__input {
    display: block;
    padding: 10px 6px;
-   width: 95%;
+   margin: 0 auto;
+   width: 80%;
    box-sizing: border-box;
    border: none;
    border-radius: 20px;
@@ -62,7 +64,7 @@
 
 .login-form__label-terms {
    display: inline-block;
-   padding: 10px 6px;
+   padding: 10px 10px;
    margin: 25px 0 15px;
    font-size: 0.8em;
    font-weight: 500;

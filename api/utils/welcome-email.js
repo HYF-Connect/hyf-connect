@@ -24,9 +24,8 @@ const welcome = (FirstName) => {
                     </tr>
                     <tr>
                         <td style="text-align:center;">
-                            <a href="" title="logo" target="_blank">
-                                <img width="60" src="../../client/assets/assets/logo_pc_full.png"
-                                    title="logo" alt="logo">
+                            <a href="https://dev-hyf-connect.herokuapp.com/" title="logo" target="_blank">
+                                <img width="80" src="https://raw.githubusercontent.com/HYF-Connect/hyf-connect/development/client/assets/logo_pc_full.png" title="logo" alt="logo">
                             </a>
                         </td>
                     </tr>
