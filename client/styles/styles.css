@@ -711,6 +711,8 @@ select:focus {
    margin: 15px 20px;
    float: right;
    width: 300px;
+   display: flex;
+   justify-content: space-evenly;
 }
 .members-ticket__card-content--name {
    color: #1c2294;
@@ -729,9 +731,7 @@ select:focus {
 }
 
 .members-ticket__card-icon {
-   width: 40px;
-   height: 60px;
-   margin-left: 5px;
+   height: 50px;
 }
 .members-ticket nav {
    margin: 20px auto;
@@ -774,195 +774,6 @@ select:focus {
 }
 .members-banner__header {
    font-size: 50px;
-}
-
-/*About-us Section*/
-
-.about-us-container {
-   font-size: 24px;
-   background-color: #dfd7ef;
-   color: #1c2294;
-   height: 120px;
-   font-weight: 200;
-   font-family: "poppins";
-}
-.about-us-container h1 {
-   position: absolute;
-   top: 16%;
-   left: 50%;
-   transform: translateX(-50%) translateY(-50%);
-}
-
-.about-hyf-team {
-   margin-left: 47.5%;
-   margin-top: -15em;
-}
-
-.about-hyf {
-   background-color: #fff;
-   border: 2px solid #1c2294;
-   padding: 50px;
-   margin: 20px;
-   margin-left: 10%;
-   font-size: 20px;
-   margin-top: 5%;
-   font-style: "Poppins";
-   width: 600px;
-   width: min(600px, 70%);
-}
-
-.about-visit-website {
-   padding: 14px 26px;
-   background-color: #2f195f;
-   border-radius: 20px;
-   color: #fff;
-   font-weight: 600;
-   font-size: 14px;
-   text-decoration: none;
-}
-
-.about-hyf-connect {
-   background-color: #fff;
-   border: 2px solid #1c2294;
-   margin-top: 2em;
-   font-size: 20px;
-   width: 600px;
-   padding: 50px;
-   margin-left: 35em;
-}
-.about-visit-project {
-   padding: 14px 26px;
-   background-color: #2f195f;
-   border-radius: 20px;
-   color: #fff;
-   font-weight: 600;
-   font-size: 14px;
-   float: right;
-   margin-top: -1em;
-   text-decoration: none;
-}
-
-.about-hyf-connect2 {
-   margin-top: -35em;
-}
-.team-container {
-   font-size: 24px;
-   color: #1c2294;
-   text-align: center;
-}
-.about-title-1 {
-   color: #1c2294;
-   text-align: right;
-   text-shadow: #2f195f;
-   font-size: 24px;
-   margin-top: 5em;
-   font-weight: 600;
-   margin-right: 5em;
-}
-.about-title {
-   color: #1c2294;
-   text-shadow: #2f195f;
-   font-size: 30px;
-   font-weight: 600;
-   box-shadow: 0 0 22px #3336;
-   border-radius: 3%;
-   padding: 20px 24px;
-   width: 500px;
-   height: 70px;
-   margin: 0 auto;
-   margin-top: 1em;
-}
-
-.caption h3 {
-   color: #1c2294;
-   text-align: center;
-   text-shadow: #2f195f;
-   font-size: 2em;
-   margin-top: 1em;
-   font-weight: 600;
-}
-
-.about-main {
-   width: 100%;
-   height: 100vh;
-   display: flex;
-   align-items: center;
-   background-color: #fdfdfd;
-   flex-wrap: wrap;
-   margin-top: 15em;
-   box-sizing: border-box;
-}
-
-.profile-card {
-   position: relative;
-   font-family: sans-serif;
-   width: 220px;
-   height: 220px;
-   background: #fff;
-   padding: 30px;
-   border-radius: 50%;
-   box-shadow: 0 0 22px #3336;
-   transition: 0.6s;
-   margin: 0 25px;
-   margin-top: -30em;
-   margin-left: 3em;
-   display: grid;
-}
-
-.profile-card:hover {
-   border-radius: 10px;
-   height: 260px;
-}
-
-.profile-card .about-img {
-   position: relative;
-   width: 100%;
-   height: 100%;
-   transition: 0.6s;
-   z-index: 99;
-}
-
-.about-img img {
-   width: 160px;
-   height: 160px;
-   object-fit: cover;
-   border-radius: 50%;
-   box-shadow: 0 0 22px #3336;
-   transition: 0.6s;
-}
-
-.profile-card:hover .about-img {
-   transform: translateY(-60px);
-}
-
-.profile-card:hover .about-img {
-   border-radius: 10px;
-}
-.caption {
-   text-align: center;
-   transform: translateY(-80px);
-   opacity: 0;
-   transition: 0.6s;
-}
-.profile-card:hover .caption {
-   opacity: 1;
-}
-.caption h3 {
-   font-size: 21px;
-   font-family: sans-serif;
-}
-.caption p {
-   font-size: 15px;
-   color: #0c52a1;
-   font-family: sans-serif;
-   margin: 2px 0 9px 0;
-}
-
-.about-last-container {
-   background-color: #dfd7ef;
-   height: 240px;
-   margin-top: -22%;
-   clip-path: polygon(84% 84%, 100% 50%, 100% 100%, 0 99%, 0 12%);
 }
 
 /* *****  contact us  *****/

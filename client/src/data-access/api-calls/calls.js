@@ -205,3 +205,8 @@ export const fetchProjects = async () => {
 export const fetchAllProjectUsers = async (projectId) => {
    return await performFetch(`projects/${projectId}/users`);
 };
+
+// fetcing all projects of a member
+export const fetchUserProjects = async (userId) => {
+   return await performFetch(`users/${userId}/projects`);
+};

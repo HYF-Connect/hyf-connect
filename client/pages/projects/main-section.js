@@ -16,7 +16,7 @@ const MainSection = {
       <template v-for="project in showingProjects">
          <project-component :project="project"/>
       </template>
-      <nav class = "projects-nav"aria-label="Page navigation example">
+      <nav class = "projects-nav" aria-label="Page navigation example">
       <ul class="projects-pagination">
          <li class="projects-pagination--item">
             <button class="projects-pagination--item__btn" v-on:click="previousPage"
