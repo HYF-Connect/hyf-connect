@@ -127,10 +127,10 @@ button.navbar-toggler {
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 71px;
+  top: 72px;
   left: 0;
   width: 100vw;
-  height: 250px;
+  height: 360px;
   background-color: #ffffff;
   z-index: 1000;
 }
@@ -150,10 +150,10 @@ button.navbar-toggler {
 }
 
 .burger-link {
-   font-size: 18px;
+   font-size: 20px;
    color: #1c2294;
    font-weight: 400;
-   margin-top:20px;
+   margin: 25px auto 0 40px;
    font-family: "Montserrat";
    text-decoration: none;
 }
