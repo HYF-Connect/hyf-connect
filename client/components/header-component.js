@@ -27,7 +27,9 @@ const HeaderComponent = {
         </button>
         <div id="header-menu-burger" class="collapse navbar-collapse header-menu-vertical">
           <button class="navbar-toggler header-burger-close" type="button" data-bs-toggle="collapse" 
-               data-bs-target="#header-menu-burger">Close
+               data-bs-target="#header-menu-burger">
+            <span class="header-menu-close-line"></span>
+            <span class="header-menu-close-line"></span>
           </button>
           <div class="">Menu comes here</div>
           <div class="">Menu comes here</div>
