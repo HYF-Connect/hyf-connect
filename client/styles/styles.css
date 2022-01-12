@@ -92,6 +92,7 @@ body {
    font-family: Poppins;
    font-weight: bolder;
    font-size: 38px;
+   margin: 3vh 0 8vh 0;
 }
 
 .benefit__container {
@@ -107,6 +108,7 @@ body {
    background-color: #ffffff;
    text-align: center;
    position: relative;
+   margin-bottom: 1vh;
 }
 
 .benefit__card--avatar > img {

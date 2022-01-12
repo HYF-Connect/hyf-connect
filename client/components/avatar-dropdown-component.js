@@ -9,10 +9,7 @@ export const AvatarDropdown = {
     </a>
     <ul class="dropdown-menu avatar-dropdown" aria-labelledby="dropdownMenuButton1">
       <li><a class="dropdown-item" href="/pages/edit-user-profile/edit-user-profile.html">My profile</a></li>
-      <li><a class="dropdown-item" href="/pages/add-new-project/add-new-project.html">My projects</a></li>
-      <li><a class="dropdown-item" href="#">Account setting</a></li>
-      <li><a class="dropdown-item" href="#">Get help</a></li>
-      <li><a class="dropdown-item" href="#">Invite another HYF</a></li>
+      <li><a class="dropdown-item" href="#">My projects</a></li>
       <li class="avatar-sign-out-btn-container"><a class="sign-out-btn" href="" v-on:click="logOut">sign out</a></li>
     </ul>
   </div>
