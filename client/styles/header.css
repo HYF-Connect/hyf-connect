@@ -135,19 +135,20 @@ button.navbar-toggler {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 430px;
+  height: auto;
+  padding-bottom: 5vh;
   background-color: #ffffff;
   z-index: 1000;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 840px) {
   .header-menu-burger {
-  display: block;
-  position: relative;
-  height: 30px;
-  width: 36px;
+    display: block;
+    position: relative;
+    height: 30px;
+    width: 36px;
   }
-
+  
   .header-menu-horizontal,
   .header-menu-avatar {
     display: none;

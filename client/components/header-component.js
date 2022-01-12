@@ -18,6 +18,7 @@ const HeaderComponent = {
         <avatar-dropdown :avatar="avatar" v-if="isLoggedIn"></avatar-dropdown>
         <a class="sign-in-btn" href="/pages/login/login.html" v-else>sign in</a>
       </div>
+      
       <div class="header-menu-burger">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
               data-bs-target="#header-menu-burger">
@@ -35,8 +36,10 @@ const HeaderComponent = {
           <a class="burger-link" href="/pages/members/members.html">members</a>
           <a class="burger-link" href="/pages/about-us/about-us.html">about us</a>
           <a class="burger-link" href="/pages/contact-us/contact-us.html">contact us</a>
-          <a class="burger-link" href="/pages/login/login.html">sign in</a>
-          <a class="burger-link" href="/pages/user-profile/user-profile.html">sign out</a>
+          <a class="burger-link" v-if="isLoggedIn" href="/pages/edit-user-profile/edit-user-profile.html">my profile</a>
+          <a class="burger-link" v-if="isLoggedIn" href="#">my projects</a>
+          <a class="burger-link" v-if="isLoggedIn" href="" v-on:click="logOut">sign out</a>
+          <a class="burger-link" v-else href="/pages/login/login.html">sign in</a>
         </div >
       </div>
     </div>`,
