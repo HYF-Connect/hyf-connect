@@ -33,7 +33,7 @@ const projectController = {
       try {
          const { Title, Description, GithubURL, WebsiteURL, Thumbnail } =
             req.body;
-         if (!Title || !Description) {
+         if (Title === undefined || Description === undefined) {
             return res.status(400).json({
                message: "Please, enter the project's title and description",
             });

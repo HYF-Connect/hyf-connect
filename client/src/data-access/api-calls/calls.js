@@ -182,15 +182,17 @@ export const fetchUserLanguages = async (userId) => {
 // create project
 export const createProject = async (
    Title,
-   Description,
+   WebsiteURL,
    GithubURL,
-   WebsiteURL
+   Description,
+   Thumbnail
 ) => {
    return await performPost("projects/", {
       Title,
-      Description,
-      GithubURL,
       WebsiteURL,
+      GithubURL,
+      Description,
+      Thumbnail,
    });
 };
 

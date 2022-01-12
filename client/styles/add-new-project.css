@@ -4,28 +4,40 @@
    flex-direction: column;
    box-sizing: border-box;
    background: #f7f7fc;
+   flex-direction: column;
+   z-index: 8;
    margin: 0;
-   height: 100vh;
    top: 0;
    bottom: 0;
+   width: 100vw;
    left: 0;
    right: 0;
 }
+.add-new-project__main {
+   width: 100%;
+   position: relative;
+   z-index: 2;
+}
 
 .addNewProject__banner {
-   display: flex;
-   width: 100%;
+   display: absolute;
+   width: auto;
    height: 13rem;
    justify-content: center;
    align-items: center;
    background: #dfd7ef;
+   z-index: 2;
 }
 
 .addNewProject__title {
+   position: absolute;
    color: #1c2294;
    font-size: 3em;
+   margin-top: 1.6em;
+   margin-left: 9.1em;
    font-family: "Poppins", sans-serif;
    font-weight: 500;
+   z-index: 100;
 }
 .addNewProject__container {
    display: flex;
@@ -95,7 +107,7 @@
    justify-content: space-start;
    background-color: #fff;
    padding: 0.5em 1.2em;
-   margin-left: 4.3em;
+   margin-left: 2.6em;
    width: 16em;
    height: 3em;
    box-sizing: border-box;
@@ -113,6 +125,7 @@
    color: #000000;
    display: inline-flex;
    justify-items: flex-start;
+   font-family: "Poppins", sans-serif;
    width: 12em;
    margin: 7px 0;
    padding: 8px 0 8px 0;
@@ -120,15 +133,21 @@
    text-transform: capitalize;
    letter-spacing: 0.1em;
 }
-
-.label-select {
+.label-select,
+.thumbnail-label {
    color: #000000;
    display: inline-flex;
    justify-items: flex-start;
-   width: 10em;
+   font-family: "Poppins", sans-serif;
+   width: 12em;
+   margin: 7px 0;
+   padding: 8px 0 8px 0;
    font-size: 0.9em;
    text-transform: capitalize;
    letter-spacing: 0.1em;
+}
+.thumbnail-label {
+   margin: 7em 0 0 1em;
 }
 .addNewProject__button {
    display: flex;
@@ -137,11 +156,11 @@
    font-family: "Montserrat", sans-serif;
    cursor: pointer;
    outline: none;
-   margin-left: 33em;
+   margin-left: 30em;
 }
 .pills {
    padding-left: 15px;
-   margin-left: 4.6em;
+   margin-left: 2.6em;
 }
 .submit-btn {
    background: #2f195f;
@@ -149,9 +168,10 @@
    width: 9.5em;
    color: #fff;
    padding: 0.6em;
-   margin: 12px 0 0 0;
+   margin: 70px 0 5px 0;
    border-radius: 20px;
    font-weight: 500;
+   font-size: 0.9em;
    border: 2px solid transparent;
 }
 .submit-btn:hover {
@@ -163,35 +183,74 @@
    transition: all 0.4s;
 }
 .thumbnail-area__img {
-   width: 28em;
-   height: 15em;
-   border-radius: 15px;
-   background-color: white;
-   margin-bottom: 0.5em;
+   display: flex;
+   width: 27em;
+   height: 14em;
+   margin-bottom: 3em;
 }
-.addNewProject__form-thumbnail {
+.thumbnail-container {
    display: flex;
    flex-direction: row;
-   justify-content: space-evenly;
-   width: 45em;
-   padding: 0.8em;
+   justify-content: flex-start;
+   align-content: center;
+   width: 55em;
    height: 15em;
-   margin-left: 1em;
+   margin: 0.7em 0 0 15em;
 }
-.addNewProject__thumbnail {
+.img__thumbnail {
    object-fit: contain;
-   width: 25em;
-   height: 15em;
-   border-radius: 15px;
-   background-color: white;
+   object-fit: contain;
+   width: 100%;
+   height: 100%;
 }
-.thumbnail-outer-area {
-   width: 26em;
-   height: 17em;
-   background-color: yellowgreen;
+.outer-area {
+   width: 32em;
+   display: flex;
+   flex-direction: row;
+   text-align: center;
+   height: 15em;
+   margin-left: 2.2em;
 }
 
 #inputFileToLoad {
-   width: 17em;
+   display: flex;
+   flex-direction: column;
    height: 7em;
+   margin: 6.5em 0 0 0em;
+}
+
+#inputFileToLoad::-webkit-file-upload-button {
+   visibility: hidden;
+}
+#inputFileToLoad::before {
+   content: "choose file";
+   display: inline-block;
+   width: 9em;
+   text-align: center;
+   background: #2f195f;
+   color: white;
+   border: 2px solid transparent;
+   font-family: "Montserrat", sans-serif;
+   cursor: pointer;
+   border-radius: 20px;
+   padding: 0.7em 1.2em;
+   outline: none;
+   white-space: nowrap;
+   -webkit-user-select: none;
+   cursor: pointer;
+   font-weight: 500;
+   font-size: 0.9em;
+}
+
+#inputFileToLoad:hover::before {
+   background-color: #fff;
+   color: #2f195f;
+   border-color: #2f195f;
+   -webkit-transition: all 0.4s;
+   -moz-transition: all 0.4s;
+   transition: all 0.4s;
+}
+.icon-thumbnail {
+   font-size: 16em;
+   color: #dfd7ef;
 }
