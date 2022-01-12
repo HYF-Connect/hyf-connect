@@ -47,7 +47,6 @@
 
 .banner__join-btn {
   text-align: center;
-  /* width:150px; */
   text-decoration: none;
   padding: 12px 28px;
   border-radius: 20px;
@@ -58,7 +57,6 @@
   font-weight: bold;
   border: 1px solid #2f195f;
 }
-
 
 .banner__join-btn:hover {
   background-color: #fff;
@@ -118,7 +116,6 @@
     font-size: 36px;
     width: 80%;
     margin: auto;
-    /* margin-bottom: 5vh; */
   }
 }
 
@@ -209,7 +206,7 @@
 .carousel__projects--btn {
   text-align: center;
   text-decoration: none;
-  padding: 15px 20px;
+  padding: 20px 25px;
   width: 120px;
   height: 50px;
   border-radius: 25px;
@@ -254,6 +251,8 @@
 /* HOMEPAGE-TESTIMONIAL-SECTION */
 
 .testimonial__section {
+  width: 100%;
+  height: auto;
   background-color: #ffffff;
   text-align: center;
 }
@@ -265,7 +264,6 @@
   font-family: Poppins;
   font-weight: bolder;
   font-size: 38px;
-  /* margin: 30px 0; */
 }
 
 .testimonial__container {
@@ -274,13 +272,14 @@
   justify-content: center;
   background-color: transparent;
   gap: 40px;
+  background-color: #ffffff;
+  margin-bottom: 50px;
 }
 
 .testimonial__card {
   justify-content: center;
   background-color: #ffffff;
   border: 1px solid #2f195f;
-  text-align: center;
   border-radius: 20px;
   margin-bottom: 5px;
 }
@@ -288,17 +287,16 @@
 .testimonial__quotes > img {
   width: 80px;
   margin-top: 20px;
-  margin-right: 240px;
+  margin-right: 200px;
   object-fit: contain;
 }
 
 .testimonial__card--content {
-  margin-top: 20px;
   color: #000000;
   text-align: justify;
   font-family: Poppins;
   font-size: 18px;
-  padding: 30px;
+  padding: 10px 20px 10px 20px;
 }
 
 .testimonial__avatar > img {
@@ -307,17 +305,12 @@
   margin-bottom: 20px;
   object-fit: contain;
 }
+
 .default-profile-picture {
   font-size: 75px;
   border-radius: 100px;
   margin-bottom: 20px;
   object-fit: contain;
-}
-
-.testimonial__background {
-  background-color: #dfd7ef;
-  height: 600px;
-  margin-top: -450px;
 }
 
 .members__link-btn {
@@ -337,4 +330,10 @@
   background-color: #ffffff;
   border: 2px solid #2f195f;
   color: #2f195f;
+}
+
+.testimonial__background {
+background-color: #dfd7ef;
+height: 420px;
+margin-top: -355px;
 }
