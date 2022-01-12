@@ -26,15 +26,16 @@ export const ProjectFormComponent = {
          </div>
          <div class="addNewProject__form-group">
             <label class="addNewProject__form--label">Project URL</label>
-            <input class="addNewProject__form--input" type="url" placeholder="example@example.com" v-model="websiteUrl">
+            <input class="addNewProject__form--input" type="url" placeholder="https://example.com" v-model="websiteUrl">
          </div>
          <div class="addNewProject__form-group">
             <label class="addNewProject__form--label">Github Repo</label>
-            <input class="addNewProject__form--input" type="url" placeholder="example@github.com" v-model="githubRepo">
+            <input class="addNewProject__form--input" type="url" placeholder="https://example.com" v-model="githubRepo">
          </div>
-         <div class="addNewProject__form-group">
+         <div class="addNewProject__form-textarea">
             <label class="addNewProject__form--label">Description</label>
-            <input class="addNewProject__form--input-description" type="text" placeholder="Describe your project" v-model="projectDescription"><br>
+            <textarea rows="4" class="textarea-description" type="text" v-model="projectDescription">
+            Describe your project </textarea>
          </div>
          <div class="addNewProject__form-group">
                <div class="multi-select">
