@@ -36,7 +36,7 @@ const projectManager = {
       return createdProjectClass;
    },
    createUserProject: async ({ UserID, ProjectID }) => {
-      const createdUserProject = await UserProjectStore.create({
+      const createdUserProject = await ProjectUserStore.create({
          UserID: UserID,
          ProjectID: ProjectID,
       });
@@ -84,7 +84,7 @@ const projectManager = {
          });
       } else {
          for (let user of users) {
-            await UserProjectStore.create({
+            await ProjectUserStore.create({
                ProjectID: projectId,
                UserID: user.value,
             });
@@ -110,7 +110,7 @@ const projectManager = {
       return true;
    },
    deleteUserProject: async ({ UserID, ProjectID }) => {
-      await UserProjectStore.destroy({
+      await ProjectUserStore.destroy({
          where: { ProjectID: ProjectID, UserID: UserID },
       });
       return true;
@@ -124,7 +124,7 @@ const projectManager = {
       return allProjects;
    },
    getAllUsers: async (projectId) => {
-      const allUsers = await UserProjectStore.findAll({
+      const allUsers = await ProjectUserStore.findAll({
          where: { ProjectID: projectId },
          attributes: ["UserID"],
       });
