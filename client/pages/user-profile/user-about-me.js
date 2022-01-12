@@ -3,30 +3,23 @@ import {
   updatePicture,
 } from "../../src/data-access/api-calls/calls.js";
 
-const ProfileImageComponent = {
+const ProfileBioComponent = {
   template: `
-      <div class="outer-area__img">
-            <div class="rounded-area__img" >
-               <img class="user-profile-picture" v-if="file" v-bind:src="file"/>
-               <i class="fas fa-user-circle default-profile-picture" style="font-size:200px" v-else ></i>
-            </div>
-            <div class="profile-image-jobTitle">
-              {{jobTitle}}
-            </div>
+      <div class="user-about-me-box">
+      <h1 class="user-about-me--title">About me</h1>   
+      <span class="user-about-me-text">{{bio}}</span>   
       </div>
       `,
   data() {
     return {
-      file: undefined,
-      jobTitle: "",
+      bio: "",
     };
   },
   methods: {
     async getDataOnLoad() {
       const id = this.getMemberId();
       const user = await fetchUserById(id);
-      this.file = user.ProfilePicture;
-      this.jobTitle = user.JobTitle;
+      this.bio = user.Bio;
     },
     getMemberId() {
       const queryPart = window.location.search;
@@ -43,4 +36,4 @@ const ProfileImageComponent = {
   },
 };
 
-export default ProfileImageComponent;
+export default ProfileBioComponent;

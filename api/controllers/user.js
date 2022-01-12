@@ -49,6 +49,15 @@ const userController = {
       res.status(500).send(error);
     }
   },
+  getProjects: async (req, res) => {
+    const userId = req.params.userId;
+    try {
+      const allUserProjects = await userManager.getAllUserProjects(userId);
+      res.send(JSON.stringify(allUserProjects, null, 2));
+    } catch (error) {
+      res.status(500).send(error);
+    }
+  },
   postRegister: async (req, res) => {
     try {
       const { FirstName, LastName, Email, Password } = req.body;

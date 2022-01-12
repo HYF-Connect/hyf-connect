@@ -25,7 +25,10 @@
    height: auto;
    padding: 0.3em 0.3em 1em 0.3em;
 }
-
+.project__thumbnail{
+   display: flex;
+   justify-content:center;
+}
 .project__buttons {
    display: flex;
    justify-content: space-around;
@@ -151,4 +154,9 @@
 }
 .projects-nav {
    margin: 20px 40%;
+}
+.project-photo {
+   color: #2f195f; 
+   font-size:200px; 
+   text-align: center;
 }

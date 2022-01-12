@@ -3,6 +3,10 @@ const userStore = require("../models/user");
 const userSkillStore = require("../models/user-skill");
 const userLanguageStore = require("../models/user-language");
 const userTypeStore = require("../models/user-type");
+const sendEmail = require("../utils/send-email");
+const welcomeEmail = require("../utils/welcome-email");
+const userProjectStore = require("../models/user-project");
+const projectsStore = require("../models/project");
 
 const saltRounds = 13;
 
@@ -14,6 +18,21 @@ const userManager = {
       saltRounds
     );
     await userStore.create(newUser);
+    const mailOptions = {
+      from: "hyfconnect@gmail.com>", // sender address
+      to: Email, // list of receivers
+      subject: `Welcome ${FirstName} to HYFConnect`, // Subject line
+      //text: text, //, // plaintext body
+      html: welcomeEmail.welcome(FirstName), // You can choose to send an HTML body instead "<b>Hello world ✔</b>";
+    };
+    sendEmail.sendMail(mailOptions, function (error, info) {
+      if (error) {
+        console.log("error" + error);
+      } else {
+        console.log("Message sent: " + info.response);
+      }
+    });
+
     return newUser;
   },
   createUserSkill: async ({
@@ -144,6 +163,20 @@ const userManager = {
     const userById = await userStore.findOne({ where: { UserID: userId } });
     return userById;
   },
+  getAllUserProjects: async (userId) => {
+    const allUserProjects = await userProjectStore.findAll({
+      where: { UserID: userId },
+    });
+    const result = [];
+    for (let userProject of allUserProjects) {
+      const project = await projectsStore.findOne({
+        where: { ProjectID: userProject.ProjectID },
+      });
+      result.push(project);
+    }
+    return result;
+  },
+
   deleteUserProfile: async ({ UserID }) => {
     await userStore.destroy({
       where: { UserID: UserID },
