@@ -19,8 +19,7 @@ const projectManager = {
          WebsiteURL,
          Thumbnail,
       };
-      await ProjectStore.create(newProject);
-      return newProject;
+      return await ProjectStore.create(newProject);
    },
    createProjectSkill: async ({ ProjectID, SkillID }) => {
       const createdProjectSkill = await ProjectSkillStore.create({

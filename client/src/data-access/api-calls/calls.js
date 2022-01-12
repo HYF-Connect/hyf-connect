@@ -217,7 +217,7 @@ export const createProject = async (
    Description,
    Thumbnail
 ) => {
-   return await performPost("projects/", {
+   return await performPost("projects", {
       Title,
       WebsiteURL,
       GithubURL,

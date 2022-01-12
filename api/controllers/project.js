@@ -46,9 +46,7 @@ const projectController = {
             WebsiteURL,
             Thumbnail,
          });
-         res.status(200).json({
-            message: `Congratulation ${project.Title}, is created!`,
-         });
+         res.status(200).json(project);
       } catch (error) {
          console.log(error);
          res.status(500).json({ message: error.message });
@@ -132,7 +130,7 @@ const projectController = {
    putProjectThumbnail: async (req, res) => {
       try {
          const { projectThumbnail } = req.body;
-         const projectId = req.params.userId;
+         const projectId = req.params.projectId;
          await projectManager.updateProjectThumbnail(
             projectId,
             projectThumbnail

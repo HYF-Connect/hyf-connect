@@ -53,7 +53,7 @@ export const ProjectFormComponent = {
             </div>
          </div>
          <div class="addNewProject__button">
-            <button class="submit-btn" v-on:click="handleSubmit">save project</button>
+            <button class="submit-btn">save project</button>
          </div>
       </form>
    </div>
@@ -64,7 +64,7 @@ export const ProjectFormComponent = {
          projectTitle: "",
          websiteUrl: "",
          githubRepo: "",
-         id: "",
+         id: undefined,
          projectDescription: "",
          teamMembers: [],
          students: [],
@@ -113,7 +113,6 @@ export const ProjectFormComponent = {
             fileReader.onload = function (fileLoadedEvent) {
                const srcData = fileLoadedEvent.target.result;
                this.file = srcData;
-               updateProjectThumbnail(srcData);
             }.bind(this);
             fileReader.readAsDataURL(fileToLoad);
          }
@@ -124,6 +123,7 @@ export const ProjectFormComponent = {
       async handleSubmit() {
          try {
             if (this.id === undefined) {
+               console.log("we are inside of this crazy cooooode!");
                let result = await createProject(
                   this.projectTitle,
                   this.websiteUrl,
@@ -131,15 +131,20 @@ export const ProjectFormComponent = {
                   this.projectDescription
                );
                this.id = result.ProjectID;
-            } /* else {
-/               result = await updateProject();
-                  this.projectTitle = result.Title,
-                  this.projectDescription = result.Description,
-                  this.githubRepo = result.GithubURL,
-                  this.websiteUrl = result.WebsiteURL,  */
-            /* },  */
-            await updateProjectUsers(this.teamMembers);
+               console.log("ProjectId:", this.id);
+            } else {
+               result = await updateProject();
+               this.projectTitle = result.Title;
+               this.projectDescription = result.Description;
+               this.githubRepo = result.GithubURL;
+               this.websiteUrl = result.WebsiteURL;
+            }
+            await updateProjectUsers(this.id, this.teamMembers);
+            console.log("ProjectId:", updateProjectUsers);
+            await updateProjectThumbnail(this.id, this.file);
+            console.log("ProjectId:", updateProjectThumbnail);
             this.success = true;
+
             setTimeout(
                () => (window.location.href = "/pages/projects/projects.html"),
                500
