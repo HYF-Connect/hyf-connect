@@ -50,7 +50,7 @@
 }
 .sign-out-btn {
   padding: 12px 24px;
-  background-color: #b52055;
+  background-color: #2f195f;
   border-radius: 20px;
   color: #fff;
   font-weight: 500;
@@ -117,7 +117,7 @@ button.navbar-toggler {
   background-color: #2f195f;
   position: absolute;
   top: 50%;
-  margin-top:3vh;
+  margin-top:1vh;
 }
 
 .header-menu-close-line:first-child {
