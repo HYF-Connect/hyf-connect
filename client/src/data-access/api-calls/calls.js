@@ -88,6 +88,7 @@ export const loginUser = async (Email, Password) => {
       Password,
    });
 };
+// update user profile
 export const updateUserProfile = async (
    FirstName,
    LastName,
@@ -116,86 +117,79 @@ export const updateUserProfile = async (
       Bio,
    });
 };
+// update user languages
 export const updateUserLanguages = async (languages) => {
    const id = localStorage.getItem("userId");
    return await performUpdate(`users/${id}/language`, {
       languages,
    });
 };
+// update user user skills
 export const updateUserSkills = async (skills) => {
    const id = localStorage.getItem("userId");
    return await performUpdate(`users/${id}/skill`, {
       skills,
    });
 };
+// update user types
 export const updateUserTypes = async (types) => {
    const id = localStorage.getItem("userId");
    return await performUpdate(`users/${id}/type`, {
       types,
    });
 };
-
+// update user picture profile
 export const updatePicture = async (ProfilePicture) => {
    const id = localStorage.getItem("userId");
    return await performUpdate(`users/${id}/picture`, {
       ProfilePicture,
    });
 };
+// fetching all user
 export const fetchUsers = async () => {
    return await performFetch("users");
 };
-
+// fetching user by id
 export const fetchUserById = async (userId) => {
    return await performFetch(`users/${userId}`);
 };
-
+// fetching all languages
 export const fetchAllLanguages = async () => {
    return await performFetch("languages");
 };
 
+// fetching all classes
 export const fetchAllClasses = async () => {
    return await performFetch("classes");
 };
-
+// fetching all regions
 export const fetchAllRegions = async () => {
    return await performFetch("regions");
 };
+// fetching all nationalities
 export const fetchAllNationalities = async () => {
    return await performFetch("nationalities");
 };
-
+// fetching all types of user
 export const fetchAllTypes = async () => {
    return await performFetch("types");
 };
+// fetching all skills
 export const fetchAllSkills = async () => {
    return await performFetch("skills");
 };
+// fetching all types of a user
 export const fetchUserTypes = async (userId) => {
    return await performFetch(`users/${userId}/type`);
 };
+// fetching all skills of a user
 export const fetchUserSkills = async (userId) => {
    return await performFetch(`users/${userId}/skill`);
 };
+// fetching all languages of a user
 export const fetchUserLanguages = async (userId) => {
    return await performFetch(`users/${userId}/language`);
 };
-// create project
-export const createProject = async (
-   Title,
-   WebsiteURL,
-   GithubURL,
-   Description,
-   Thumbnail
-) => {
-   return await performPost("projects/", {
-      Title,
-      WebsiteURL,
-      GithubURL,
-      Description,
-      Thumbnail,
-   });
-};
-
 // fetching all projects
 export const fetchProjects = async () => {
    return await performFetch("projects/");
@@ -215,8 +209,23 @@ export const fetchAllProjectUsers = async (projectId) => {
 export const fetchUserProjects = async (userId) => {
    return await performFetch(`users/${userId}/projects`);
 };
-
-// update project users
+// create project
+export const createProject = async (
+   Title,
+   WebsiteURL,
+   GithubURL,
+   Description,
+   Thumbnail
+) => {
+   return await performPost("projects/", {
+      Title,
+      WebsiteURL,
+      GithubURL,
+      Description,
+      Thumbnail,
+   });
+};
+// update members of a project
 export const updateProjectUsers = async (projectId, users) => {
    return await performUpdate(`projects/${projectId}/users`, {
       users,
@@ -238,6 +247,8 @@ export const updateProject = async (
       WebsiteURL,
    });
 };
+
+//update thumbnail from project
 
 export const updateProjectThumbnail = async (projectId, projectThumbnail) => {
    return await performUpdate(`projects/${projectId}/thumbnail`, {

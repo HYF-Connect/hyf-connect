@@ -1,7 +1,7 @@
 const ProjectStore = require("../models/project");
 const ProjectSkillStore = require("../models/project-skill.js");
 const ProjectClassStore = require("../models/project-class.js");
-const UserProjectStore = require("../models/user-project.js");
+const ProjectUserStore = require("../models/user-project.js");
 const userManager = require("./user.js");
 
 const projectManager = {
@@ -57,7 +57,7 @@ const projectManager = {
       const projectById = await ProjectStore.findOne({
          where: { ProjectID: ProjectID },
       });
-      const updatedProfile = await projectById.update({
+      const updatedProject = await projectById.update({
          Title,
          Description,
          GithubURL,
@@ -67,28 +67,29 @@ const projectManager = {
          ClassID: Class,
          SkillID: Skill,
       });
-      return updatedProfile;
+      return updatedProject;
    },
-   updateProjectThumbnail: async (projectId, profilePicture) => {
+   updateProjectThumbnail: async (projectId, projectThumbnail) => {
       const projectById = await ProjectStore.findOne({
          where: { ProjectID: projectId },
       });
       const updatedThumbnail = await projectById.update({
-         ProfilePicture: profilePicture,
+         Thumbnail: projectThumbnail,
       });
       return updatedThumbnail;
    },
    updateProjectUsers: async (projectId, users) => {
       if (users.length !== 0) {
-         await UserProjectStore.destroy({
+         await ProjectUserStore.destroy({
             where: { ProjectID: projectId },
          });
-      }
-      for (let user of users) {
-         await UserProjectStore.create({
-            projectID: projectId,
-            userID: user.value,
-         });
+      } else {
+         for (let user of users) {
+            await UserProjectStore.create({
+               ProjectID: projectId,
+               UserID: user.value,
+            });
+         }
       }
    },
    deleteProject: async ({ ProjectID }) => {

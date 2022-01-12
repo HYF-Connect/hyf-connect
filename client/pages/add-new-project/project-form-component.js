@@ -5,6 +5,8 @@ import {
    fetchUsers,
    updateProject,
    updateProjectThumbnail,
+   updateProjectUsers,
+   fetchProjectById,
 } from "../../src/data-access/api-calls/calls.js";
 
 export const ProjectFormComponent = {
@@ -80,6 +82,7 @@ export const ProjectFormComponent = {
          try {
             this.students = await fetchUsers();
             const allUsers = await fetchUsers();
+
             this.students = allUsers.map((u) => ({
                label: u.FirstName + " " + u.LastName,
                value: u.UserID,
@@ -90,6 +93,8 @@ export const ProjectFormComponent = {
                return;
             }
             this.id = id;
+            const project = fetchProjectById(id);
+            this.file = project.Thumbnail;
             const usersProject = await fetchAllProjectUsers(id);
             console.log(usersProject);
             this.teamMembers = usersProject.map((u) => ({
@@ -126,14 +131,13 @@ export const ProjectFormComponent = {
                   this.projectDescription
                );
                this.id = result.ProjectID;
-            } /*  else {
-               result = await updateProject();
+            } /* else {
+/               result = await updateProject();
                   this.projectTitle = result.Title,
                   this.projectDescription = result.Description,
                   this.githubRepo = result.GithubURL,
-                  this.websiteUrl = result.WebsiteURL,
-               
-            }, */
+                  this.websiteUrl = result.WebsiteURL,  */
+            /* },  */
             await updateProjectUsers(this.teamMembers);
             this.success = true;
             setTimeout(
