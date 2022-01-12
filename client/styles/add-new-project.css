@@ -1,77 +1,273 @@
-body  {
-    background-color: #f7f7fc;
+.add-new-project-page {
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+   box-sizing: border-box;
+   background: #f7f7fc;
+   flex-direction: column;
+   z-index: 8;
+   margin: 0;
+   top: 0;
+   bottom: 0;
+   width: 100vw;
+   left: 0;
+   right: 0;
+}
+.add-new-project__main {
+   width: 100%;
+   position: relative;
+   z-index: 2;
 }
 
-h1 {
-    font-family: "Poppins", sans-serif;
-    color: #1c2294;
-    font-weight: 500;
-    font-size: 36px;
-    text-align: center;
-    justify-content: center;
+.addNewProject__banner {
+   display: absolute;
+   width: auto;
+   height: 13rem;
+   justify-content: center;
+   align-items: center;
+   background: #dfd7ef;
+   z-index: 2;
 }
 
-.addnewproject__banner {
-    display: flex;
-    top: 100px;
-    height: 100px;
-    flex-direction: column;
-    background: #DFD7EF;
-  }
-  
-  .addnewproject__container{
-    max-width: 500px;
-    width: 100%;
-    background: #fff;
-    margin: 20px auto;
-    box-shadow: 1px 1px 2px rgba(0,0,0,0.175);
-    padding: 30px;
-    border-radius: 10px;
-  }
-  
-  .addnewproject__form {
-  width: 100%;
-  }
-  
-  .addnewproject__form--input {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .addnewproject__form--label {
-    width: 200px;
-    color: #757575;
-    margin-right: 10px;
-    font-size: 14px;
-    font-family: "Poppins", sans-serif;
-    color: #1c2294;
-  }
-  
-  .addnewproject__form--input,
-  .addnewproject__form--textarea {
-    width: 100%;
-    outline: none;
-    border: 1px solid #eef0ef;
-    font-size: 10px;
-    font-family: "Poppins", sans-serif;
-    padding: 8px 10px;
-    border-radius: 25px;
-  }
-  
-  
-  .addnewproject__form--btn {
-    padding: 8px 10px;
-    font-size: 12px;
-    font-family: 'Montserrat', sans-serif;
-    border: 0px;
-    background:  #2f195f;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 25px;
-    outline: none;
-  }
-  
-  .addnewproject__form--btn:hover{
-    background: #1c2294;
-  }
+.addNewProject__title {
+   position: absolute;
+   color: #1c2294;
+   font-size: 3em;
+   margin-top: 1.6em;
+   margin-left: 9.1em;
+   font-family: "Poppins", sans-serif;
+   font-weight: 500;
+   z-index: 100;
+}
+.addNewProject__container {
+   display: flex;
+   flex-direction: column;
+   max-width: auto;
+   width: 65%;
+   background: #f7f7fc;
+   margin: 20px auto;
+   height: 100%;
+   padding: 30px;
+   border-radius: 10px;
+}
+
+.addNewProject__form {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   width: 100%;
+   align-items: center;
+   height: 100%;
+}
+.addNewProject__form-group {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   font-family: "Poppins", sans-serif;
+   width: 40em;
+   padding: 0.8em;
+   height: 5em;
+}
+.multi-select {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
+   background: #f7f7fc;
+   font-family: "Poppins", sans-serif;
+   width: 100%;
+   width: 40em;
+   height: 3em;
+   padding: 2em 0;
+}
+
+.addNewProject__form--input,
+.textarea-description {
+   display: flex;
+   flex-direction: row;
+   background-color: #fff;
+   padding: 0.5em 1.2em;
+   width: 30em;
+   height: 3em;
+   margin: 2em 0 2em 4.3em;
+   box-sizing: border-box;
+   border: none;
+   border-radius: 20px;
+   color: rgb(39, 39, 39);
+   outline: none;
+   overflow-wrap: break-word;
+   word-wrap: break-word;
+}
+.textarea-description {
+   justify-items: flex-start;
+   overflow: hidden;
+   height: 10em;
+}
+.addNewProject__form-textarea {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   font-family: "Poppins", sans-serif;
+   width: 40em;
+   padding: 0.8em;
+   height: 12em;
+}
+#membersDropDown {
+   justify-content: space-start;
+   background-color: #fff;
+   padding: 0.5em 1.2em;
+   margin-left: 2.6em;
+   width: 16em;
+   height: 3em;
+   box-sizing: border-box;
+   border: none;
+   border-radius: 20px;
+   color: rgb(39, 39, 39);
+   outline: none;
+}
+.dropdown-menu {
+   width: 16em;
+   outline: none;
+   border: none;
+}
+.addNewProject__form--label {
+   color: #000000;
+   display: inline-flex;
+   justify-items: flex-start;
+   font-family: "Poppins", sans-serif;
+   width: 12em;
+   margin: 7px 0;
+   padding: 8px 0 8px 0;
+   font-size: 0.9em;
+   text-transform: capitalize;
+   letter-spacing: 0.1em;
+}
+.label-select,
+.thumbnail-label {
+   color: #000000;
+   display: inline-flex;
+   justify-items: flex-start;
+   font-family: "Poppins", sans-serif;
+   width: 12em;
+   margin: 7px 0;
+   padding: 8px 0 8px 0;
+   font-size: 0.9em;
+   text-transform: capitalize;
+   letter-spacing: 0.1em;
+}
+.thumbnail-label {
+   margin: 7em 0 0 1em;
+}
+.addNewProject__button {
+   display: flex;
+   flex-direction: row;
+   align-content: flex-end;
+   font-family: "Montserrat", sans-serif;
+   cursor: pointer;
+   outline: none;
+   margin-left: 30em;
+   height: 6.4em;
+}
+.pills {
+   padding-left: 15px;
+   margin-left: 2.6em;
+}
+.submit-btn {
+   background: #2f195f;
+   justify-content: center;
+   width: 9.5em;
+   color: #fff;
+   padding: 0.6em;
+   margin: 50px 0 5px 0;
+   border-radius: 20px;
+   font-weight: 500;
+   font-size: 0.9em;
+   border: 2px solid transparent;
+}
+.submit-btn:hover {
+   background-color: #fff;
+   color: #2f195f;
+   border-color: #2f195f;
+   -webkit-transition: all 0.4s;
+   -moz-transition: all 0.4s;
+   transition: all 0.4s;
+}
+.thumbnail-area__img {
+   display: flex;
+   width: 27em;
+   height: 14em;
+   margin-bottom: 3em;
+}
+.thumbnail-container {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-content: center;
+   width: 55em;
+   height: 15em;
+   margin: 0.7em 0 0 15em;
+}
+.img__thumbnail {
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+}
+.outer-area {
+   width: 32em;
+   display: flex;
+   flex-direction: row;
+   text-align: center;
+   height: 15em;
+   margin-left: 2.2em;
+}
+
+#inputFileToLoad {
+   display: flex;
+   flex-direction: column;
+   height: 7em;
+   margin: 6.5em 0 0 2em;
+   overflow: hidden;
+}
+
+input[type="file"] {
+   color: transparent;
+}
+
+#inputFileToLoad::-webkit-file-upload-button {
+   visibility: hidden;
+}
+#inputFileToLoad::before {
+   content: "choose file";
+   display: inline-block;
+   width: 9em;
+   text-align: center;
+   background: #2f195f;
+   color: white;
+   border: 2px solid transparent;
+   font-family: "Montserrat", sans-serif;
+   cursor: pointer;
+   border-radius: 20px;
+   padding: 0.7em 1.2em;
+   outline: none;
+   white-space: nowrap;
+   -webkit-user-select: none;
+   cursor: pointer;
+   font-weight: 500;
+   font-size: 0.9em;
+}
+
+#inputFileToLoad:hover::before {
+   background-color: #fff;
+   color: #2f195f;
+   border-color: #2f195f;
+   -webkit-transition: all 0.4s;
+   -moz-transition: all 0.4s;
+   transition: all 0.4s;
+}
+.icon-thumbnail {
+   font-size: 16em;
+   color: #dfd7ef;
+}

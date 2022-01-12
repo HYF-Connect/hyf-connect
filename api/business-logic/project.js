@@ -1,7 +1,7 @@
 const ProjectStore = require("../models/project");
 const ProjectSkillStore = require("../models/project-skill.js");
 const ProjectClassStore = require("../models/project-class.js");
-const UserProjectStore = require("../models/user-project.js");
+const ProjectUserStore = require("../models/user-project.js");
 const userManager = require("./user.js");
 
 const projectManager = {
@@ -19,8 +19,7 @@ const projectManager = {
          WebsiteURL,
          Thumbnail,
       };
-      await ProjectStore.create(newProject);
-      return newProject;
+      return await ProjectStore.create(newProject);
    },
    createProjectSkill: async ({ ProjectID, SkillID }) => {
       const createdProjectSkill = await ProjectSkillStore.create({
@@ -37,7 +36,7 @@ const projectManager = {
       return createdProjectClass;
    },
    createUserProject: async ({ UserID, ProjectID }) => {
-      const createdUserProject = await UserProjectStore.create({
+      const createdUserProject = await ProjectUserStore.create({
          UserID: UserID,
          ProjectID: ProjectID,
       });
@@ -57,7 +56,7 @@ const projectManager = {
       const projectById = await ProjectStore.findOne({
          where: { ProjectID: ProjectID },
       });
-      const updatedProfile = await projectById.update({
+      const updatedProject = await projectById.update({
          Title,
          Description,
          GithubURL,
@@ -67,7 +66,29 @@ const projectManager = {
          ClassID: Class,
          SkillID: Skill,
       });
-      return updatedProfile;
+      return updatedProject;
+   },
+   updateProjectThumbnail: async (projectId, projectThumbnail) => {
+      const projectById = await ProjectStore.findOne({
+         where: { ProjectID: projectId },
+      });
+      const updatedThumbnail = await projectById.update({
+         Thumbnail: projectThumbnail,
+      });
+      return updatedThumbnail;
+   },
+   updateProjectUsers: async (projectId, users) => {
+      if (users.length !== 0) {
+         await ProjectUserStore.destroy({
+            where: { ProjectID: projectId },
+         });
+      }
+      for (let user of users) {
+         await ProjectUserStore.create({
+            ProjectID: projectId,
+            UserID: user.value,
+         });
+      }
    },
    deleteProject: async ({ ProjectID }) => {
       await ProjectStore.destroy({
@@ -88,7 +109,7 @@ const projectManager = {
       return true;
    },
    deleteUserProject: async ({ UserID, ProjectID }) => {
-      await UserProjectStore.destroy({
+      await ProjectUserStore.destroy({
          where: { ProjectID: ProjectID, UserID: UserID },
       });
       return true;
@@ -102,7 +123,7 @@ const projectManager = {
       return allProjects;
    },
    getAllUsers: async (projectId) => {
-      const allUsers = await UserProjectStore.findAll({
+      const allUsers = await ProjectUserStore.findAll({
          where: { ProjectID: projectId },
          attributes: ["UserID"],
       });
