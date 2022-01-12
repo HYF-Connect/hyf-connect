@@ -12,6 +12,8 @@ const regionRoutes = require("./region");
 const nationalityRoutes = require("./nationality");
 const typeRoutes = require("./type");
 const skillRoutes = require("./skill");
+const contactUsRoutes = require("./contact-us.js");
+
 // use them with this router
 
 router.use(AuthRoutes);
@@ -24,6 +26,8 @@ router.use("/regions", regionRoutes);
 router.use("/nationalities", nationalityRoutes);
 router.use("/types", typeRoutes);
 router.use("/skills", skillRoutes);
+router.use("/contactus", contactUsRoutes);
+
 // this route was added for testing the middleware
 router.get("/auth", (req, res) => {
   console.log(req.loggedInUser);

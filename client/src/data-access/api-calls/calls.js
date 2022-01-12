@@ -210,3 +210,12 @@ export const fetchAllProjectUsers = async (projectId) => {
 export const fetchUserProjects = async (userId) => {
   return await performFetch(`users/${userId}/projects`);
 };
+
+// handeling contact us form submit
+export const sendForm = async (senderEmail, senderName, senderText) => {
+  return await performPost("contactus", {
+    senderEmail,
+    senderName,
+    senderText,
+  });
+};

@@ -1,4 +1,4 @@
-// import { registerUser } from "../../src/data-access/api-calls/calls.js";
+import { sendForm } from "../../src/data-access/api-calls/calls.js";
 export const FormSection = {
   template: `
   <div id="section-contact-template" class="section">
@@ -26,13 +26,13 @@ export const FormSection = {
             <img class="contact__input_image"  src="/images/contact-us/Screenshot_2021-12-08.png"/>
           </div>
           <div class="contact__columns">
-          <input type="text" class="contact__input" id="contactFormName" name="contact" placeholder="Name" autocapitalize="words" value required="required" />
-          <input type="email" class="contact__input" id="contactFormEmail" name="contact[email]" placeholder="Email" autocorrect="off" autocapitalize="off" value required="required" />
+          <input type="text" class="contact__input" id="contactFormName" name="contact" placeholder="Name" autocapitalize="words" value required="required" v-model="name" />
+          <input type="email" class="contact__input" id="contactFormEmail" name="contact[email]" placeholder="Email" autocorrect="off" autocapitalize="off" value required="required" v-model="email" />
             <div class="container__textarea">
-            <textarea  class="contact__input message" rows="10" cols="25.5"  placeholder="Message" required="required"></textarea>
+            <textarea  class="contact__input message" rows="10" cols="25.5" placeholder="Message" required="required" v-model="message"></textarea>
             </div>
             <div class="container__submit">
-            <button type="submit" id="action_button" value="submit">submit</button>
+            <button class= "container__submit__btn-submit" type="submit" id="action_button" value="submit">submit</button>
             </div>
           </div>
         </div>
@@ -40,40 +40,40 @@ export const FormSection = {
   </div>
     `,
   data() {
-      return {
-        name: "",
-        email: "",
-        message: "",
-        messageError: "",
-        messageCheck: "",
-        messageConfirm:"",
-        success: false,
-      };
+    return {
+      name: "",
+      email: "",
+      message: "",
+      messageError: "",
+      messageCheck: "",
+      messageConfirm: "",
+      success: false,
+    };
   },
   methods: {
-      async handleSubmit() {
-        this.messageError =
-            this.message.length <= 500
-              ? ""
-              : "Message contains more than 500 characters!";
-        this.messageCheck =
-            this.message === this.messageConfirm
-              ? ""
-              : "Message do not match, more than 500 characters. Try again!";
-        try {
-            // const result = await contactUs(
-            //   this.name,
-            //   this.email,
-            //   this.message
-            // );
-            this.errorMessage = "";
-            this.success = true;
-            // setTimeout(() => (window.location.href = "/"), 4000);
-        } catch (error) {
-            this.errorMessage = error;
-            console.log(`The result: Name: ${this.name}, eMail: ${this.email}, Message: ${this.message}`);
-        }
-      },
+    async handleSubmit() {
+      this.messageError =
+        this.message.length <= 500
+          ? ""
+          : "Message contains more than 500 characters!";
+      this.messageCheck =
+        this.message === this.messageConfirm
+          ? ""
+          : "Message do not match, more than 500 characters. Try again!";
+      try {
+        const result = await sendForm(this.name, this.email, this.message);
+        //console.log(result);
+        this.errorMessage = "";
+        this.success = true;
+        // setTimeout(() => (window.location.href = "/"), 4000);
+      } catch (error) {
+        this.errorMessage = error;
+        console.log(error);
+        console.log(
+          `The result: Name: ${this.name}, eMail: ${this.email}, Message: ${this.message}`
+        );
+      }
+    },
   },
 };
 
