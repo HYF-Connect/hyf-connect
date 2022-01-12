@@ -37,16 +37,13 @@ const MainSection = {
       showingProjects: function () {
          // `this` points to the vm instance
          const startingPosition = (this.pageCount - 1) * 5;
-         return this.filterItems().slice(
-            startingPosition,
-            startingPosition + 5
-         );
+         return this.projects.slice(startingPosition, startingPosition + 5);
       },
       disablePrevious: function () {
          return this.pageCount === 1;
       },
       disableNext: function () {
-         const limit = Math.ceil(this.filterItems().length / 5);
+         const limit = Math.ceil(this.projects.length / 5);
          return this.pageCount === limit;
       },
    },
@@ -67,7 +64,7 @@ const MainSection = {
    methods: {
       async onload() {
          try {
-            const result = await fetchProjects();
+            const result = (await fetchProjects()).reverse();
             for (let i = 0; i < result.length; i++) {
                this.projects.push({
                   thumbnail: result[i].Thumbnail,
@@ -88,24 +85,6 @@ const MainSection = {
       },
       previousPage() {
          this.pageCount--;
-      },
-
-      filterItems() {
-         const resultList = [];
-         if (this.hyfClass === 0) {
-            return this.projects;
-         }
-         for (let project of this.projects) {
-            //console.log(
-            //  `memberId ${member.ClassID} - filtering on: ${this.hyfClass}`
-            //);
-            if (project.ClassID == this.hyfClass) {
-               // console.log("They are equal!");
-               resultList.push(project);
-            }
-         }
-         //console.log(resultList);
-         return resultList;
       },
    },
 };

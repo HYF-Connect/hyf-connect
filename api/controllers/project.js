@@ -144,7 +144,6 @@ const projectController = {
    putProjectUsers: async (req, res) => {
       try {
          const { users } = req.body;
-         console.log("Controller - users:", users);
          const projectId = req.params.projectId;
          const result = await projectManager.updateProjectUsers(
             projectId,

@@ -1,10 +1,10 @@
 const ProjectComponent = {
-  props: ["project"],
-  template: `  
+   props: ["project"],
+   template: `  
   <div class="project__component--container">
     <div class="project__component--left">
       <div class="project__thumbnail">
-      <img v-bind:src="project.thumbnail" v-if="project.avatar" alt="project thumbnail">
+      <img v-bind:src="project.thumbnail" v-if="project.thumbnail" alt="project thumbnail">
       <i class="fas fa-image project project-photo"  v-else></i>
       </div>
       <div class="project__buttons">
@@ -28,10 +28,10 @@ const ProjectComponent = {
         </div>
     </div>
   </div>`,
-  methods: {
-    async navigate(userId) {
-      window.location.href = `../user-profile/user-profile.html?memberId=${userId}`;
-    },
-  },
+   methods: {
+      async navigate(userId) {
+         window.location.href = `../user-profile/user-profile.html?memberId=${userId}`;
+      },
+   },
 };
 export default ProjectComponent;

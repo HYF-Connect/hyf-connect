@@ -102,8 +102,9 @@ export const FormSection = {
          </div>
       </div>
       <div class="profile-form-group"> 
-         <label class="profile-form__label">About me</label> 
-         <input class="profile-form__input-bio" type="text" v-model="bio">
+         <label class="profile-form__label">About me</label>
+         <textarea rows="4" class="profile-form__input-bio" type="text" v-model="bio">
+         </textarea>
       </div>
       <div class = "profile-form_btn-right">
          <button class = "profile-form__btn-submit"> save </button>

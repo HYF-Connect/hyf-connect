@@ -403,9 +403,12 @@ input[type="checkbox"] {
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-   padding-left: 20px;
+   padding-left: 2em;
 }
-
+textarea[type="text"] {
+   padding-left: 1em;
+   padding-top: 1em;
+}
 .form__label-terms {
    display: inline-block;
    margin: 25px 0 15px;
@@ -594,6 +597,12 @@ input[type="password"] {
    outline: none;
    overflow-wrap: break-word;
    word-wrap: break-word;
+}
+.profile-form__input-bio {
+   justify-items: flex-start;
+   overflow: hidden;
+   height: 10em;
+   padding: 2em;
 }
 
 .form-control-ms:focus {

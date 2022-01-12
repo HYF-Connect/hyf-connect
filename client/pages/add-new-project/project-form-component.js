@@ -83,13 +83,11 @@ export const ProjectFormComponent = {
          try {
             this.students = await fetchUsers();
             const allUsers = await fetchUsers();
-
             this.students = allUsers.map((u) => ({
                label: u.FirstName + " " + u.LastName,
                value: u.UserID,
             }));
             const id = this.getProjectId();
-            console.log(id);
             if (id === undefined) {
                return;
             }

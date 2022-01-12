@@ -82,13 +82,12 @@ const projectManager = {
          await ProjectUserStore.destroy({
             where: { ProjectID: projectId },
          });
-      } else {
-         for (let user of users) {
-            await ProjectUserStore.create({
-               ProjectID: projectId,
-               UserID: user.value,
-            });
-         }
+      }
+      for (let user of users) {
+         await ProjectUserStore.create({
+            ProjectID: projectId,
+            UserID: user.value,
+         });
       }
    },
    deleteProject: async ({ ProjectID }) => {
