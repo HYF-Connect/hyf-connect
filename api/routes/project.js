@@ -7,8 +7,13 @@ const projectRoutes = express.Router();
 projectRoutes.get("/", projectController.get);
 projectRoutes.post("/", projectController.post);
 projectRoutes.get("/:projectId/users", projectController.getAllProjectUsers);
+projectRoutes.put("/:projectId/users", projectController.putProjectUsers);
 projectRoutes.get("/:projectId", projectController.getProjectById);
 projectRoutes.put("/:projectId", projectController.putProject);
+projectRoutes.put(
+   "/:projectId/thumbnail",
+   projectController.putProjectThumbnail
+);
 projectRoutes.post("/:projectId/skill", projectController.postSkill);
 projectRoutes.post("/:projectId/class", projectController.postClass);
 projectRoutes.post("/:projectId/user", projectController.postUser);
