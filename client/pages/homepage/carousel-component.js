@@ -41,7 +41,7 @@ const CarouselComponent = {
           </a>
         </div>
       </div>
-      <a class="carousel__projects--btn" href="pages/projects/projects.html">see all the projects</a>
+      <a class="carousel__projects--btn" href="/pages/projects/projects.html">see all the projects</a>
     </div>
 `
 }
