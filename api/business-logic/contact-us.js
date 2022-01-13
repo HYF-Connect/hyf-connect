@@ -1,52 +1,36 @@
 const nodemailer = require("nodemailer");
+
 const environment = require("../config");
-//const sgMail = require("@sendgrid/mail");
+
 const GEmail = environment.GEmail;
 const GPassword = environment.GPassword;
-
+const mailApiKey = environment.mailApiKey;
+const mailDomain = environment.mailDomain;
+const mailURL = environment.mailURL;
 const auth = {
-  //sendmail: true,
-  //newline: "unix",
-  //path: "/usr/sbin/sendmail",
-  host: "smtp.gmail.com",
+  service: "gmail",
   port: 465,
   secure: true,
+  secureConnection: false,
+
   auth: {
-    api_key: "f890d8c48bc6975ba8a70a764bcf1d4f-0be3b63b-2aee9519",
-    domain: "sandbox4ff9182ad67e479fa0f0595e0afa0b09.mailgun.org",
-    url: "https://api.eu.mailgun.net",
+    api_key: mailApiKey,
+    domain: mailDomain,
+    url: mailURL,
     user: GEmail,
     pass: GPassword,
   },
 };
 
 const contactUsManager = {
-  sendingEmail: async (senderEmail, senderName, senderText) => {
-    /*
-    sgMail.setApiKey("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");
-  const msg = {
-    to: `hyfconnect@gmail.com`,
-    from: senderEmail,
-    subject: `New Contact Form ${senderName}!`,
-    html: `<p><b>Name:</b> ${senderName}</p> <p><b>Email:</b> ${senderEmail}</p><p><b>Message:</b> <br><br> <i>${senderText}</i></p>`,
-  };
-  
-  sgMail
-    .send(msg)
-    .then((res) => res.json())
-    .catch((err) => res.send(err));
-}),
-*/
-
+  sendingEmail: async (senderName, senderEmail, senderText) => {
     const transporter = nodemailer.createTransport(auth);
     const mailOptions = {
-      from: `Email from ${senderName} <${senderEmail}>`,
+      from: senderEmail,
       to: "hyfconnect@gmail.com",
-      subject: `Message from contact form by ${senderName} email ${senderEmail}`,
-      //text: senderEmail,
+      subject: `Message from <${senderEmail}> "${senderName}" through the contact form`,
       html: senderText,
     };
-    //console.log(mailOptions);
     await transporter.sendMail(mailOptions, (err, data) => {
       if (err) {
         console.log("error", err);
@@ -55,8 +39,8 @@ const contactUsManager = {
       }
     });
     return {
-      senderEmail,
       senderName,
+      senderEmail,
       senderText,
     };
   },
