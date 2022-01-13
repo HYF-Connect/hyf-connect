@@ -3,17 +3,17 @@ import FooterComponent from "../../components/footer-component.js";
 import MainSection from "./main-section.js";
 
 const page = Vue.createApp({
-  components: {
-    HeaderComponent,
-    FooterComponent,
-    MainSection,
-  },
-  template: `
-      <div class="page">
-        <header-component></header-component>
+   components: {
+      HeaderComponent,
+      FooterComponent,
+      MainSection,
+   },
+   template: `
+      <header-component></header-component>
+      <div class="add-new-project-page">
         <main-section></main-section>
-        <footer-component></footer-component>
       </div>
+      <footer-component></footer-component>
     
       `,
 }).mount("#add-new-project");

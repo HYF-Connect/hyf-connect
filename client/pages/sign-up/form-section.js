@@ -23,7 +23,7 @@ export const FormSection = {
       <div class="form__input-warning" v-if="passwordCheck">{{ passwordCheck }}</div>    
       <input class="form__input" type="checkbox" v-model="checkedTerms" required>
       <label class="form__label-terms">I've read and agree to the terms and conditions</label>
-      <button class= "form__btn-submit">Create an account</button>
+      <button class= "form__btn-submit">create an account</button>
   </form>
     `,
    data() {
