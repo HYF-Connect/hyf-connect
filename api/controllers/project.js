@@ -96,31 +96,18 @@ const projectController = {
    },
    putProject: async (req, res) => {
       try {
-         const {
-            Title,
-            Description,
-            GithubURL,
-            WebsiteURL,
-            Thumbnail,
-            User,
-            Class,
-            Skill,
-         } = req.body;
+         const { Title, Description, GithubURL, WebsiteURL, Thumbnail } =
+            req.body;
          const projectId = req.params.projectId;
-         const project = await projectManager.updateProject({
+         const updatedProject = await projectManager.updateProject({
             ProjectID: projectId,
             Title,
             Description,
             GithubURL,
             WebsiteURL,
             Thumbnail,
-            UserID: User,
-            ClassID: Class,
-            SkillID: Skill,
          });
-         res.status(200).json(
-            `Congratulation ${project.Title}, has been successfully updated!`
-         );
+         res.status(200).json(updatedProject);
       } catch (error) {
          res.status(400).json({
             message: error.message,
@@ -131,11 +118,11 @@ const projectController = {
       try {
          const { projectThumbnail } = req.body;
          const projectId = req.params.projectId;
-         await projectManager.updateProjectThumbnail(
+         const updatedThumbnail = await projectManager.updateProjectThumbnail(
             projectId,
             projectThumbnail
          );
-         res.status(200).json(`Thumbnail has been successfully updated!`);
+         res.status(200).json(updatedThumbnail);
       } catch (error) {
          console.log(error);
          res.status(500).json({ message: error.message });

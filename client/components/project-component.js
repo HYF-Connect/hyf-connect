@@ -9,7 +9,7 @@ const ProjectComponent = {
       </div>
       <div class="project__buttons">
         <div class="project__github--url">
-          <a v-bind:href="project.github_url" target="_blank" >see project</a>
+          <a v-bind:href="project.github_url" target="_blank">see project <i class="fab fa-github"></i> </a>
         </div>
         <div class="project__website--url">
           <a v-bind:href="project.website_url" target="_blank" >visit website</a>

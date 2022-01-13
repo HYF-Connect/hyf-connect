@@ -254,7 +254,6 @@ textarea[type="text"] {
    position: relative;
    flex-flow: row wrap;
    align-items: center;
-   font-family: "Poppins", sans-serif;
    background: #fff;
    width: 65%;
    padding: 40px 0 40px 0;

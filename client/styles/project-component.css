@@ -25,9 +25,9 @@
    height: auto;
    padding: 0.3em 0.3em 1em 0.3em;
 }
-.project__thumbnail{
+.project__thumbnail {
    display: flex;
-   justify-content:center;
+   justify-content: center;
 }
 .project__buttons {
    display: flex;
@@ -140,6 +140,7 @@
    list-style-type: none;
    color: rgba(28, 34, 148, 1);
    justify-self: center;
+   background-color: transparent;
 }
 .projects-pagination--item {
    display: inline-block;
@@ -156,7 +157,11 @@
    margin: 20px 40%;
 }
 .project-photo {
-   color: #2f195f; 
-   font-size:200px; 
+   color: #2f195f;
+   font-size: 200px;
    text-align: center;
+}
+
+.fa-github {
+   padding-left: 0.1em;
 }
