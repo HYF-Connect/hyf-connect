@@ -45,13 +45,14 @@
 
 .project__github--url,
 .project__website--url {
-   display: block;
+   display: inline-block;
    color: #ffffff;
    text-decoration: none;
    background-color: #2f195f;
    border-radius: 18px;
-   padding: 0.5em 0.8em;
+   padding: 0.4em 0.6em 0.3em 0.6em;
    margin-right: 0.5em;
+   height: 42px;
    font-family: Montserrat, sans-serif;
    font-size: 0.9em;
    cursor: pointer;
@@ -93,6 +94,8 @@
    font-size: 3em;
    font-weight: 600;
    color: #1c2294;
+   width: 700px;
+   background-color: aqua;
 }
 
 .project__description,
@@ -164,4 +167,26 @@
 
 .fa-github {
    padding-left: 0.1em;
+}
+.project__title-container {
+   width: auto;
+   height: 57px;
+   padding-top: 0.5em;
+   margin-bottom: 2em;
+}
+
+/*Edit icon in user-project page*/
+
+.fa-edit {
+   color: #1c2294;
+   font-size: 36px;
+}
+
+.project__edit--url {
+   width: 70px;
+   height: 54px;
+   z-index: 100;
+   top: 0;
+   margin: 0 0 20em 50em;
+   background-color: tomato;
 }

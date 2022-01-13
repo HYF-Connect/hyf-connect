@@ -105,7 +105,6 @@ a.submit-btn {
    -webkit-appearance: button;
    -moz-appearance: button;
    appearance: button;
-
    text-decoration: none;
 }
 .submit-btn:hover {
@@ -115,4 +114,18 @@ a.submit-btn {
    -webkit-transition: all 0.4s;
    -moz-transition: all 0.4s;
    transition: all 0.4s;
+}
+
+.fa-edit {
+   color: #1c2294;
+   font-size: 36px;
+}
+
+.project__edit--url {
+   width: 70px;
+   height: 54px;
+   z-index: 100;
+   top: 0;
+   margin: 0 0 20em 50em;
+   background-color: tomato;
 }

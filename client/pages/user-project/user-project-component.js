@@ -64,6 +64,7 @@ const UserProjectComponent = {
                thumbnail: result[i].Thumbnail,
                github_url: result[i].GithubURL,
                website_url: result[i].WebsiteURL,
+               edit_url: result[i].ProjectID,
                title: result[i].Title,
                description: result[i].Description,
                members: await fetchAllProjectUsers(result[i].ProjectID),
