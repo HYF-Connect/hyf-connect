@@ -2,7 +2,7 @@ import AvatarDropdown from "./avatar-dropdown-component.js";
 import { fetchUserById } from "../src/data-access/api-calls/calls.js";
 
 const HeaderComponent = {
-  components: {    AvatarDropdown,  },
+  components: { AvatarDropdown },
   template: `
     <div class="header-container">
       <div class="brand">
@@ -37,7 +37,7 @@ const HeaderComponent = {
           <a class="burger-link" href="/pages/about-us/about-us.html">about us</a>
           <a class="burger-link" href="/pages/contact-us/contact-us.html">contact us</a>
           <a class="burger-link" v-if="isLoggedIn" href="/pages/edit-user-profile/edit-user-profile.html">my profile</a>
-          <a class="burger-link" v-if="isLoggedIn" href="#">my projects</a>
+          <a class="burger-link" v-if="isLoggedIn" href="/pages/user-project/user-project.html">my projects</a>
           <a class="burger-link" v-if="isLoggedIn" href="" v-on:click="logOut">sign out</a>
           <a class="burger-link" v-else href="/pages/login/login.html">sign in</a>
         </div >
