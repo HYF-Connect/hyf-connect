@@ -49,9 +49,6 @@ const projectManager = {
       GithubURL,
       WebsiteURL,
       Thumbnail,
-      User,
-      Class,
-      Skill,
    }) => {
       const projectById = await ProjectStore.findOne({
          where: { ProjectID: ProjectID },
@@ -62,9 +59,6 @@ const projectManager = {
          GithubURL,
          WebsiteURL,
          Thumbnail,
-         UserID: User,
-         ClassID: Class,
-         SkillID: Skill,
       });
       return updatedProject;
    },
