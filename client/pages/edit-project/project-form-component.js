@@ -17,7 +17,7 @@ export const ProjectFormComponent = {
    <div class="addNewProject__container">
       <form class="addNewProject__form" @submit.prevent="handleSubmit">
          <div class="alert alert-success" role="alert" v-if="success">
-            Your project is successfully updated! 
+            Your project is successfully updated!
          </div>
          <div class="addNewProject__form-group"> 
             <label class="addNewProject__form--label">Project Title</label>
@@ -98,12 +98,10 @@ export const ProjectFormComponent = {
             this.githubRepo = project.GithubURL;
             this.projectDescription = project.Description;
             this.projectThumbnail = project.Thumbnail;
-
             const usersProject = await fetchAllProjectUsers(id);
-
             this.teamMembers = usersProject.map((u) => ({
                label: u.FirstName + " " + u.LastName,
-               value: u.userID,
+               value: u.UserID,
             }));
          } catch (error) {
             console.log("error from members", error);
@@ -133,10 +131,10 @@ export const ProjectFormComponent = {
                this.websiteUrl,
                this.projectDescription
             );
+            console.log(this.teamMembers);
             await updateProjectUsers(this.id, this.teamMembers);
             await updateProjectThumbnail(this.id, this.file);
             this.success = true;
-
             setTimeout(
                () => (window.location.href = "/pages/projects/projects.html"),
                500

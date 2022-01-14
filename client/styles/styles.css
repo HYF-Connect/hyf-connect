@@ -511,6 +511,10 @@ select:focus {
    box-sizing: border-box;
 }
 
+.image1 {
+   height: 350px;
+   padding-bottom: 10px;
+}
 .container-contact-us-page.image2 {
    width: 730px;
    margin: 0;
@@ -547,7 +551,7 @@ select:focus {
    text-align: center;
    white-space: pre;
    position: relative;
-   height: 300px;
+   height: 200px;
    color: #1c2294;
    width: 98.8vw;
    padding-top: 40px;
@@ -566,13 +570,17 @@ select:focus {
    color: #1c2294;
    font-size: 50px;
 }
-
+.contact-page {
+   background-color: #f7f7fc;
+}
 .contact__form {
    display: flex;
    flex-wrap: wrap;
    justify-content: space-evenly;
    gap: 2em;
    padding-left: 20px;
+   height: auto;
+   margin-bottom: 40px;
 }
 .contact__input_image {
    position: relative;
@@ -591,6 +599,9 @@ select:focus {
    display: block;
    font-size: 16px;
    width: 100%;
+   border: none;
+   padding: 0.8em 1.7em;
+   border-radius: 18px;
 }
 
 input[type="text"],
@@ -607,8 +618,32 @@ textarea {
    font-size: 14px;
    font-family: "Montserrat";
    text-decoration: none;
-   border-radius: 10px;
+   border-radius: 18px;
    padding: 12px 20px;
    width: 130px;
    margin-left: 225px;
+   border: 2px solid transparent;
+}
+
+#action_button:hover {
+   background-color: #fff;
+   color: #2f195f;
+   border-color: #2f195f;
+   -webkit-transition: all 0.4s;
+   -moz-transition: all 0.4s;
+   transition: all 0.4s;
+}
+
+.contact__input-message {
+   border: none;
+   display: block;
+   font-size: 16px;
+   width: 100%;
+   border: none;
+   padding: 0.8em 1.7em;
+   border-radius: 18px;
+}
+
+.container__textarea {
+   border: none;
 }

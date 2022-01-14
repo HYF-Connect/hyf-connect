@@ -98,8 +98,9 @@ export const ProjectFormComponent = {
             console.log(usersProject);
             this.teamMembers = usersProject.map((u) => ({
                label: u.FirstName + " " + u.LastName,
-               value: u.userID,
+               value: u.UserID,
             }));
+            this.updateTeammates(this.teamMembers);
          } catch (error) {
             console.log("error from members", error);
          }
@@ -122,7 +123,6 @@ export const ProjectFormComponent = {
       async handleSubmit() {
          try {
             if (this.id === undefined) {
-               console.log("we are inside of this crazy cooooode!");
                let result = await createProject(
                   this.projectTitle,
                   this.websiteUrl,

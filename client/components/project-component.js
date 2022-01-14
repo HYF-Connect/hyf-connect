@@ -17,10 +17,10 @@ const ProjectComponent = {
       </div>
     </div>
     <div class="project__component--right">
-     <div class="project__title-container">
-        <h4 class="project__title" >{{project.title}}</h4>
-        <div class="project__edit--url" v-if="project.edit_url">
-          <i v-bind:href="'/pages/edit-project/edit-project.html?projectId=' + project.edit_url" class="far fa-edit"></i>
+     <div class="title-container">
+    <h4 class="project__title" >{{project.title}}</h4> 
+     <div class="project__edit--url" v-if="project.edit_url">
+          <a v-bind:href="'/pages/edit-project/edit-project.html?projectId=' + project.edit_url">  <i  class="far fa-edit"></i> </a>
         </div>
       </div>
       <p class="project__description">{{project.description}}</p>

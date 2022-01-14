@@ -24,7 +24,7 @@
    right: 0;
    margin-left: auto;
    margin-top: 0;
-   border-top: 39vw solid #dfd7ef;
+   border-top: 43vw solid #dfd7ef;
    border-left: 137vw solid transparent;
    z-index: 2;
 }
@@ -34,7 +34,7 @@
    height: 0;
    left: 0;
    margin-right: auto;
-   border-top: 27vw solid #dfd7ef;
+   border-top: 29vw solid #dfd7ef;
    border-right: 75vw solid transparent;
    z-index: 2;
 }
@@ -122,10 +122,16 @@ a.submit-btn {
 }
 
 .project__edit--url {
+   display: inline-block;
    width: 70px;
    height: 54px;
-   z-index: 100;
-   top: 0;
-   margin: 0 0 20em 50em;
-   background-color: tomato;
+   margin: 0 0 0 50em;
+}
+
+.title-container {
+   width: auto;
+   display: inline-block;
+   align-items: center;
+   height: 54px;
+   padding-top: 0.5em;
 }

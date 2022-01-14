@@ -5,7 +5,7 @@ const MainSection = {
       </div>
       <div class="user-projects__main-arrow-left">
       </div>  
-      <h1 class= "user-projects__title"> My <span class= "user-projects__span"> projects! </span></h1     
+      <p class= "user-projects__title"> My <span class= "user-projects__span"> projects! </span></p>     
     </div>
     `,
 };

@@ -58,7 +58,7 @@ const UserProjectComponent = {
    methods: {
       async getDataOnLoad() {
          const id = localStorage.getItem("userId");
-         const result = await fetchUserProjects(id);
+         const result = (await fetchUserProjects(id)).reverse();
          for (let i = 0; i < result.length; i++) {
             this.projects.push({
                thumbnail: result[i].Thumbnail,

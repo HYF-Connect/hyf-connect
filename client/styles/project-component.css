@@ -95,7 +95,6 @@
    font-weight: 600;
    color: #1c2294;
    width: 700px;
-   background-color: aqua;
 }
 
 .project__description,
@@ -167,26 +166,4 @@
 
 .fa-github {
    padding-left: 0.1em;
-}
-.project__title-container {
-   width: auto;
-   height: 57px;
-   padding-top: 0.5em;
-   margin-bottom: 2em;
-}
-
-/*Edit icon in user-project page*/
-
-.fa-edit {
-   color: #1c2294;
-   font-size: 36px;
-}
-
-.project__edit--url {
-   width: 70px;
-   height: 54px;
-   z-index: 100;
-   top: 0;
-   margin: 0 0 20em 50em;
-   background-color: tomato;
 }
