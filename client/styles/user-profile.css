@@ -230,13 +230,19 @@ select:focus {
 }
 .profile-detail-line >i{
    padding-right: 30px;
-   font-size: 1.2rem;
+   font-size: 1.5rem;
 }
 .profile-form-icons{
    width: 100%;
    justify-content: space-evenly;
    display: flex;
+   font-size: 1.5rem;
 }
+
+.profile-form-icons >i:hover{
+color: #dfd7ef;
+}
+
 .user-profile-projects{
    padding-top: 20px;
    margin: 30px;
