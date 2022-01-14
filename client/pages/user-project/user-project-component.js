@@ -9,30 +9,37 @@ const UserProjectComponent = {
       ProjectComponent,
    },
    template: `
-      <div class="user-profile-projects" v-if="projects.length>0">
-      <div class="edit-project__button">          
-          <a class="submit-btn" href="/pages/add-new-project/add-new-project.html">add new project</a>
+      <div class = "user-project-container">
+         <div class="user-profile-projects" >
+         <div class="edit-project__button">          
+            <a class="submit-btn" href="/pages/add-new-project/add-new-project.html">add new project</a>
+            </div>
+         <div class="user-profile-projects-cards" v-if="projects.length>0">
+               <template v-for="project in projects">
+                  <project-component :project="project"/>
+               </template>
+                <nav class = "projects-nav" aria-label="Page navigation example">
+         <ul class="projects-pagination">
+            <li class="projects-pagination--item">
+               <button class="projects-pagination--item__btn" v-on:click="previousPage"
+               v-bind:disabled="disablePrevious">
+               Previous</button>
+            </li>
+            {{ pageCount }}
+            <li class="projects-pagination--item">
+               <button class="projects-pagination--item__btn" v-on:click="nextPage"
+               v-bind:disabled="disableNext">
+               Next</button>
+            </li>
+         </ul>
+         </nav>;
+         </div>  
+            <div class="no-projects" v-else>
+               <div class= "upload-project-icon"> <a href="/pages/add-new-project/add-new-project.html">  <i class="fa fa-upload"></i></a> </div>
+               <div class="no-project-title"> <h2 class="no-project-title"> There are no projects yet! </h2> </div>
+            </div>
+           
          </div>
-        <div class="user-profile-projects-cards">
-            <template v-for="project in projects">
-                <project-component :project="project"/>
-            </template>
-        </div>  
-         <nav class = "projects-nav" aria-label="Page navigation example">
-      <ul class="projects-pagination">
-         <li class="projects-pagination--item">
-            <button class="projects-pagination--item__btn" v-on:click="previousPage"
-            v-bind:disabled="disablePrevious">
-            Previous</button>
-         </li>
-         {{ pageCount }}
-         <li class="projects-pagination--item">
-            <button class="projects-pagination--item__btn" v-on:click="nextPage"
-            v-bind:disabled="disableNext">
-            Next</button>
-         </li>
-      </ul>
-      </nav>;
       </div>
       `,
    computed: {
