@@ -80,7 +80,10 @@
    font-weight: 500;
    text-decoration: none;
    }
-   
+.project__buttons--disabled:hover{
+   text-decoration: none;
+   color:white;
+}
 
 .project__github--url:hover,
 .project__website--url:hover {
