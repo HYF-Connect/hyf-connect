@@ -3,7 +3,6 @@
    display: flex;
    flex-direction: column;
    z-index: 8;
-   margin-bottom: 20px;
 }
 
 /* EDIT USER PROFILE MAIN SECTION */
@@ -37,10 +36,10 @@
    position: absolute;
    top: 0;
    color: #f7f7fc;
-   width: 35%;
-   margin-left: 60%;
-   margin-top: 7%;
-   font-size: 3.8em;
+   width: 36%;
+   margin-left: 55%;
+   margin-top: 4%;
+   font-size: 3.7em;
    font-weight: 600;
    z-index: 100;
 }
@@ -134,19 +133,16 @@
    overflow-wrap: break-word;
    word-wrap: break-word;
 }
-.profile-form-group > a{
-    color:brown;
-    font-size: .75em;
+.profile-form-group > a {
+   color: brown;
+   font-size: 0.75em;
 }
-.pills{
-    padding-left: 15px;
-    width: 65%;
-    height: 3em;
-    word-break: break-all;
-
+.pills {
+   padding-left: 15px;
+   width: 65%;
+   height: 3em;
+   word-break: break-all;
 }
-
-
 
 .profile-form__select {
    width: 45%;
@@ -198,86 +194,128 @@ select:focus {
    font-weight: bold;
 }
 .profile-image-jobTitle {
-   color:#2f195f; 
+   color: #2f195f;
    font-size: 1.1rem;
-   margin-top: 10px;
+   margin-top: 20px;
 }
-.user-profile-row { 
-  display: flex; 
-  padding-top: 170px;
-} 
+.user-profile-row {
+   display: flex;
+   padding-top: 170px;
+}
 
-.column-details { 
-  flex: 50%; 
+.column-details {
+   flex: 50%;
 }
-.column-about{
-   flex:50% ;
+.column-about {
+   flex: 50%;
 }
 .user-about-me-box {
    z-index: 5;
    margin-top: 168px;
    margin-right: 20px;
+   width: 690px;
    padding: 20px;
    position: relative;
    background-color: rgba(47, 25, 95, 1);
    color: white;
-   min-height: 300px;
+   min-height: 285px;
    border-radius: 10px;
+   outline: none;
+   overflow-wrap: break-word;
+   word-wrap: break-word;
 }
-.profile-detail-line{
+.profile-detail-line {
    padding-left: 30px;
    padding-bottom: 20px;
 }
-.profile-detail-line >i{
+.profile-detail-line > i {
    padding-right: 30px;
    font-size: 1.5rem;
 }
-.profile-form-icons{
+.profile-form-icons {
    width: 100%;
    justify-content: space-evenly;
    display: flex;
+   cursor: pointer;
    font-size: 1.5rem;
 }
 
-.profile-form-icons >i:hover{
-color: #dfd7ef;
+.profile-form-icons > i:hover {
+   color: #dfd7ef;
 }
 
-.user-profile-projects{
+.user-profile-projects {
    padding-top: 20px;
-   margin: 30px;
+   margin: 30px 30px 60px 30px;
 }
-.user-profile-projects-title{
-   color:rgba(47, 25, 95, 1);
+.user-profile-projects-title {
+   color: rgba(47, 25, 95, 1);
+   width: 88%;
+   margin-left: 3.2em;
+   padding-bottom: 0.5em;
 }
-.user-profile-skills-title{
-   color:rgba(47, 25, 95, 1);
-
+.user-profile-skills-title {
+   color: rgba(47, 25, 95, 1);
+   width: 88%;
+   margin-left: 3.2em;
+   padding-bottom: 0.5em;
 }
-.user-profile-projects-cards{
+.user-profile-projects-cards {
    box-shadow: 7px 7px 5px rgb(185, 183, 183);
-   width: 100%;
+   width: 88%;
+   margin-left: 7em;
    display: block;
    min-height: 100px;
    border-radius: 1rem;
    background: white;
-   padding: 20px;
+   padding: 10px;
 }
-.user-profile-skills{
+.user-profile-skills {
    box-shadow: 7px 7px 5px rgb(185, 183, 183);
-   width: 100%;
+   width: 85%;
    min-height: 100px;
    border-radius: 1rem;
    background: white;
-   padding: 20px;
+   margin-left: 7.5em;
+   padding: 17px;
    display: flex;
    justify-content: space-evenly;
-
 }
-.user-profile-skill{
-   height:80px;
+.user-profile-skill {
+   height: 80px;
 }
-.profile-details-separator{
+.profile-details-separator {
    margin-right: 20px;
    margin-left: 20px;
+}
+
+.outer-area {
+   border: none;
+   height: 255px;
+   width: 255px;
+   border-radius: 5px;
+   margin-left: 22%;
+   margin-top: 3.5%;
+   display: flex;
+   position: absolute;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   z-index: 100;
+}
+
+.profile-picture {
+   object-fit: cover;
+   padding: 0.5em;
+   width: 200px;
+   height: 200px;
+   -webkit-border-radius: 50%;
+   -webkit-background-clip: padding-box;
+   -moz-border-radius: 50%;
+   -moz-background-clip: padding;
+   border-radius: 50%;
+   background-clip: padding-box;
+   float: left;
+   background-size: cover;
+   background-position: center;
 }
