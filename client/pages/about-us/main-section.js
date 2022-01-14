@@ -1,5 +1,5 @@
 const MainSection = {
-template: `
+  template: `
 
 <div class="about-us-container">
 <h1>About us</h1>
@@ -25,7 +25,7 @@ continuing the HYF journey. In this platform, everyone can share their knowledge
 share their profile for new opportunities to grow. 
 Our mission is to connect, to share, and to grow together as one big HackYourFuture Community</p>
 
-<a class="about-visit-project" href="https://github.com/HYF-Connect">See project</a>
+<a class="about-visit-project" href="https://github.com/HYF-Connect" target="_blank">See project</a>
 </div> 
 <div class="about-hyf-connect2">
 <img src="/assets/logo_pc_full.png" class="photo2" alt="logo" width="700" height="650">
