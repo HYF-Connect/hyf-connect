@@ -1,7 +1,6 @@
 import MultiSelect from "../../components/multiselect-component.js";
 import {
    fetchAllProjectUsers,
-   createProject,
    fetchUsers,
    updateProject,
    updateProjectThumbnail,
@@ -15,10 +14,10 @@ export const ProjectFormComponent = {
    },
 
    template: `
-   <div class="addNewProject__container" v-on:load="onload()">
+   <div class="addNewProject__container">
       <form class="addNewProject__form" @submit.prevent="handleSubmit">
          <div class="alert alert-success" role="alert" v-if="success">
-            Your new project is successfully saved! 
+            Your project is successfully updated!
          </div>
          <div class="addNewProject__form-group"> 
             <label class="addNewProject__form--label">Project Title</label>
@@ -92,15 +91,18 @@ export const ProjectFormComponent = {
                return;
             }
             this.id = id;
-            const project = fetchProjectById(id);
+            const project = await fetchProjectById(id);
             this.file = project.Thumbnail;
+            this.projectTitle = project.Title;
+            this.websiteUrl = project.WebsiteURL;
+            this.githubRepo = project.GithubURL;
+            this.projectDescription = project.Description;
+            this.projectThumbnail = project.Thumbnail;
             const usersProject = await fetchAllProjectUsers(id);
-            console.log(usersProject);
             this.teamMembers = usersProject.map((u) => ({
                label: u.FirstName + " " + u.LastName,
                value: u.UserID,
             }));
-            this.updateTeammates(this.teamMembers);
          } catch (error) {
             console.log("error from members", error);
          }
@@ -122,28 +124,17 @@ export const ProjectFormComponent = {
       },
       async handleSubmit() {
          try {
-            if (this.id === undefined) {
-               let result = await createProject(
-                  this.projectTitle,
-                  this.websiteUrl,
-                  this.githubRepo,
-                  this.projectDescription
-               );
-               this.id = result.ProjectID;
-               console.log("ProjectId:", this.id);
-            } else {
-               result = await updateProject();
-               this.projectTitle = result.Title;
-               this.projectDescription = result.Description;
-               this.githubRepo = result.GithubURL;
-               this.websiteUrl = result.WebsiteURL;
-            }
+            const result = await updateProject(
+               this.id,
+               this.projectTitle,
+               this.githubRepo,
+               this.websiteUrl,
+               this.projectDescription
+            );
+            console.log(this.teamMembers);
             await updateProjectUsers(this.id, this.teamMembers);
-            console.log("ProjectId:", updateProjectUsers);
             await updateProjectThumbnail(this.id, this.file);
-            console.log("ProjectId:", updateProjectThumbnail);
             this.success = true;
-
             setTimeout(
                () => (window.location.href = "/pages/projects/projects.html"),
                500
@@ -157,7 +148,6 @@ export const ProjectFormComponent = {
          const parts = queryPart.replace("?", "").split("&");
          for (let part of parts) {
             if (part.split("=")[0] === "projectId") {
-               console.log("get project id", part.split("=")[1]);
                return part.split("=")[1];
             }
          }

@@ -1,0 +1,172 @@
+.user-projects-page {
+   background-color: #f7f7fc;
+   display: flex;
+   position: relative;
+   flex-direction: column;
+   justify-content: center;
+   font-family: "Poppins", sans-serif;
+   align-items: center;
+   box-sizing: border-box;
+   margin: 0;
+   z-index: 8;
+   width: 100%;
+   height: auto;
+}
+
+.user-projects__main {
+   position: relative;
+   width: 100%;
+   z-index: 1;
+}
+.user-projects__main-arrow-right {
+   position: absolute;
+   width: 0;
+   height: 0;
+   right: 0;
+   margin-left: auto;
+   margin-top: 0;
+   border-top: 43vw solid #dfd7ef;
+   border-left: 137vw solid transparent;
+   z-index: 2;
+}
+.user-projects__main-arrow-left {
+   position: absolute;
+   width: 0;
+   height: 0;
+   left: 0;
+   margin-right: auto;
+   border-top: 32vw solid #dfd7ef;
+   border-right: 75vw solid transparent;
+   z-index: 2;
+}
+
+.user-projects__title {
+   position: relative;
+   color: #f7f7fc;
+   text-align: center;
+   margin-top: 6%;
+   margin-left: 11%;
+   width: 400px;
+   font-size: 4em;
+   font-weight: 600;
+   z-index: 100;
+}
+
+.user-projects__span {
+   color: #1c2294;
+}
+
+.user-profile-projects-cards {
+   width: 100%;
+   display: block;
+   min-height: 100px;
+   border-radius: 1rem;
+   background: white;
+   padding: 3em;
+   border: 2px solid transparent;
+   box-shadow: 0px 20px 10px -15px rgb(180, 174, 174);
+}
+
+.user-profile-projects {
+   display: flex;
+   height: auto;
+   min-height: 40em;
+   flex-direction: column;
+   position: relative;
+   padding: 0 1em;
+   margin-bottom: 4.5em;
+   z-index: 5;
+}
+.no-projects {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   justify-content: center;
+   width: 100%;
+   align-items: center;
+   padding: 0 1em;
+   height: 30em;
+   margin: 0.5em 0 4.5em 0;
+   border-radius: 1rem;
+   padding: 3em;
+   border: 2px solid transparent;
+   background-color: white;
+   box-shadow: 0px 20px 10px -15px rgb(180, 174, 174);
+   z-index: 5;
+}
+.edit-project__button {
+   display: flex;
+   position: relative;
+   flex-direction: row;
+   justify-content: flex-end;
+   left: 0;
+   font-family: "Montserrat", sans-serif;
+   cursor: pointer;
+   outline: none;
+   margin: 0 0 1em 1em;
+   width: 88em;
+   height: 5em;
+   z-index: 100;
+   font-weight: 500;
+}
+
+a.submit-btn {
+   background: #2f195f;
+   text-align: center;
+   width: 14em;
+   height: 3.4em;
+   color: #fff;
+   padding: 0.7em 0.6em;
+   border-radius: 1.25rem;
+   margin-top: 30px;
+   font-size: 0.9em;
+   border: 2px solid transparent;
+   -webkit-appearance: button;
+   -moz-appearance: button;
+   appearance: button;
+   text-decoration: none;
+}
+.submit-btn:hover {
+   background-color: #fff;
+   color: #2f195f;
+   border-color: #2f195f;
+   -webkit-transition: all 0.4s;
+   -moz-transition: all 0.4s;
+   transition: all 0.4s;
+}
+
+.fa-edit {
+   color: #1c2294;
+   font-size: 36px;
+}
+
+.fa-upload:hover {
+   opacity: 1;
+}
+.fa-upload {
+   font-size: 100px;
+   opacity: 0.8;
+   color: #1c2294;
+}
+
+.project__edit--url {
+   display: inline-block;
+   width: 70px;
+   height: 54px;
+   margin: 0 0 0 50em;
+}
+
+.title-container {
+   width: auto;
+   display: inline-block;
+   align-items: center;
+   height: 54px;
+   padding-top: 0.5em;
+}
+.upload-project-icon {
+   margin: 1.5em 0;
+}
+
+.no-project-title {
+   color: #1c2294;
+}
