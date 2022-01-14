@@ -130,7 +130,6 @@ export const ProjectFormComponent = {
                   this.projectDescription
                );
                this.id = result.ProjectID;
-               console.log("ProjectId:", this.id);
             } else {
                result = await updateProject();
                this.projectTitle = result.Title;
@@ -139,14 +138,14 @@ export const ProjectFormComponent = {
                this.websiteUrl = result.WebsiteURL;
             }
             await updateProjectUsers(this.id, this.teamMembers);
-            console.log("ProjectId:", updateProjectUsers);
             await updateProjectThumbnail(this.id, this.file);
-            console.log("ProjectId:", updateProjectThumbnail);
             this.success = true;
 
             setTimeout(
-               () => (window.location.href = "/pages/projects/projects.html"),
-               500
+               () =>
+                  (window.location.href =
+                     "/pages/user-project/user-project.html"),
+               1000
             );
          } catch (error) {
             console.log("error from project", error);
