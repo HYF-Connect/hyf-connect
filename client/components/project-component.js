@@ -1,6 +1,6 @@
 const ProjectComponent = {
-   props: ["project"],
-   template: `  
+  props: ["project"],
+  template: `  
   <div class="project__component--container">
     <div class="project__component--left">
       <div class="project__thumbnail">
@@ -9,10 +9,12 @@ const ProjectComponent = {
       </div>
       <div class="project__buttons">
         <div class="project__github--url">
-          <a v-bind:href="project.github_url" target="_blank" >see project</a>
+          <a v-bind:href="project.github_url" target="_blank" v-bind:disabled="" v-if="project.github_url" >see project</a>
+          <a v-else>see project</a>
         </div>
         <div class="project__website--url">
-          <a v-bind:href="project.website_url" target="_blank" >visit website</a>
+          <a v-bind:href="project.website_url" target="_blank" v-bind:disabled="" v-if="project.website_url" >visit website</a>
+          <a v-else>see project</a>
         </div>
       </div>
     </div>
@@ -28,10 +30,11 @@ const ProjectComponent = {
         </div>
     </div>
   </div>`,
-   methods: {
-      async navigate(userId) {
-         window.location.href = `../user-profile/user-profile.html?memberId=${userId}`;
-      },
-   },
+
+  methods: {
+    async navigate(userId) {
+      window.location.href = `../user-profile/user-profile.html?memberId=${userId}`;
+    },
+  },
 };
 export default ProjectComponent;
