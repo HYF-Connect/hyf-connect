@@ -1,0 +1,142 @@
+/* SIGN-UP PAGE */
+
+.sign-up-page {
+   background-color: #f7f7fc;
+   display: flex;
+   position: relative;
+   flex-direction: row;
+   justify-content: space-between;
+   font-family: "Poppins", sans-serif;
+   align-items: center;
+   box-sizing: border-box;
+   margin: 0;
+   height: 100vh;
+   width: auto;
+   z-index: 1;
+}
+
+/* SIGN-UP FORM SECTION */
+
+.sign-up-form {
+   max-width: 520px;
+   order: 2;
+   margin: 60px auto;
+   font-family: "Poppins", sans-serif;
+   background: #f7f7fc;
+   text-align: left;
+   padding: 40px;
+   border-radius: 10px;
+   font-weight: 500;
+}
+
+.form__label {
+   color: #2f195f;
+   display: inline-block;
+   margin: 18px 0 15px;
+   font-size: 0.8em;
+   text-transform: capitalize;
+   letter-spacing: 0.1em;
+   font-weight: bold;
+}
+
+.form__input {
+   display: block;
+   padding: 10px 6px;
+   width: 95%;
+   box-sizing: border-box;
+   border: none;
+   border-radius: 20px;
+   border-bottom: 1px solid #ddd;
+   color: #555;
+   outline: none;
+}
+
+input[type="checkbox"] {
+   color: rgb(36, 35, 35);
+   display: inline-block;
+   background-color: #2f195f;
+   width: 16px;
+   margin: 0px 10px 0 0;
+   position: relative;
+   top: 2px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+   padding-left: 2em;
+}
+textarea[type="text"] {
+   padding-left: 1em;
+   padding-top: 1em;
+}
+.form__label-terms {
+   display: inline-block;
+   margin: 25px 0 15px;
+   font-size: 0.8em;
+   font-weight: 500;
+}
+
+.form__btn-submit {
+   background: #2f195f;
+   align-items: center;
+   width: 210px;
+   text-align: center;
+   font-family: "Montserrat", sans-serif;
+   color: #fff;
+   padding: 10px 20px;
+   margin: 20px 0 0 100px;
+   border-radius: 20px;
+   font-weight: bold;
+   border: 2px solid transparent;
+}
+.form__btn-submit:hover {
+   background-color: #fff;
+   color: #2f195f;
+   border-color: #2f195f;
+   -webkit-transition: all 0.4s;
+   -moz-transition: all 0.4s;
+   transition: all 0.4s;
+}
+.form__input-warning {
+   color: #b52055;
+   margin-top: 10px;
+   font-size: 0.8em;
+   font-weight: bold;
+}
+.form__title {
+   color: #2f195f;
+   font-size: 1.8em;
+   text-align: center;
+   font-weight: 500;
+}
+
+/* SIGN-UP MAIN SECTION */
+
+.main__trapezoid {
+   order: 1;
+   position: relative;
+   text-align: center;
+   border-left: 48vw solid #dfd7ef;
+   border-top: 10vw solid transparent;
+   border-bottom: 10vw solid transparent;
+   width: 0;
+   height: 54vw;
+   z-index: 1;
+}
+
+.main__text-box {
+   font-family: "Poppins", sans-serif;
+   position: absolute;
+   text-align: left;
+   padding-top: 3vw;
+   left: 10vw;
+   color: #1c2294;
+   font-size: 3.7em;
+   font-weight: 600;
+   line-height: 1.3em;
+   z-index: 1;
+}
+
+.main__text-left {
+   padding-left: 3vw;
+}
