@@ -47,13 +47,13 @@ export const FormSection = {
       </div>
       <div class="profile-form-group"> 
          <label class="profile-form__label">Nationality</label>
-          <div class="select-container">
+         <div class="select-container">
                <select class="profile-form__select" v-model="nationality">
                   <option v-for="nationality in nationalities" v-bind:value="nationality.NationalityID">
                      {{ nationality.Country }}
                   </option>
                </select>
-          </div>
+         </div>
       </div>
       <div class="profile-form-group"> 
          <label class="profile-form__label">Language</label>
