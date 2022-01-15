@@ -9,6 +9,8 @@
    font-family: "Poppins", sans-serif;
    align-items: center;
    box-sizing: border-box;
+   -moz-box-sizing: content-box;
+   -webkit-box-sizing: content-box;
    margin: 0;
    height: 100vh;
    width: auto;
@@ -18,9 +20,13 @@
 /* SIGN-UP FORM SECTION */
 
 .sign-up-form {
-   max-width: 520px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   max-width: 600px;
    order: 2;
    margin: 60px auto;
+   justify-self: center;
    font-family: "Poppins", sans-serif;
    background: #f7f7fc;
    text-align: left;
@@ -33,7 +39,7 @@
    color: #2f195f;
    display: inline-block;
    margin: 18px 0 15px;
-   font-size: 0.8em;
+   font-size: clamp(0.3rem, 3.2vw - 1.1rem, 0.9rem);
    text-transform: capitalize;
    letter-spacing: 0.1em;
    font-weight: bold;
@@ -42,7 +48,7 @@
 .form__input {
    display: block;
    padding: 10px 6px;
-   width: 95%;
+   width: 100%;
    box-sizing: border-box;
    border: none;
    border-radius: 20px;
@@ -72,19 +78,24 @@ textarea[type="text"] {
 .form__label-terms {
    display: inline-block;
    margin: 25px 0 15px;
-   font-size: 0.8em;
+   font-size: clamp(0.3rem, 3.2vw - 1.1rem, 0.9rem);
    font-weight: 500;
+}
+.terms-box {
+   margin-left: 0.7em;
+   margin-top: 0.3em;
+   height: 3em;
 }
 
 .form__btn-submit {
    background: #2f195f;
    align-items: center;
-   width: 210px;
+   width: 100%;
    text-align: center;
    font-family: "Montserrat", sans-serif;
    color: #fff;
    padding: 10px 20px;
-   margin: 20px 0 0 100px;
+   margin-top: 20px;
    border-radius: 20px;
    font-weight: bold;
    border: 2px solid transparent;
@@ -100,12 +111,13 @@ textarea[type="text"] {
 .form__input-warning {
    color: #b52055;
    margin-top: 10px;
-   font-size: 0.8em;
+   margin-left: 20px;
+   font-size: clamp(0.3rem, 3.2vw - 1.1rem, 0.9rem);
    font-weight: bold;
 }
 .form__title {
    color: #2f195f;
-   font-size: 1.8em;
+   font-size: clamp(1rem, 4.7vw - 1rem, 1.875rem);
    text-align: center;
    font-weight: 500;
 }
@@ -121,7 +133,7 @@ textarea[type="text"] {
    border-bottom: 10vw solid transparent;
    width: 0;
    height: 54vw;
-   z-index: 1;
+   z-index: 2;
 }
 
 .main__text-box {
@@ -131,10 +143,10 @@ textarea[type="text"] {
    padding-top: 3vw;
    left: 10vw;
    color: #1c2294;
-   font-size: 3.7em;
+   font-size: clamp(2rem, 9.1vw - 2rem, 3.7rem);
    font-weight: 600;
    line-height: 1.3em;
-   z-index: 1;
+   z-index: 100;
 }
 
 .main__text-left {
