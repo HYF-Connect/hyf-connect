@@ -9,7 +9,6 @@ const MainSection = {
    },
    template: `
       <div class="project__banner--container">
-      <div class="project-trapezoid"></div>
          <h2 class="project__banner--title">Discover all the <span style="color:white">projects</span> built by HYF students</h2>
          <img src="../../images/projects/project-page-banner.png" alt="project image" class="project__banner--image">
       </div>
@@ -30,7 +29,7 @@ const MainSection = {
             Next</button>
          </li>
       </ul>
-      </nav>;
+      </nav>
 
   `,
    computed: {
