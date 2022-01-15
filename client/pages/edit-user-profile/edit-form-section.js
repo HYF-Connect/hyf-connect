@@ -21,7 +21,7 @@ export const FormSection = {
       MultiSelect,
    },
    template: `
-   <form class="user-profile-form" @submit.prevent="handleSubmit" >
+   <form class="user-profile-form" @submit.prevent="handleSubmit">
       <div class="alert alert-success" role="alert" v-if="success">
          Your profile is successfully saved! 
       </div>
@@ -101,7 +101,7 @@ export const FormSection = {
          </textarea>
       </div>
       <div class = "profile-form_btn-right">
-         <button class = "profile-form__btn-submit"> save </button>
+         <button class = "profile-form__btn-submit">save</button>
       </div>
    </form>
    `,
