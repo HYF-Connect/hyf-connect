@@ -80,7 +80,6 @@
 .members-ticket__card-icons {
   display: flex;
   justify-content: flex-end;
-  background-color: rgb(231, 228, 10);
   padding-left: 20px;
   margin: 15px 20px;
   width: 40%;
