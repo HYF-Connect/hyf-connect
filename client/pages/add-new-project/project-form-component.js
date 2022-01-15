@@ -34,7 +34,7 @@ export const ProjectFormComponent = {
          </div>
          <div class="addNewProject__form-textarea">
             <label class="addNewProject__form--label">Description</label>
-            <textarea rows="4" class="textarea-description" type="text" v-model="projectDescription">
+            <textarea rows="4" class="textarea-description" type="text" maxlength="256" v-model="projectDescription">
             Describe your project </textarea>
          </div>
          <div class="addNewProject__form-group">
