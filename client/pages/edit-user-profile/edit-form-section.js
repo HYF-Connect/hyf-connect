@@ -81,15 +81,15 @@ export const FormSection = {
       </div>
       <div class="profile-form-group"> 
          <label class="profile-form__label">GitHub</label>
-         <input class="profile-form__input" type="text" v-model="gitHub">
+         <input class="profile-form__input" type="text" placeholder="https://example.com"  v-model="gitHub">
       </div>
       <div class="profile-form-group"> 
          <label class="profile-form__label">Website</label>
-         <input class="profile-form__input" type="text" v-model="website">
+         <input class="profile-form__input" type="text"  placeholder="https://example.com"  v-model="website">
       </div>
       <div class="profile-form-group"> 
          <label class="profile-form__label">LinkedIn</label>
-         <input class="profile-form__input" type="text" v-model="linkedIn">
+         <input class="profile-form__input" type="text" placeholder="https://example.com"  v-model="linkedIn">
       </div>
       <div class="profile-form-group"> 
          <label class="profile-form__label">My Skills</label>
