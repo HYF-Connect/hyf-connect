@@ -56,7 +56,7 @@
    margin-left: 0.8em;
    padding: 0.5em;
    width: 10em;
-   height: 6em;
+   height: 5.4em;
    overflow: hidden;
 }
 
@@ -64,11 +64,8 @@ input[type="file"] {
    color: transparent;
 }
 
-#inputFileToLoad::-webkit-file-upload-button {
-   visibility: hidden;
-}
-#inputFileToLoad::before {
-   content: "upload photo";
+input[type="file"]::file-selector-button {
+   content: "upload a photo";
    display: inline-block;
    width: 9em;
    text-align: center;
@@ -77,18 +74,18 @@ input[type="file"] {
    border: 2px solid transparent;
    font-family: "Montserrat", sans-serif;
    cursor: pointer;
-   border-radius: 20px;
-   padding: 0.6em 1em;
+   border-radius: 1.7rem;
+   padding: 0.7em 1.2em;
    outline: none;
    white-space: nowrap;
    -webkit-user-select: none;
    cursor: pointer;
    font-weight: 500;
-   font-size: 0.9em;
-   z-index: 100;
+   font-size: clamp(0.7rem, 0.8vw + 0.1rem, 0.875rem);
+   text-transform: lowercase;
 }
 
-#inputFileToLoad:hover::before {
+input[type="file"]:hover::-webkit-file-upload-button {
    background-color: #fff;
    color: #2f195f;
    border-color: #2f195f;

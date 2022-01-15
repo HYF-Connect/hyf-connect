@@ -183,6 +183,10 @@
    padding-left: 15px;
    margin-left: 2.6em;
 }
+.bg-pill-hyf {
+   background-color: #2f195f;
+   margin: 5px 3px 0 0;
+}
 .submit-btn {
    background: #2f195f;
    justify-content: center;
@@ -255,7 +259,7 @@ textarea[type="text"] {
    padding-top: 1em;
 }
 input[type="file"]::file-selector-button {
-   content: "choose file";
+   content: "upload a photo";
    display: inline-block;
    width: 9em;
    text-align: center;
