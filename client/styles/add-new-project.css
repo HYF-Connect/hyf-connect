@@ -3,6 +3,8 @@
    display: flex;
    flex-direction: column;
    box-sizing: border-box;
+   -moz-box-sizing: content-box;
+   -webkit-box-sizing: content-box;
    background: #f7f7fc;
    flex-direction: column;
    z-index: 8;
@@ -20,7 +22,8 @@
 }
 
 .addNewProject__banner {
-   display: absolute;
+   display: flex;
+   align-items: center;
    width: auto;
    height: 13rem;
    justify-content: center;
@@ -30,13 +33,11 @@
 }
 
 .addNewProject__title {
-   position: absolute;
+   position: relative;
    color: #1c2294;
-   font-size: 3em;
-   margin-top: 1.6em;
-   margin-left: 9.1em;
    font-family: "Poppins", sans-serif;
    font-weight: 500;
+   font-size: clamp(1.5rem, 8.7vw - 2.3rem, 3.125rem);
    z-index: 100;
 }
 .addNewProject__container {
@@ -64,21 +65,23 @@
    flex-direction: row;
    justify-content: space-around;
    align-items: center;
+   align-content: center;
    font-family: "Poppins", sans-serif;
    width: 40em;
    padding: 0.8em;
-   height: 5em;
+   height: 5.5em;
+   margin-top: 0.5em;
 }
 .multi-select {
    display: flex;
    flex-direction: row;
    justify-content: flex-start;
    align-items: center;
+   align-content: center;
    background: #f7f7fc;
    font-family: "Poppins", sans-serif;
-   width: 100%;
    width: 40em;
-   height: 3em;
+   height: 5em;
    padding: 2em 0;
 }
 
@@ -87,13 +90,15 @@
    display: flex;
    flex-direction: row;
    background-color: #fff;
-   padding: 0.5em 1.2em;
-   width: 30em;
+   padding: 0.5em 0.8em;
+   width: 29em;
    height: 3em;
-   margin: 2em 0 2em 4.3em;
+   margin: 3em 0 3em 4.3em;
    box-sizing: border-box;
+   -moz-box-sizing: content-box;
+   -webkit-box-sizing: content-box;
    border: none;
-   border-radius: 1.25rem;
+   border-radius: 1.7rem;
    color: rgb(39, 39, 39);
    outline: none;
    overflow-wrap: break-word;
@@ -112,26 +117,30 @@
    font-family: "Poppins", sans-serif;
    width: 40em;
    padding: 0.8em;
-   height: 12em;
+   height: 13em;
+   margin: 0.8em 0 0.9em 0;
 }
 #membersDropDown {
    justify-content: space-start;
    background-color: #fff;
-   padding: 0.5em 1.2em;
-   margin-left: 2.6em;
-   width: 16em;
+   padding: 0.5em 1em;
+   margin: 0 0 0.6em 2.6em;
+   width: 23em;
    height: 3em;
    box-sizing: border-box;
+   -moz-box-sizing: content-box;
+   -webkit-box-sizing: content-box;
    border: none;
-   border-radius: 1.25rem;
+   border-radius: 1.7rem;
    color: rgb(39, 39, 39);
    outline: none;
 }
+
 .dropdown-menu {
-   width: 16em;
    outline: none;
    border: none;
 }
+
 .addNewProject__form--label {
    color: #000000;
    display: inline-flex;
@@ -140,7 +149,7 @@
    width: 12em;
    margin: 7px 0;
    padding: 8px 0 8px 0;
-   font-size: 0.9em;
+   font-size: clamp(0.5rem, 2.7vw - 0.7rem, 1rem);
    text-transform: capitalize;
    letter-spacing: 0.1em;
 }
@@ -152,13 +161,13 @@
    font-family: "Poppins", sans-serif;
    width: 12em;
    margin: 7px 0;
-   padding: 8px 0 8px 0;
-   font-size: 0.9em;
+   padding: 8px 0 8px 9px;
+   font-size: clamp(0.5rem, 2.7vw - 0.7rem, 1rem);
    text-transform: capitalize;
    letter-spacing: 0.1em;
 }
 .thumbnail-label {
-   margin: 7em 0 0 1em;
+   margin: 7em 0 0 0.6em;
 }
 .addNewProject__button {
    display: flex;
@@ -181,9 +190,9 @@
    color: #fff;
    padding: 0.6em;
    margin: 50px 0 5px 0;
-   border-radius: 1.25rem;
+   border-radius: 1.7rem;
    font-weight: 500;
-   font-size: 0.9em;
+   font-size: clamp(0.5rem, 2.7vw - 0.7rem, 1rem);
    border: 2px solid transparent;
 }
 .submit-btn:hover {
@@ -196,9 +205,9 @@
 }
 .thumbnail-area__img {
    display: flex;
+   justify-content: center;
    width: 27em;
    height: 14em;
-   margin-bottom: 3em;
 }
 .thumbnail-container {
    display: flex;
@@ -206,14 +215,15 @@
    justify-content: flex-start;
    align-content: center;
    width: 55em;
-   height: 15em;
-   margin: 0.7em 0 0 15em;
+   height: 16em;
+   margin: 0.8em 0 0 15em;
 }
 .img__thumbnail {
    object-fit: cover;
    width: 100%;
    height: 100%;
    overflow: hidden;
+   margin-top: 1.2em;
 }
 .outer-area {
    width: 32em;
@@ -222,24 +232,29 @@
    text-align: center;
    height: 15em;
    margin-left: 2.2em;
+   margin-top: 0.5em;
 }
 
 #inputFileToLoad {
    display: flex;
    flex-direction: column;
    height: 7em;
-   margin: 6.5em 0 0 2em;
+   margin: 8em 0 0 2em;
    overflow: hidden;
 }
 
 input[type="file"] {
    color: transparent;
 }
-
-#inputFileToLoad::-webkit-file-upload-button {
-   visibility: hidden;
+input[type="text"],
+input[type="url"] {
+   padding-left: 1.5em;
 }
-#inputFileToLoad::before {
+textarea[type="text"] {
+   padding-left: 1.5em;
+   padding-top: 1em;
+}
+input[type="file"]::file-selector-button {
    content: "choose file";
    display: inline-block;
    width: 9em;
@@ -249,17 +264,18 @@ input[type="file"] {
    border: 2px solid transparent;
    font-family: "Montserrat", sans-serif;
    cursor: pointer;
-   border-radius: 1.25rem;
+   border-radius: 1.7rem;
    padding: 0.7em 1.2em;
    outline: none;
    white-space: nowrap;
    -webkit-user-select: none;
    cursor: pointer;
    font-weight: 500;
-   font-size: 0.9em;
+   font-size: clamp(0.5rem, 2.7vw - 0.7rem, 1rem);
+   text-transform: lowercase;
 }
 
-#inputFileToLoad:hover::before {
+input[type="file"]:hover::-webkit-file-upload-button {
    background-color: #fff;
    color: #2f195f;
    border-color: #2f195f;
@@ -268,14 +284,16 @@ input[type="file"] {
    transition: all 0.4s;
 }
 .icon-thumbnail {
-   font-size: 16em;
+   font-size: 18em;
+   text-align: start;
    color: #dfd7ef;
+   margin-bottom: 3em;
 }
 
 .editProject__title {
    position: absolute;
    color: #ffff;
-   font-size: 3em;
+   font-size: clamp(1.5rem, 8.7vw - 2.3rem, 3.125rem);
    margin-top: 1.6em;
    margin-left: 12em;
    font-family: "Poppins", sans-serif;
