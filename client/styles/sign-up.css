@@ -5,6 +5,9 @@
    display: flex;
    position: relative;
    flex-direction: row;
+   flex: 0 1 auto;
+   flex-wrap: row wrap;
+   -webkit-flex-wrap: wrap;
    justify-content: space-between;
    font-family: "Poppins", sans-serif;
    align-items: center;
@@ -25,6 +28,7 @@
    justify-content: center;
    max-width: 600px;
    order: 2;
+   flex: 1 2 55%;
    margin: 60px auto;
    justify-self: center;
    font-family: "Poppins", sans-serif;
@@ -34,12 +38,26 @@
    border-radius: 10px;
    font-weight: 500;
 }
+@media screen and (max-width: 840px) {
+   .sign-up-form {
+      margin-top: 4px;
+   }
+   .main__trapezoid {
+      display: none;
+   }
+   .main__text-box {
+      display: none;
+   }
+   .form__btn-submit {
+      width: 80%;
+   }
+}
 
 .form__label {
    color: #2f195f;
    display: inline-block;
    margin: 18px 0 15px;
-   font-size: clamp(0.3rem, 3.2vw - 1.1rem, 0.9rem);
+   font-size: clamp(0.5rem, 0.8vw + 0.1rem, 0.875rem);
    text-transform: capitalize;
    letter-spacing: 0.1em;
    font-weight: bold;
@@ -54,6 +72,7 @@
    border-radius: 20px;
    border-bottom: 1px solid #ddd;
    color: #555;
+   font-size: clamp(0.6rem, 0.8vw + 0.2rem, 1rem);
    outline: none;
 }
 
@@ -78,7 +97,7 @@ textarea[type="text"] {
 .form__label-terms {
    display: inline-block;
    margin: 25px 0 15px;
-   font-size: clamp(0.3rem, 3.2vw - 1.1rem, 0.9rem);
+   font-size: clamp(0.5rem, 0.8vw + 0.1rem, 0.875rem);
    font-weight: 500;
 }
 .terms-box {
@@ -97,6 +116,7 @@ textarea[type="text"] {
    padding: 10px 20px;
    margin-top: 20px;
    border-radius: 20px;
+   font-size: clamp(0.5rem, 0.8vw + 0.1rem, 0.875rem);
    font-weight: bold;
    border: 2px solid transparent;
 }
@@ -112,7 +132,7 @@ textarea[type="text"] {
    color: #b52055;
    margin-top: 10px;
    margin-left: 20px;
-   font-size: clamp(0.3rem, 3.2vw - 1.1rem, 0.9rem);
+   font-size: clamp(0.5rem, 0.8vw + 0.1rem, 0.875rem);
    font-weight: bold;
 }
 .form__title {
@@ -126,6 +146,7 @@ textarea[type="text"] {
 
 .main__trapezoid {
    order: 1;
+   flex: 1 1 45%;
    position: relative;
    text-align: center;
    border-left: 48vw solid #dfd7ef;
