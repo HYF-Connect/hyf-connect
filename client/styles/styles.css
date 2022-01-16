@@ -17,6 +17,57 @@ body {
 }
 
 
+/* EDIT USER PROFILE PAGE */
+
+.edit-profile-page {
+   background-color: #f7f7fc;
+   display: flex;
+   flex-direction: column;
+   z-index: 8;
+}
+
+/* EDIT USER PROFILE MAIN SECTION */
+.edit-user__main {
+   position: relative;
+   z-index: 2;
+}
+
+.profile__main-arrow-right {
+   position: absolute;
+   width: 0;
+   height: 0;
+   right: 0;
+   margin-left: auto;
+   margin-top: 0;
+   border-top: 39vw solid #dfd7ef;
+   border-left: 85vw solid transparent;
+   z-index: 2;
+}
+.profile__main-arrow-left {
+   position: absolute;
+   width: 0;
+   height: 0;
+   left: 0;
+   margin-right: auto;
+   border-top: 20vw solid #dfd7ef;
+   border-right: 45vw solid transparent;
+   z-index: 3;
+}
+.edit-user__main-title {
+   position: absolute;
+   top: 0;
+   color: #f7f7fc;
+   width: 25%;
+   margin-left: 58%;
+   margin-top: 7%;
+   font-size: 3.8em;
+   font-weight: 600;
+   z-index: 100;
+}
+
+.edit-user__span {
+   color: #1c2294;
+}
 /* Members page*/
 
 .members-ticket {

@@ -167,6 +167,7 @@
 .projects-pagination--item__btn {
    color: rgba(28, 34, 148, 1);
    border: none;
+   background-color: transparent;
 }
 .projects-pagination--item :hover {
    border-bottom: solid 1px rgba(28, 34, 148, 1);

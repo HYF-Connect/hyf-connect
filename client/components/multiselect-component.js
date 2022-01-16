@@ -6,7 +6,7 @@ const multiSelect = {
    template: ` <div class="select-container">
                   <div class="select-menu">
                      <input v-bind:id="dropdownid" v-once class="form-control-ms addnewproject__form--input" type="text" placeholder="multiple answers are possible">
-                     <div class="pills">
+                     <div class="selected-tags">
                         <span class="badge rounded-pill bg-pill-hyf" v-on:click="removeSelected(s)" v-for="s in selectedValues">{{ s.label }} <i class="fas fa-times"></i></span>
                      </div>
                   </div>

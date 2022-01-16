@@ -21,7 +21,7 @@ export const FormSection = {
       MultiSelect,
    },
    template: `
-   <form class="user-profile-form" @submit.prevent="handleSubmit" >
+   <form class="user-profile-form" @submit.prevent="handleSubmit">
       <div class="alert alert-success" role="alert" v-if="success">
          Your profile is successfully saved! 
       </div>
@@ -47,13 +47,13 @@ export const FormSection = {
       </div>
       <div class="profile-form-group"> 
          <label class="profile-form__label">Nationality</label>
-          <div class="select-container">
+         <div class="select-container">
                <select class="profile-form__select" v-model="nationality">
                   <option v-for="nationality in nationalities" v-bind:value="nationality.NationalityID">
                      {{ nationality.Country }}
                   </option>
                </select>
-          </div>
+         </div>
       </div>
       <div class="profile-form-group"> 
          <label class="profile-form__label">Language</label>
@@ -81,15 +81,15 @@ export const FormSection = {
       </div>
       <div class="profile-form-group"> 
          <label class="profile-form__label">GitHub</label>
-         <input class="profile-form__input" type="text" v-model="gitHub">
+         <input class="profile-form__input" type="text" placeholder="https://example.com"  v-model="gitHub">
       </div>
       <div class="profile-form-group"> 
          <label class="profile-form__label">Website</label>
-         <input class="profile-form__input" type="text" v-model="website">
+         <input class="profile-form__input" type="text"  placeholder="https://example.com"  v-model="website">
       </div>
       <div class="profile-form-group"> 
          <label class="profile-form__label">LinkedIn</label>
-         <input class="profile-form__input" type="text" v-model="linkedIn">
+         <input class="profile-form__input" type="text" placeholder="https://example.com"  v-model="linkedIn">
       </div>
       <div class="profile-form-group"> 
          <label class="profile-form__label">My Skills</label>
@@ -101,7 +101,7 @@ export const FormSection = {
          </textarea>
       </div>
       <div class = "profile-form_btn-right">
-         <button class = "profile-form__btn-submit"> save </button>
+         <button class = "profile-form__btn-submit">save</button>
       </div>
    </form>
    `,
