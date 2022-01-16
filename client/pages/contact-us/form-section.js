@@ -1,7 +1,7 @@
 import { sendForm } from "../../src/data-access/api-calls/calls.js";
 
 export const FormSection = {
-   template: `
+  template: `
   <div id="section-contact-template" class="section">
       <form method="post" action="/contact#contact_form" id="contact__form" accept-charset="UTF-8" class="contact-form" @submit.prevent="handleSubmit">
       <div class="alert alert-danger" role="alert" v-if="messageError">
@@ -12,7 +12,7 @@ export const FormSection = {
        
         <div class="contact__text">
         <span class="contact__text">
-          <span class="contact__text_color">you have
+          <span class="contact__text_color">Do you have
           <span class="contact__text_white"> question </span>
           <span class="contact__text_purple"> or </span>
           <span class="contact__text_white"> suggestion</span>
@@ -44,43 +44,42 @@ export const FormSection = {
       </form>
   </div>
     `,
-   data() {
-      return {
-         name: "",
-         email: "",
-         message: "",
-         messageError: "",
-         messageCheck: "",
-         messageConfirm: "",
-         success: false,
-      };
-   },
-   methods: {
-      async handleSubmit() {
-         this.messageError =
-            this.message.length <= 500
-               ? ""
-               : "Message contains more than 500 characters!";
-         this.messageCheck =
-            this.message === this.messageConfirm
-               ? ""
-               : "Message do not match, more than 500 characters. Try again!";
-         try {
-            await sendForm(this.name, this.email, this.message);
-            this.errorMessage = "";
-            this.success = true;
-            setTimeout(
-               () =>
-                  (window.location.href = "/pages/contact-us/contact-us.html"),
-               500
-            );
-         } catch (error) {
-            this.errorMessage = error;
-            this.success = false;
-            console.log(error);
-         }
-      },
-   },
+  data() {
+    return {
+      name: "",
+      email: "",
+      message: "",
+      messageError: "",
+      messageCheck: "",
+      messageConfirm: "",
+      success: false,
+    };
+  },
+  methods: {
+    async handleSubmit() {
+      this.messageError =
+        this.message.length <= 500
+          ? ""
+          : "Message contains more than 500 characters!";
+      this.messageCheck =
+        this.message === this.messageConfirm
+          ? ""
+          : "Message do not match, more than 500 characters. Try again!";
+      try {
+        await sendForm(this.name, this.email, this.message);
+        this.errorMessage = "";
+        this.success = true;
+        setTimeout(
+          () => (window.location.href = "/pages/contact-us/contact-us.html"),
+          500
+        );
+      } catch (error) {
+        this.errorMessage = error;
+        this.success = false;
+        console.log(error);
+      }
+    },
+  },
 };
 
 export default FormSection;

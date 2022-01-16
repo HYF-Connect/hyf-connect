@@ -133,6 +133,14 @@
    font-size: 1em;
    cursor: pointer;
  }
+ .project__button >a:hover{
+   background-color: #fff;
+   color: #2f195f;
+   border-color: #2f195f;
+   -webkit-transition: all 0.4s;
+   -moz-transition: all 0.4s;
+   transition: all 0.4s;
+ }
 
 .project__button--disabled{
    background-color: gray;
@@ -149,9 +157,7 @@
    transition: all 0.4s;
 }
 
-.project__button a {
-   text-decoration: none;
-}
+
 
 .projects-pagination {
    list-style-type: none;
