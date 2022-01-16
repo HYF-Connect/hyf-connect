@@ -56,6 +56,7 @@
   font-size: 14px;
   text-decoration: none;
 }
+
 .about-visit-website:hover,
 .about-visit-project:hover {
   background-color: white;
@@ -149,19 +150,16 @@
     background-color: rgb(255, 255, 255);
     width: 90%;
   }
-
   .about-hyf-connect2 {
     background-color: #ffffff;
     width: 40%;
     margin: auto;
   }
-
   .about-hyf-connect {
     background-color: #ffffff;
     width: 100%;
     margin: 0 auto 50px auto;
   }
-
   .about-title h4 {
     width: 90%;
   }
