@@ -3,7 +3,7 @@ const ProjectSkillStore = require("../models/project-skill.js");
 const ProjectClassStore = require("../models/project-class.js");
 const ProjectUserStore = require("../models/user-project.js");
 const userManager = require("./user.js");
-
+const removeDuplicateValues = require("../utils/remove-duplicate");
 const projectManager = {
    createProject: async ({
       Title,
@@ -77,10 +77,12 @@ const projectManager = {
             where: { ProjectID: projectId },
          });
       }
-      for (let user of users) {
+      const filteredUsers = removeDuplicateValues(users);
+
+      for (let user of filteredUsers) {
          await ProjectUserStore.create({
             ProjectID: projectId,
-            UserID: user.value,
+            UserID: user,
          });
       }
    },

@@ -7,6 +7,7 @@ const sendEmail = require("../utils/send-email");
 const welcomeEmail = require("../utils/welcome-email");
 const userProjectStore = require("../models/user-project");
 const projectsStore = require("../models/project");
+const removeDuplicateValues = require("../utils/remove-duplicate");
 
 const saltRounds = 13;
 
@@ -99,10 +100,11 @@ const userManager = {
       await userSkillStore.destroy({
          where: { UserID: userId },
       });
-      for (let skill of skills) {
+      const filteredSkills = removeDuplicateValues(skills);
+      for (let skill of filteredSkills) {
          await userSkillStore.create({
             UserID: userId,
-            SkillID: skill.value,
+            SkillID: skill,
          });
       }
       return true;
@@ -111,10 +113,12 @@ const userManager = {
       await userLanguageStore.destroy({
          where: { UserID: userId },
       });
-      for (let language of languages) {
+      //Make sure the languages does not contain a duplicate value
+      const filteredLanguages = removeDuplicateValues(languages);
+      for (let language of filteredLanguages) {
          await userLanguageStore.create({
             UserID: userId,
-            LanguageID: language.value,
+            LanguageID: language,
          });
       }
       return true;
@@ -123,10 +127,11 @@ const userManager = {
       await userTypeStore.destroy({
          where: { UserID: userId },
       });
-      for (let type of types) {
+      const filteredTypes = removeDuplicateValues(types);
+      for (let type of filteredTypes) {
          await userTypeStore.create({
             UserID: userId,
-            TypeID: type.value,
+            TypeID: type,
          });
       }
       return true;
