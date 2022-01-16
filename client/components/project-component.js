@@ -1,6 +1,6 @@
 const ProjectComponent = {
-  props: ['project'],
-  template: `  
+   props: ["project"],
+   template: `  
   <div class="project__component--container">
     <div class="project__thumbnail">
       <img v-bind:src="project.thumbnail" v-if="project.thumbnail" alt="project thumbnail">
@@ -8,7 +8,9 @@ const ProjectComponent = {
     </div>
     <div class="project__description">
       <div class="project__title-container">
+       <div class="title_title">
         <h4 class="project__title" >{{project.title}}</h4>
+        </div>
         <div class="project__edit--url" v-if="project.edit_url">
           <a v-bind:href="'/pages/edit-project/edit-project.html?projectId=' + project.edit_url">  <i  class="far fa-edit"></i> </a>
         </div>
@@ -32,7 +34,7 @@ const ProjectComponent = {
         <a v-else> see project </a>
       </div>
     </div>
-  </div>`
-}
+  </div>`,
+};
 
 export default ProjectComponent;

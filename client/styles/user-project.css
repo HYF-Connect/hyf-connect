@@ -77,6 +77,9 @@
    margin-bottom: 4.5em;
    z-index: 5;
 }
+a {
+   -webkit-appearance: none;
+}
 .no-projects {
    display: flex;
    flex-direction: column;
@@ -112,6 +115,9 @@
 
 a.submit-btn {
    background: #2f195f;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
    text-align: center;
    width: 14em;
    height: 3.4em;
@@ -150,18 +156,16 @@ a.submit-btn {
 }
 
 .project__edit--url {
-   display: inline-block;
-   width: 70px;
-   height: 54px;
-   margin: 0 0 0 50em;
+   float: right;
+   z-index: 100;
 }
 
-.title-container {
-   width: auto;
+.project__title-container {
+   width: 100%;
    display: inline-block;
    align-items: center;
    height: 54px;
-   padding-top: 0.5em;
+   margin-top: 1.5em;
 }
 .upload-project-icon {
    margin: 1.5em 0;
@@ -169,4 +173,8 @@ a.submit-btn {
 
 .no-project-title {
    color: #1c2294;
+}
+
+.title_title {
+   float: left;
 }
