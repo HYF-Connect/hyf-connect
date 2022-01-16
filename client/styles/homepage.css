@@ -206,7 +206,7 @@
 .carousel__projects--btn {
   text-align: center;
   text-decoration: none;
-  padding: 15px 25px;
+  padding: 15px 30px;
   width: 120px;
   height: 50px;
   border-radius: 25px;
@@ -277,7 +277,9 @@
 }
 
 .testimonial__card {
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
   background-color: #ffffff;
   border: 1px solid #2f195f;
   border-radius: 20px;
