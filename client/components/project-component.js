@@ -1,6 +1,6 @@
 const ProjectComponent = {
-   props: ["project"],
-   template: `  
+  props: ["project"],
+  template: `  
   <div class="project__component--container">
     <div class="project__thumbnail">
       <img v-bind:src="project.thumbnail" v-if="project.thumbnail" alt="project thumbnail">
@@ -35,6 +35,11 @@ const ProjectComponent = {
       </div>
     </div>
   </div>`,
+  methods: {
+    async navigate(userId) {
+      window.location.href = `../user-profile/user-profile.html?memberId=${userId}`;
+    },
+  },
 };
 
 export default ProjectComponent;
