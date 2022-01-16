@@ -13,15 +13,43 @@ const userProfileProjectsComponent = {
       <div class="user-profile-projects" v-if="projects.length>0">
         <h1 class="user-profile-projects-title">My projects</h1>
         <div class="user-profile-projects-cards">
-            <template v-for="project in projects">
+            <template v-for="project in showingProjects">
                 <project-component :project="project"/>
             </template>
+              <nav class="projects-nav" aria-label="Page navigation example">
+                <ul class="projects-pagination">
+                  <li class="projects-pagination--item">
+                    <button class="projects-pagination--item__btn" v-on:click="previousPage" v-bind:disabled="disablePrevious">
+                      Previous</button>
+                  </li>
+                  {{ pageCount }}
+                  <li class="projects-pagination--item">
+                    <button class="projects-pagination--item__btn" v-on:click="nextPage" v-bind:disabled="disableNext">
+                      Next </button>
+                  </li>
+                </ul>
+              </nav>
         </div>  
       </div>
       `,
+  computed: {
+    showingProjects: function () {
+      // `this` points to the vm instance
+      const startingPosition = (this.pageCount - 1) * 3;
+      return this.projects.slice(startingPosition, startingPosition + 3);
+    },
+    disablePrevious: function () {
+      return this.pageCount === 1;
+    },
+    disableNext: function () {
+      const limit = Math.ceil(this.projects.length / 3);
+      return this.pageCount === limit;
+    },
+  },
   data() {
     return {
       projects: [],
+      pageCount: 1,
     };
   },
   methods: {
@@ -48,6 +76,13 @@ const userProfileProjectsComponent = {
           return part.split("=")[1];
         }
       }
+    },
+
+    nextPage() {
+      this.pageCount++;
+    },
+    previousPage() {
+      this.pageCount--;
     },
   },
   mounted: function () {

@@ -18,185 +18,6 @@ body {
    color: #1c2294;
 }
 
-/* PROJECTS-PAGE */
-
-.project__banner--container {
-   background-color: #ffff;
-   width: 100%;
-   margin-bottom: 3vh;
-}
-.project-trapezoid {
-   position: absolute;
-   width: 0;
-   height: 0;
-   left: 0;
-   margin-right: auto;
-   border-top: 30vw solid #dfd7ef;
-   border-right: 200vw solid transparent;
-   z-index: 2;
-}
-
-.project__banner--title {
-   position: relative;
-   font-family: Montserrat, sans serif;
-   font-weight: 500;
-   font-size: 3vw;
-   color: #1c2294;
-   padding: 1.8em 3em 1em 3em;
-   z-index: 100;
-}
-
-.project__banner--image {
-   position: relative;
-   width: 100%;
-   height: auto;
-   padding-right: 5vw;
-   padding-left: 25vw;
-   z-index: 100;
-}
-
-/* SIGN-UP PAGE */
-
-.sign-up-page {
-   background-color: #f7f7fc;
-   display: flex;
-   position: relative;
-   flex-direction: row;
-   justify-content: space-between;
-   font-family: "Poppins", sans-serif;
-   align-items: center;
-   box-sizing: border-box;
-   margin: 0;
-   height: 100vh;
-   width: auto;
-   z-index: 1;
-}
-
-/* SIGN-UP FORM SECTION */
-
-.sign-up-form {
-   max-width: 520px;
-   order: 2;
-   margin: 60px auto;
-   font-family: "Poppins", sans-serif;
-   background: #f7f7fc;
-   text-align: left;
-   padding: 40px;
-   border-radius: 10px;
-   font-weight: 500;
-}
-
-.form__label {
-   color: #2f195f;
-   display: inline-block;
-   margin: 18px 0 15px;
-   font-size: 0.8em;
-   text-transform: capitalize;
-   letter-spacing: 0.1em;
-   font-weight: bold;
-}
-
-.form__input {
-   display: block;
-   padding: 10px 6px;
-   width: 95%;
-   box-sizing: border-box;
-   border: none;
-   border-radius: 20px;
-   border-bottom: 1px solid #ddd;
-   color: #555;
-   outline: none;
-}
-
-input[type="checkbox"] {
-   color: rgb(36, 35, 35);
-   display: inline-block;
-   background-color: #2f195f;
-   width: 16px;
-   margin: 0px 10px 0 0;
-   position: relative;
-   top: 2px;
-}
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-   padding-left: 2em;
-}
-textarea[type="text"] {
-   padding-left: 1em;
-   padding-top: 1em;
-}
-.form__label-terms {
-   display: inline-block;
-   margin: 25px 0 15px;
-   font-size: 0.8em;
-   font-weight: 500;
-}
-
-.form__btn-submit {
-   background: #2f195f;
-   align-items: center;
-   width: 210px;
-   text-align: center;
-   font-family: "Montserrat", sans-serif;
-   color: #fff;
-   padding: 10px 20px;
-   margin: 20px 0 0 100px;
-   border-radius: 20px;
-   font-weight: bold;
-   border: 2px solid transparent;
-}
-.form__btn-submit:hover {
-   background-color: #fff;
-   color: #2f195f;
-   border-color: #2f195f;
-   -webkit-transition: all 0.4s;
-   -moz-transition: all 0.4s;
-   transition: all 0.4s;
-}
-.form__input-warning {
-   color: #b52055;
-   margin-top: 10px;
-   font-size: 0.8em;
-   font-weight: bold;
-}
-.form__title {
-   color: #2f195f;
-   font-size: 1.8em;
-   text-align: center;
-   font-weight: 500;
-}
-
-/* SIGN-UP MAIN SECTION */
-
-.main__trapezoid {
-   order: 1;
-   position: relative;
-   text-align: center;
-   border-left: 48vw solid #dfd7ef;
-   border-top: 10vw solid transparent;
-   border-bottom: 10vw solid transparent;
-   width: 0;
-   height: 54vw;
-   z-index: 1;
-}
-
-.main__text-box {
-   font-family: "Poppins", sans-serif;
-   position: absolute;
-   text-align: left;
-   padding-top: 3vw;
-   left: 10vw;
-   color: #1c2294;
-   font-size: 3.7em;
-   font-weight: 600;
-   line-height: 1.3em;
-   z-index: 1;
-}
-
-.main__text-left {
-   padding-left: 3vw;
-}
 
 /* EDIT USER PROFILE PAGE */
 
@@ -249,6 +70,7 @@ textarea[type="text"] {
 .edit-user__span {
    color: #1c2294;
 }
+<<<<<<< HEAD
 
 /* EDIT USER PROFILE FORM SECTION */
 .user-profile-form {
@@ -400,6 +222,108 @@ select:focus {
    margin-top: 10px;
    font-size: 0.8em;
    font-weight: bold;
+=======
+/* Members page*/
+
+.members-ticket {
+   background-color: #f7f7fc;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding-top: 15px;
+}
+.members-ticket__card {
+   display: flex;
+   width: 952px;
+   height: 100px;
+   left: 245px;
+   background: #ffffff;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   border-radius: 10px;
+   margin: 10px;
+}
+.members-ticket__card-content {
+   width: 750px;
+   padding-left: 20px;
+   margin: 15px 20px;
+   padding-right: 100px;
+   font-family: "Poppins", sans-serif;
+}
+
+.members-ticket__card-img {
+   margin: 15px 20px;
+}
+
+.members-ticket__card-icons {
+   padding-left: 20px;
+   margin: 15px 20px;
+   float: right;
+   width: 300px;
+   display: flex;
+   justify-content: space-evenly;
+}
+.members-ticket__card-content--name {
+   color: #1c2294;
+   font-weight: 600;
+   font-size: 14px;
+}
+.members-ticket__card-content--title {
+   color: black;
+   font-weight: 600;
+   font-size: 14px;
+}
+.members-ticket__card-img--member {
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+}
+
+.members-ticket__card-icon {
+   height: 50px;
+}
+.members-ticket nav {
+   margin: 20px auto;
+}
+.members-ticket a {
+   margin: auto 10px;
+   color: rgba(28, 34, 148, 1);
+}
+.members-banner__text {
+   color: white;
+   margin-left: 700px;
+   margin-top: -200px;
+}
+.members-form__select {
+   position: relative;
+   left: 70%;
+   margin-top: 10px;
+}
+
+.members-form__select--options {
+   width: 120px;
+   margin-left: 10px;
+   background: rgba(223, 215, 239, 1);
+}
+.members-pagination {
+   list-style-type: none;
+   color: rgba(28, 34, 148, 1);
+   justify-self: center;
+}
+.members-pagination--item {
+   display: inline-block;
+   margin: 10px;
+}
+.members-pagination--item__btn {
+   color: rgba(28, 34, 148, 1);
+   border: none;
+}
+.members-pagination--item :hover {
+   border-bottom: solid 1px rgba(28, 34, 148, 1);
+}
+.members-banner__header {
+   font-size: 50px;
+>>>>>>> f753c4b1a532cc33e984668148fe8912b7b2ca98
 }
 
 /* *****  contact us  *****/
