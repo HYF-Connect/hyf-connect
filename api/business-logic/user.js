@@ -3,6 +3,11 @@ const userStore = require("../models/user");
 const userSkillStore = require("../models/user-skill");
 const userLanguageStore = require("../models/user-language");
 const userTypeStore = require("../models/user-type");
+const sendEmail = require("../utils/send-email");
+const welcomeEmail = require("../utils/welcome-email");
+const userProjectStore = require("../models/user-project");
+const projectsStore = require("../models/project");
+const removeDuplicateValues = require("../utils/remove-duplicate");
 
 const saltRounds = 13;
 
@@ -14,6 +19,21 @@ const userManager = {
          saltRounds
       );
       await userStore.create(newUser);
+      const mailOptions = {
+         from: "hyfconnect@gmail.com>", // sender address
+         to: Email, // list of receivers
+         subject: `Welcome ${FirstName} to HYFConnect`, // Subject line
+         //text: text, //, // plaintext body
+         html: welcomeEmail.welcome(FirstName), // You can choose to send an HTML body instead "<b>Hello world ✔</b>";
+      };
+      sendEmail.sendMail(mailOptions, function (error, info) {
+         if (error) {
+            console.log("error" + error);
+         } else {
+            console.log("Message sent: " + info.response);
+         }
+      });
+
       return newUser;
    },
    createUserSkill: async ({
@@ -80,27 +100,25 @@ const userManager = {
       await userSkillStore.destroy({
          where: { UserID: userId },
       });
-      console.log("The nice iterable list of skills: ", skills);
-      for (let skill of skills) {
-         console.log(skill);
-         console.log("Business-Logic - Writing Skill:", skill);
+      const filteredSkills = removeDuplicateValues(skills);
+      for (let skill of filteredSkills) {
          await userSkillStore.create({
             UserID: userId,
-            SkillID: skill.value,
+            SkillID: skill,
          });
       }
       return true;
    },
    updateUserLanguages: async (userId, languages) => {
-      console.log("Business-Logic - User ID", userId);
-      console.log("Business-Logic - Languages", languages);
       await userLanguageStore.destroy({
          where: { UserID: userId },
       });
-      for (let language of languages) {
+      //Make sure the languages does not contain a duplicate value
+      const filteredLanguages = removeDuplicateValues(languages);
+      for (let language of filteredLanguages) {
          await userLanguageStore.create({
             UserID: userId,
-            LanguageID: language.value,
+            LanguageID: language,
          });
       }
       return true;
@@ -109,11 +127,11 @@ const userManager = {
       await userTypeStore.destroy({
          where: { UserID: userId },
       });
-      for (let type of types) {
-         console.log("Business-Logic - Writing Type:", type);
+      const filteredTypes = removeDuplicateValues(types);
+      for (let type of filteredTypes) {
          await userTypeStore.create({
             UserID: userId,
-            TypeID: type.value,
+            TypeID: type,
          });
       }
       return true;
@@ -144,6 +162,20 @@ const userManager = {
       const userById = await userStore.findOne({ where: { UserID: userId } });
       return userById;
    },
+   getAllUserProjects: async (userId) => {
+      const allUserProjects = await userProjectStore.findAll({
+         where: { UserID: userId },
+      });
+      const result = [];
+      for (let userProject of allUserProjects) {
+         const project = await projectsStore.findOne({
+            where: { ProjectID: userProject.ProjectID },
+         });
+         result.push(project);
+      }
+      return result;
+   },
+
    deleteUserProfile: async ({ UserID }) => {
       await userStore.destroy({
          where: { UserID: UserID },

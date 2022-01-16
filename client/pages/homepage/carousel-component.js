@@ -2,9 +2,6 @@ const CarouselComponent = {
   template: `
   <div class="homepage__carousel">
       <h2 class="carousel__title">see what we have achieved as HYF community!</h2>
-      <!-- CHANGES
-      <h3 class="carousel__subtittle">and many more projects to build...</h3>
-      -->
       <div class="homepage-carousel-container">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
@@ -26,12 +23,12 @@ const CarouselComponent = {
             <div class="carousel-item">
               <img class="d-block w-100" src="/images/homepage/projectcard_class11-12_helpy.png" alt="Fourth slide">
               <h2 class="slide__tittle">helpy / class 11-12</h2>
-              <p class="slide__description">Helpy is a sharing platform, its goal is to link those people who need help with their groceries to volunteers who are willing to help.</p>
+              <p class="slide__description">Platform to link people who need help with their groceries to volunteers who are willing to help.</p>
             </div>
             <div class="carousel-item">
               <img class="d-block w-100" src="/images/homepage/projectcard_class9-10_hearmystory.png" alt="Fifth slide">
               <h2 class="slide__tittle">hearmystory / class 9-10</h2>
-              <p class="slide__description"> <br>Be heard in your words, on your own terms.</p>
+              <p class="slide__description">Be heard in your words, <br>on your own terms.</p>
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
@@ -44,7 +41,7 @@ const CarouselComponent = {
           </a>
         </div>
       </div>
-      <a class="carousel__projects--btn" href="pages/projects/projects.html">see all the projects</a>
+      <a class="carousel__projects--btn" href="/pages/projects/projects.html">projects</a>
     </div>
 `
 }

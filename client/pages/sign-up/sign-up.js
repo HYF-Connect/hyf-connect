@@ -16,7 +16,7 @@ const SignUpPage = Vue.createApp({
          <main-section></main-section>
          <form-section></form-section>
       </div>
-    <footer-component></footer-component>
+      <footer-component></footer-component>
       `,
 }).mount("#sign-up");
 

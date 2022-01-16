@@ -7,6 +7,7 @@ userRoutes.get("/", userController.getAll);
 userRoutes.get("/:userId/skill", userController.getSkills);
 userRoutes.get("/:userId/language", userController.getLanguages);
 userRoutes.get("/:userId/type", userController.getTypes);
+userRoutes.get("/:userId/projects", userController.getProjects);
 userRoutes.post("/register", userController.postRegister);
 userRoutes.put("/:userId/profile", userController.putUserProfile);
 userRoutes.put("/:userId/picture", userController.putUserPicture);
@@ -19,8 +20,8 @@ userRoutes.post("/:userId/type", userController.postType);
 userRoutes.delete("/:userId/profile", userController.deleteUserProfile);
 userRoutes.delete("/:userId/skill/:skillId", userController.deleteSkill);
 userRoutes.delete(
-   "/:userId/language/:languageId",
-   userController.deleteLanguage
+  "/:userId/language/:languageId",
+  userController.deleteLanguage
 );
 userRoutes.delete("/:userId/type/:typeId", userController.deleteType);
 userRoutes.get("/:userId", userController.getById);

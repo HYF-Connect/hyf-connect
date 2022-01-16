@@ -38,75 +38,70 @@ export const FormSection = {
          <input class="profile-form__input" type="email" required readonly v-model="email">
       </div>
       <div class="profile-form-group">
-         <div class="profile-form-list"> 
             <label class="profile-form__label">User Type</label>
             <multi-select v-bind:dropdownid="'typesDropDown'" v-bind:options="types" v-bind:selection="selectedTypes" v-on:new-selection="updateUserTypes"></multi-select>
-         </div>
       </div>
       <div class="profile-form-group"> 
          <label class="profile-form__label">Job Title</label>
          <input class="profile-form__input" type="text" v-model="jobTitle">
       </div>
       <div class="profile-form-group"> 
-      <div class="profile-form-list"> 
          <label class="profile-form__label">Nationality</label>
-         <select class="profile-form__select" v-model="nationality">
-            <option v-for="nationality in nationalities" v-bind:value="nationality.NationalityID">
-               {{ nationality.Country }}
-            </option>
-         </select>
-      </div>
-      </div>
-      <div class="profile-form-group"> 
-      <div class="profile-form-list"> 
-         <label class="profile-form__label">Language</label>
-         <multi-select v-bind:dropdownid="'languagesDropDown'" v-bind:options="languages" v-bind:selection="selectedLanguages" v-on:new-selection="updateUserLanguages"></multi-select>
-      </div>
-      </div>
-      <div class="profile-form-group"> 
-         <div class="profile-form-list"> 
-         <label class="profile-form__label">Region</label>
-         <select class="profile-form__select" v-model="region">
-            <option v-for="region in regions" v-bind:value="region.RegionID">
-                  {{ region.Name }}
-            </option>
-         </select>
+         <div class="select-container">
+               <select class="profile-form__select" v-model="nationality">
+                  <option v-for="nationality in nationalities" v-bind:value="nationality.NationalityID">
+                     {{ nationality.Country }}
+                  </option>
+               </select>
          </div>
       </div>
       <div class="profile-form-group"> 
-         <div class="profile-form-list">   
-         <label class="profile-form__label">HYF Class</label>
-         <select class="profile-form__select" v-model="hyfClass">
+         <label class="profile-form__label">Language</label>
+            <multi-select v-bind:dropdownid="'languagesDropDown'" v-bind:options="languages" v-bind:selection="selectedLanguages" v-on:new-selection="updateUserLanguages"></multi-select>
+      </div>
+      <div class="profile-form-group"> 
+         <label class="profile-form__label">Region</label>
+         <div class="select-container">
+            <select class="profile-form__select" v-model="region">
+               <option v-for="region in regions" v-bind:value="region.RegionID">
+                     {{ region.Name }}
+               </option>
+            </select>
+         </div>
+      </div>
+      <div class="profile-form-group">
+         <label class="profile-form__label">HYF Class</label> 
+         <div class="select-container">
+            <select class="profile-form__select" v-model="hyfClass">
             <option v-for="hyfClass in classes" v-bind:value="hyfClass.ClassID">
-               {{ hyfClass.Name }}
-            </option>
-         </select>
+                  {{ hyfClass.Name }}
+               </option>
+            </select>
          </div>
       </div>
       <div class="profile-form-group"> 
          <label class="profile-form__label">GitHub</label>
-         <input class="profile-form__input" type="text" v-model="gitHub">
+         <input class="profile-form__input" type="text" placeholder="https://example.com"  v-model="gitHub">
       </div>
       <div class="profile-form-group"> 
          <label class="profile-form__label">Website</label>
-         <input class="profile-form__input" type="text" v-model="website">
+         <input class="profile-form__input" type="text"  placeholder="https://example.com"  v-model="website">
       </div>
       <div class="profile-form-group"> 
          <label class="profile-form__label">LinkedIn</label>
-         <input class="profile-form__input" type="text" v-model="linkedIn">
+         <input class="profile-form__input" type="text" placeholder="https://example.com"  v-model="linkedIn">
       </div>
       <div class="profile-form-group"> 
-         <div class="profile-form-list"> 
-            <label class="profile-form__label">My Skills</label>
+         <label class="profile-form__label">My Skills</label>
             <multi-select  v-bind:dropdownid="'skillsDropDown'" v-bind:options="skills" v-bind:selection="selectedSkills" v-on:new-selection="updateUserSkills"></multi-select>
-         </div>
       </div>
       <div class="profile-form-group"> 
-         <label class="profile-form__label">About me</label> 
-         <input class="profile-form__input-bio" type="text" v-model="bio">
+         <label class="profile-form__label">About me</label>
+         <textarea rows="4" class="profile-form__input-bio" type="text" maxlength="256"  v-model="bio">
+         </textarea>
       </div>
       <div class = "profile-form_btn-right">
-         <button class = "profile-form__btn-submit"> save </button>
+         <button class = "profile-form__btn-submit">save</button>
       </div>
    </form>
    `,

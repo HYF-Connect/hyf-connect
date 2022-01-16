@@ -1,9 +1,11 @@
 .rounded-area__img {
    border: none;
-   background-color: #fff;
-   height: 180px;
-   width: 180px;
+   background-color: rgb(245, 245, 250);
+   height: 165px;
+   width: 165px;
    border-radius: 50%;
+   margin-top: 0.8em;
+   margin-right: 0.3em;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -11,26 +13,88 @@
 }
 
 .user-profile-picture {
-   height: 180px;
-   width: 180px;
+   object-fit: cover;
+   width: 166px;
+   height: 166px;
+   -webkit-border-radius: 50%;
+   -webkit-background-clip: padding-box;
+   -moz-border-radius: 50%;
+   -moz-background-clip: padding;
    border-radius: 50%;
+   background-clip: padding-box;
+   float: left;
+   background-size: cover;
+   background-position: center;
 }
 .default-profile-picture {
-   font-size: 200px;
+   font-size: 165px;
    color: #dfd7ef;
+   text-align: center;
 }
 
 .outer-area__img {
    border: none;
-   height: 220px;
-   width: 220px;
+   height: 255px;
+   width: 255px;
    border-radius: 5px;
    margin-left: 22%;
-   margin-top: 2.5%;
+   margin-top: 3.5%;
    display: flex;
    position: absolute;
    align-items: center;
    justify-content: center;
    flex-direction: column;
+   box-shadow: 10px 20px 10px -15px rgb(200, 197, 197);
+   background-color: #f7f7fc;
    z-index: 100;
+}
+
+#inputFileToLoad {
+   display: flex;
+   flex-direction: column;
+   margin-top: 0.8em;
+   margin-left: 0.8em;
+   padding: 0.5em;
+   width: 10em;
+   height: 5.4em;
+   overflow: hidden;
+}
+
+input[type="file"] {
+   color: transparent;
+}
+
+input[type="file"]::file-selector-button {
+   content: "upload a photo";
+   display: inline-block;
+   width: 9em;
+   text-align: center;
+   background: #2f195f;
+   color: white;
+   border: 2px solid transparent;
+   font-family: "Montserrat", sans-serif;
+   cursor: pointer;
+   border-radius: 1.7rem;
+   padding: 0.7em 1.2em;
+   outline: none;
+   white-space: nowrap;
+   -webkit-user-select: none;
+   cursor: pointer;
+   font-weight: 500;
+   font-size: clamp(0.7rem, 0.8vw + 0.1rem, 0.875rem);
+   text-transform: lowercase;
+}
+
+input[type="file"]:hover::-webkit-file-upload-button {
+   background-color: #fff;
+   color: #2f195f;
+   border-color: #2f195f;
+   -webkit-transition: all 0.4s;
+   -moz-transition: all 0.4s;
+   transition: all 0.4s;
+}
+
+.default-icon {
+   margin-top: 1.3em;
+   margin-left: 0.2em;
 }

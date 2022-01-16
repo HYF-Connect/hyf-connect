@@ -12,7 +12,6 @@ const userController = {
    },
    getById: async (req, res) => {
       const userId = req.params.userId;
-      console.log("controllers", userId);
       try {
          const result = await userManager.getUserById(userId);
          res.status(200).json(result);
@@ -45,6 +44,15 @@ const userController = {
       try {
          const allUserTypes = await userManager.getAllUserTypes(userId);
          res.send(JSON.stringify(allUserTypes, null, 2));
+      } catch (error) {
+         res.status(500).send(error);
+      }
+   },
+   getProjects: async (req, res) => {
+      const userId = req.params.userId;
+      try {
+         const allUserProjects = await userManager.getAllUserProjects(userId);
+         res.send(JSON.stringify(allUserProjects, null, 2));
       } catch (error) {
          res.status(500).send(error);
       }
@@ -174,10 +182,6 @@ const userController = {
    putUserPicture: async (req, res) => {
       try {
          const { ProfilePicture } = req.body;
-         console.log(
-            "\n\n\nControllers\n\n\nGorgeous Rayane says: ",
-            ProfilePicture
-         );
          const userId = req.params.userId;
          await userManager.updateUserPicture(userId, ProfilePicture);
          res.status(200).json(`Picture has been successfully updated!`);
@@ -202,7 +206,6 @@ const userController = {
    putLanguages: async (req, res) => {
       try {
          const { languages } = req.body;
-         console.log("Controller - Received Languages", languages);
          const userId = req.params.userId;
          const result = await userManager.updateUserLanguages(
             userId,

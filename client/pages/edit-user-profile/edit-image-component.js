@@ -7,8 +7,10 @@ const EditImageComponent = {
    template: `
       <div class="outer-area__img">
             <div class="rounded-area__img" >
+              <div class="default-icon">
                <img class="user-profile-picture" v-if="file" v-bind:src="file"/>
-               <i class="fas fa-user-circle default-profile-picture" v-else ></i>
+                  <i class="fas fa-user-circle default-profile-picture" v-else ></i>
+               </div>
             </div>
          <input v-on:change="handleImageUpload" id="inputFileToLoad" type="file">
       </div>
