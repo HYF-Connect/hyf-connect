@@ -16,42 +16,6 @@ body {
    color: #1c2294;
 }
 
-/* PROJECTS-PAGE */
-
-.project__banner--container {
-   background-color: #ffff;
-   width: 100%;
-   margin-bottom: 3vh;
-}
-.project-trapezoid {
-   position: absolute;
-   width: 0;
-   height: 0;
-   left: 0;
-   margin-right: auto;
-   border-top: 30vw solid #dfd7ef;
-   border-right: 200vw solid transparent;
-   z-index: 2;
-}
-
-.project__banner--title {
-   position: relative;
-   font-family: Montserrat, sans serif;
-   font-weight: 500;
-   font-size: 3vw;
-   color: #1c2294;
-   padding: 1.8em 3em 1em 3em;
-   z-index: 100;
-}
-
-.project__banner--image {
-   position: relative;
-   width: 100%;
-   height: auto;
-   padding-right: 5vw;
-   padding-left: 25vw;
-   z-index: 100;
-}
 
 /* EDIT USER PROFILE PAGE */
 
