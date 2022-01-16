@@ -3,7 +3,7 @@ export const AvatarDropdown = {
    template: `
    <div class="dropdown avatar-container">
    
-  <button class="btn " type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false" v-on:click="menuClicked" data-bs-offset="0,-5">
+  <button class="btn " type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,-5">
     <a class="" href="#" role="button">
         <img class="avatar-image" v-bind:src="avatar.url" v-if="avatar.url"/>
         <i class="fas fa-user-circle default-avatar-profile-picture" v-else></i>
@@ -17,23 +17,10 @@ export const AvatarDropdown = {
   </ul>
 </div>
     `,
-   data() {
-      return {
-         bMenuClicked: "",
-      };
-   },
    methods: {
       logOut() {
          localStorage.removeItem("token");
          localStorage.removeItem("username");
-      },
-      menuClicked() {
-         console.log("trigger received");
-         if (this.bMenuClicked) {
-            this.bMenuClicked = false;
-         } else {
-            this.bMenuClicked = true;
-         }
       },
    },
 };
