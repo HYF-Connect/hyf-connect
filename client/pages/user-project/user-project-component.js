@@ -11,11 +11,11 @@ const UserProjectComponent = {
    template: `
       <div class = "user-project-container">
          <div class="user-profile-projects" >
-         <div class="edit-project__button">          
+            <div class="edit-project__button">          
             <a class="submit-btn" href="/pages/add-new-project/add-new-project.html">add new project</a>
             </div>
          <div class="user-profile-projects-cards" v-if="projects.length>0">
-               <template v-for="project in projects">
+               <template v-for="project in showingProjects">
                   <project-component :project="project"/>
                </template>
                 <nav class = "projects-nav" aria-label="Page navigation example">
