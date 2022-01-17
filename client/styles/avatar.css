@@ -1,4 +1,5 @@
 .avatar-image {
+   position: inline-block;
    object-fit: cover;
    width: 60px;
    height: 60px;
@@ -13,7 +14,7 @@
    z-index: 1000;
 }
 .default-avatar-profile-picture {
-   position: relative;
+   position: inline-block;
    color: #2f195f;
    font-size: 60px;
    z-index: 1000;
@@ -23,16 +24,19 @@
    font-family: "Poppins", sans-serif;
    color: #2f195f;
    text-transform: none;
-   margin-left: 16px;
+   max-width: 150px;
+   max-height: 75px;
    font-weight: 600;
+   padding-left: 15px;
 }
 
 .avatar-dropdown {
+   outline: none;
+   border: none;
 }
-.user-credentials {
-   width: 180px;
-   background-color: #fafafa;
-   margin-left: 10px;
+#user-credentials {
+   width: 230px;
+   object-fit: contain;
 }
 .avatar-sign-out-btn-container {
    display: flex;
@@ -43,17 +47,13 @@
 }
 .dropdown-item a {
    font-family: "Poppins", sans-serif;
-   color: #2f195f;
+   color: #2f195f !important;
    text-transform: none;
 }
-/*
-.dropdown-item {
-   align-items: center;
-}*/
 
 .sign-out-btn {
    padding: 12px 24px;
-   background-color: #2f195f;
+   background-color: #2f195f !important;
    border-radius: 20px;
    color: #fff;
    font-weight: 500;
@@ -64,21 +64,28 @@
 }
 
 .sign-out-btn:hover {
-   background-color: #fff;
-   color: #2f195f;
-   border-color: #2f195f;
+   background-color: #fff !important;
+   color: #2f195f !important;
+   border-color: #2f195f !important;
    -webkit-transition: all 0.4s;
    -moz-transition: all 0.4s;
    transition: all 0.4s;
 }
 
 .avatar-container {
-   width: 200px;
-   margin-right: 20px;
+   display: inline-block;
+   margin-right: 40px;
+   max-width: 270px;
+   max-height: 70px;
+}
+#dropdownMenu1 {
+   max-width: 280px;
+   min-width: 200px;
+   padding-left: 10px;
 }
 
 .dropdown-menu {
-   width: 200px;
+   width: 100%;
 }
 
 #item {
@@ -101,16 +108,12 @@
    top: 0;
    margin-bottom: 10px;
 }
-.dropdown-menu {
-   outline: none;
-   border: none;
-}
+
 .btn-check:focus + .btn,
 .btn:focus {
    outline: 0;
    box-shadow: 0 0 0 0.25rem rgba(255, 0, 0, 0);
 }
-
 .btn:focus {
    box-shadow: 0 0 0 0.25rem rgba(255, 0, 0, 0);
 }

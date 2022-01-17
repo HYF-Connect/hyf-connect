@@ -1,49 +1,84 @@
 /* footer section */
 
 .footer {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background: #2f195f;
- }
- 
- .footer_text {
-    color: #ffffff;
-    font-family: Montserrat;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 600px;
-    line-height: 14px;
-    letter-spacing: 0em;
-    text-align: center;
- }
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-between;
+   padding: 20px;
+   background: #2f195f;
+}
+.footer_text {
+   color: #ffffff;
+   font-family: "Montserrat", sans-serif;
+   font-size: 15px;
+   font-weight: 700;
+   line-height: 14px;
+   letter-spacing: 0em;
+   text-align: center;
+   text-decoration: none;
+}
 
- .footer_panel {
-     display: flex;
-     flex-direction: column;
-     gap:1em;
-     align-items: center;
-     justify-content: center;
-     width: 280px;
-     height: 110px;
- }
- 
- 
- .footer_link_ico {
-    display: inline-block;
-    display: inline;
-    margin-left: 1.1em;
-    margin-right: 0em;
-    margin-bottom: 0em;
-    margin-top: 0em;
- }
+a:hover {
+   color: white;
+   text-decoration: none;
+}
+.footer_panel,
+.footer_panel-terms,
+.footer_panel-icon {
+   display: flex;
+   flex-direction: column;
+   gap: 1em;
+   align-items: center;
+   justify-content: center;
+   height: 110px;
+}
+.footer_panel {
+   width: 220px;
+   margin-right: 5.2em;
+}
 
- @media screen and (max-width: 940px) {
-     .footer {
-        flex-direction: column;
-     }
-     
- }
-  
+.footer_panel-terms {
+   width: 400px;
+}
+.footer_panel-icon {
+   width: 300px;
+}
+.footer_text-hyf {
+   font-size: 15px;
+   font-weight: 400;
+}
+.footer_link_ico {
+   display: inline-block;
+   padding-right: 1em;
+}
+.footer_links-icon {
+   display: flex;
+   justify-content: center;
+   width: 175px;
+   margin-left: 1.2em;
+}
+
+@media screen and (max-width: 840px) {
+   .footer {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+      flex: 0 1 auto;
+      font-size: 10px;
+   }
+   .footer_panel {
+      order: 1;
+      flex: 1 1;
+      margin-left: 4.3em;
+      font-size: 10px;
+      margin-top: 0.5;
+   }
+   .footer_panel-terms,
+   .footer_panel-icon {
+      order: 2;
+      flex: 1 2;
+      font-size: 10px;
+   }
+}
