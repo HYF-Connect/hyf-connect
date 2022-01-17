@@ -1,12 +1,12 @@
-const fs = require('fs');
-const path = require('path');
-const util = require('util');
+const fs = require("fs");
+const path = require("path");
+const util = require("util");
 
-const jsdocToMarkdown = require('jsdoc-to-markdown');
-const prettier = require('prettier');
+const jsdocToMarkdown = require("jsdoc-to-markdown");
+const prettier = require("prettier");
 
 const safeFileName = (path) =>
-  path.split(path.sep).join('-').split('.').join('-').split(' ').join('-');
+  path.split(path.sep).join("-").split(".").join("-").split(" ").join("-");
 
 const documentDirectory = async (
   dirName,
@@ -18,9 +18,9 @@ const documentDirectory = async (
     graphPrefix = title,
   }
 ) => {
-  const SOURCE_DIR = path.normalize(path.join(__dirname, '..', '..', dirName));
+  const SOURCE_DIR = path.normalize(path.join(__dirname, "..", "..", dirName));
   const DOCS_PATH = path.normalize(
-    path.join(__dirname, '..', '..', 'docs', `${fileName}.md`)
+    path.join(__dirname, "..", "..", "docs", `${fileName}.md`)
   );
 
   try {
@@ -30,9 +30,9 @@ const documentDirectory = async (
     fs.mkdirSync(SOURCE_DIR);
   }
 
-  let newToc = '';
+  let newToc = "";
 
-  let newDocs = '';
+  let newDocs = "";
 
   const appendToDocs = async (absolutePath, depth = 1) => {
     if (depth > maxDepth) {
@@ -40,9 +40,9 @@ const documentDirectory = async (
     }
 
     try {
-      const indent = new Array(depth).join('  ');
-      const headerLevel = new Array(depth).join('#');
-      const paths = await util.promisify(fs.readdir)(absolutePath, 'utf-8');
+      const indent = new Array(depth).join("  ");
+      const headerLevel = new Array(depth).join("#");
+      const paths = await util.promisify(fs.readdir)(absolutePath, "utf-8");
       paths.sort((prev, next) => {
         const absPrev = path.join(absolutePath, prev);
         const prevIsDir = fs.statSync(absPrev).isDirectory();
@@ -66,7 +66,7 @@ const documentDirectory = async (
           /sandbox.js/i.test(nextPath) ||
           /node_modules/i.test(nextPath) ||
           /.git/i.test(nextPath) ||
-          ignore.some((toIgnore) => new RegExp(toIgnore, 'i').test(nextPath))
+          ignore.some((toIgnore) => new RegExp(toIgnore, "i").test(nextPath))
         ) {
           continue;
         }
@@ -99,7 +99,7 @@ const documentDirectory = async (
           continue;
         }
 
-        const isNotJavaScript = path.extname(subPath) !== '.js';
+        const isNotJavaScript = path.extname(subPath) !== ".js";
         if (isNotJavaScript) {
           continue;
         }
@@ -112,29 +112,29 @@ const documentDirectory = async (
           continue;
         }
 
-        const relativePath = subPath.replace(path.join(process.cwd()), '..');
+        const relativePath = subPath.replace(path.join(process.cwd()), "..");
 
         const anchorId = relativePath
-          .split(' ')
-          .join('')
-          .split('.')
-          .join('')
-          .split('/')
-          .join('');
+          .split(" ")
+          .join("")
+          .split(".")
+          .join("")
+          .split("/")
+          .join("");
 
         newToc += `\n${indent}- [${nextPath}](#${anchorId})`;
 
         const docs = jsdocToMarkdown.renderSync({
           files: subPath,
-          exampleLang: 'js',
+          exampleLang: "js",
         });
 
-        const kindlessDocs = docs.replace(/\*\*Kind[^\n]+/g, '\n');
+        const kindlessDocs = docs.replace(/\*\*Kind[^\n]+/g, "\n");
         console.log(relativePath);
         newDocs +=
           // '\n\n---\n\n' +
           `${
-            '\n\n' +
+            "\n\n" +
             `<details><summary><a href="../${relativePath}" id="${anchorId}">${relativePath}</a></summary>\n\n`
           }${kindlessDocs}</details>`;
       }
@@ -145,9 +145,9 @@ const documentDirectory = async (
 
   await appendToDocs(SOURCE_DIR);
 
-  let oldReadme = '';
+  let oldReadme = "";
   if (fs.existsSync(DOCS_PATH)) {
-    oldReadme = await util.promisify(fs.readFile)(DOCS_PATH, 'utf-8');
+    oldReadme = await util.promisify(fs.readFile)(DOCS_PATH, "utf-8");
   }
 
   const tocRegex =
@@ -182,7 +182,7 @@ const documentDirectory = async (
   let formattedDocs = newDocsDocument;
   try {
     formattedDocs = prettier.format(formattedDocs, {
-      parser: 'markdown',
+      parser: "markdown",
     });
   } catch (o_0) {
     console.error(o_0);
@@ -191,7 +191,7 @@ const documentDirectory = async (
   fs.writeFile(
     DOCS_PATH,
     formattedDocs,
-    'utf-8',
+    "utf-8",
     (err) => err && console.error(err)
   );
 };

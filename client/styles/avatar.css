@@ -1,0 +1,119 @@
+.avatar-image {
+   position: inline-block;
+   object-fit: cover;
+   width: 60px;
+   height: 60px;
+   -webkit-border-radius: 50%;
+   -webkit-background-clip: padding-box;
+   -moz-border-radius: 50%;
+   -moz-background-clip: padding;
+   border-radius: 50%;
+   background-clip: padding-box;
+   background-size: cover;
+   background-position: center;
+   z-index: 1000;
+}
+.default-avatar-profile-picture {
+   position: inline-block;
+   color: #2f195f;
+   font-size: 60px;
+   z-index: 1000;
+}
+.avatar-name {
+   display: inline-block;
+   font-family: "Poppins", sans-serif;
+   color: #2f195f;
+   text-transform: none;
+   max-width: 150px;
+   max-height: 75px;
+   font-weight: 600;
+   padding-left: 15px;
+}
+
+.avatar-dropdown {
+   outline: none;
+   border: none;
+}
+#user-credentials {
+   width: 230px;
+   object-fit: contain;
+}
+.avatar-sign-out-btn-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 16px;
+   margin-bottom: 16px;
+}
+.dropdown-item a {
+   font-family: "Poppins", sans-serif;
+   color: #2f195f !important;
+   text-transform: none;
+}
+
+.sign-out-btn {
+   padding: 12px 24px;
+   background-color: #2f195f !important;
+   border-radius: 20px;
+   color: #fff;
+   font-weight: 500;
+   font-size: 14px;
+   font-family: "Montserrat";
+   text-decoration: none;
+   border: 2px solid transparent;
+}
+
+.sign-out-btn:hover {
+   background-color: #fff !important;
+   color: #2f195f !important;
+   border-color: #2f195f !important;
+   -webkit-transition: all 0.4s;
+   -moz-transition: all 0.4s;
+   transition: all 0.4s;
+}
+
+.avatar-container {
+   display: inline-block;
+   margin-right: 40px;
+   max-width: 270px;
+   max-height: 70px;
+}
+#dropdownMenu1 {
+   max-width: 280px;
+   min-width: 200px;
+   padding-left: 10px;
+}
+
+.dropdown-menu {
+   width: 100%;
+}
+
+#item {
+   text-align: center;
+   font-family: "Poppins", sans-serif;
+   color: #2f195f;
+}
+#item:hover {
+   text-align: center;
+   font-family: "Poppins", sans-serif;
+   background-color: #dfd7ef;
+   color: #2f195f;
+   -webkit-transition: all 0.4s;
+   -moz-transition: all 0.4s;
+   transition: all 0.4s;
+}
+
+#bg-menu {
+   border: none;
+   top: 0;
+   margin-bottom: 10px;
+}
+
+.btn-check:focus + .btn,
+.btn:focus {
+   outline: 0;
+   box-shadow: 0 0 0 0.25rem rgba(255, 0, 0, 0);
+}
+.btn:focus {
+   box-shadow: 0 0 0 0.25rem rgba(255, 0, 0, 0);
+}

@@ -1,0 +1,271 @@
+.about-us-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dfd7ef;
+  height: 120px;
+  margin-bottom: 20px;
+}
+.about-us-title {
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 36px;
+  color: #1c2294;
+}
+
+.about-us {
+  background-color: #ffffff;
+  width: 100%;
+  height: auto;
+  padding: 3vw;
+}
+.about-hyf {
+  background-color: #ffffff;
+  border: 2px solid #1c2294;
+  padding: 3vw;
+  font-style: "Poppins";
+  font-size: 16px;
+  text-align: justify;
+  width: 60%;
+  height: auto;
+  margin-left: 5vw;
+  margin-right: auto;
+}
+
+.about-hyf-team {
+  width: 50%;
+  height: auto;
+  margin-top: -50px;
+  margin-right: 4vw;
+  margin-bottom: 2vw;
+  margin-left: auto;
+}
+.photo {
+  width: 100%;
+  height: auto;
+  margin-right: 5px;
+  margin-left: auto;
+}
+
+.about-visit-website {
+  padding: 14px 26px;
+  background-color: #2f195f;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.about-visit-website:hover,
+.about-visit-project:hover {
+  background-color: white;
+  color: #2f195f;
+  border: 2px solid #2f195f;
+}
+
+.logo-text-container {
+  display: flex;
+  justify-content: space-around;
+  width: 95%;
+  margin: auto;
+}
+
+.about-hyf-connect2 {
+  background-color: rgb(255, 255, 255);
+  width: 30%;
+  height: 30%;
+  margin-top: -170px;
+  margin-left: 0%;
+}
+
+.photo2 {
+  width: 100%;
+  height: auto;
+}
+
+.about-hyf-connect {
+  background-color: #ffffff;
+  border: 2px solid #1c2294;
+  padding: 3vw 3vw 3vw 3vw;
+  font-family: "Poppins";
+  font-size: 16px;
+  text-align: justify;
+  width: 60%;
+  height: auto;
+  margin-right: 20px;
+  margin-left:auto;
+  margin-bottom: 50px;
+}
+
+.about-visit-project {
+  padding: 14px 26px;
+  background-color: #2f195f;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  float: right;
+  text-decoration: none;
+}
+
+.team-container {
+  background-color: #ffffff;
+  font-size: 24px;
+  color: #1c2294;
+  text-align: center;
+}
+
+.about-title h4 {
+  background-color: #ffffff;
+  color: #1c2294;
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 15px;
+  font-size: 30px;
+  font-weight: 600;
+  box-shadow: 5px 5px 5px #3336;
+  border-radius: 3%;
+  font-family: "Poppins", sans-serif;
+  text-shadow: #2f195f;
+  padding: 15px 5px;
+  text-align: center;
+}
+
+@media screen and (max-width: 840px) {
+  .about-hyf {
+    width: 90%;
+    margin: auto;
+    background-color: #ffffff;
+    padding-bottom: 50px;
+  }
+  .about-hyf-team {
+    width: 90%;
+    margin: 20px auto 10px auto;
+  }
+  .logo-text-container {
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+  }
+  .about-hyf-connect2 {
+    background-color: #ffffff;
+    width: 40%;
+    margin: auto;
+  }
+  .about-hyf-connect {
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0 auto 50px auto;
+  }
+  .about-title h4 {
+    width: 90%;
+  }
+}
+
+.caption h3 {
+  color: #1c2294;
+  text-align: center;
+  text-shadow: #2f195f;
+  font-size: 2em;
+  margin-top: 1em;
+  margin-bottom: 1.7em;
+  font-weight: 600;
+}
+
+.about-main {
+  width: 100%;
+  margin: 5px auto o auto;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.profile-card {
+  font-family: sans-serif;
+  width: 220px;
+  height: 220px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 22px #3336;
+  transition: 0.6s;
+  margin: 2em;
+<<<<<<< HEAD
+  margin-bottom: 2em;
+=======
+  margin-bottom: 2.5em;
+>>>>>>> 8db07e8b9498e533079aba61d59aa2756fc73c60
+  display: grid;
+}
+
+.profile-card:hover {
+  border-radius: 10px;
+  height: 220px;
+}
+
+.profile-card .about-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: 0.6s;
+  z-index: 99;
+}
+
+.about-img img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 22px #3336;
+  transition: 0.6s;
+}
+
+.profile-card:hover .about-img {
+  transform: translateY(-60px);
+}
+
+.profile-card:hover .about-img {
+  border-radius: 10px;
+}
+
+.caption {
+  text-align: center;
+  transform: translateY(-70px);
+  opacity: 0;
+  transition: 0.6s;
+}
+
+.profile-card:hover .caption {
+  opacity: 1;
+}
+
+.caption h3 {
+  font-family: Poppins;
+  font-size: 24px;
+  color: #0c52a1;
+}
+
+.caption p {
+  font-family: Poppins;
+  font-size: 16px;
+  color: #0c52a1;
+  margin-top: -50px;
+}
+
+.about-last-container {
+  background-color: #dfd7ef;
+  height: 240px;
+  clip-path: polygon(84% 84%, 100% 50%, 100% 100%, 0 99%, 0 12%);
+<<<<<<< HEAD
+  margin-top: -2em;
+=======
+  margin-top: -5em;
+>>>>>>> 8db07e8b9498e533079aba61d59aa2756fc73c60
+}

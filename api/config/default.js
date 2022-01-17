@@ -1,8 +1,8 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  MODE: 'default',
+  MODE: "default",
   PORT: 8080,
-  DATA_PATH: path.join(__dirname, '..', 'data'),
-  STATIC_DIR: 'client',
+  DATA_PATH: path.join(__dirname, "..", "data"),
+  STATIC_DIR: "client",
 };

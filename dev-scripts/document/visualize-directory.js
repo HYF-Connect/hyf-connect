@@ -1,29 +1,29 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-const { cruise } = require('dependency-cruiser');
-const { renderGraphFromSource } = require('graphviz-cli');
+const { cruise } = require("dependency-cruiser");
+const { renderGraphFromSource } = require("graphviz-cli");
 
 const safeFileName = (fileName) =>
-  fileName.split(path.sep).join('-').split('.').join('-').split(' ').join('-');
+  fileName.split(path.sep).join("-").split(".").join("-").split(" ").join("-");
 
 const visualizeDirectory = async (
   dirName,
   {
     options = {
-      outputType: 'dot',
-      doNotFollow: { path: 'node_modules' },
+      outputType: "dot",
+      doNotFollow: { path: "node_modules" },
       reporterOptions: {
-        dot: { collapsePattern: '^(node_modules/[^/]+)' },
+        dot: { collapsePattern: "^(node_modules/[^/]+)" },
       },
-      exclude: '(sandbox.js|(\\S)+.spec.js|dev-scripts|dev.js)',
+      exclude: "(sandbox.js|(\\S)+.spec.js|dev-scripts|dev.js)",
     },
     filePrefix = safeFileName(dirName),
   }
 ) => {
-  const SOURCE_DIR = path.normalize(path.join(__dirname, '..', '..', dirName));
+  const SOURCE_DIR = path.normalize(path.join(__dirname, "..", "..", dirName));
   const GRAPH_PATH = path.normalize(
-    path.join(__dirname, '..', '..', 'docs', filePrefix)
+    path.join(__dirname, "..", "..", "docs", filePrefix)
   );
 
   try {
@@ -37,12 +37,12 @@ const visualizeDirectory = async (
 
   // for (const project of cruised) {
 
-  renderGraphFromSource({ input: cruised }, { format: 'svg' })
+  renderGraphFromSource({ input: cruised }, { format: "svg" })
     .then((svgGraph) =>
       fs.writeFile(
         path.join(`${GRAPH_PATH}.svg`),
         svgGraph,
-        'utf-8',
+        "utf-8",
         (err) => err && console.err(err)
       )
     )

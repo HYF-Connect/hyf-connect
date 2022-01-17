@@ -1,3 +1,3 @@
 module.exports = {
-  MODE: 'development',
+  MODE: "development",
 };

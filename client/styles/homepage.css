@@ -1,0 +1,341 @@
+/* HOMEPAGE-BANNER SECTION */
+
+.banner {
+  background-color: #dfd7ef;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.banner__left {
+  width: 50%;
+}
+
+.banner__left--image {
+  display: flex;
+  justify-content:center;
+  width: 80%;
+  margin: auto;
+}
+
+.banner__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding-right: 4vw;
+}
+
+.banner__right--title {
+  font-family: Poppins;
+  font-weight: bolder;
+  font-size: 5vw;
+  color: #1c2294;
+  text-align: center;
+}
+
+.banner__right--paragraph {
+  font-family: Poppins;
+  color: #ffffff;
+  font-size: 1.7vw;
+  text-align: center;
+  margin-top: 3vh;
+  margin-bottom: 4vh;
+}
+
+.banner__join-btn {
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 20px;
+  background-color: #2f195f;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid #2f195f;
+}
+
+.banner__join-btn:hover {
+  background-color: #fff;
+  color: #2f195f;
+  border: 1px solid #2f195f;
+}
+
+.banner__join-btn:active {
+  background-color: #2f195f;
+  color: #fff;
+}
+
+@media screen and (max-width: 840px) {
+  
+  .banner__right--title {
+    width: 80vw;
+    font-size:48px;
+    margin-top:50px;
+  }
+
+  .banner__right--paragraph {
+    width: 80vw;
+    font-size:20px;
+    margin-bottom: 40px;
+  }
+
+  .banner__left {display:none;}
+
+  .banner__join-btn {margin-bottom: 20px}
+}
+
+/* HOMEPAGE-BENEFITS-SECTION */
+
+.benefit-section {
+  background-color: #ffffff;
+  width:100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.benefit__title {
+  text-align: center;
+  color: #1c2294;
+  padding-top: 1rem;
+  font-family: Poppins;
+  font-weight: bolder;
+  font-size: 4vw;
+  padding-bottom: 5vh;
+}
+
+@media screen and (max-width: 840px) {
+  .benefit-section {
+    width: 100%
+  }
+
+  .benefit__title {
+    font-size: 36px;
+    width: 80%;
+    margin: auto;
+  }
+}
+
+.benefit__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  justify-content: center;
+}
+
+.benefit__card {
+  justify-content: center;
+  background-color: #ffffff;
+  text-align: center;
+  position: relative;
+  margin-bottom: 1vh;
+}
+
+.benefit__card--avatar > img {
+  height: 250px;
+  object-fit: contain;
+}
+
+.benefit__card--content {
+  color: #1c2294;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* HOMEPAGE-CAROUSEL-COMPONENT */
+
+.homepage__carousel {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  padding: 5px 3vw 5vh 3vw;
+  background-color: #ffffff;
+}
+
+.carousel__title {
+  font-family: Poppins;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bolder;
+  color: #1c2294;
+  margin-top: 4vw;
+  margin-bottom: 32px;
+}
+
+.homepage-carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #1c2294;
+  border-radius: 25px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 60px;
+  background-color: #ffffff;
+}
+
+.carousel-inner {
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+.slide__tittle {
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 24px;
+  text-decoration: none;
+  color: #1c2294;
+  margin-top: 1vh;
+}
+
+.slide__description {
+  font-family: Poppins;
+  color: #1c2294;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.carousel__projects--btn {
+  text-align: center;
+  text-decoration: none;
+  padding: 15px 30px;
+  width: 120px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #2f195f;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  margin-bottom: 100px;
+}
+
+.carousel__projects--btn:hover {
+  background-color: #ffffff;
+  border: 2px solid #2f195f;
+  color: #2f195f;
+}
+
+.carousel-control-prev-icon {
+  background-color: #9c9c9c8f;
+  border-radius: 9px;
+}
+
+.carousel-control-next-icon {
+  background-color: #9c9c9c8f;
+  border-radius: 9px;
+}
+
+@media screen and (max-width: 540px) {
+  .slide__description {height:50px}
+
+  .homepage-carousel-container {
+    padding: 10px;
+  }
+
+  .slide__tittle {font-size: 18px;}
+
+  .slide__description {
+    font-size: 4vw;
+    line-height: 20px;
+  }
+}
+
+/* HOMEPAGE-TESTIMONIAL-SECTION */
+
+.testimonial__section {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.testimonial__title {
+  text-align: center;
+  color: #2f195f;
+  padding: 2rem;
+  font-family: Poppins;
+  font-weight: bolder;
+  font-size: 38px;
+}
+
+.testimonial__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 330px);
+  justify-content: center;
+  background-color: transparent;
+  gap: 40px;
+  background-color: #ffffff;
+  margin-bottom: 50px;
+}
+
+.testimonial__card {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  background-color: #ffffff;
+  border: 1px solid #2f195f;
+  border-radius: 20px;
+  margin-bottom: 5px;
+}
+
+.testimonial__quotes > img {
+  width: 80px;
+  margin-top: 20px;
+  margin-right: 200px;
+  object-fit: contain;
+}
+
+.testimonial__card--content {
+  color: #000000;
+  text-align: justify;
+  font-family: Poppins;
+  font-size: 18px;
+  padding: 10px 20px 10px 20px;
+}
+
+.testimonial__avatar > img {
+  width: 150px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.default-profile-picture {
+  font-size: 75px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.members__link-btn {
+  padding-top: 30px;
+  text-decoration: none;
+  padding: 15px 25px;
+  width: 120px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #2f195f;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.members__link-btn:hover {
+  background-color: #ffffff;
+  border: 2px solid #2f195f;
+  color: #2f195f;
+}
+
+.testimonial__background {
+background-color: #dfd7ef;
+height: 420px;
+margin-top: -355px;
+}
