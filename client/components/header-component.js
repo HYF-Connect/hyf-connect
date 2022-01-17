@@ -6,7 +6,7 @@ const HeaderComponent = {
   template: `
     <div class="header-container">
       <div class="brand">
-        <a href="/pages/homepage/homepage.html" class="logo"><img src="/assets/logo_pc_half.png" alt="logo" height="80"/></a>
+        <a href="/pages/homepage/homepage.html" class="logo"><img src="/assets/hyh-connect-logo-header.png" alt="logo" height="80"/></a>
       </div>
       <div class="nav-bar header-menu-horizontal">
           <a class="nav-link" href="/pages/projects/projects.html">projects</a>
