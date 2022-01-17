@@ -15,14 +15,14 @@
 }
 .default-avatar-profile-picture {
    position: inline-block;
-   color: #1c2294;
+   color: #2f195f;
    font-size: 60px;
    z-index: 1000;
 }
 .avatar-name {
    display: inline-block;
    font-family: "Poppins", sans-serif;
-   color: #1c2294;
+   color: #2f195f;
    text-transform: none;
    max-width: 150px;
    max-height: 75px;
@@ -46,13 +46,14 @@
 }
 .dropdown-item a {
    font-family: "Poppins", sans-serif;
-   color: #1c2294;
+   color: #2f195f !important;
    text-transform: none;
 }
 
+
 .sign-out-btn {
    padding: 12px 24px;
-   background-color: #1c2294;
+   background-color: #2f195f !important;
    border-radius: 20px;
    color: #fff;
    font-weight: 500;
@@ -63,9 +64,9 @@
 }
 
 .sign-out-btn:hover {
-   background-color: #fff;
-   color: #1c2294;
-   border-color: #1c2294;
+   background-color: #fff !important;
+   color: #2f195f !important;
+   border-color: #2f195f !important;
    -webkit-transition: all 0.4s;
    -moz-transition: all 0.4s;
    transition: all 0.4s;
@@ -88,13 +89,13 @@
 #item {
    text-align: center;
    font-family: "Poppins", sans-serif;
-   color: #1c2294;
+   color: #2f195f;
 }
 #item:hover {
    text-align: center;
    font-family: "Poppins", sans-serif;
    background-color: #dfd7ef;
-   color: #1c2294;
+   color: #2f195f;
    -webkit-transition: all 0.4s;
    -moz-transition: all 0.4s;
    transition: all 0.4s;
