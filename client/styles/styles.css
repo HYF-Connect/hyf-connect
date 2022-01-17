@@ -16,3 +16,9 @@ body {
    font-family: "Poppins", sans-serif;
    color: #1c2294;
 }
+
+
+
+.container__textarea {
+   border: none;
+}
