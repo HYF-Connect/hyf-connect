@@ -1,5 +1,5 @@
 const ProjectComponent = {
-  props: ['project'],
+  props: ["project"],
   template: `  
   <div class="project__component--container">
     <div class="project__thumbnail">
@@ -29,10 +29,10 @@ const ProjectComponent = {
       </div>
       <div class="project__button" v-bind:class="{'project__button--disabled': !project.github_url}">
         <a v-if="project.website_url" v-bind:href="project.website_url" target="_blank"   >visit website</a>
-        <a v-else> see project </a>
+        <a v-else> visit website </a>
       </div>
     </div>
-  </div>`
-}
+  </div>`,
+};
 
 export default ProjectComponent;
