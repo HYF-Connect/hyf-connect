@@ -31,7 +31,7 @@ const ProjectComponent = {
       </div>
       <div class="project__button" v-bind:class="{'project__button--disabled': !project.website_url}">
         <a v-if="project.website_url" v-bind:href="project.website_url" target="_blank"   >visit website</a>
-        <a v-else> see project </a>
+        <a v-else> visit website </a>
       </div>
     </div>
   </div>`,
