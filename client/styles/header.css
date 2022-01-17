@@ -179,3 +179,8 @@ button.navbar-toggler {
    font-family: "Montserrat";
    text-decoration: none;
 }
+.burger-link:hover {
+   font-size: 29px;
+   color: #7a7a7a;
+
+}
