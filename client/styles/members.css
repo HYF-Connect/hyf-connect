@@ -77,10 +77,10 @@
 }
 .members-ticket__card-icons {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   align-items: center;
-  margin: 15px 15px 15px 0;
-  width: 60%;
+  margin: 15px 15px 15px 180px;
+  width: 30%;
 }
 .members-ticket__card-content--name {
   color: #1c2294;
