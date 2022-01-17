@@ -136,7 +136,9 @@ export const ProjectFormComponent = {
             await updateProjectThumbnail(this.id, this.file);
             this.success = true;
             setTimeout(
-               () => (window.location.href = "/pages/projects/projects.html"),
+               () =>
+                  (window.location.href =
+                     "/pages/user-project/user-project.html"),
                500
             );
          } catch (error) {

@@ -8,7 +8,9 @@ const ProjectComponent = {
     </div>
     <div class="project__description">
       <div class="project__title-container">
+       <div class="title_title">
         <h4 class="project__title" >{{project.title}}</h4>
+        </div>
         <div class="project__edit--url" v-if="project.edit_url">
           <a v-bind:href="'/pages/edit-project/edit-project.html?projectId=' + project.edit_url">  <i  class="far fa-edit"></i> </a>
         </div>
@@ -27,12 +29,17 @@ const ProjectComponent = {
         <a v-if="project.github_url" v-bind:href="project.github_url" target="_blank">see project <i class="fab fa-github"></i> </a>
         <a v-else>see project <i class="fab fa-github"></i></a>
       </div>
-      <div class="project__button" v-bind:class="{'project__button--disabled': !project.github_url}">
+      <div class="project__button" v-bind:class="{'project__button--disabled': !project.website_url}">
         <a v-if="project.website_url" v-bind:href="project.website_url" target="_blank"   >visit website</a>
         <a v-else> visit website </a>
       </div>
     </div>
   </div>`,
+  methods: {
+    async navigate(userId) {
+      window.location.href = `../user-profile/user-profile.html?memberId=${userId}`;
+    },
+  },
 };
 
 export default ProjectComponent;

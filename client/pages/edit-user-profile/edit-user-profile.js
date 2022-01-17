@@ -13,6 +13,7 @@ const EditProfilePage = Vue.createApp({
    template: `
    <header-component></header-component>
    <div class="edit-profile-page">
+      
       <main-section></main-section>
       <edit-form-section></edit-form-section>
    </div>
