@@ -4,7 +4,6 @@
    display: flex;
    align-items: center;
    justify-content: space-between;
-   padding: 20px;
    height: 70px;
    background-color: #ffffff;
 }
@@ -152,7 +151,7 @@ button.navbar-toggler {
    margin-left: 50px;
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 870px) {
    .header-menu-burger {
       display: block;
       position: relative;
@@ -166,6 +165,9 @@ button.navbar-toggler {
    }
    .brand {
       margin-left: 0;
+   }
+   .header-container {
+      padding: 20px;
    }
 }
 
