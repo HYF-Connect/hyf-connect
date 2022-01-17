@@ -147,10 +147,11 @@
 .project__button:not(.project__button--disabled):hover {
    background-color: #fff;
    color: #2f195f;
-   border: 1px solid #2f195f;
+   border: 2px solid #2f195f;
    -webkit-transition: all 0.6s;
    -moz-transition: all 0.6s;
    transition: all 0.6s;
+   
 }
 
 .projects-pagination {
