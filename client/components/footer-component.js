@@ -11,7 +11,7 @@ const FooterComponent = {
             <img alt="HYF_connect logo" src="/assets/logo_white_icon.png" width="78" height="78"/>
           </a>
           <a class="footer_text" href="/">
-            <div class="footer_text-hyf">© HYF Connect 2022</div>
+            <div class="footer_text-hyf">© HYF CONNECT | 2022</div>
           </a>
         </div>
         <div class="footer_panel-icon">
