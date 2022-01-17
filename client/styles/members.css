@@ -79,8 +79,7 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  margin: 3% ​3% 3% 14%;
-  width: 30%;
+  width: 50%;
 }
 .members-ticket__card-content--name {
   color: #1c2294;
