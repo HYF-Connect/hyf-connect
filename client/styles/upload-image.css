@@ -37,10 +37,8 @@
    height: 255px;
    width: 255px;
    border-radius: 5px;
-   margin-left: 22%;
    margin-top: 3.5%;
    display: flex;
-   position: absolute;
    align-items: center;
    justify-content: center;
    flex-direction: column;
