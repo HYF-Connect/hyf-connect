@@ -58,7 +58,7 @@
 }
 .members-ticket__card {
   display: flex;
-  height: 100px;
+  height: auto;
   width: 80%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -66,24 +66,21 @@
   background-color:#ffffff;
 }
 .members-ticket__card-img {
-  margin: 15px 20px;
+  width: 75px;
+  height: 75px;
+  margin: 15px;
 }
 .members-ticket__card-content {
-  display:flex;
-  justify-content: space-around;
-  width: 750px;
-  padding-left: 20px;
-  margin: 15px 20px;
-  padding-right: 100px;
+  width: 400px;
   font-family: "Poppins", sans-serif;
+  margin:15px 0;
 }
 .members-ticket__card-icons {
   display: flex;
   justify-content: flex-end;
-  padding-left: 20px;
-  margin: 15px 20px;
-  width: 40%;
-  justify-content: space-evenly;
+  align-items: center;
+  margin: 15px 15px 15px 0;
+  width: 60%;
 }
 .members-ticket__card-content--name {
   color: #1c2294;
@@ -93,7 +90,8 @@
 .members-ticket__card-content--title {
   color: black;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
+  margin-top:-15px
 }
 .members-ticket__card-img--member {
   width: 70px;
@@ -111,7 +109,20 @@
   color: rgba(28, 34, 148, 1);
 }
 
+@media screen and (max-width: 600px) {
+  .members-ticket__card {
+    width:95%;
+  }
+  .members-ticket__card-icons {
+    width: 80%;
+  }
+}
 
+@media screen and (max-width: 450px) {
+  .members-ticket__card-icon {
+    height: 35px;
+  }
+}
 
 
 .members-pagination {
