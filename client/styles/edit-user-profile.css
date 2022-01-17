@@ -42,6 +42,12 @@
    z-index: 100;
 }
 
+@media screen and (max-width: 840px) {
+   .edit-user__main-title  {
+      color: #1c2294;
+   }
+}
+
 .edit-user__span {
    color: #1c2294;
 }
@@ -77,17 +83,26 @@
 .profile-form-group {
    display: flex;
    flex-direction: row;
+   justify-content: flex-start;
    align-items: center;
+   gap: 4px;
    width: 100%;
    margin-bottom: 0.5em;
 }
+
+@media screen and (max-width: 840px) {
+   .profile-form-group  {
+      flex-direction: column;
+      align-items: flex-start;
+   }
+}
+
 .select-menu {
-   width: 20em;
+   width: 18em;
 }
 .select-container {
    display: inline-flex;
    flex-direction: row;
-   width: 32.6em;
 }
 
 #languagesDropDown,
@@ -102,26 +117,23 @@
    -moz-box-sizing: content-box;
    -webkit-box-sizing: content-box;
    border: none;
-   border-radius: 20px;
+   border-radius: 8px;
    color: rgb(39, 39, 39);
    outline: none;
 }
 .profile-form__input,
 .profile-form__input-bio,
 .profile-form__select {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-evenly;
    background-color: #ebebeb;
    padding: 0.5em 1.2em;
-   width: 30em;
+   width: 18em;
    height: 2.5em;
-   margin: 0.2em 0;
+   margin: 0;
    box-sizing: border-box;
    -moz-box-sizing: content-box;
    -webkit-box-sizing: content-box;
    border: none;
-   border-radius: 20px;
+   border-radius: 8px;
    color: rgb(39, 39, 39);
    outline: none;
    overflow-wrap: break-word;
@@ -163,16 +175,15 @@ select {
    -webkit-border-radius: 3px;
    background-position: right center;
    background-color: #ebebeb;
-   border-radius: 20px;
+   border-radius: 8px;
    color: rgb(39, 39, 39);
    border: none;
 }
 
 .profile-form__label {
    color: #000000;
-   display: inline;
+   display: block;
    width: 110px;
-   margin-right: 1em;
    font-size: 0.9em;
    text-transform: capitalize;
    letter-spacing: 0.1em;
@@ -189,9 +200,8 @@ select:focus {
 .profile-form_btn-right {
    display: flex;
    flex-direction: row;
-   align-content: flex-end;
-   width: 150px;
-   margin-left: 54%;
+   justify-content: flex-start;
+   width: 100%;
 }
 .profile-form__btn-submit {
    display: inline-flex;
