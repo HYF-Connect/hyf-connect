@@ -27,6 +27,7 @@
    max-width: 150px;
    max-height: 75px;
    font-weight: 600;
+   padding-left: 15px;
 }
 
 .avatar-dropdown {
@@ -49,7 +50,6 @@
    color: #2f195f !important;
    text-transform: none;
 }
-
 
 .sign-out-btn {
    padding: 12px 24px;
@@ -80,6 +80,8 @@
 }
 #dropdownMenu1 {
    max-width: 280px;
+   min-width: 200px;
+   padding-left: 10px;
 }
 
 .dropdown-menu {
