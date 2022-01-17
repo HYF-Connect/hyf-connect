@@ -77,9 +77,9 @@
 }
 .members-ticket__card-icons {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: end;
   align-items: center;
-  margin: 15px 15px 15px 180px;
+  margin: 3% ​3% 3% 14%;
   width: 30%;
 }
 .members-ticket__card-content--name {
@@ -100,6 +100,7 @@
 }
 .members-ticket__card-icon {
   height: 50px;
+  margin-right: 10px;
 }
 .members-ticket nav {
   margin: 20px auto;
