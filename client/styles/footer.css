@@ -6,6 +6,7 @@
    align-items: center;
    justify-content: space-between;
    padding: 20px;
+   gap: 16px;
    background: #2f195f;
 }
 
