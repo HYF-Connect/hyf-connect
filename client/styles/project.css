@@ -31,12 +31,30 @@
 .project__banner--title {
    position: relative;
    font-family: Montserrat, sans serif;
-   font-weight: 500;
+   font-weight: bold;
    font-size: 3vw;
    color: #1c2294;
    padding: 1.8em 3em 1em 3em;
    z-index: 100;
 }
 
+@media screen and (max-width: 961px) {
+   .project__banner--container {
+      height: auto;
+   } 
+   .project__banner--image {
+      width: 100%;
+      padding: 5px;
+   }
+   .project__banner--title {
+      font-size: 40px;
+      padding: 50px;
+}
+}
 
-
+@media screen and (max-width: 630px) {
+   .project__banner--title {
+      font-size: 30px;
+      padding: 20px;
+   }  
+}
