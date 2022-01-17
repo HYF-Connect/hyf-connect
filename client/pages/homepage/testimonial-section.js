@@ -22,20 +22,17 @@ const TestimonialSection = {
         {
           quotes: "/assets/quote_icon.png",
           avatar: "/assets/bermarte.jpg",
-          content:
-            "I recommend to all newcomers in Belgium who want to seriously start a career in web development to participate in the HYF program. With HYF you'll find a dedicated and brought up to date training curriculum, there is nothing better. Bernardo Martelli.",
+          content: `I recommend to all newcomers in Belgium who want to seriously start a career in web development to participate in the HYF program. With HYF you'll find a dedicated and brought up to date training curriculum, there is nothing better. "Bernardo Martelli"`,
         },
         {
           quotes: "/assets/quote_icon.png",
           avatar: "/assets/Mame.jpeg",
-          content:
-            "School and teachers are very important to people who have dreams. HYF has shown me many things for tech and self-development. Currently, I am working as a web developer. I would like to improve my tech knowledge and in the future learn mobile applications and AI as a hobby. I am so grateful to the people who helped me during my journey. Mamé Azad",
+          content: `School and teachers are very important to people who have dreams. HYF has shown me many things for tech and self-development. Currently, I am working as a web developer. I would like to improve my tech knowledge and in the future learn mobile applications and AI as a hobby. I am so grateful to the people who helped me during my journey. "Mamé Azad"`,
         },
         {
           quotes: "/assets/quote_icon.png",
           avatar: "/assets/Alina.jpg",
-          content:
-            "I've joined the HYF program to learn how to become a web-developer, but this course gave me so much more than knowledge of technology. Support of incredibly compassionate and dedicated HYF team gave me inspiration and strength to follow my ambitious attempt to change my life for the best. Alina Marasca",
+          content: `I've joined the HYF program to learn how to become a web-developer, but this course gave me so much more than knowledge of technology. Support of incredibly compassionate and dedicated HYF team gave me inspiration and strength to follow my ambitious attempt to change my life for the best. "Alina Marasca"`,
         },
       ],
     };

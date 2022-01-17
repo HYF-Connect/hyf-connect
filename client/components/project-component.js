@@ -29,7 +29,7 @@ const ProjectComponent = {
         <a v-if="project.github_url" v-bind:href="project.github_url" target="_blank">see project <i class="fab fa-github"></i> </a>
         <a v-else>see project <i class="fab fa-github"></i></a>
       </div>
-      <div class="project__button" v-bind:class="{'project__button--disabled': !project.github_url}">
+      <div class="project__button" v-bind:class="{'project__button--disabled': !project.website_url}">
         <a v-if="project.website_url" v-bind:href="project.website_url" target="_blank"   >visit website</a>
         <a v-else> see project </a>
       </div>

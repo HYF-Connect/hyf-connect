@@ -2,45 +2,36 @@ import { sendForm } from "../../src/data-access/api-calls/calls.js";
 
 export const FormSection = {
   template: `
-  <div id="section-contact-template" class="section">
-      <form method="post" action="/contact#contact_form" id="contact__form" accept-charset="UTF-8" class="contact-form" @submit.prevent="handleSubmit">
-      <div class="alert alert-danger" role="alert" v-if="messageError">
-        {{ messageError }}
-        </div>  
-        <div class="image1">
-          <img class="rectangle" alt="rectangle" src="/images/contact-us/Rectangle 740.png"/>
-       
-        <div class="contact__text">
-        <span class="contact__text">
-          <span class="contact__text_color">Do you have
-          <span class="contact__text_white"> question </span>
-          <span class="contact__text_purple"> or </span>
-          <span class="contact__text_white"> suggestion</span>
-          <span class="contact__text_purple"> ? </span>
-          <br>
-          <span class="contact__tex5">contact us! </span>
-          </span>
-          </span>
-        </div>
+  <div>
+      <form method="post" @submit.prevent="handleSubmit">
+         <div class="contact__banner">
+            <img class="contact__banner--img" src="/images/contact-us/Rectangle 740.png"/>
+      
+            <div class="contact__banner--text">
+               <div class="contact__text contact__text_purple">Do you have </div>
+               <div class="contact__text contact__text_white">a question </div>
+               <div class="contact__text contact__text_purple">or </div>
+               <div class="contact__text contact__text_white">a suggestion ? </div>
+               <div class="contact__text contact__text_purple contact__text_contact">Contact us !</div>
+            </div>
          </div> 
-        <div class="contact__form">
-          <div class="img__left">
-            <img class="contact__input_image"  src="/images/contact-us/Screenshot_2021-12-08.png"/>
-          </div>
-          <div class="contact__columns">
-          <input type="text" class="contact__input" id="contactFormName" name="contact" placeholder="Name" autocapitalize="words" value required="required" v-model="name">
-          <input type="email" class="contact__input" id="contactFormEmail" name="contact[email]" placeholder="Email" autocorrect="off" autocapitalize="off" value required="required" v-model="email">  
-            <div class="container__textarea">
-              <textarea  class="contact__input-message" rows="10" cols="25.5" placeholder="Message" required="required" v-model="message"></textarea>
+
+         <div class="alert alert-danger" role="alert" v-if="messageError">{{ messageError }}</div>
+
+         <div class="contact__form">
+            <div>
+               <img class="contact__form--image"  src="/images/contact-us/Screenshot_2021-12-08.png"/>
             </div>
-            <div class="contact__input alert alert-success" role="alert" v-if="success">
-              Your message was sent, thank you :)
+            <div class="contact__input-container">
+               <input type="text" class="contact__input" placeholder="Name" required="required" v-model="name">
+               <input type="email" class="contact__input" placeholder="Email" required="required" v-model="email">  
+               <textarea  class="contact__input" rows="10" placeholder="Message" required="required" v-model="message"></textarea>
+               <div class="contact__input alert alert-success" role="alert" v-if="success">Your message was sent, thank you :) </div>
+               <div class="container__submit">
+                  <button class= "container__submit__btn-submit" type="submit" id="action_button" value="submit">submit</button>
+               </div>
             </div>
-            <div class="container__submit">
-            <button class= "container__submit__btn-submit" type="submit" id="action_button" value="submit">submit</button>
-            </div>
-          </div>
-        </div>
+         </div>
       </form>
   </div>
     `,
