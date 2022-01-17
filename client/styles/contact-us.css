@@ -1,0 +1,123 @@
+.contact-page__form {
+    background-color: #f7f7fc;
+    margin: 0;
+    padding: 0px 20px 20px 20px;
+    box-sizing: border-box;
+ }
+
+ .contact__banner {
+    height: auto;
+    padding: 0px 20px 20px 20px;
+    margin-bottom: 40px;
+ }
+
+ .contact__banner--img {
+    position: absolute;
+    width: 100%;
+    right: 0;
+ }
+
+ .contact__banner--text {
+     margin-left: auto;
+     margin-right: auto;
+     padding-top: 20px;
+     max-width: 640px;
+     display: flex;
+     flex-wrap: wrap;
+ }
+ 
+.contact__text {
+    font-size: calc(1.8em + 0.8vw);
+    text-align: center;
+    white-space: pre;
+    position: relative;
+ }
+
+.contact__text_white {
+   color: #ffffff;
+}
+
+@media screen and (max-width: 640px) {
+    .contact__text_white {
+        color: #1c2294;
+     }
+}
+
+.contact__text_purple {
+   color: #1c2294;
+}
+
+.contact__text_contact {
+    font-size: calc(2em + 0.8vw);
+}
+
+ .contact__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2em;
+    height: auto;
+    margin-bottom: 40px;
+ }
+
+ .contact__form--image {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    object-fit: contain;
+ }
+
+ .contact__form--text {
+    font-family: "Montserrat";
+    font-size: 30px;
+    font-weight: 600;
+    white-space: pre;
+    display: flex;
+ }
+
+ .contact__input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    height: auto;
+    width:100%;
+    max-width: 640px;  
+    z-index: 1000;  
+ }
+  
+ .contact__input {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    padding: 0.8em 1.7em;
+    border: none;
+    border-radius: 18px;
+ }
+ 
+ .container__submit {
+    display: flex;
+    justify-content: center;
+ }
+
+ .container__submit__btn-submit {     
+    background-color: #2f195f;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Montserrat";
+    text-decoration: none;
+    border-radius: 18px;
+    padding: 12px 20px;
+    width: 130px;
+    border: 2px solid transparent;
+ }
+ 
+ .container__submit__btn-submit:hover {
+    background-color: #fff;
+    color: #2f195f;
+    border-color: #2f195f;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+ }
+ 
