@@ -171,7 +171,7 @@
   text-shadow: #2f195f;
   font-size: 2em;
   margin-top: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 1.7em;
   font-weight: 600;
 }
 
@@ -197,7 +197,11 @@
   box-shadow: 0 0 22px #3336;
   transition: 0.6s;
   margin: 2em;
+<<<<<<< HEAD
   margin-bottom: 2em;
+=======
+  margin-bottom: 2.5em;
+>>>>>>> 8db07e8b9498e533079aba61d59aa2756fc73c60
   display: grid;
 }
 
@@ -259,5 +263,9 @@
   background-color: #dfd7ef;
   height: 240px;
   clip-path: polygon(84% 84%, 100% 50%, 100% 100%, 0 99%, 0 12%);
+<<<<<<< HEAD
   margin-top: -2em;
+=======
+  margin-top: -5em;
+>>>>>>> 8db07e8b9498e533079aba61d59aa2756fc73c60
 }

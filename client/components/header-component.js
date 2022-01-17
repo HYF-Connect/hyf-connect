@@ -2,11 +2,11 @@ import AvatarDropdown from "./avatar-dropdown-component.js";
 import { fetchUserById } from "../src/data-access/api-calls/calls.js";
 
 const HeaderComponent = {
-   components: { AvatarDropdown },
-   template: `
+  components: { AvatarDropdown },
+  template: `
     <div class="header-container">
       <div class="brand">
-        <a href="/pages/homepage/homepage.html" class="logo"><img src="/assets/logo_pc_half.png" alt="logo" height="80"/></a>
+        <a href="/pages/homepage/homepage.html" class="logo"><img src="/assets/hyh-connect-logo-header.png" alt="logo" height="80"/></a>
       </div>
       <div class="nav-bar header-menu-horizontal">
           <a class="nav-link" href="/pages/projects/projects.html">projects</a>
@@ -43,36 +43,36 @@ const HeaderComponent = {
         </div >
       </div>
     </div>`,
-   data() {
-      let isLoggedIn = true;
-      //console.log(localStorage.getItem("token"));
-      if (localStorage.getItem("token") == undefined) {
-         isLoggedIn = false;
-      }
-      return {
-         isLoggedIn,
-         username: localStorage.getItem("username"),
-         avatar: {
-            name: localStorage.getItem("username"),
-            url: undefined,
-         },
-      };
-   },
-   methods: {
-      async getDataOnLoad() {
-         const id = localStorage.getItem("userId");
-         const user = await fetchUserById(id);
-         this.avatar.url = user.ProfilePicture;
+  data() {
+    let isLoggedIn = true;
+    //console.log(localStorage.getItem("token"));
+    if (localStorage.getItem("token") == undefined) {
+      isLoggedIn = false;
+    }
+    return {
+      isLoggedIn,
+      username: localStorage.getItem("username"),
+      avatar: {
+        name: localStorage.getItem("username"),
+        url: undefined,
       },
-      logOut() {
-         localStorage.removeItem("token");
-         localStorage.removeItem("username");
-         this.isLoggedIn = false;
-      },
-   },
-   mounted: function () {
-      this.getDataOnLoad();
-   },
+    };
+  },
+  methods: {
+    async getDataOnLoad() {
+      const id = localStorage.getItem("userId");
+      const user = await fetchUserById(id);
+      this.avatar.url = user.ProfilePicture;
+    },
+    logOut() {
+      localStorage.removeItem("token");
+      localStorage.removeItem("username");
+      this.isLoggedIn = false;
+    },
+  },
+  mounted: function () {
+    this.getDataOnLoad();
+  },
 };
 
 export default HeaderComponent;
