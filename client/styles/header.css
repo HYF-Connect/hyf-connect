@@ -1,165 +1,170 @@
 /* header section */
 
 .header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  height: 70px;
-  background-color: #ffffff;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 20px;
+   height: 70px;
+   background-color: #ffffff;
 }
 .nav-bar a {
-  color: #1c2294;
-  padding: 12px;
-  font-size: 18px;
-  font-weight: 500;
-  display: inline;
-  font-family: "Montserrat";
-  text-decoration: none;
+   color: #1c2294;
+   padding: 12px;
+   font-size: 18px;
+   font-weight: 500;
+   display: inline;
+   font-family: "Montserrat";
+   text-decoration: none;
+}
+.nav-link {
+   color: #1c2294;
+}
+.nav-link:hover {
+   color: #1c2294;
+   text-decoration: none;
+}
+.nav-link a {
+   color: #1c2294;
+   text-decoration: none;
+}
+.nav-link:active a {
+   color: #1c2294;
+   text-decoration: none;
+}
+
+.nav-link:visited a {
+   color: #1c2294;
+   text-decoration: none;
 }
 .username {
-  color: #1c2294;
-  padding: 12px;
-  font-size: 18px;
-  display: inline;
-  font-family: "Montserrat";
-  text-decoration: none;
+   color: #1c2294;
+   padding: 12px;
+   font-size: 18px;
+   display: inline;
+   font-family: "Montserrat";
+   text-decoration: none;
 }
 .nav-bar a:hover {
-  border-bottom: 2px #2f195f solid;
+   border-bottom: 2px #2f195f solid;
 }
 .sign-in-btn {
-  padding: 12px 24px;
-  background-color: #2f195f;
-  border: 2px solid #2f195f;
-  border-radius: 20px;
-  color: #fff;
-  font-weight: 500;
-  font-size: 14px;
-  font-family: "Montserrat";
-  text-decoration: none;
+   padding: 12px 24px;
+   background-color: #2f195f;
+   border: 2px solid #2f195f;
+   border-radius: 20px;
+   color: #fff;
+   font-weight: 500;
+   font-size: 14px;
+   font-family: "Montserrat";
+   text-decoration: none;
+   margin-right: 50px;
 }
 .sign-in-btn:hover {
-  background-color: #ffffff;
-  color: #2f195f;
-
+   background-color: #ffffff;
+   color: #2f195f;
 }
 .sign-in-btn:hover:active {
-  background-color: #fff;
-  border: #2f195f;
-}
-.sign-out-btn {
-  padding: 12px 24px;
-  background-color: #2f195f;
-  border-radius: 20px;
-  color: #fff;
-  font-weight: 500;
-  font-size: 14px;
-  font-family: "Montserrat";
-  text-decoration: none;
-}
-
-.sign-out-btn:hover {
-  background-color: #dfd7ef;
-}
-.sign-out-btn:hover:active {
-  background-color: #fff;
-  border: #2f195f;
+   background-color: #fff;
+   border: #2f195f;
 }
 
 button.navbar-toggler {
-  height: 30px;
-  width: 36px;
+   height: 30px;
+   width: 36px;
 }
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
-  outline: none !important;
-  box-shadow: none !important;
+   outline: none !important;
+   box-shadow: none !important;
 }
 
 .header-menu-burger {
-  display: none;
+   display: none;
 }
 
 .header-burger_line {
-  width: 100%;
-  height: 2px;
-  background-color: #1c2294;
-  position: absolute;
-  left: 0;
+   width: 100%;
+   height: 2px;
+   background-color: #1c2294;
+   position: absolute;
+   left: 0;
 }
 
 .header-burger_line_first {
-  top: 0;
+   top: 0;
 }
 
 .header-burger_line_second {
-  top: 50%;
-  transform: translateY(-50%);
+   top: 50%;
+   transform: translateY(-50%);
 }
 
 .header-burger_line_third {
-  bottom: 0;
+   bottom: 0;
 }
 
 .header-burger-close {
-  z-index: 11;
-  position: absolute;
-  right: 40px;
-  top: 20px;
+   z-index: 11;
+   position: absolute;
+   right: 40px;
+   top: 20px;
 }
 
 .header-menu-close-line {
-  display: block;
-  width: 80%;
-  height: 4px;
-  background-color: #2f195f;
-  position: absolute;
-  top: 50%;
-  margin-top:1vh;
+   display: block;
+   width: 80%;
+   height: 4px;
+   background-color: #2f195f;
+   position: absolute;
+   top: 50%;
+   margin-top: 1vh;
 }
 
 .header-menu-close-line:first-child {
-  transform: translateY(-50%) rotate(45deg);
+   transform: translateY(-50%) rotate(45deg);
 }
 
 .header-menu-close-line:last-child {
-  transform: translateY(-50%) rotate(-45deg);
+   transform: translateY(-50%) rotate(-45deg);
 }
 
 .header-menu-vertical {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: auto;
-  padding-bottom: 5vh;
-  background-color: #ffffff;
-  z-index: 1000;
+   display: flex;
+   flex-direction: column;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: auto;
+   padding-bottom: 5vh;
+   background-color: #ffffff;
+   z-index: 1000;
+}
+.brand {
+   margin-left: 50px;
 }
 
 @media screen and (max-width: 840px) {
-  .header-menu-burger {
-    display: block;
-    position: relative;
-    height: 30px;
-    width: 36px;
-  }
-  
-  .header-menu-horizontal,
-  .header-menu-avatar {
-    display: none;
-  }
+   .header-menu-burger {
+      display: block;
+      position: relative;
+      height: 30px;
+      width: 36px;
+   }
+
+   .header-menu-horizontal,
+   .header-menu-avatar {
+      display: none;
+   }
 }
 
 .burger-link {
-  font-size: 28px;
-  color: #1c2294;
-  font-weight: 400;
-  margin: 25px auto 0 40px;
-  font-family: "Montserrat";
-  text-decoration: none;
+   font-size: 28px;
+   color: #1c2294;
+   font-weight: 400;
+   margin: 25px auto 0 40px;
+   font-family: "Montserrat";
+   text-decoration: none;
 }
