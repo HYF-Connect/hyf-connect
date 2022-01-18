@@ -7,69 +7,104 @@
 
 /* EDIT USER PROFILE MAIN SECTION */
 .profile-user__main {
+   display: flex;
+   justify-content: space-evenly;
    position: relative;
    z-index: 2;
 }
 
+<<<<<<< HEAD
+=======
+
+@media screen and (max-width:1100px){
+   .profile-user__main {
+      color: #1c2294;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+   }
+}
+
+
+>>>>>>> e22f05615a0c47e5b6a3b2fadf10ed1f9bc040c3
 .profile__main-arrow-right {
    position: absolute;
+   top:0;
+   right: 0;
    width: 0;
    height: 0;
-   right: 0;
-   margin-left: auto;
-   margin-top: 0;
    border-top: 39vw solid #dfd7ef;
    border-left: 85vw solid transparent;
    z-index: 2;
 }
 .profile__main-arrow-left {
    position: absolute;
+   top:0;
+   left: 0;
    width: 0;
    height: 0;
-   left: 0;
-   margin-right: auto;
    border-top: 20vw solid #dfd7ef;
    border-right: 45vw solid transparent;
    z-index: 3;
 }
+
+.outer-area {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: none;
+   height: 255px;
+   border-radius: 5px;
+   margin-top: 3.5%;
+   flex-direction: column;
+   z-index: 100;
+}
+
+
 .profile-user__main-title {
-   position: absolute;
-   top: 0;
+   display: block;
    color: #f7f7fc;
    width: 36%;
-   margin-left: 50%;
-   margin-top: 4%;
+   padding-top: 4%;
    font-size: 3.7em;
    font-weight: 600;
    line-height:1.5em;
    z-index: 100;
 }
+<<<<<<< HEAD
 .profile-user__span {
    color: #1c2294;
    width:300px;
 }
+=======
+
+>>>>>>> e22f05615a0c47e5b6a3b2fadf10ed1f9bc040c3
 @media screen and (max-width:1100px){
    .profile-user__main-title {
+      color: #1c2294;
       font-size: 3.3em;
       line-height:1.2em;
-      margin-top: 6vw;
-      margin-left: 55%;
    }
    .user-about-me--title {
       font-size: 26px;
    }
 }
+<<<<<<< HEAD
+=======
+
+.profile-user__span {
+   color: #1c2294;
+   width:300px;
+}
+
+>>>>>>> e22f05615a0c47e5b6a3b2fadf10ed1f9bc040c3
 /* EDIT USER PROFILE FORM SECTION */
 .user-profile-form {
    display: block;
+   width:100%;
    position: relative;
-   flex-flow: row wrap;
-   justify-content: space-evenly;
-   align-items: center;
    font-family: "Poppins", sans-serif;
-   width: 65%;
    padding: 40px 0 40px 0;
-   margin: 170px auto 0 9vw;
    border-radius: 1rem;
    font-weight: 600;
    border: 2px solid transparent;
@@ -204,21 +239,32 @@ select:focus {
    margin-top: 20px;
 }
 .user-profile-row {
+   padding: 0 10px 0 10px;
    display: flex;
-   padding-top: 170px;
+   flex-wrap: wrap;
+   flex-direction: row;
+   gap:40px;
+   justify-content: space-evenly;
+   align-items: center;
+   margin-top: 40px;
+   margin-bottom: 80px;
 }
+<<<<<<< HEAD
 .column-details {
    flex: 50%;
+=======
+
+.user-profile-details {
+   width: 500px;   
+>>>>>>> e22f05615a0c47e5b6a3b2fadf10ed1f9bc040c3
 }
-.column-about {
-   flex: 50%;
+.user-profile-about {
+   width: 500px;   
 }
 .user-about-me-box {
    background-color: #2f195f;
    z-index: 5;
-   margin-top: 170px;
-   margin-right: 5vw;
-   width: 80%;
+   width: 100%;
    padding: 20px;
    position: relative;
    color: white;
@@ -228,6 +274,7 @@ select:focus {
    overflow-wrap: break-word;
    word-wrap: break-word;
 }
+<<<<<<< HEAD
 @media screen and (max-width:924px){
    .user-about-me-box {
       width: 100%;
@@ -249,6 +296,9 @@ select:focus {
       color: #1c2294;
    }
 }
+=======
+
+>>>>>>> e22f05615a0c47e5b6a3b2fadf10ed1f9bc040c3
 .profile-detail-line {
    padding-left: 30px;
    padding-bottom: 20px;
@@ -312,6 +362,7 @@ select:focus {
    margin-right: 20px;
    margin-left: 20px;
 }
+<<<<<<< HEAD
 .outer-area {
    border: none;
    height: 255px;
@@ -332,11 +383,16 @@ select:focus {
       margin:auto;
    }
 }
+=======
+
+
+
+>>>>>>> e22f05615a0c47e5b6a3b2fadf10ed1f9bc040c3
 .profile-picture {
    object-fit: cover;
    padding: 0.5em;
-   width: 200px;
-   height: 200px;
+   width: 165px;
+   height: 165px;
    -webkit-border-radius: 50%;
    -webkit-background-clip: padding-box;
    -moz-border-radius: 50%;
@@ -372,3 +428,4 @@ select:focus {
 .projects-nav {
    margin: 20px 40%;
 }
+

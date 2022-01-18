@@ -20,10 +20,10 @@ const UserProfilePage = Vue.createApp({
    <div class="profile-page">
       <main-section></main-section>
       <div class="user-profile-row">
-        <div class="column-details">
+        <div class="user-profile-details">
           <personal-details-section></personal-details-section>
         </div>
-        <div class="column-about">
+        <div class="user-profile-about">
           <profile-bio-component></profile-bio-component>
         </div>
       </div>
