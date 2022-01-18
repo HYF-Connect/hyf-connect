@@ -58,6 +58,7 @@
   border-radius: 10px;
   margin:20px auto 0 auto;
   background-color:#ffffff;
+  cursor: pointer;
 }
 .members-ticket__card:hover{
   cursor: pointer;

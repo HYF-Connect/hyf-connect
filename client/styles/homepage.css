@@ -123,9 +123,10 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, 300px);
   justify-content: center;
-  gap: 30px;
+  gap: 50px;
   width: 90%;
-  margin: 0 auto 1vh auto;
+  margin: auto;
+
 }
 
 .benefit__card {

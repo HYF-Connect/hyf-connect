@@ -7,63 +7,100 @@
 
 /* EDIT USER PROFILE MAIN SECTION */
 .profile-user__main {
+   display: flex;
+   justify-content: space-evenly;
    position: relative;
    z-index: 2;
 }
 
+
+@media screen and (max-width:1100px){
+   .profile-user__main {
+      color: #1c2294;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+   }
+}
+
+
 .profile__main-arrow-right {
    position: absolute;
+   top:0;
+   right: 0;
    width: 0;
    height: 0;
-   right: 0;
-   margin-left: auto;
-   margin-top: 0;
    border-top: 39vw solid #dfd7ef;
    border-left: 85vw solid transparent;
    z-index: 2;
 }
 .profile__main-arrow-left {
    position: absolute;
+   top:0;
+   left: 0;
    width: 0;
    height: 0;
-   left: 0;
-   margin-right: auto;
    border-top: 20vw solid #dfd7ef;
    border-right: 45vw solid transparent;
    z-index: 3;
 }
+
+.outer-area {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: none;
+   height: 255px;
+   border-radius: 5px;
+   margin-top: 3.5%;
+   flex-direction: column;
+   z-index: 100;
+}
+
+
 .profile-user__main-title {
-   position: absolute;
-   top: 0;
+   display: block;
    color: #f7f7fc;
    width: 36%;
-   margin-left: 55%;
-   margin-top: 4%;
+   padding-top: 4%;
    font-size: 3.7em;
    font-weight: 600;
+   line-height:1.5em;
    z-index: 100;
+}
+
+@media screen and (max-width:1100px){
+   .profile-user__main-title {
+      color: #1c2294;
+      font-size: 3.3em;
+      line-height:1.2em;
+   }
+   .user-about-me--title {
+      font-size: 26px;
+   }
+}
+@media screen and (max-width:500px){
+   .profile-user__main-title {
+      font-size: 3em;
+   }
 }
 
 .profile-user__span {
    color: #1c2294;
+   width:300px;
 }
 
 /* EDIT USER PROFILE FORM SECTION */
 .user-profile-form {
    display: block;
+   width:100%;
    position: relative;
-   flex-flow: row wrap;
-   justify-content: space-evenly;
-   align-items: center;
    font-family: "Poppins", sans-serif;
-   background: #fff;
-   width: 65%;
    padding: 40px 0 40px 0;
-   margin: 20% 0 6% 18%;
    border-radius: 1rem;
    font-weight: 600;
    border: 2px solid transparent;
-   box-shadow: 0px 20px 10px -15px rgb(180, 174, 174);
+   box-shadow: 5px 5px 5px rgb(180, 174, 174);
    z-index: 100;
 }
 #languagesDropDown,
@@ -199,31 +236,38 @@ select:focus {
    margin-top: 20px;
 }
 .user-profile-row {
+   padding: 0 10px 0 10px;
    display: flex;
-   padding-top: 170px;
+   flex-wrap: wrap;
+   flex-direction: row;
+   gap:40px;
+   justify-content: space-evenly;
+   align-items: center;
+   margin-top: 40px;
+   margin-bottom: 80px;
 }
 
-.column-details {
-   flex: 50%;
+.user-profile-details {
+   width: 500px;   
 }
-.column-about {
-   flex: 50%;
+.user-profile-about {
+   width: 500px;   
 }
+
 .user-about-me-box {
+   background-color: #2f195f;
    z-index: 5;
-   margin-top: 168px;
-   margin-right: 20px;
-   width: 690px;
+   width: 100%;
    padding: 20px;
    position: relative;
-   background-color: rgba(47, 25, 95, 1);
    color: white;
    min-height: 285px;
-   border-radius: 10px;
+   border-radius: 1rem;
    outline: none;
    overflow-wrap: break-word;
    word-wrap: break-word;
 }
+
 .profile-detail-line {
    padding-left: 30px;
    padding-bottom: 20px;
@@ -245,21 +289,26 @@ select:focus {
 }
 
 .user-profile-projects {
-   padding-top: 20px;
-   margin: 30px 30px 60px 30px;
-}
-.user-profile-projects-title {
-   color: rgba(47, 25, 95, 1);
-   width: 88%;
-   margin-left: 3.2em;
-   padding-bottom: 0.5em;
+   width: 100%;
+   margin: 30px 0 60px 0;
 }
 .user-profile-skills-title {
+
    color: rgba(47, 25, 95, 1);
-   width: 88%;
-   margin-left: 3.2em;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
    padding-bottom: 0.5em;
+
 }
+.user-profile-projects-title{
+  color: rgba(47, 25, 95, 1);
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   padding-bottom: 0.5em;
+ 
+   }
 .user-profile-projects-cards {
    box-shadow: 7px 7px 5px rgb(185, 183, 183);
    width: 88%;
@@ -269,6 +318,11 @@ select:focus {
    border-radius: 1rem;
    background: white;
    padding: 10px;
+    margin: auto;
+   padding: 17px;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 16px;
 }
 .user-profile-skills {
    box-shadow: 7px 7px 5px rgb(185, 183, 183);
@@ -276,9 +330,11 @@ select:focus {
    min-height: 100px;
    border-radius: 1rem;
    background: white;
-   margin-left: 7.5em;
+   margin: auto;
    padding: 17px;
    display: flex;
+   flex-wrap: wrap;
+   gap: 16px;
    justify-content: space-evenly;
 }
 .user-profile-skill {
@@ -289,26 +345,13 @@ select:focus {
    margin-left: 20px;
 }
 
-.outer-area {
-   border: none;
-   height: 255px;
-   width: 255px;
-   border-radius: 5px;
-   margin-left: 22%;
-   margin-top: 3.5%;
-   display: flex;
-   position: absolute;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
-   z-index: 100;
-}
+
 
 .profile-picture {
    object-fit: cover;
    padding: 0.5em;
-   width: 200px;
-   height: 200px;
+   width: 165px;
+   height: 165px;
    -webkit-border-radius: 50%;
    -webkit-background-clip: padding-box;
    -moz-border-radius: 50%;
