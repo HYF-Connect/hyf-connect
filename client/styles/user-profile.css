@@ -334,8 +334,8 @@ select:focus {
 .profile-picture {
    object-fit: cover;
    padding: 0.5em;
-   width: 200px;
-   height: 200px;
+   width: 165px;
+   height: 165px;
    -webkit-border-radius: 50%;
    -webkit-background-clip: padding-box;
    -moz-border-radius: 50%;
@@ -373,3 +373,4 @@ select:focus {
 .projects-nav {
    margin: 20px 40%;
 }
+
