@@ -23,6 +23,7 @@ const userManager = {
       from: "hyfconnect@gmail.com>", // sender address
       to: Email, // list of receivers
       subject: `Welcome ${FirstName} to HYFConnect`, // Subject line
+      //text: text, //, // plaintext body
       html: welcomeEmail.welcome(FirstName), // You can choose to send an HTML body instead "<b>Hello world ✔</b>";
     };
     sendEmail.sendMail(mailOptions, function (error, info) {
