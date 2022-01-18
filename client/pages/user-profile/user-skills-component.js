@@ -8,7 +8,9 @@ const userProfileSkillsComponent = {
       <div class="user-profile-projects" v-if="skillImages.length>0">
         <h1 class="user-profile-skills-title">My skills</h1>
         <div class="user-profile-skills">
-            <img class="user-profile-skill" v-for="skillImage in skillImages" v-bind:src="skillImage" />
+            <div v-for="skillImage in skillImages" >
+              <img class="user-profile-skill" v-bind:src="skillImage" />
+            </div>
         </div>  
       </div>
       `,
