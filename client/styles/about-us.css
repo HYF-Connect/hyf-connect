@@ -256,16 +256,12 @@
   font-family: Poppins;
   font-size: 16px;
   color: #0c52a1;
-  margin-top: -50px;
+  margin-top: -40px;
 }
 
 .about-last-container {
   background-color: #dfd7ef;
   height: 240px;
   clip-path: polygon(84% 84%, 100% 50%, 100% 100%, 0 99%, 0 12%);
-<<<<<<< HEAD
-  margin-top: -2em;
-=======
-  margin-top: -5em;
->>>>>>> 8db07e8b9498e533079aba61d59aa2756fc73c60
+  margin-top: -4em;
 }
