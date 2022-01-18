@@ -34,8 +34,6 @@ const contactUsManager = {
     await transporter.sendMail(mailOptions, (err, data) => {
       if (err) {
         console.log("error", err);
-      } else {
-        console.log(null, data);
       }
     });
     return {

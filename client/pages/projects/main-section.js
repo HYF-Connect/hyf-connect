@@ -1,13 +1,13 @@
 import ProjectComponent from "/components/project-component.js";
 import {
-   fetchProjects,
-   fetchAllProjectUsers,
+  fetchProjects,
+  fetchAllProjectUsers,
 } from "../../src/data-access/api-calls/calls.js";
 const MainSection = {
-   components: {
-      ProjectComponent,
-   },
-   template: `
+  components: {
+    ProjectComponent,
+  },
+  template: `
       <div class="project__banner--container">
          <h2 class="project__banner--title">Discover all the <span style="color:white">projects</span> built by HYF students</h2>
          <img src="../../images/projects/project-page-banner.png" alt="project image" class="project__banner--image">
@@ -32,59 +32,58 @@ const MainSection = {
       </nav>
 
   `,
-   computed: {
-      showingProjects: function () {
-         // `this` points to the vm instance
-         const startingPosition = (this.pageCount - 1) * 5;
-         return this.projects.slice(startingPosition, startingPosition + 5);
-      },
-      disablePrevious: function () {
-         return this.pageCount === 1;
-      },
-      disableNext: function () {
-         const limit = Math.ceil(this.projects.length / 5);
-         return this.pageCount === limit;
-      },
-   },
-   data() {
-      let isLoggedIn = true;
-      if (localStorage.getItem("token") == undefined) {
-         isLoggedIn = false;
+  computed: {
+    showingProjects: function () {
+      // `this` points to the vm instance
+      const startingPosition = (this.pageCount - 1) * 5;
+      return this.projects.slice(startingPosition, startingPosition + 5);
+    },
+    disablePrevious: function () {
+      return this.pageCount === 1;
+    },
+    disableNext: function () {
+      const limit = Math.ceil(this.projects.length / 5);
+      return this.pageCount === limit;
+    },
+  },
+  data() {
+    let isLoggedIn = true;
+    if (localStorage.getItem("token") == undefined) {
+      isLoggedIn = false;
+    }
+    return {
+      projects: [],
+      pageCount: 1,
+      hyfClass: 0,
+    };
+  },
+  mounted() {
+    this.onload();
+  },
+  methods: {
+    async onload() {
+      try {
+        const result = (await fetchProjects()).reverse();
+        for (let i = 0; i < result.length; i++) {
+          this.projects.push({
+            thumbnail: result[i].Thumbnail,
+            github_url: result[i].GithubURL,
+            website_url: result[i].WebsiteURL,
+            title: result[i].Title,
+            description: result[i].Description,
+            members: await fetchAllProjectUsers(result[i].ProjectID),
+          });
+        }
+      } catch (error) {
+        console.log("error from projects", error);
       }
-      return {
-         projects: [],
-         pageCount: 1,
-         hyfClass: 0,
-      };
-   },
-   mounted() {
-      this.onload();
-   },
-   methods: {
-      async onload() {
-         try {
-            const result = (await fetchProjects()).reverse();
-            for (let i = 0; i < result.length; i++) {
-               this.projects.push({
-                  thumbnail: result[i].Thumbnail,
-                  github_url: result[i].GithubURL,
-                  website_url: result[i].WebsiteURL,
-                  title: result[i].Title,
-                  description: result[i].Description,
-                  members: await fetchAllProjectUsers(result[i].ProjectID),
-               });
-            }
-            console.log(this.projects);
-         } catch (error) {
-            console.log("error from projects", error);
-         }
-      },
-      nextPage() {
-         this.pageCount++;
-      },
-      previousPage() {
-         this.pageCount--;
-      },
-   },
+    },
+    nextPage() {
+      this.pageCount++;
+    },
+    previousPage() {
+      this.pageCount--;
+    },
+  },
 };
 export default MainSection;

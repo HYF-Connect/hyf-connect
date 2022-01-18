@@ -13,7 +13,8 @@ const MainSection = {
             refugees and disadvantaged people to build digital skills for a career in web development, 
             facilitate the integration of newcomers, and address the shortage of qualified workforce in the IT sector.</p> <br>
     <a class="about-visit-website" href="https://hackyourfuture.be/" target="_blank">visit website</a>
-</div>
+    </div>
+    </div>
 
 <div class="about-hyf-team">
     <img src="/images/homepage/hyf-team.jpeg" class="photo" alt="pic">

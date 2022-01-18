@@ -34,8 +34,6 @@ export const FormSection = {
         localStorage.setItem("token", result.token);
         localStorage.setItem("username", result.userName);
         localStorage.setItem("userId", result.userId);
-        //localStorage.setItem("profilePicture", result.profilePicture);
-        //console.log(result.profilePicture);
         this.passwordError = "";
         this.password = "";
         this.success = true;

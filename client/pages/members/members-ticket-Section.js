@@ -70,7 +70,6 @@ export const membersTicketSection = {
           { Name: "select all", ClassID: 0 },
           ...(await fetchAllClasses()),
         ];
-        //console.log(this.members);
         const imageMap = {
           1: "/assets/html-logo.png",
           2: "/assets/css-logo.png",
@@ -85,8 +84,7 @@ export const membersTicketSection = {
           11: "/assets/java-logo.png",
           12: "/assets/github-logo.png",
         };
-        //console.log(imageMap[1]);
-        const result = await fetchUsers();
+        const result = (await fetchUsers()).reverse();
 
         for (let i = 0; i < result.length; i++) {
           let skills = await fetchUserSkills(result[i].UserID);
@@ -119,15 +117,10 @@ export const membersTicketSection = {
         return this.members;
       }
       for (let member of this.members) {
-        //console.log(
-        //  `memberId ${member.ClassID} - filtering on: ${this.hyfClass}`
-        //);
         if (member.ClassID == this.hyfClass) {
-          // console.log("They are equal!");
           resultList.push(member);
         }
       }
-      //console.log(resultList);
       return resultList;
     },
   },
