@@ -345,8 +345,6 @@ select:focus {
    margin-left: 20px;
 }
 
-
-
 .profile-picture {
    object-fit: cover;
    padding: 0.5em;
