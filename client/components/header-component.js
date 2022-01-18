@@ -45,7 +45,6 @@ const HeaderComponent = {
     </div>`,
   data() {
     let isLoggedIn = true;
-    //console.log(localStorage.getItem("token"));
     if (localStorage.getItem("token") == undefined) {
       isLoggedIn = false;
     }

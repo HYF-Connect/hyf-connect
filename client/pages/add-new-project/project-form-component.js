@@ -1,20 +1,20 @@
 import MultiSelect from "../../components/multiselect-component.js";
 import {
-   fetchAllProjectUsers,
-   createProject,
-   fetchUsers,
-   updateProject,
-   updateProjectThumbnail,
-   updateProjectUsers,
-   fetchProjectById,
+  fetchAllProjectUsers,
+  createProject,
+  fetchUsers,
+  updateProject,
+  updateProjectThumbnail,
+  updateProjectUsers,
+  fetchProjectById,
 } from "../../src/data-access/api-calls/calls.js";
 
 export const ProjectFormComponent = {
-   components: {
-      MultiSelect,
-   },
+  components: {
+    MultiSelect,
+  },
 
-   template: `
+  template: `
    <div class="addNewProject__container" v-on:load="onload()">
       <form class="addNewProject__form" @submit.prevent="handleSubmit">
          <div class="alert alert-success" role="alert" v-if="success">
@@ -60,108 +60,105 @@ export const ProjectFormComponent = {
    </div>
     `,
 
-   data() {
-      return {
-         projectTitle: "",
-         websiteUrl: "",
-         githubRepo: "",
-         id: undefined,
-         projectDescription: "",
-         teamMembers: [],
-         students: [],
-         projectThumbnail: "",
-         success: false,
-         file: undefined,
-      };
-   },
+  data() {
+    return {
+      projectTitle: "",
+      websiteUrl: "",
+      githubRepo: "",
+      id: undefined,
+      projectDescription: "",
+      teamMembers: [],
+      students: [],
+      projectThumbnail: "",
+      success: false,
+      file: undefined,
+    };
+  },
 
-   mounted: function () {
-      this.onload();
-   },
-   methods: {
-      async onload() {
-         try {
-            this.students = await fetchUsers();
-            const allUsers = await fetchUsers();
-            this.students = allUsers.map((u) => ({
-               label: u.FirstName + " " + u.LastName,
-               value: u.UserID,
-            }));
-            const id = this.getProjectId();
-            if (id === undefined) {
-               return;
-            }
-            this.id = id;
-            const project = fetchProjectById(id);
-            this.file = project.Thumbnail;
-            const usersProject = await fetchAllProjectUsers(id);
-            console.log(usersProject);
-            this.teamMembers = usersProject.map((u) => ({
-               label: u.FirstName + " " + u.LastName,
-               value: u.UserID,
-            }));
-            this.updateTeammates(this.teamMembers);
-         } catch (error) {
-            console.log("error from members", error);
-         }
-      },
-      async handleImageUpload() {
-         const filesSelected = document.getElementById("inputFileToLoad").files;
-         if (filesSelected.length > 0) {
-            const fileToLoad = filesSelected[0];
-            const fileReader = new FileReader();
-            fileReader.onload = function (fileLoadedEvent) {
-               const srcData = fileLoadedEvent.target.result;
-               this.file = srcData;
-            }.bind(this);
-            fileReader.readAsDataURL(fileToLoad);
-         }
-      },
-      async updateTeammates(members) {
-         this.teamMembers = members;
-      },
-      async handleSubmit() {
-         try {
-            if (this.id === undefined) {
-               let result = await createProject(
-                  this.projectTitle,
-                  this.websiteUrl,
-                  this.githubRepo,
-                  this.projectDescription
-               );
-               this.id = result.ProjectID;
-            } else {
-               result = await updateProject();
-               this.projectTitle = result.Title;
-               this.projectDescription = result.Description;
-               this.githubRepo = result.GithubURL;
-               this.websiteUrl = result.WebsiteURL;
-            }
-            await updateProjectUsers(this.id, this.teamMembers);
-            await updateProjectThumbnail(this.id, this.file);
-            this.success = true;
+  mounted: function () {
+    this.onload();
+  },
+  methods: {
+    async onload() {
+      try {
+        this.students = await fetchUsers();
+        const allUsers = await fetchUsers();
+        this.students = allUsers.map((u) => ({
+          label: u.FirstName + " " + u.LastName,
+          value: u.UserID,
+        }));
+        const id = this.getProjectId();
+        if (id === undefined) {
+          return;
+        }
+        this.id = id;
+        const project = fetchProjectById(id);
+        this.file = project.Thumbnail;
+        const usersProject = await fetchAllProjectUsers(id);
+        this.teamMembers = usersProject.map((u) => ({
+          label: u.FirstName + " " + u.LastName,
+          value: u.UserID,
+        }));
+        this.updateTeammates(this.teamMembers);
+      } catch (error) {
+        console.log("error from members", error);
+      }
+    },
+    async handleImageUpload() {
+      const filesSelected = document.getElementById("inputFileToLoad").files;
+      if (filesSelected.length > 0) {
+        const fileToLoad = filesSelected[0];
+        const fileReader = new FileReader();
+        fileReader.onload = function (fileLoadedEvent) {
+          const srcData = fileLoadedEvent.target.result;
+          this.file = srcData;
+        }.bind(this);
+        fileReader.readAsDataURL(fileToLoad);
+      }
+    },
+    async updateTeammates(members) {
+      this.teamMembers = members;
+    },
+    async handleSubmit() {
+      try {
+        if (this.id === undefined) {
+          let result = await createProject(
+            this.projectTitle,
+            this.websiteUrl,
+            this.githubRepo,
+            this.projectDescription
+          );
+          this.id = result.ProjectID;
+        } else {
+          result = await updateProject();
+          this.projectTitle = result.Title;
+          this.projectDescription = result.Description;
+          this.githubRepo = result.GithubURL;
+          this.websiteUrl = result.WebsiteURL;
+        }
+        await updateProjectUsers(this.id, this.teamMembers);
+        await updateProjectThumbnail(this.id, this.file);
+        this.success = true;
 
-            setTimeout(
-               () =>
-                  (window.location.href =
-                     "/pages/user-project/user-project.html"),
-               1000
-            );
-         } catch (error) {
-            console.log("error from project", error);
-         }
-      },
-      getProjectId() {
-         const queryPart = window.location.search;
-         const parts = queryPart.replace("?", "").split("&");
-         for (let part of parts) {
-            if (part.split("=")[0] === "projectId") {
-               console.log("get project id", part.split("=")[1]);
-               return part.split("=")[1];
-            }
-         }
-      },
-   },
+        setTimeout(
+          () =>
+            (window.location.href = "/pages/user-project/user-project.html"),
+          1000
+        );
+      } catch (error) {
+        console.log("error from project", error);
+      }
+    },
+    getProjectId() {
+      const queryPart = window.location.search;
+      const parts = queryPart.replace("?", "").split("&");
+      for (let part of parts) {
+        if (part.split("=")[0] === "projectId") {
+          return part.split("=")[1];
+        }
+      }
+    },
+  },
 };
 
 export default ProjectFormComponent;
