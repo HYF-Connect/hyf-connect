@@ -2,7 +2,7 @@
 .project__component--container {
    display: grid;
    gap: 1rem;
-      width: 90%;
+   width: 90%;
    grid-template-areas: "thumbnail description"
    "buttons description";
    grid-template-columns: 40% 60%;
