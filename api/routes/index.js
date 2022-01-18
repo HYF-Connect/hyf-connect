@@ -30,7 +30,7 @@ router.use("/contactus", contactUsRoutes);
 
 // this route was added for testing the middleware
 router.get("/auth", (req, res) => {
-  console.log(req.loggedInUser);
+  //console.log(req.loggedInUser);
   res.json({ mes: "ok" });
 });
 // export the routes

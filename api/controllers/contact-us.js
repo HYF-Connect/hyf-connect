@@ -4,7 +4,6 @@ const contactUsController = {
   postMessage: async (req, res) => {
     try {
       const { senderName, senderEmail, senderText } = req.body;
-      console.log(senderEmail, "from controller!");
       const sendEmail = await contactUsManager.sendingEmail(
         senderName,
         senderEmail,

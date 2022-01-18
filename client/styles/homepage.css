@@ -123,6 +123,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, 300px);
   justify-content: center;
+  gap: 30px;
+  width: 90%;
+  margin: 0 auto 1vh auto;
 }
 
 .benefit__card {
@@ -130,7 +133,6 @@
   background-color: #ffffff;
   text-align: center;
   position: relative;
-  margin-bottom: 1vh;
 }
 
 .benefit__card--avatar > img {
