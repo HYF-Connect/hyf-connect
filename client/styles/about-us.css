@@ -254,11 +254,12 @@
   font-size: 16px;
   color: #0c52a1;
   margin-top: -35px;
-}
+
 
 .about-last-container {
   background-color: #dfd7ef;
   height: 240px;
   clip-path: polygon(84% 84%, 100% 50%, 100% 100%, 0 99%, 0 12%);
   margin-top: -5em;
+
 }

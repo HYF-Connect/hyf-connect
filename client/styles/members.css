@@ -60,6 +60,9 @@
   background-color:#ffffff;
   cursor: pointer;
 }
+.members-ticket__card:hover{
+  cursor: pointer;
+}
 .members-ticket__card-img {
   width: 75px;
   height: 75px;
