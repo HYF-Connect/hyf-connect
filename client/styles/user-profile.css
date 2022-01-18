@@ -293,12 +293,22 @@ select:focus {
    margin: 30px 0 60px 0;
 }
 .user-profile-skills-title {
+
    color: rgba(47, 25, 95, 1);
    text-align: center;
    margin-left: auto;
    margin-right: auto;
    padding-bottom: 0.5em;
+
 }
+.user-profile-projects-title{
+  color: rgba(47, 25, 95, 1);
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   padding-bottom: 0.5em;
+ 
+   }
 .user-profile-projects-cards {
    box-shadow: 7px 7px 5px rgb(185, 183, 183);
    width: 88%;
@@ -308,6 +318,11 @@ select:focus {
    border-radius: 1rem;
    background: white;
    padding: 10px;
+    margin: auto;
+   padding: 17px;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 16px;
 }
 .user-profile-skills {
    box-shadow: 7px 7px 5px rgb(185, 183, 183);
