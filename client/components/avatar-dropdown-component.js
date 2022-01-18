@@ -12,7 +12,7 @@ export const AvatarDropdown = {
   </button>
   <ul class="dropdown-menu" id="bg-menu" aria-labelledby="dropdownMenu1" >
     <li><a class="dropdown-item" id="item" href="/pages/edit-user-profile/edit-user-profile.html">My profile</a></li>
-      <li><a class="dropdown-item"id="item" href="/pages/user-project/user-project.html">My projects</a></li>
+      <li><a class="dropdown-item" id="item" href="/pages/user-project/user-project.html">My projects</a></li>
       <li class="avatar-sign-out-btn-container"><a class="sign-out-btn" href="" v-on:click="logOut">sign out</a></li>
   </ul>
 </div>
