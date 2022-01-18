@@ -11,12 +11,10 @@ const MainSection = {
   },
   template: `
     <div class="profile-user__main">
-      <div class="profile__main-arrow-right">
-      </div>
-      <p class= "profile-user__main-title"> Meet <span class= "profile-user__span"> {{ name }}! </span></p>
-      <div class="profile__main-arrow-left">
-      </div>
+      <div class="profile__main-arrow-right"></div>
+      <div class="profile__main-arrow-left"></div>
       <profile-image-component></profile-image-component>
+      <p class= "profile-user__main-title"> Meet <span class= "profile-user__span"> {{ name }}! </span></p>
     </div>
     `,
   data() {
