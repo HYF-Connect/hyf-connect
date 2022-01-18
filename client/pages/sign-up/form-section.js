@@ -1,6 +1,6 @@
 import { registerUser } from "../../src/data-access/api-calls/calls.js";
 export const FormSection = {
-   template: `
+  template: `
     <form class="sign-up-form" @submit.prevent="handleSubmit">
       <div class="alert alert-danger" role="alert" v-if="errorMessage">
        {{ errorMessage }}
@@ -28,50 +28,50 @@ export const FormSection = {
       <button class= "form__btn-submit">create an account</button>
   </form>
     `,
-   data() {
-      return {
-         firstName: "",
-         lastName: "",
-         email: "",
-         password: "",
-         confirmPassword: "",
-         checkedTerms: false,
-         passwordError: "",
-         passwordCheck: "",
-         errorMessage: "",
-         success: false,
-      };
-   },
-   methods: {
-      async handleSubmit() {
-         this.passwordError =
-            this.password.length >= 6
-               ? ""
-               : "Password contains less than 6 characters!";
-         this.passwordCheck =
-            this.password === this.confirmPassword
-               ? ""
-               : "Passwords do not match. Try again!";
+  data() {
+    return {
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+      checkedTerms: false,
+      passwordError: "",
+      passwordCheck: "",
+      errorMessage: "",
+      success: false,
+    };
+  },
+  methods: {
+    async handleSubmit() {
+      this.passwordError =
+        this.password.length >= 6
+          ? ""
+          : "Password contains less than 6 characters!";
+      this.passwordCheck =
+        this.password === this.confirmPassword
+          ? ""
+          : "Passwords do not match. Try again!";
 
-         try {
-            if (this.password !== this.confirmPassword) {
-               return;
-            }
-            const result = await registerUser(
-               this.firstName,
-               this.lastName,
-               this.email,
-               this.password
-            );
-            this.errorMessage = "";
-            this.success = true;
-            setTimeout(() => (window.location.href = "/"), 3000);
-         } catch (error) {
-            this.errorMessage = error;
-            console.log("error from registration", error);
-         }
-      },
-   },
+      try {
+        if (this.password !== this.confirmPassword) {
+          return;
+        }
+        const result = await registerUser(
+          this.firstName,
+          this.lastName,
+          this.email,
+          this.password
+        );
+        this.errorMessage = "";
+        this.success = true;
+        setTimeout(() => (window.location.href = "/"), 3000);
+      } catch (error) {
+        this.errorMessage = error;
+        console.log("error from registration", error);
+      }
+    },
+  },
 };
 
 export default FormSection;

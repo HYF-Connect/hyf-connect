@@ -22,8 +22,9 @@ const createDb = async () => {
   };
   console.log("creating DB");
   try {
-    result = await pgtools.createdb(config, DB_NAME);
-    console.log("Result", result);
+    //result =
+    await pgtools.createdb(config, DB_NAME);
+    //console.log("Result", result);
   } catch (error) {
     console.log("error", error);
   }
