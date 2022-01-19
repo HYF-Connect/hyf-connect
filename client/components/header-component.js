@@ -2,8 +2,8 @@ import AvatarDropdown from "./avatar-dropdown-component.js";
 import { fetchUserById } from "../src/data-access/api-calls/calls.js";
 
 const HeaderComponent = {
-  components: { AvatarDropdown },
-  template: `
+   components: { AvatarDropdown },
+   template: `
     <div class="header-container">
       <div class="brand">
         <a href="/pages/homepage/homepage.html" class="logo"><img src="/assets/hyh-connect-logo-header.png" alt="logo" height="80"/></a>
@@ -43,35 +43,37 @@ const HeaderComponent = {
         </div >
       </div>
     </div>`,
-  data() {
-    let isLoggedIn = true;
-    if (localStorage.getItem("token") == undefined) {
-      isLoggedIn = false;
-    }
-    return {
-      isLoggedIn,
-      username: localStorage.getItem("username"),
-      avatar: {
-        name: localStorage.getItem("username"),
-        url: undefined,
+   data() {
+      let isLoggedIn = true;
+      if (localStorage.getItem("token") == undefined) {
+         isLoggedIn = false;
+      }
+      return {
+         isLoggedIn,
+         username: localStorage.getItem("username"),
+         avatar: {
+            name: localStorage.getItem("username"),
+            url: undefined,
+         },
+      };
+   },
+   methods: {
+      async getDataOnLoad() {
+         if (this.isLoggedIn) {
+            const id = localStorage.getItem("userId");
+            const user = await fetchUserById(id);
+            this.avatar.url = user.ProfilePicture;
+         }
       },
-    };
-  },
-  methods: {
-    async getDataOnLoad() {
-      const id = localStorage.getItem("userId");
-      const user = await fetchUserById(id);
-      this.avatar.url = user.ProfilePicture;
-    },
-    logOut() {
-      localStorage.removeItem("token");
-      localStorage.removeItem("username");
-      this.isLoggedIn = false;
-    },
-  },
-  mounted: function () {
-    this.getDataOnLoad();
-  },
+      logOut() {
+         localStorage.removeItem("token");
+         localStorage.removeItem("username");
+         this.isLoggedIn = false;
+      },
+   },
+   mounted: function () {
+      this.getDataOnLoad();
+   },
 };
 
 export default HeaderComponent;
