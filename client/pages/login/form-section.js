@@ -37,10 +37,7 @@ export const FormSection = {
         this.passwordError = "";
         this.password = "";
         this.success = true;
-        setTimeout(
-          () => (window.location.href = "/pages/homepage/homepage.html"),
-          500
-        );
+        setTimeout(() => (window.location.href = "/"), 1000);
       } catch (error) {
         this.passwordError = "Invalid email or password";
         this.success = false;
