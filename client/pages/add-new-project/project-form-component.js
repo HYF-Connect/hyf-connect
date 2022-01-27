@@ -67,7 +67,9 @@ export const ProjectFormComponent = {
       githubRepo: "",
       id: undefined,
       projectDescription: "",
-      teamMembers: [],
+      userID: "",
+      userName: "",
+      teamMembers: [], //[{ lable: this.userName, value: this.userID }],
       students: [],
       projectThumbnail: "",
       success: false,
@@ -87,6 +89,11 @@ export const ProjectFormComponent = {
           label: u.FirstName + " " + u.LastName,
           value: u.UserID,
         }));
+
+        this.userID = localStorage.getItem("userId");
+        this.userName = localStorage.getItem("username");
+        this.teamMembers = [{ lable: this.userName, value: this.userID }];
+
         const id = this.getProjectId();
         if (id === undefined) {
           return;
@@ -95,6 +102,7 @@ export const ProjectFormComponent = {
         const project = fetchProjectById(id);
         this.file = project.Thumbnail;
         const usersProject = await fetchAllProjectUsers(id);
+
         this.teamMembers = usersProject.map((u) => ({
           label: u.FirstName + " " + u.LastName,
           value: u.UserID,
